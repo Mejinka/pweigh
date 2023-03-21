@@ -1,0 +1,27 @@
+
+ onTap: () {
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          title: const Text("Logout"),
+                          content:
+                              const Text("Are you sure you want to logout?"),
+                          actions: <Widget>[
+                            TextButton(
+                              child: const Text("Cancel"),
+                              onPressed: () => Navigator.of(context).pop(),
+                            ),
+                            TextButton(
+                              child: const Text("Confirm"),
+                              onPressed: () {
+                                Navigator.of(context)
+                                    .popUntil((route) => route.isFirst);
+                                // perform logout logic
+                              },
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                  },
