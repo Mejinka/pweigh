@@ -466,14 +466,14 @@ class _CalibrationState extends State<Calibration> {
                 Container(width: 20),
                 const Divider(height: 120),
                 SizedBox(
-                  width: 300,
+                  width: 100,
                   child: Column(
                     children: [
-                      const Text('Objeto'),
+                      const Text('Max:'),
                       TextField(
                         enabled: true,
                         decoration: const InputDecoration(
-                          hintText: "Objeto",
+                          hintText: "Max:",
                           border: OutlineInputBorder(),
                         ),
                         controller: _objeto,
@@ -484,14 +484,14 @@ class _CalibrationState extends State<Calibration> {
                 ),
                 Container(width: 100),
                 SizedBox(
-                  width: 300,
+                  width: 100,
                   child: Column(
                     children: [
-                      const Text('Marca'),
+                      const Text('d:'),
                       TextField(
                         enabled: true,
                         decoration: const InputDecoration(
-                          hintText: "Marca",
+                          hintText: "d:",
                           border: OutlineInputBorder(),
                         ),
                         controller: _marca,
@@ -502,18 +502,66 @@ class _CalibrationState extends State<Calibration> {
                 ),
                 Container(width: 100),
                 SizedBox(
-                  width: 300,
+                  width: 100,
                   child: Column(
                     children: [
-                      const Text('Modelo'),
+                      const Text('dT:'),
                       TextField(
                         enabled: true,
                         decoration: const InputDecoration(
-                          hintText: "Modelo",
+                          hintText: "dT:",
                           border: OutlineInputBorder(),
                         ),
                         controller: _modelo,
                         textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                ),
+                Container(width: 100),
+                SizedBox(
+                  width: 100,
+                  child: Column(
+                    children: [
+                      const Text('dT:'),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8.0),
+                          border: Border.all(
+                            color: Colors.grey.withOpacity(0.5),
+                            width: 1.0,
+                          ),
+                        ),
+                        child: DropdownButton<String>(
+                          value: dropdownValue,
+                          onChanged: (String? newValue) {
+                            setState(() {
+                              dropdownValue = newValue!;
+                            });
+                          },
+                          items: <String>[
+                            'kg',
+                            'g',
+                            'mg',
+                            'mN',
+                            'cN',
+                            'N',
+                            'daN',
+                            'kn',
+                            'lbf',
+                            'oZ',
+                            'glm2'
+                          ].map<DropdownMenuItem<String>>((String value) {
+                            return DropdownMenuItem<String>(
+                              value: value,
+                              child: Text(value),
+                            );
+                          }).toList(),
+                          dropdownColor: Colors.white,
+                          elevation: 2,
+                          underline: Container(),
+                          focusColor: Colors.transparent,
+                        ),
                       ),
                     ],
                   ),
@@ -529,6 +577,7 @@ class _CalibrationState extends State<Calibration> {
   bool _showExtraWidget = false;
   bool _showExtraWidget1 = false;
   bool _isSwitchOn = false;
+  String dropdownValue = 'kg'; // valor padrão
 
   String generateCertificado() {
     String user = _user.text;
