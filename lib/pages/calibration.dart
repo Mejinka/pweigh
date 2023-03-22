@@ -51,7 +51,7 @@ class _CalibrationState extends State<Calibration> {
   }
 
   body() {
-    return SafeArea(
+    return SingleChildScrollView(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -306,9 +306,15 @@ class _CalibrationState extends State<Calibration> {
                     _showExtraWidget = newValue!;
                   });
                 },
-              ), //////////////
+              ),
+              const Text("Sim"), Container(width: 15),
+              //////////////
               /////////////
-              const Text("Sim"),
+              Container(
+                height: 20,
+                width: 1.0,
+                color: Colors.grey.withOpacity(0.5),
+              ),
               Container(
                 width: 20,
               ),
@@ -328,7 +334,15 @@ class _CalibrationState extends State<Calibration> {
               ),
               const Text("Sim"),
               Container(
-                width: 40,
+                width: 15,
+              ),
+              Container(
+                height: 20,
+                width: 1.0,
+                color: Colors.grey.withOpacity(0.5),
+              ),
+              Container(
+                width: 15,
               ),
               //////////////////////////
               //////////////////////////
@@ -447,126 +461,314 @@ class _CalibrationState extends State<Calibration> {
             ],
           ),
 
-          Column(
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Divider(height: 20),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
+              Column(
                 children: [
-                  Container(
-                    width: 20,
+                  const Divider(height: 20),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Container(
+                        width: 20,
+                      ),
+                      const Text(
+                        'Caracteristicas do Instrumento',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
                   ),
-                  const Text(
-                    'Caracteristicas do Instrumento',
-                    style: TextStyle(fontSize: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(width: 20),
+                      const Divider(height: 150),
+                      Column(
+                        children: [
+                          SizedBox(
+                            width: 100,
+                            child: Column(
+                              children: [
+                                const Text('Max:'),
+                                TextField(
+                                  enabled: true,
+                                  decoration: const InputDecoration(
+                                    hintText: "Max:",
+                                    border: OutlineInputBorder(),
+                                  ),
+                                  controller: _objeto,
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(width: 100),
+                          SizedBox(
+                            width: 100,
+                            child: Column(
+                              children: [
+                                const Text('d:'),
+                                TextField(
+                                  enabled: true,
+                                  decoration: const InputDecoration(
+                                    hintText: "d:",
+                                    border: OutlineInputBorder(),
+                                  ),
+                                  controller: _marca,
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      Container(width: 100),
+                      Column(
+                        children: [
+                          SizedBox(
+                            width: 100,
+                            child: Column(
+                              children: [
+                                const Text('Unidade:'),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8.0),
+                                    border: Border.all(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      width: 1.0,
+                                    ),
+                                  ),
+                                  child: DropdownButton<String>(
+                                    value: dropdownValue,
+                                    onChanged: (String? newValue) {
+                                      setState(() {
+                                        dropdownValue = newValue!;
+                                      });
+                                    },
+                                    items: <String>[
+                                      'kg',
+                                      'g',
+                                      'mg',
+                                      'mN',
+                                      'cN',
+                                      'N',
+                                      'daN',
+                                      'kn',
+                                      'lbf',
+                                      'oZ',
+                                      'glm2'
+                                    ].map<DropdownMenuItem<String>>(
+                                        (String value) {
+                                      return DropdownMenuItem<String>(
+                                        value: value,
+                                        child: Text(value),
+                                      );
+                                    }).toList(),
+                                    dropdownColor: Colors.white,
+                                    elevation: 2,
+                                    underline: Container(),
+                                    focusColor: Colors.transparent,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            width: 100,
+                            child: Column(
+                              children: [
+                                const Text('dT:'),
+                                TextField(
+                                  enabled: true,
+                                  decoration: const InputDecoration(
+                                    hintText: "dT:",
+                                    border: OutlineInputBorder(),
+                                  ),
+                                  controller: _modelo,
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(width: 100),
+                        ],
+                      ),
+                    ],
                   ),
                 ],
               ),
-              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                Container(width: 20),
-                const Divider(height: 120),
-                SizedBox(
-                  width: 100,
-                  child: Column(
+              Container(width: 15),
+              Container(
+                height: 100,
+                width: 1.0,
+                color: Colors.grey.withOpacity(0.5),
+              ),
+              Column(
+                children: [
+                  const Divider(height: 20),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      const Text('Max:'),
-                      TextField(
-                        enabled: true,
-                        decoration: const InputDecoration(
-                          hintText: "Max:",
-                          border: OutlineInputBorder(),
-                        ),
-                        controller: _objeto,
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
-                  ),
-                ),
-                Container(width: 100),
-                SizedBox(
-                  width: 100,
-                  child: Column(
-                    children: [
-                      const Text('d:'),
-                      TextField(
-                        enabled: true,
-                        decoration: const InputDecoration(
-                          hintText: "d:",
-                          border: OutlineInputBorder(),
-                        ),
-                        controller: _marca,
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
-                  ),
-                ),
-                Container(width: 100),
-                SizedBox(
-                  width: 100,
-                  child: Column(
-                    children: [
-                      const Text('dT:'),
-                      TextField(
-                        enabled: true,
-                        decoration: const InputDecoration(
-                          hintText: "dT:",
-                          border: OutlineInputBorder(),
-                        ),
-                        controller: _modelo,
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
-                  ),
-                ),
-                Container(width: 100),
-                SizedBox(
-                  width: 100,
-                  child: Column(
-                    children: [
-                      const Text('dT:'),
                       Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8.0),
-                          border: Border.all(
-                            color: Colors.grey.withOpacity(0.5),
-                            width: 1.0,
-                          ),
-                        ),
-                        child: DropdownButton<String>(
-                          value: dropdownValue,
-                          onChanged: (String? newValue) {
-                            setState(() {
-                              dropdownValue = newValue!;
-                            });
-                          },
-                          items: <String>[
-                            'kg',
-                            'g',
-                            'mg',
-                            'mN',
-                            'cN',
-                            'N',
-                            'daN',
-                            'kn',
-                            'lbf',
-                            'oZ',
-                            'glm2'
-                          ].map<DropdownMenuItem<String>>((String value) {
-                            return DropdownMenuItem<String>(
-                              value: value,
-                              child: Text(value),
-                            );
-                          }).toList(),
-                          dropdownColor: Colors.white,
-                          elevation: 2,
-                          underline: Container(),
-                          focusColor: Colors.transparent,
-                        ),
+                        width: 20,
+                      ),
+                      const Text(
+                        'Balança com aprovação de modelo?',
+                        style: TextStyle(fontSize: 19),
                       ),
                     ],
                   ),
-                ),
-              ]),
+                  Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+                    Container(width: 20),
+                    const Divider(height: 150),
+                    SizedBox(
+                      child: Row(
+                        children: [
+                          const Text("Não"),
+                          Switch(
+                            value: _isSwitchOn,
+                            onChanged: (bool newValue) {
+                              setState(() {
+                                _isSwitchOn = newValue;
+                              });
+                            },
+                          ),
+                          const Text("Sim"),
+                        ],
+                      ),
+                    ),
+                  ]),
+                ],
+              ),
+              Container(width: 15),
+              Container(
+                height: 100,
+                width: 1.0,
+                color: Colors.grey.withOpacity(0.5),
+              ),
+              Column(
+                children: [
+                  const Divider(height: 20),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Container(
+                        width: 20,
+                      ),
+                      const Text(
+                        'Caracteristicas do Instrumento',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(width: 20),
+                      Column(
+                        children: [
+                          const Text('Temperatura [ ºC ]:'),
+                          Text('Temperatura [ ºC ]:'),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: 100,
+                            child: Column(
+                              children: [
+                                const Text('Inicial:'),
+                                TextField(
+                                  enabled: true,
+                                  decoration: const InputDecoration(
+                                    hintText: "Inicial:",
+                                    border: OutlineInputBorder(),
+                                  ),
+                                  controller: _objeto,
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(width: 100),
+                          SizedBox(
+                            width: 100,
+                            child: Column(
+                              children: [
+                                const Text("Final:"),
+                                TextField(
+                                  enabled: true,
+                                  decoration: const InputDecoration(
+                                    hintText: "Final:",
+                                    border: OutlineInputBorder(),
+                                  ),
+                                  controller: _marca,
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(width: 20),
+                      const Text('HR [ % ]:'),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: 100,
+                            child: Column(
+                              children: [
+                                Divider(
+                                  height: 20,
+                                  color: Colors.transparent,
+                                ),
+                                TextField(
+                                  enabled: true,
+                                  decoration: const InputDecoration(
+                                    hintText: "Inicial:",
+                                    border: OutlineInputBorder(),
+                                  ),
+                                  controller: _objeto,
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(width: 100),
+                          SizedBox(
+                            width: 100,
+                            child: Column(
+                              children: [
+                                Divider(
+                                  height: 20,
+                                  color: Colors.transparent,
+                                ),
+                                TextField(
+                                  enabled: true,
+                                  decoration: const InputDecoration(
+                                    hintText: "Final:",
+                                    border: OutlineInputBorder(),
+                                  ),
+                                  controller: _marca,
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ],
           ),
         ],
