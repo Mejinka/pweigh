@@ -1,8 +1,10 @@
 import 'package:cachapuz_2/pages/calibration.dart';
 import 'package:cachapuz_2/pages/file.dart';
+
 import 'package:flutter/material.dart';
 
 import 'about_page.dart';
+import 'calibration_ensaios.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -26,6 +28,11 @@ class HomePageState extends State<HomePage> {
     const double drawerWidth = 260;
 
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Scale Calibration'),
+        centerTitle: true,
+        backgroundColor: Colors.redAccent.shade700,
+      ),
       body: Row(
         children: [
           SizedBox(
@@ -37,8 +44,9 @@ class HomePageState extends State<HomePage> {
           Expanded(
             child: PageView(
               controller: pageController,
-              children: const [
-                Calibration(),
+              children: [
+                Calibration(pageController: pageController),
+                Ensaios(pageController: pageController),
                 Files(),
                 About(),
               ],
@@ -91,12 +99,12 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.edit_document),
             title: const Text('Files'),
-            onTap: () => pageController.jumpToPage(1),
+            onTap: () => pageController.jumpToPage(2),
           ),
           ListTile(
             leading: const Icon(Icons.info),
             title: const Text('About'),
-            onTap: () => pageController.jumpToPage(2),
+            onTap: () => pageController.jumpToPage(3),
           ),
           ListTile(
               leading: const Icon(Icons.exit_to_app),

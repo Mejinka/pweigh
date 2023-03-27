@@ -58,3 +58,26 @@ class Controllers {
   final MaskTextInputFormatter tempFinalF =
       MaskTextInputFormatter(mask: '00.0', filter: {"0": RegExp(r'[0-9]')});
 }
+
+void clearAllFields(Controllers controllers) {
+  controllers.user.clear();
+  controllers.certificado.clear();
+  controllers.year.clear();
+  controllers.cliente.clear();
+  controllers.morada.clear();
+  controllers.morada2.clear();
+  controllers.objeto.clear();
+  controllers.marca.clear();
+  controllers.modelo.clear();
+  controllers.nserie.clear();
+  controllers.idinterna.clear();
+  controllers.altitude.clear();
+  controllers.latitude.clear();
+  controllers.cepController.clear();
+  controllers.cepController2.clear();
+  controllers.cimax.clear();
+  controllers.d.clear();
+  controllers.dT.clear();
+  controllers.tempInit.clear();
+  controllers.tempFinal.clear();
+}

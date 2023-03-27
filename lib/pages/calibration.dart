@@ -4,7 +4,8 @@ import '../controlers/controladores.dart';
 import 'calibration_ensaios.dart';
 
 class Calibration extends StatefulWidget {
-  const Calibration({super.key});
+  final PageController pageController;
+  const Calibration({Key? key, required this.pageController}) : super(key: key);
 
   @override
   State<Calibration> createState() => _CalibrationState();
@@ -12,28 +13,16 @@ class Calibration extends StatefulWidget {
 
 class _CalibrationState extends State<Calibration> {
   final Controllers _controladores = Controllers();
-  final _pageController = PageController(initialPage: 0);
-  final List<Widget> _formPages = [
-    const Calibration(),
-    Ensaios(),
-    // ...
-  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Scale Calibration'),
-        centerTitle: true,
-        backgroundColor: Colors.redAccent.shade700,
-      ),
       body: body(),
     );
   }
 
   body() {
     return SingleChildScrollView(
-      controller: _pageController,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -778,14 +767,29 @@ class _CalibrationState extends State<Calibration> {
                 width: 100,
                 height: 50,
                 child: ElevatedButton(
-                  child: const Text('Próximo'),
+                  child: const Text('Limpar'),
                   onPressed: () {
-                    _pageController.nextPage(
-                      duration: const Duration(milliseconds: 400),
-                      curve: Curves.easeInOut,
-                    );
+                    clearAllFields(_controladores);
+                    setState(() {});
                   },
                 ),
+              ),
+              Container(width: 10),
+              SizedBox(
+                width: 100,
+                height: 50,
+                child: ElevatedButton(
+                  child: const Text('Próximo'),
+                  onPressed: () {
+                    widget.pageController.animateToPage(1,
+                        duration: const Duration(milliseconds: 400),
+                        curve: Curves.easeInOut);
+                  },
+                ),
+              ),
+              const Divider(
+                height: 70,
+                color: Colors.transparent,
               ),
             ],
           )
