@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../controlers/controladores.dart';
-import 'calibration_ensaios.dart';
 
 class Calibration extends StatefulWidget {
   final PageController pageController;
@@ -770,7 +769,13 @@ class _CalibrationState extends State<Calibration> {
                   child: const Text('Limpar'),
                   onPressed: () {
                     clearAllFields(_controladores);
-                    setState(() {});
+
+                    setState(() {
+                      _showExtraWidget = false;
+                      _showExtraWidget1 = false;
+                      _isSwitchOn = false;
+                      _switchbalanca = false;
+                    });
                   },
                 ),
               ),

@@ -1,4 +1,5 @@
 import 'package:cachapuz_2/pages/calibration.dart';
+import 'package:cachapuz_2/pages/ensaios/grid.dart';
 import 'package:cachapuz_2/pages/file.dart';
 
 import 'package:flutter/material.dart';
@@ -46,9 +47,9 @@ class HomePageState extends State<HomePage> {
               controller: pageController,
               children: [
                 Calibration(pageController: pageController),
-                Ensaios(pageController: pageController),
-                Files(),
-                About(),
+                GridSecondPage(pageController: pageController),
+                const Files(),
+                const About(),
               ],
             ),
           ),
