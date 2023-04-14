@@ -51,7 +51,8 @@ dependencies:
   syncfusion_flutter_datepicker: ^20.4.54
   flutter_windowmanager: ^0.2.0
   mask_text_input_formatter: ^2.4.0
-  pluto_grid: ^6.0.4
+  syncfusion_flutter_datagrid: ^20.4.54
+  flutter_editable_table: ^1.1.1
 
 dev_dependencies:
   flutter_test:

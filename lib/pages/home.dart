@@ -1,11 +1,11 @@
 import 'package:cachapuz_2/pages/calibration.dart';
-import 'package:cachapuz_2/pages/ensaios/grid.dart';
 import 'package:cachapuz_2/pages/file.dart';
 
 import 'package:flutter/material.dart';
 
 import 'about_page.dart';
 import 'calibration_ensaios.dart';
+import 'ensaios/ensaio_pesagem.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -47,7 +47,7 @@ class HomePageState extends State<HomePage> {
               controller: pageController,
               children: [
                 Calibration(pageController: pageController),
-                GridSecondPage(pageController: pageController),
+                Ensaios(pageController: pageController),
                 const Files(),
                 const About(),
               ],

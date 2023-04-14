@@ -1,5 +1,4 @@
 import 'package:cachapuz_2/pages/ensaios/ensaio_pesagem.dart';
-import 'package:cachapuz_2/pages/ensaios/grid.dart';
 import 'package:flutter/material.dart';
 
 import '../controlers/controladores.dart';
