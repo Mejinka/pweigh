@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:window_manager/window_manager.dart';
 
@@ -26,20 +27,22 @@ class SplashScreenState extends State<SplashScreen> {
         );
       },
     );
-    WidgetsFlutterBinding.ensureInitialized();
-    windowManager.ensureInitialized();
+    if (!kIsWeb) {
+      WidgetsFlutterBinding.ensureInitialized();
+      windowManager.ensureInitialized();
 
-    WindowOptions windowOptions = const WindowOptions(
-      size: Size(800, 600),
-      center: true,
-      backgroundColor: Colors.transparent,
-      skipTaskbar: false,
-      titleBarStyle: TitleBarStyle.normal,
-    );
-    windowManager.waitUntilReadyToShow(windowOptions, () {
-      windowManager.show();
-      windowManager.focus();
-    });
+      WindowOptions windowOptions = const WindowOptions(
+        size: Size(800, 600),
+        center: true,
+        backgroundColor: Colors.transparent,
+        skipTaskbar: false,
+        titleBarStyle: TitleBarStyle.normal,
+      );
+      windowManager.waitUntilReadyToShow(windowOptions, () {
+        windowManager.show();
+        windowManager.focus();
+      });
+    }
   }
 
   @override

@@ -6,9 +6,15 @@ import 'package:flutter/material.dart';
 import 'about_page.dart';
 import 'calibration_ensaios.dart';
 import 'ensaios/ensaio_pesagem.dart';
+import 'login/login.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  final String? username;
+  final String? firstName;
+  final String? lastName;
+
+  const HomePage({Key? key, this.username, this.firstName, this.lastName})
+      : super(key: key);
 
   @override
   HomePageState createState() => HomePageState();
@@ -17,6 +23,7 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
   PageController pageController = PageController(initialPage: 0);
   bool isDrawerOpen = false;
+  bool _showIconsOnly = false;
 
   void toggleDrawer() {
     setState(() {
@@ -26,20 +33,31 @@ class HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    const double drawerWidth = 260;
+    const double drawerWidth = 250;
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('Scale Calibration'),
         centerTitle: true,
         backgroundColor: Colors.redAccent.shade700,
+        leading: IconButton(
+          icon: const Icon(Icons.menu),
+          onPressed: () {
+            setState(() {
+              _showIconsOnly = !_showIconsOnly;
+            });
+          },
+        ),
       ),
       body: Row(
         children: [
           SizedBox(
-            width: drawerWidth,
+            width: _showIconsOnly ? 80 : drawerWidth,
             child: NavDrawer(
+              firstName: widget.firstName,
+              lastName: widget.lastName,
               pageController: pageController,
+              showIconsOnly: _showIconsOnly,
             ),
           ),
           Expanded(
@@ -59,13 +77,36 @@ class HomePageState extends State<HomePage> {
   }
 }
 
+String capitalize(String text) {
+  if (text.isEmpty) {
+    return text;
+  }
+
+  return text
+      .split(' ')
+      .map((word) => word[0].toUpperCase() + word.substring(1))
+      .join(' ');
+}
+
 class NavDrawer extends StatelessWidget {
   const NavDrawer({
     Key? key,
+    required this.firstName,
+    required this.lastName,
     required this.pageController,
+    required this.showIconsOnly,
   }) : super(key: key);
 
+  final String? firstName;
+  final String? lastName;
   final PageController pageController;
+  final bool showIconsOnly;
+
+  Future<void> logout(BuildContext context) async {
+    await setLoggedIn(false);
+    Navigator.of(context).pushNamedAndRemoveUntil('/', (route) => false);
+    print('Usuário deslogou com sucesso');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -80,58 +121,121 @@ class NavDrawer extends StatelessWidget {
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Icon(
-                  Icons.person,
-                  size: 100,
-                ),
-                Text(
-                  'Tester 4257',
-                  style: TextStyle(color: Colors.white, fontSize: 20),
-                ),
+              children: [
+                Icon(Icons.person, size: showIconsOnly ? 50 : 100),
+                showIconsOnly
+                    ? Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          FittedBox(
+                            fit: BoxFit.fitWidth,
+                            child: Text(
+                              capitalize(firstName ?? ''),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 20),
+                            ),
+                          ),
+                          FittedBox(
+                            fit: BoxFit.fitWidth,
+                            child: Text(
+                              capitalize(lastName ?? ''),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 20),
+                            ),
+                          ),
+                        ],
+                      )
+                    : FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Text(
+                          capitalize(firstName ?? '') +
+                              ' ' +
+                              capitalize(lastName ?? ''),
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
+                      )
               ],
             ),
           ),
-          ListTile(
-            leading: const Icon(Icons.balance),
-            title: const Text('Calibration'),
-            onTap: () => pageController.jumpToPage(0),
+          SizedBox(
+            height: showIconsOnly ? 48 : null,
+            child: Container(
+              alignment: Alignment.center,
+              child: ListTile(
+                leading: Padding(
+                  padding: EdgeInsets.only(left: showIconsOnly ? 10 : 0),
+                  child: const Icon(Icons.balance),
+                ),
+                title: Opacity(
+                  opacity: showIconsOnly ? 0.0 : 1.0,
+                  child: const Text('Calibration'),
+                ),
+                onTap: () => pageController.jumpToPage(0),
+              ),
+            ),
           ),
-          ListTile(
-            leading: const Icon(Icons.edit_document),
-            title: const Text('Files'),
-            onTap: () => pageController.jumpToPage(2),
+          SizedBox(
+            height: showIconsOnly ? 48 : null,
+            child: ListTile(
+              leading: Padding(
+                padding: EdgeInsets.only(left: showIconsOnly ? 10 : 0),
+                child: const Icon(Icons.edit_document),
+              ),
+              title: Opacity(
+                opacity: showIconsOnly ? 0.0 : 1.0,
+                child: const Text('Files'),
+              ),
+              onTap: () => pageController.jumpToPage(2),
+            ),
           ),
-          ListTile(
-            leading: const Icon(Icons.info),
-            title: const Text('About'),
-            onTap: () => pageController.jumpToPage(3),
+          SizedBox(
+            height: showIconsOnly ? 48 : null,
+            child: ListTile(
+              leading: Padding(
+                padding: EdgeInsets.only(left: showIconsOnly ? 10 : 0),
+                child: const Icon(Icons.info),
+              ),
+              title: Opacity(
+                opacity: showIconsOnly ? 0.0 : 1.0,
+                child: const Text('About'),
+              ),
+              onTap: () => pageController.jumpToPage(3),
+            ),
           ),
-          ListTile(
-              leading: const Icon(Icons.exit_to_app),
-              title: const Text('Logout'),
+          SizedBox(
+            height: showIconsOnly ? 48 : null,
+            child: ListTile(
+              leading: Padding(
+                padding: EdgeInsets.only(left: showIconsOnly ? 10 : 0),
+                child: const Icon(Icons.exit_to_app),
+              ),
+              title: Opacity(
+                opacity: showIconsOnly ? 0.0 : 1.0,
+                child: const Text('Logout'),
+              ),
               onTap: () => showDialog(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return AlertDialog(
-                        title: const Text("Logout"),
-                        content: const Text("Are you sure you want to logout?"),
-                        actions: <Widget>[
-                          TextButton(
-                            child: const Text("Cancel"),
-                            onPressed: () => Navigator.of(context).pop(),
-                          ),
-                          TextButton(
-                            child: const Text("Confirm"),
-                            onPressed: () {
-                              Navigator.of(context).pushNamedAndRemoveUntil(
-                                  '/', (route) => false);
-                            },
-                          ),
-                        ],
-                      );
-                    },
-                  )),
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    title: const Text("Logout"),
+                    content: const Text("Are you sure you want to logout?"),
+                    actions: <Widget>[
+                      TextButton(
+                        child: const Text("Cancel"),
+                        onPressed: () => Navigator.of(context).pop(),
+                      ),
+                      TextButton(
+                        child: const Text("Confirm"),
+                        onPressed: () async {
+                          await logout(context);
+                        },
+                      ),
+                    ],
+                  );
+                },
+              ),
+            ),
+          ),
         ],
       ),
     );
