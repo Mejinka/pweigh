@@ -22,9 +22,9 @@ def login():
     result = cursor.fetchone()
 
     if result:
-        return jsonify({"success": True})
+         return jsonify({"success": True})
     else:
-        return jsonify({"success": False})
+         return jsonify({"success": False})
 
 @app.route('/get_user_details', methods=['POST'])
 def get_user_details():
@@ -35,9 +35,9 @@ def get_user_details():
     result = cursor.fetchone()
 
     if result:
-        return jsonify({"success": True, "first_name": result[0], "last_name": result[1]})
+         return jsonify({"success": True, "first_name": result[0], "last_name": result[1]})
     else:
-        return jsonify({"success": False})
+         return jsonify({"success": False})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+      app.run(debug=True)

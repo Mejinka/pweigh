@@ -184,21 +184,45 @@ Widget buildTextField2(String labelText, TextEditingController controller,
   );
 }
 
-Widget buildRangeInput(String labelText, TextEditingController controller,
-    TextInputFormatter inputFormatter) {
-  return Column(
-    children: [
-      Text(labelText),
-      TextField(
-        enabled: true,
-        decoration: InputDecoration(
-          hintText: labelText,
-          border: OutlineInputBorder(),
+Widget buildSizedBoxColumn(String labelText, TextEditingController controller,
+    List<TextInputFormatter>? inputFormatters) {
+  return SizedBox(
+    width: 100,
+    child: Column(
+      children: [
+        Text(labelText),
+        TextField(
+          enabled: true,
+          decoration: InputDecoration(
+            hintText: labelText,
+            border: OutlineInputBorder(),
+          ),
+          controller: controller,
+          inputFormatters: inputFormatters,
+          textAlign: TextAlign.center,
         ),
-        controller: controller,
-        inputFormatters: [inputFormatter],
-        textAlign: TextAlign.center,
-      ),
-    ],
+      ],
+    ),
+  );
+}
+
+Widget buildFlexibleColumn(String labelText, TextEditingController controller,
+    List<TextInputFormatter>? inputFormatters) {
+  return Flexible(
+    child: Column(
+      children: [
+        Text(labelText),
+        TextField(
+          enabled: true,
+          decoration: InputDecoration(
+            hintText: labelText,
+            border: OutlineInputBorder(),
+          ),
+          controller: controller,
+          inputFormatters: inputFormatters,
+          textAlign: TextAlign.center,
+        ),
+      ],
+    ),
   );
 }
