@@ -2,7 +2,10 @@ import 'package:cachapuz_2/pages/calibration.dart';
 import 'package:cachapuz_2/pages/file.dart';
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../api.dart';
+import '../controlers/time.dart';
 import 'about_page.dart';
 import 'calibration_ensaios.dart';
 import 'ensaios/ensaio_pesagem.dart';
@@ -37,7 +40,7 @@ class HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Scale Calibration'),
+        title: const Text('Calibração de Balanças'),
         centerTitle: true,
         backgroundColor: Colors.redAccent.shade700,
         leading: IconButton(
@@ -168,7 +171,7 @@ class NavDrawer extends StatelessWidget {
                 ),
                 title: Opacity(
                   opacity: showIconsOnly ? 0.0 : 1.0,
-                  child: const Text('Calibration'),
+                  child: const Text('Calibração'),
                 ),
                 onTap: () => pageController.jumpToPage(0),
               ),
@@ -183,7 +186,7 @@ class NavDrawer extends StatelessWidget {
               ),
               title: Opacity(
                 opacity: showIconsOnly ? 0.0 : 1.0,
-                child: const Text('Files'),
+                child: const Text('Arquivos'),
               ),
               onTap: () => pageController.jumpToPage(2),
             ),
@@ -197,7 +200,7 @@ class NavDrawer extends StatelessWidget {
               ),
               title: Opacity(
                 opacity: showIconsOnly ? 0.0 : 1.0,
-                child: const Text('About'),
+                child: const Text('Info'),
               ),
               onTap: () => pageController.jumpToPage(3),
             ),
@@ -218,15 +221,19 @@ class NavDrawer extends StatelessWidget {
                 builder: (BuildContext context) {
                   return AlertDialog(
                     title: const Text("Logout"),
-                    content: const Text("Are you sure you want to logout?"),
+                    content: const Text("Deseja realmente fazer o logout?"),
                     actions: <Widget>[
                       TextButton(
-                        child: const Text("Cancel"),
+                        child: const Text("Cancelar"),
                         onPressed: () => Navigator.of(context).pop(),
                       ),
                       TextButton(
-                        child: const Text("Confirm"),
+                        child: const Text("Confirmar"),
                         onPressed: () async {
+                          Provider.of<TimerManager>(context, listen: false)
+                              .stopTimer();
+                          Provider.of<TimerManager>(context, listen: false)
+                              .setLoggedInStatus(false);
                           await logout(context);
                         },
                       ),

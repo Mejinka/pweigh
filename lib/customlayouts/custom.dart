@@ -28,7 +28,7 @@ Widget buildAddressRow(String labelText, TextEditingController controller,
     List<TextInputFormatter>? inputFormatters) {
   return Flexible(
     child: SizedBox(
-      width: 300,
+      width: 200,
       child: Column(
         children: [
           Text(labelText),
@@ -54,6 +54,7 @@ Widget customTextField({
   Function(String)? onChanged,
 }) {
   return Column(
+    mainAxisAlignment: MainAxisAlignment.center,
     children: [
       Text(labelText, textAlign: TextAlign.center),
       TextField(
@@ -124,45 +125,6 @@ Widget buildTextField(String labelText, TextEditingController controller,
   );
 }
 
-Widget buildDropdownButton(
-  String labelText,
-  String dropdownValue,
-  List<String> items,
-  ValueChanged<String?> onChanged,
-) {
-  return SizedBox(
-    width: 100,
-    child: Column(
-      children: [
-        Text(labelText),
-        Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8.0),
-            border: Border.all(
-              color: Colors.grey.withOpacity(0.5),
-              width: 1.0,
-            ),
-          ),
-          child: DropdownButton<String>(
-            value: dropdownValue,
-            onChanged: onChanged,
-            items: items.map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(
-                value: value,
-                child: Text(value),
-              );
-            }).toList(),
-            dropdownColor: Colors.white,
-            elevation: 2,
-            underline: Container(),
-            focusColor: Colors.transparent,
-          ),
-        ),
-      ],
-    ),
-  );
-}
-
 Widget buildTextField2(String labelText, TextEditingController controller,
     List<TextInputFormatter> formatters) {
   return SizedBox(
@@ -206,23 +168,98 @@ Widget buildSizedBoxColumn(String labelText, TextEditingController controller,
   );
 }
 
-Widget buildFlexibleColumn(String labelText, TextEditingController controller,
-    List<TextInputFormatter>? inputFormatters) {
-  return Flexible(
-    child: Column(
-      children: [
-        Text(labelText),
-        TextField(
+Widget customTextField1(String labelText, TextEditingController controller) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.center,
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Text(labelText),
+      Divider(height: 10),
+      SizedBox(
+        width: 100,
+        child: TextField(
           enabled: true,
-          decoration: InputDecoration(
-            hintText: labelText,
+          decoration: const InputDecoration(
+            hintText: "",
             border: OutlineInputBorder(),
           ),
           controller: controller,
-          inputFormatters: inputFormatters,
           textAlign: TextAlign.center,
         ),
-      ],
+      ),
+      Divider(height: 5),
+    ],
+  );
+}
+
+Widget customTextField2(String labelText, TextEditingController controller) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.center,
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Text(
+        labelText,
+        textAlign: TextAlign.center,
+      ),
+      SizedBox(
+        width: 50,
+        child: TextField(
+          enabled: true,
+          decoration: const InputDecoration(
+            hintText: "",
+            border: OutlineInputBorder(),
+          ),
+          controller: controller,
+          textAlign: TextAlign.center,
+        ),
+      ),
+      Divider(height: 5),
+    ],
+  );
+}
+
+Widget ensaioPrevioTextField(
+    String labelText, TextEditingController controller) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.center,
+    mainAxisAlignment: MainAxisAlignment.start,
+    children: [
+      SizedBox(
+        width: 50,
+        child: TextField(
+          enabled: true,
+          decoration: const InputDecoration(
+            hintText: "s",
+            border: OutlineInputBorder(),
+          ),
+          controller: controller,
+          textAlign: TextAlign.center,
+        ),
+      ),
+      Divider(height: 5),
+    ],
+  );
+}
+
+Widget ajustesCheckBox(String labelText, TextEditingController controller,
+    List<TextInputFormatter>? inputFormatters) {
+  return Flexible(
+    child: SizedBox(
+      width: 2,
+      child: Column(
+        children: [
+          Text(labelText),
+          TextField(
+            decoration: InputDecoration(
+              hintText: labelText,
+              border: OutlineInputBorder(),
+            ),
+            controller: controller,
+            inputFormatters: inputFormatters,
+            textAlign: TextAlign.center,
+          ),
+        ],
+      ),
     ),
   );
 }

@@ -1,82 +1,23 @@
-// ignore_for_file: use_build_context_synchronously
+// ignore_for_file: use_build_context_synchronously, avoid_print
 
 import 'dart:convert';
 
 import 'package:cachapuz_2/pages/home.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:window_manager/window_manager.dart';
-import 'package:http/http.dart' as http;
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/foundation.dart';
+import 'package:http/http.dart' as http;
 
-Future<bool> loginUser(String user, String password) async {
-  final response = await http.post(
-    Uri.parse('http://localhost:5000/login'),
-    body: {'user': user, 'password': password},
-  );
-
-  final jsonResponse = jsonDecode(response.body);
-  return jsonResponse['success'];
-}
-
-Future<Map<String, String>> getUserDetails(String user) async {
-  final response = await http.post(
-    Uri.parse('http://localhost:5000/get_user_details'),
-    body: {'user': user},
-  );
-
-  final jsonResponse = jsonDecode(response.body);
-  if (jsonResponse['success']) {
-    return {
-      'first_name': jsonResponse['first_name'],
-      'last_name': jsonResponse['last_name'],
-    };
-  } else {
-    return {'first_name': '', 'last_name': ''};
-  }
-}
+import '../../api.dart';
+import '../../controlers/tracker.dart';
+import '../../controlers/time.dart';
 
 class Initial extends StatefulWidget {
   const Initial({super.key});
 
   @override
   State<Initial> createState() => _InitialState();
-}
-
-Future<void> setLoggedIn(bool isLoggedIn,
-    {String? user, String? firstName, String? lastName}) async {
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  await prefs.setBool('loggedIn', isLoggedIn);
-
-  if (user != null) {
-    await prefs.setString('user', user);
-  }
-  if (firstName != null) {
-    await prefs.setString('first_name', firstName);
-  }
-  if (lastName != null) {
-    await prefs.setString('last_name', lastName);
-  }
-}
-
-Future<String?> getFirstName() async {
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  return prefs.getString('first_name');
-}
-
-Future<String?> getLastName() async {
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  return prefs.getString('last_name');
-}
-
-Future<bool> isLoggedIn() async {
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  return prefs.getBool('loggedIn') ?? false;
-}
-
-Future<String?> getUsername() async {
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  return prefs.getString('username');
 }
 
 class _InitialState extends State<Initial> {
@@ -114,30 +55,30 @@ class _InitialState extends State<Initial> {
           children: [
             Flexible(
               fit: FlexFit.loose,
-              child: Image.asset(
-                'assets/images/logo2.png',
-                width: MediaQuery.of(context).size.width * 0.1,
-              ),
+              child: Image.asset('assets/images/logo2.png', width: 100),
             ),
             const Divider(
               height: 20,
               color: Colors.transparent,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Flexible(
                   flex: 1,
                   child: Container(),
                 ),
                 Flexible(
-                  flex: 1,
-                  child: TextField(
-                    decoration: const InputDecoration(
-                      hintText: "Utilizador",
-                      border: OutlineInputBorder(),
+                  child: SizedBox(
+                    width: 250,
+                    child: TextField(
+                      decoration: const InputDecoration(
+                        hintText: "Utilizador",
+                        border: OutlineInputBorder(),
+                      ),
+                      controller: _user,
+                      textAlign: TextAlign.center,
                     ),
-                    controller: _user,
-                    textAlign: TextAlign.center,
                   ),
                 ),
                 const Spacer(),
@@ -148,22 +89,25 @@ class _InitialState extends State<Initial> {
               color: Colors.transparent,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Flexible(
                   flex: 1,
                   child: Container(),
                 ),
                 Flexible(
-                  flex: 1,
-                  child: TextField(
-                    controller: _password,
-                    decoration: const InputDecoration(
-                      hintText: 'Palavra-Passe',
-                      border: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.red)),
+                  child: SizedBox(
+                    width: 250,
+                    child: TextField(
+                      controller: _password,
+                      decoration: const InputDecoration(
+                        hintText: 'Palavra-Passe',
+                        border: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.red)),
+                      ),
+                      obscureText: true,
+                      textAlign: TextAlign.center,
                     ),
-                    obscureText: true,
-                    textAlign: TextAlign.center,
                   ),
                 ),
                 const Spacer(),
@@ -173,10 +117,10 @@ class _InitialState extends State<Initial> {
               height: 5,
               color: Colors.transparent,
             ),
-            Row(
+            const Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const [],
+              children: [],
             ),
             const Divider(
               height: 10,
@@ -190,24 +134,47 @@ class _InitialState extends State<Initial> {
                   backgroundColor: MaterialStatePropertyAll(Colors.red),
                 ),
                 onPressed: () async {
-                  final success = await loginUser(_user.text, _password.text);
+                  final result = await loginUser(_user.text, _password.text);
+                  final success = result['success'];
+                  final user = result['user'];
                   if (success) {
-                    final userDetails = await getUserDetails(_user.text);
+                    // Coletar as informações do cliente
+                    final clientInfo = await getClientInfo();
+                    clientInfo['user'] = user;
+                    final response = await http.post(
+                      Uri.parse('http://127.0.0.1:5000/save_info'),
+                      headers: {'Content-Type': 'application/json'},
+                      body: jsonEncode(clientInfo),
+                    );
+
+                    if (response.statusCode == 200) {
+                      print('Info saved successfully');
+                    } else {
+                      print('Error saving info: ${response.statusCode}');
+                    }
+
+                    Provider.of<TimerManager>(context, listen: false)
+                        .startTimer();
+
+                    final userDetails = await getUserDetails(user);
+                    print('User Details: $userDetails');
                     final firstName = userDetails['first_name'];
                     final lastName = userDetails['last_name'];
+
                     await setLoggedIn(true,
-                        user: _user.text,
-                        firstName: firstName,
-                        lastName: lastName);
-                    print('Usuário logado: ${_user.text}');
-                    checkLoginStatus(context);
+                        user: user, firstName: firstName, lastName: lastName);
+                    print('Usuário logado: $user');
                     if (!kIsWeb) {
                       WindowManager.instance.maximize();
                     }
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => HomePage(username: _user.text),
+                        builder: (context) => HomePage(
+                          username: user,
+                          firstName: firstName,
+                          lastName: lastName,
+                        ),
                       ),
                     );
                   } else {

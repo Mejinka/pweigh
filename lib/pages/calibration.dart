@@ -1,7 +1,11 @@
+import 'package:cachapuz_2/pages/first_page_extends/carac_instrument.dart';
+import 'package:cachapuz_2/pages/first_page_extends/ambiental_conditions.dart';
+import 'package:cachapuz_2/pages/first_page_extends/balanca.dart';
+
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../controlers/controladores.dart';
-import 'package:flutter/foundation.dart';
 
 import '../customlayouts/custom.dart';
 
@@ -14,10 +18,12 @@ class Calibration extends StatefulWidget {
 }
 
 class _CalibrationState extends State<Calibration> {
-  final Controllers _controladores = Controllers();
+  late Controllers _controladores;
 
   @override
   Widget build(BuildContext context) {
+    _controladores = Provider.of<Controllers>(context);
+
     return Scaffold(
       body: body(),
     );
@@ -36,7 +42,7 @@ class _CalibrationState extends State<Calibration> {
                   width: 300,
                   child: customTextField(
                     labelText: "Registro De Calibração",
-                    controller: _controladores.user,
+                    controller: _controladores.regCali,
                     onChanged: (value) {
                       setState(() {
                         _controladores.certificado.text = generateCertificado();
@@ -283,195 +289,33 @@ class _CalibrationState extends State<Calibration> {
           const Divider(height: 1),
 
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Column(
-                children: [
-                  const Divider(height: 20),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Container(
-                        width: 20,
-                      ),
-                      const Text(
-                        'Caracteristicas do Instrumento',
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    ],
-                  ),
-                  const Divider(
-                    height: 20,
-                  ),
-                  IntrinsicWidth(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Container(width: 20),
-                        const Divider(height: 150),
-                        Column(
-                          children: [
-                            buildTextField('Max:', _controladores.cimax,
-                                [_controladores.cimaxF]),
-                            SizedBox(width: 100),
-                            buildTextField(
-                                'd:', _controladores.d, [_controladores.dF]),
-                          ],
-                        ),
-                        Container(width: 100),
-                        Column(
-                          children: [
-                            buildDropdownButton('Unidade:', dropdownValue, [
-                              'kg',
-                              'g',
-                              'mg',
-                              'mN',
-                              'cN',
-                              'N',
-                              'daN',
-                              'kn',
-                              'lbf',
-                              'oZ',
-                              'glm2'
-                            ], (String? newValue) {
-                              setState(() {
-                                dropdownValue = newValue!;
-                              });
-                            }),
-                            SizedBox(width: 100),
-                            buildTextField2(
-                                'dT:', _controladores.dT, [_controladores.dTF]),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+              Expanded(
+                child: Consumer<Controllers>(
+                  builder: (context, controllers, child) {
+                    return SizedBox(child: Teste1());
+                  },
+                ),
               ),
-              Container(width: 15),
-              Container(
-                height: 100,
-                width: 1.0,
-                color: Colors.grey.withOpacity(0.5),
+              Expanded(
+                child: Consumer<Controllers>(
+                  builder: (context, controllers, child) {
+                    return SizedBox(child: Teste3());
+                  },
+                ),
               ),
-              Column(
-                children: [
-                  const Divider(height: 20),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Container(
-                        width: 20,
-                      ),
-                      const Text(
-                        'Balança com aprovação de modelo?',
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    ],
-                  ),
-                  const Divider(
-                    height: 20,
-                  ),
-                  Row(mainAxisAlignment: MainAxisAlignment.start, children: [
-                    Container(width: 20),
-                    const Divider(height: 150),
-                    SizedBox(
-                      child: Row(
-                        children: [
-                          const Text("Não"),
-                          Switch(
-                            value: _switchbalanca,
-                            onChanged: (bool newValue) {
-                              setState(() {
-                                _switchbalanca = newValue;
-                              });
-                            },
-                          ),
-                          const Text("Sim"),
-                        ],
-                      ),
-                    ),
-                  ]),
-                ],
-              ),
-              Container(width: 15),
-              Container(
-                height: 100,
-                width: 1.0,
-                color: Colors.grey.withOpacity(0.5),
-              ),
-              Column(
-                children: [
-                  const Divider(height: 20),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Container(
-                        width: 20,
-                      ),
-                      const Text(
-                        'Caracteristicas do Instrumento',
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    ],
-                  ),
-                  const Divider(
-                    height: 20,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(width: 20),
-                      Column(
-                        children: const [
-                          Text('Temperatura [ ºC ]:'),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          buildSizedBoxColumn(
-                            'Inicial:',
-                            _controladores.tempInit,
-                            [_controladores.tempInitF],
-                          ),
-                          Container(width: 100),
-                          buildSizedBoxColumn(
-                            'Final:',
-                            _controladores.tempFinal,
-                            [_controladores.tempFinalF],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(width: 80),
-                      const Text('HR [ % ]:'),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          buildSizedBoxColumn(
-                            'Inicial:',
-                            _controladores.objeto,
-                            [_controladores.tempInitF],
-                          ),
-                          Container(width: 100),
-                          buildSizedBoxColumn(
-                            'Final:',
-                            _controladores.marca,
-                            [_controladores.tempFinalF],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
+              Expanded(
+                child: Consumer<Controllers>(
+                  builder: (context, controllers, child) {
+                    return SizedBox(child: Teste2());
+                  },
+                ),
               ),
             ],
           ),
+
           const Divider(
             height: 40,
             color: Colors.transparent,
@@ -480,34 +324,38 @@ class _CalibrationState extends State<Calibration> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(
-                width: 100,
-                height: 50,
-                child: ElevatedButton(
-                  child: const Text('Limpar'),
-                  onPressed: () {
-                    clearAllFields(_controladores);
+              Flexible(
+                child: SizedBox(
+                  width: 100,
+                  height: 50,
+                  child: ElevatedButton(
+                    child: const Text('Limpar'),
+                    onPressed: () {
+                      _controladores.clearAllFields();
 
-                    setState(() {
-                      _showExtraWidget = false;
-                      _showExtraWidget1 = false;
-                      _isSwitchOn = false;
-                      _switchbalanca = false;
-                    });
-                  },
+                      setState(() {
+                        _showExtraWidget = false;
+                        _showExtraWidget1 = false;
+                        _isSwitchOn = false;
+                        switchbalanca = false;
+                      });
+                    },
+                  ),
                 ),
               ),
               Container(width: 10),
-              SizedBox(
-                width: 100,
-                height: 50,
-                child: ElevatedButton(
-                  child: const Text('Próximo'),
-                  onPressed: () {
-                    widget.pageController.animateToPage(1,
-                        duration: const Duration(milliseconds: 400),
-                        curve: Curves.easeInOut);
-                  },
+              Flexible(
+                child: SizedBox(
+                  width: 100,
+                  height: 50,
+                  child: ElevatedButton(
+                    child: const Text('Próximo'),
+                    onPressed: () {
+                      widget.pageController.animateToPage(1,
+                          duration: const Duration(milliseconds: 400),
+                          curve: Curves.easeInOut);
+                    },
+                  ),
                 ),
               ),
               const Divider(
@@ -524,13 +372,12 @@ class _CalibrationState extends State<Calibration> {
   bool _showExtraWidget = false;
   bool _showExtraWidget1 = false;
   bool _isSwitchOn = false;
-  bool _switchbalanca = false;
 
   String dropdownValue = 'kg'; // valor padrão
 
   String generateCertificado() {
-    String user = _controladores.user.text;
+    String regCali = _controladores.regCali.text;
     String year = _controladores.year.text.replaceAll('/', '');
-    return '$year-$user';
+    return '$year-$regCali      ';
   }
 }

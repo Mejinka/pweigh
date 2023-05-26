@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:window_manager/window_manager.dart';
@@ -18,7 +17,7 @@ class SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      const Duration(seconds: 2),
+      const Duration(seconds: 5),
       () {
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(
@@ -32,7 +31,7 @@ class SplashScreenState extends State<SplashScreen> {
       windowManager.ensureInitialized();
 
       WindowOptions windowOptions = const WindowOptions(
-        size: Size(800, 600),
+        size: Size(1000, 600),
         center: true,
         backgroundColor: Colors.transparent,
         skipTaskbar: false,
@@ -48,14 +47,23 @@ class SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-        Center(
-          child: SizedBox(
-            child: Image.asset(
-              'assets/images/logo2.png',
-              width: MediaQuery.of(context).size.width * 0.3,
-            ),
-          ),
+      body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        Flexible(
+          fit: FlexFit.loose,
+          child: Image.asset('assets/images/logo2.png', width: 100),
+        ),
+        const Divider(
+          color: Colors.transparent,
+          height: 10,
+        ),
+        const Center(
+            child: SizedBox(
+          child: Text('Por favor, use sempre com ecrã completo!!!',
+              style: TextStyle(fontSize: 20)),
+        )),
+        const Divider(
+          color: Colors.transparent,
+          height: 30,
         ),
         const CircularProgressIndicator(
           color: Colors.red,

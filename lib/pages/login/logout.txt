@@ -499,3 +499,259 @@ Row(
                   ),
                 ],
               ),
+
+
+
+
+
+
+
+PARTE DAS Caracteristicas
+
+
+Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Column(
+                children: [
+                  const Divider(height: 20),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Container(
+                        width: 20,
+                      ),
+                      const Text(
+                        'Caracteristicas do Instrumento',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                  const Divider(
+                    height: 20,
+                  ),
+                  IntrinsicWidth(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Container(width: 20),
+                        const Divider(height: 150),
+                        Column(
+                          children: [
+                            buildTextField('Max:', _controladores.cimax,
+                                [_controladores.cimaxF]),
+                            SizedBox(width: 100),
+                            buildTextField(
+                                'd:', _controladores.d, [_controladores.dF]),
+                          ],
+                        ),
+                        Container(width: 100),
+                        Column(
+                          children: [
+                            buildDropdownButton('Unidade:', dropdownValue, [
+                              'kg',
+                              'g',
+                              'mg',
+                              'mN',
+                              'cN',
+                              'N',
+                              'daN',
+                              'kn',
+                              'lbf',
+                              'oZ',
+                              'glm2'
+                            ], (String? newValue) {
+                              setState(() {
+                                dropdownValue = newValue!;
+                              });
+                            },
+                            ),
+                            SizedBox(width: 100),
+                            buildTextField2(
+                                'dT:', _controladores.dT, [_controladores.dTF]),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              Container(width: 15),
+              Container(
+                height: 100,
+                width: 1.0,
+                color: Colors.grey.withOpacity(0.5),
+              ),
+              Column(
+                children: [
+                  const Divider(height: 20),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Container(
+                        width: 20,
+                      ),
+                      const Text(
+                        'Balança com aprovação de modelo?',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                  const Divider(
+                    height: 20,
+                  ),
+                  Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+                    Container(width: 20),
+                    const Divider(height: 150),
+                    SizedBox(
+                      child: Row(
+                        children: [
+                          const Text("Não"),
+                          Switch(
+                            value: _switchbalanca,
+                            onChanged: (bool newValue) {
+                              setState(() {
+                                _switchbalanca = newValue;
+                              });
+                            },
+                          ),
+                          const Text("Sim"),
+                        ],
+                      ),
+                    ),
+                  ]),
+                ],
+              ),
+              Container(width: 15),
+              Container(
+                height: 100,
+                width: 1.0,
+                color: Colors.grey.withOpacity(0.5),
+              ),
+              Column(
+                children: [
+                  const Divider(height: 20),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Container(
+                        width: 20,
+                      ),
+                      const Text(
+                        'Caracteristicas do Instrumento',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                  const Divider(
+                    height: 20,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(width: 20),
+                      Column(
+                        children: const [
+                          Text('Temperatura [ ºC ]:'),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          buildSizedBoxColumn(
+                            'Inicial:',
+                            _controladores.tempInit,
+                            [_controladores.tempInitF],
+                          ),
+                          Container(width: 100),
+                          buildSizedBoxColumn(
+                            'Final:',
+                            _controladores.tempFinal,
+                            [_controladores.tempFinalF],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(width: 80),
+                      const Text('HR [ % ]:'),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          buildSizedBoxColumn(
+                            'Inicial:',
+                            _controladores.objeto,
+                            [_controladores.tempInitF],
+                          ),
+                          Container(width: 100),
+                          buildSizedBoxColumn(
+                            'Final:',
+                            _controladores.marca,
+                            [_controladores.tempFinalF],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
+
+
+
+
+
+
+
+
+
+
+
+
+          Column(
+                        children: [
+                          Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.0),
+                                border: Border.all(
+                                  color: Colors.grey.withOpacity(0.5),
+                                  width: 1.0,
+                                ),
+                              ),
+                              child: DropdownButton<String>(
+                                dropdownColor: Colors.white,
+                                elevation: 2,
+                                underline: Container(),
+                                focusColor: Colors.transparent,
+                                value: dropdownValue,
+                                onChanged: (String? newValue) {
+                                  setState(() {
+                                    dropdownValue = newValue!;
+                                  });
+                                },
+                                items: <String>[
+                                  'kg',
+                                  'g',
+                                  'mg',
+                                  'mN',
+                                  'cN',
+                                  'N',
+                                  'daN',
+                                  'kn',
+                                  'lbf',
+                                  'oZ',
+                                  'glm2'
+                                ].map<DropdownMenuItem<String>>((String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Text(value),
+                                  );
+                                }).toList(),
+                              )),
+                          SizedBox(width: 100),
+                        ],
+                      ),

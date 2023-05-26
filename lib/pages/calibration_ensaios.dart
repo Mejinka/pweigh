@@ -1,7 +1,7 @@
-import 'package:cachapuz_2/pages/ensaios/ensaio_pesagem.dart';
+import '../off/off_ensaios_previo.dart';
+import 'ensaios/ensaio_pesagem.dart';
 import 'package:flutter/material.dart';
 
-import '../controlers/controladores.dart';
 import 'ensaios/ensaio_excen.dart';
 import 'ensaios/ensaios_previo.dart';
 
