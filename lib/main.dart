@@ -17,6 +17,9 @@ void main(List<String> args) {
         ChangeNotifierProvider<Controllers>(
           create: (context) => Controllers(),
         ),
+        ChangeNotifierProvider<ControllersEnsarioPrevio>(
+          create: (context) => ControllersEnsarioPrevio(),
+        ),
       ],
       child: MyApp(),
     ),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:intl/intl.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
-import 'package:provider/provider.dart';
 
 import '../pages/first_page_extends/balanca.dart';
 
@@ -98,6 +97,28 @@ class Controllers with ChangeNotifier {
 
   void updateCimax(String value) {
     cimax.text = value;
+    notifyListeners();
+  }
+}
+
+class ControllersEnsarioPrevio with ChangeNotifier {
+  final TextEditingController pontosCali = TextEditingController();
+  final TextEditingController pontosCali2 = TextEditingController();
+
+  final TextEditingController indicaBalanca = TextEditingController();
+  final TextEditingController indicaBalanca2 = TextEditingController();
+
+  final TextEditingController cargaAjuste = TextEditingController();
+  final TextEditingController ref = TextEditingController();
+
+  void clearAllFieldsEP() {
+    pontosCali.clear();
+    pontosCali2.clear();
+    indicaBalanca.clear();
+    indicaBalanca2.clear();
+    cargaAjuste.clear();
+    ref.clear();
+    switchbalanca;
     notifyListeners();
   }
 }

@@ -51,7 +51,7 @@ class _CalibrationState extends State<Calibration> {
                   ),
                 ),
               ),
-              Flexible(child: SizedBox(width: 150)),
+              const Flexible(child: SizedBox(width: 150)),
               Flexible(
                 child: SizedBox(
                   width: 300,
@@ -62,7 +62,7 @@ class _CalibrationState extends State<Calibration> {
                   ),
                 ),
               ),
-              Flexible(child: SizedBox(width: 150)),
+              const Flexible(child: SizedBox(width: 150)),
               Flexible(
                 child: SizedBox(
                   width: 300,
@@ -96,7 +96,7 @@ class _CalibrationState extends State<Calibration> {
                   ),
                 ),
               ),
-              Flexible(child: SizedBox(width: 150)),
+              const Flexible(child: SizedBox(width: 150)),
               Flexible(
                 child: SizedBox(
                   width: 300,
@@ -107,7 +107,7 @@ class _CalibrationState extends State<Calibration> {
                   ),
                 ),
               ),
-              Flexible(child: SizedBox(width: 150)),
+              const Flexible(child: SizedBox(width: 150)),
               Flexible(
                 child: SizedBox(
                   width: 300,
@@ -147,7 +147,7 @@ class _CalibrationState extends State<Calibration> {
                   ),
                 ),
               ),
-              Flexible(child: SizedBox(width: 150)),
+              const Flexible(child: SizedBox(width: 150)),
               Flexible(
                 child: SizedBox(
                   width: 300,
@@ -158,7 +158,7 @@ class _CalibrationState extends State<Calibration> {
                   ),
                 ),
               ),
-              Flexible(child: SizedBox(width: 150)),
+              const Flexible(child: SizedBox(width: 150)),
               Flexible(
                 child: SizedBox(
                   width: 300,
@@ -189,7 +189,7 @@ class _CalibrationState extends State<Calibration> {
                   ),
                 ),
               ),
-              Flexible(child: SizedBox(width: 150)),
+              const Flexible(child: SizedBox(width: 150)),
               Flexible(
                 child: SizedBox(
                   width: 300,
@@ -295,21 +295,21 @@ class _CalibrationState extends State<Calibration> {
               Expanded(
                 child: Consumer<Controllers>(
                   builder: (context, controllers, child) {
-                    return SizedBox(child: Teste1());
+                    return const SizedBox(child: Teste1());
                   },
                 ),
               ),
               Expanded(
                 child: Consumer<Controllers>(
                   builder: (context, controllers, child) {
-                    return SizedBox(child: Teste3());
+                    return const SizedBox(child: Teste3());
                   },
                 ),
               ),
               Expanded(
                 child: Consumer<Controllers>(
                   builder: (context, controllers, child) {
-                    return SizedBox(child: Teste2());
+                    return const SizedBox(child: Teste2());
                   },
                 ),
               ),
@@ -329,6 +329,12 @@ class _CalibrationState extends State<Calibration> {
                   width: 100,
                   height: 50,
                   child: ElevatedButton(
+                    style: ButtonStyle(
+                      overlayColor:
+                          MaterialStatePropertyAll(Colors.red.shade600),
+                      backgroundColor:
+                          const MaterialStatePropertyAll(Colors.red),
+                    ),
                     child: const Text('Limpar'),
                     onPressed: () {
                       _controladores.clearAllFields();
@@ -349,6 +355,12 @@ class _CalibrationState extends State<Calibration> {
                   width: 100,
                   height: 50,
                   child: ElevatedButton(
+                    style: ButtonStyle(
+                      overlayColor:
+                          MaterialStatePropertyAll(Colors.red.shade600),
+                      backgroundColor:
+                          const MaterialStatePropertyAll(Colors.red),
+                    ),
                     child: const Text('Próximo'),
                     onPressed: () {
                       widget.pageController.animateToPage(1,

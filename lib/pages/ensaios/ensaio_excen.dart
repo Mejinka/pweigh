@@ -12,12 +12,61 @@ class EnsaioExcentrico extends StatefulWidget {
 
 class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
   final Controllers _controladores = Controllers();
+  final TextEditingController _pontosApoioController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    _pontosApoioController.addListener(_updateCampos);
+  }
+
+  @override
+  void dispose() {
+    _pontosApoioController.dispose();
+    super.dispose();
+  }
+
+  void _updateCampos() {
+    setState(() {});
+  }
+
+  List<Widget> _gerarCampos(int quantidade) {
+    List<Widget> lista = [];
+    int limit = 11;
+    if (quantidade > limit) {
+      quantidade = limit;
+    }
+    for (int i = 1; i <= quantidade; i++) {
+      lista.add(
+        Column(
+          children: [
+            customTextField2('$i', _controladores.regCali),
+            customTextField2('', _controladores.regCali),
+          ],
+        ),
+      );
+      if (i < quantidade) {
+        lista.add(SizedBox(
+            width: 20)); // Add some space between each point of support
+      }
+    }
+    return lista;
+  }
+
   @override
   Widget build(BuildContext context) {
+    int numPontosApoio;
+    try {
+      numPontosApoio = int.parse(_pontosApoioController.text);
+    } catch (e) {
+      numPontosApoio = 0;
+    }
+    List<Widget> campos = _gerarCampos(numPontosApoio);
+
     return Column(
       children: [
-        Row(
-          children: const [
+        const Row(
+          children: [
             Text(
               " Ensaio Excentricidade",
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.w400),
@@ -37,141 +86,47 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
               child: Column(
                 children: [
                   customTextField1(
-                      'N.º Pontos de Apoio:', _controladores.regCali),
+                      'N.º Pontos de Apoio:', _pontosApoioController),
                   customTextField1(
                       'Carga utilizada (Lexc):', _controladores.regCali),
                 ],
               ),
             ),
-            Container(width: 20),
-            Expanded(
-              flex: 1,
-              child: Column(
-                children: [
-                  customTextField2('1', _controladores.regCali),
-                  customTextField2('', _controladores.regCali),
-                ],
-              ),
-            ),
-            Container(width: 5),
-            Expanded(
-              flex: 1,
-              child: Column(
-                children: [
-                  customTextField2('2', _controladores.regCali),
-                  customTextField2('', _controladores.regCali),
-                ],
-              ),
-            ),
-            Container(width: 5),
-            Expanded(
-              flex: 1,
-              child: Column(
-                children: [
-                  customTextField2('3', _controladores.regCali),
-                  customTextField2('', _controladores.regCali),
-                ],
-              ),
-            ),
-            Container(width: 5),
-            Expanded(
-              flex: 1,
-              child: Column(
-                children: [
-                  customTextField2('4', _controladores.regCali),
-                  customTextField2('', _controladores.regCali),
-                ],
-              ),
-            ),
-            Container(width: 5),
-            Expanded(
-              flex: 1,
-              child: Column(
-                children: [
-                  customTextField2('5', _controladores.regCali),
-                  customTextField2('', _controladores.regCali),
-                ],
-              ),
-            ),
-            Container(width: 5),
-            Expanded(
-              flex: 1,
-              child: Column(
-                children: [
-                  customTextField2('6', _controladores.regCali),
-                  customTextField2('', _controladores.regCali),
-                ],
-              ),
-            ),
-            Container(width: 5),
-            Expanded(
-              flex: 1,
-              child: Column(
-                children: [
-                  customTextField2('7', _controladores.regCali),
-                  customTextField2('', _controladores.regCali),
-                ],
-              ),
-            ),
-            Container(width: 5),
-            Expanded(
-              flex: 1,
-              child: Column(
-                children: [
-                  customTextField2('8', _controladores.regCali),
-                  customTextField2('', _controladores.regCali),
-                ],
-              ),
-            ),
-            Container(width: 5),
-            Expanded(
-              flex: 1,
-              child: Column(
-                children: [
-                  customTextField2('9', _controladores.regCali),
-                  customTextField2('', _controladores.regCali),
-                ],
-              ),
-            ),
-            Container(width: 5),
-            Expanded(
-              flex: 1,
-              child: Column(
-                children: [
-                  customTextField2('10', _controladores.regCali),
-                  customTextField2('', _controladores.regCali),
-                ],
-              ),
-            ),
-            Container(width: 5),
-            Expanded(
-              flex: 1,
-              child: Column(
-                children: [
-                  customTextField2('11', _controladores.regCali),
-                  customTextField2('', _controladores.regCali),
-                ],
-              ),
-            ),
-            Column(
-              children: [
-                const Text('Erro de '),
-                const Text('Excentricidade'),
-                const Text('máx. |∆Iexc,i|max:'),
-                const Divider(height: 10),
-                SizedBox(
-                  width: 50,
-                  child: TextField(
-                    enabled: true,
-                    decoration: const InputDecoration(
-                      hintText: "",
-                      border: OutlineInputBorder(),
+            numPontosApoio == 0
+                ? const Text(
+                    "Insira o numero de pontos de apoio.",
+                    style: TextStyle(fontSize: 20),
+                  )
+                : Expanded(
+                    flex: 1,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: campos,
                     ),
-                    controller: _controladores.regCali,
-                    textAlign: TextAlign.center,
                   ),
-                ),
-              ],
+            Expanded(
+              flex: 0,
+              child: Column(
+                children: [
+                  const Text('Erro de '),
+                  const Text('Excentricidade'),
+                  const Text('máx. |∆Iexc,i|max:'),
+                  const Divider(height: 10),
+                  SizedBox(
+                    width: 50,
+                    child: TextField(
+                      enabled: true,
+                      decoration: const InputDecoration(
+                        hintText: "",
+                        border: OutlineInputBorder(),
+                      ),
+                      controller: _controladores.regCali,
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),

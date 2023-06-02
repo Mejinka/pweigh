@@ -10,12 +10,14 @@ class EnsaioPrevio extends StatefulWidget {
   State<EnsaioPrevio> createState() => _EnsaioPrevioState();
 }
 
-bool _switchbalanca = false;
+bool checkboxAjuste = false;
 
 class _EnsaioPrevioState extends State<EnsaioPrevio> {
   @override
   Widget build(BuildContext context) {
     Controllers controladores = Provider.of<Controllers>(context);
+    ControllersEnsarioPrevio controladoresExcen =
+        Provider.of<ControllersEnsarioPrevio>(context);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,49 +31,6 @@ class _EnsaioPrevioState extends State<EnsaioPrevio> {
           height: 10,
           color: Colors.transparent,
         ),
-        const Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Expanded(
-              child: Text(
-                'Pontos de Calibração',
-                textAlign: TextAlign.center,
-              ),
-            ),
-            Expanded(
-              child: Text(
-                'Peso(s) Padrão (mc)',
-                textAlign: TextAlign.center,
-              ),
-            ),
-            Expanded(
-              child: Text(
-                'Indicação na Balança',
-                textAlign: TextAlign.center,
-              ),
-            ),
-            Expanded(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Erro',
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-            ),
-            Expanded(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text('Ajuste?'),
-                ],
-              ),
-            ),
-          ],
-        ),
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -80,6 +39,15 @@ class _EnsaioPrevioState extends State<EnsaioPrevio> {
             Expanded(
               child: Column(
                 children: [
+                  const Text(
+                    'Pontos de Calibração',
+                    textAlign: TextAlign.center,
+                  ),
+                  if (checkboxAjuste) ...[
+                    const SizedBox(height: 18),
+                  ] else ...[
+                    const SizedBox(height: 18),
+                  ],
                   SizedBox(
                     width: 200,
                     child: TextField(
@@ -88,7 +56,7 @@ class _EnsaioPrevioState extends State<EnsaioPrevio> {
                         hintText: "Ponto de Calibração",
                       ),
                       textAlign: TextAlign.center,
-                      controller: controladores.cimax,
+                      controller: controladoresExcen.pontosCali,
                       inputFormatters: [controladores.cimaxF],
                     ),
                   ),
@@ -101,10 +69,11 @@ class _EnsaioPrevioState extends State<EnsaioPrevio> {
                         hintText: "Ponto de Calibração",
                       ),
                       textAlign: TextAlign.center,
-                      controller: controladores.cimax,
+                      controller: controladoresExcen.pontosCali2,
                       inputFormatters: [controladores.cimaxF],
                     ),
                   ),
+                  Container(height: 10),
                 ],
               ),
             ),
@@ -112,9 +81,19 @@ class _EnsaioPrevioState extends State<EnsaioPrevio> {
             Expanded(
               child: Column(
                 children: [
+                  const Text(
+                    'Peso(s) Padrão (mc)',
+                    textAlign: TextAlign.center,
+                  ),
+                  if (checkboxAjuste) ...[
+                    const SizedBox(height: 18),
+                  ] else ...[
+                    const SizedBox(height: 18),
+                  ],
                   SizedBox(
                     width: 200,
                     child: TextField(
+                      enabled: false,
                       decoration: const InputDecoration(
                         border: OutlineInputBorder(),
                         hintText: "Peso(s) Padrão (mc)",
@@ -128,6 +107,7 @@ class _EnsaioPrevioState extends State<EnsaioPrevio> {
                   SizedBox(
                     width: 200,
                     child: TextField(
+                      enabled: false,
                       decoration: const InputDecoration(
                         border: OutlineInputBorder(),
                         hintText: "Peso(s) Padrão (mc)",
@@ -142,71 +122,90 @@ class _EnsaioPrevioState extends State<EnsaioPrevio> {
             ),
             Container(width: 10),
             Expanded(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
+              child: Column(
                 children: [
-                  Expanded(
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          width: 100,
-                          child: TextField(
-                            decoration: const InputDecoration(
-                              border: OutlineInputBorder(),
-                              hintText: 'Indicação na Balança',
-                            ),
-                            textAlign: TextAlign.center,
-                            controller: controladores.cimax,
-                            inputFormatters: [controladores.cimaxF],
-                          ),
-                        ),
-                        Container(height: 10),
-                        SizedBox(
-                          width: 100,
-                          child: TextField(
-                            decoration: const InputDecoration(
-                              border: OutlineInputBorder(),
-                              hintText: 'Indicação na Balança',
-                            ),
-                            textAlign: TextAlign.center,
-                            controller: controladores.cimax,
-                            inputFormatters: [controladores.cimaxF],
-                          ),
-                        ),
-                      ],
-                    ),
+                  const Text(
+                    'Indicação na Balança',
+                    textAlign: TextAlign.center,
                   ),
-                  Expanded(
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          width: 100,
-                          child: TextField(
-                            decoration: const InputDecoration(
-                              border: OutlineInputBorder(),
-                              hintText: "---------",
+                  if (checkboxAjuste) ...[
+                    const SizedBox(height: 18),
+                  ] else ...[
+                    const SizedBox(height: 18),
+                  ],
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: false,
+                                decoration: const InputDecoration(
+                                  border: OutlineInputBorder(),
+                                  hintText: '---------',
+                                ),
+                                textAlign: TextAlign.center,
+                                controller: controladores.cimax,
+                                inputFormatters: [controladores.cimaxF],
+                              ),
                             ),
-                            textAlign: TextAlign.center,
-                            controller: controladores.cimax,
-                            inputFormatters: [controladores.cimaxF],
-                          ),
-                        ),
-                        Container(height: 10),
-                        SizedBox(
-                          width: 100,
-                          child: TextField(
-                            decoration: const InputDecoration(
-                              border: OutlineInputBorder(),
-                              hintText: "---------",
+                            Container(height: 10),
+                            SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: false,
+                                decoration: const InputDecoration(
+                                  border: OutlineInputBorder(),
+                                  hintText: '---------',
+                                ),
+                                textAlign: TextAlign.center,
+                                controller: controladores.cimax,
+                                inputFormatters: [controladores.cimaxF],
+                              ),
                             ),
-                            textAlign: TextAlign.center,
-                            controller: controladores.cimax,
-                            inputFormatters: [controladores.cimaxF],
-                          ),
+                          ],
                         ),
+                      ),
+                      Container(height: 110),
+                      if (checkboxAjuste) ...[
+                        const SizedBox(width: 10),
                       ],
-                    ),
+                      Expanded(
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              width: 100,
+                              child: TextField(
+                                decoration: const InputDecoration(
+                                  border: OutlineInputBorder(),
+                                  hintText: "Indicação na Balança",
+                                ),
+                                textAlign: TextAlign.center,
+                                controller: controladoresExcen.indicaBalanca,
+                                inputFormatters: [controladores.cimaxF],
+                              ),
+                            ),
+                            Container(height: 10),
+                            SizedBox(
+                              width: 100,
+                              child: TextField(
+                                decoration: const InputDecoration(
+                                  border: OutlineInputBorder(),
+                                  hintText: "Indicação na Balança",
+                                ),
+                                textAlign: TextAlign.center,
+                                controller: controladoresExcen.indicaBalanca,
+                                inputFormatters: [controladores.cimaxF],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -216,9 +215,19 @@ class _EnsaioPrevioState extends State<EnsaioPrevio> {
             Expanded(
               child: Column(
                 children: [
+                  const Text(
+                    'Erro',
+                    textAlign: TextAlign.center,
+                  ),
+                  if (checkboxAjuste) ...[
+                    const SizedBox(height: 18),
+                  ] else ...[
+                    const SizedBox(height: 18),
+                  ],
                   SizedBox(
                     width: 200,
                     child: TextField(
+                      enabled: false,
                       decoration: const InputDecoration(
                           border: OutlineInputBorder(), hintText: "Erro"),
                       textAlign: TextAlign.center,
@@ -230,6 +239,7 @@ class _EnsaioPrevioState extends State<EnsaioPrevio> {
                   SizedBox(
                     width: 200,
                     child: TextField(
+                      enabled: false,
                       decoration: const InputDecoration(
                           border: OutlineInputBorder(), hintText: "Erro"),
                       textAlign: TextAlign.center,
@@ -242,28 +252,43 @@ class _EnsaioPrevioState extends State<EnsaioPrevio> {
             ),
             Container(width: 10),
             Expanded(
-              child: Checkbox(
-                value: _switchbalanca,
-                onChanged: (bool? newValue) {
-                  if (newValue != null) {
-                    setState(() {
-                      _switchbalanca = newValue;
-                    });
-                  }
-                },
+              child: Column(
+                children: [
+                  const Text('Ajuste?'),
+                  if (checkboxAjuste) ...[
+                    const SizedBox(height: 18),
+                  ] else ...[
+                    const SizedBox(height: 18),
+                  ],
+                  Checkbox(
+                    value: checkboxAjuste,
+                    onChanged: (bool? newValue) {
+                      if (newValue != null) {
+                        setState(() {
+                          checkboxAjuste = newValue;
+                        });
+                      }
+                    },
+                  ),
+                ],
               ),
             ),
-            if (_switchbalanca) ...[
+            if (checkboxAjuste) ...[
               Expanded(
                 child: Column(
                   children: [
-                    Tooltip(
+                    const Tooltip(
                       message: 'Peso Padrão:',
                       child: Text(
                         'Carga de Ajuste',
                         textAlign: TextAlign.center,
                       ),
                     ),
+                    if (checkboxAjuste) ...[
+                      const SizedBox(height: 18),
+                    ] else ...[
+                      const SizedBox(height: 18),
+                    ],
                     SizedBox(
                       width: 200,
                       child: TextField(
@@ -272,7 +297,7 @@ class _EnsaioPrevioState extends State<EnsaioPrevio> {
                           hintText: 'Carga de Ajuste/ Peso Padrão:',
                         ),
                         textAlign: TextAlign.center,
-                        controller: controladores.cimax,
+                        controller: controladoresExcen.cargaAjuste,
                         inputFormatters: [controladores.cimaxF],
                       ),
                     ),
@@ -283,16 +308,21 @@ class _EnsaioPrevioState extends State<EnsaioPrevio> {
               Expanded(
                 child: Column(
                   children: [
-                    Text('data'),
+                    const Text('Ref.ª'),
+                    if (checkboxAjuste) ...[
+                      const SizedBox(height: 18),
+                    ] else ...[
+                      const SizedBox(height: 18),
+                    ],
                     SizedBox(
                       width: 100,
                       child: TextField(
                         decoration: const InputDecoration(
                           border: OutlineInputBorder(),
-                          hintText: 'Ref.ª:',
+                          hintText: 'Ref.ª',
                         ),
                         textAlign: TextAlign.center,
-                        controller: controladores.cimax,
+                        controller: controladoresExcen.ref,
                         inputFormatters: [controladores.cimaxF],
                       ),
                     ),

@@ -1,4 +1,6 @@
+import 'package:cachapuz_2/customlayouts/custom.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../controlers/controladores.dart';
 
@@ -9,116 +11,171 @@ class EnsaioPesagem extends StatefulWidget {
   State<EnsaioPesagem> createState() => _EnsaioPesagemState();
 }
 
-class _EnsaioPesagemState extends State<EnsaioPesagem> {
-  final Controllers _controladores = Controllers();
+bool checkboxAj = false;
 
+class _EnsaioPesagemState extends State<EnsaioPesagem> {
   @override
   Widget build(BuildContext context) {
+    Controllers controladores = Provider.of<Controllers>(context);
+    ControllersEnsarioPrevio controladoresExcen =
+        Provider.of<ControllersEnsarioPrevio>(context);
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          children: const [
-            Tooltip(
-              message: '(n = 3 para Max > 100kg e n = 5 para Max < 100 kg)',
-              child: Text(
-                " Ensaio de Pesagem e Repetibilidade",
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.w400),
-              ),
-            )
-          ],
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: <Widget>[
+        const Tooltip(
+          message: '(n = 3 para Max > 100kg e n = 5 para Max < 100 kg)',
+          child: Text(
+            " Ensaio de Pesagem e Repetibilidade",
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w400),
+          ),
         ),
-        const Divider(height: 10),
+        const Divider(
+          height: 10,
+          color: Colors.transparent,
+        ),
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                const Divider(height: 5),
-                const SizedBox(
-                  child: Text('Pontos de Calibração'),
+            Container(width: 10),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(4),
+                    border: Border.all(
+                      color: Colors.black.withOpacity(0.4),
+                      width: 1.0,
+                    ),
+                  ),
+                  child: Column(
+                    children: [
+                      const Text('Abreviaturas'),
+                      const Text('dos '),
+                      const Text('Pesos Padrão (mN)'),
+                      Divider(
+                        color: Colors.transparent,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Column(
+                            children: [
+                              pesoPad(controladores.cimax),
+                              const SizedBox(height: 10),
+                              pesoPad(controladores.cimax),
+                              const SizedBox(height: 10),
+                              pesoPad(controladores.cimax),
+                              const SizedBox(height: 10),
+                              pesoPad(controladores.cimax),
+                              const SizedBox(height: 10),
+                              pesoPad(controladores.cimax),
+                            ],
+                          ),
+                          Container(width: 10),
+                          Column(
+                            children: [
+                              pesoPad(controladores.cimax),
+                              const SizedBox(height: 10),
+                              pesoPad(controladores.cimax),
+                              const SizedBox(height: 10),
+                              pesoPad(controladores.cimax),
+                              const SizedBox(height: 10),
+                              pesoPad(controladores.cimax),
+                              const SizedBox(height: 10),
+                              pesoPad(controladores.cimax),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-                const SizedBox(
-                  child: Text('Peso Padrão'),
-                ),
-                const SizedBox(
-                  child: Text('mc'),
-                ),
-                Column(
-                  children: const [
-                    SizedBox(
-                      child: Text('Cargas de Substituição'),
-                    ),
-                    Divider(
-                      height: 10,
-                      color: Colors.black,
-                    ),
-                    SizedBox(
-                      child: Text('Lsub'),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: const [
-                    SizedBox(
-                      child: Text('Total Carga Teste'),
-                    ),
-                    Divider(
-                      height: 10,
-                      color: Colors.black,
-                    ),
-                    SizedBox(
-                      child: Text('Lt'),
-                    ),
-                  ],
-                ),
-              ],
+              ),
             ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Divider(height: 5),
-                const SizedBox(
-                  child: Text('Pontos de Calibração'),
+            abrevPesos(controladores.cimax),
+            Container(width: 10),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(4),
+                    border: Border.all(
+                      color: Colors.black.withOpacity(0.4),
+                      width: 1.0,
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Column(
+                        children: [
+                          pesoPad(controladores.cimax),
+                          const SizedBox(height: 10),
+                          pesoPad(controladores.cimax),
+                          const SizedBox(height: 10),
+                          pesoPad(controladores.cimax),
+                          const SizedBox(height: 10),
+                          pesoPad(controladores.cimax),
+                          const SizedBox(height: 10),
+                          pesoPad(controladores.cimax),
+                        ],
+                      ),
+                      Container(width: 10),
+                      Column(
+                        children: [
+                          pesoPad(controladores.cimax),
+                          const SizedBox(height: 10),
+                          pesoPad(controladores.cimax),
+                          const SizedBox(height: 10),
+                          pesoPad(controladores.cimax),
+                          const SizedBox(height: 10),
+                          pesoPad(controladores.cimax),
+                          const SizedBox(height: 10),
+                          pesoPad(controladores.cimax),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-                const SizedBox(
-                  child: Text('Peso Padrão'),
-                ),
-                const SizedBox(
-                  child: Text('mc'),
-                ),
-                Column(
-                  children: const [
-                    SizedBox(
-                      child: Text('Cargas de Substituição'),
-                    ),
-                    Divider(
-                      height: 10,
-                      color: Colors.black,
-                    ),
-                    SizedBox(
-                      child: Text('Lsub'),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: const [
-                    SizedBox(
-                      child: Text('Total Carga Teste'),
-                    ),
-                    Divider(
-                      height: 10,
-                      color: Colors.black,
-                    ),
-                    SizedBox(
-                      child: Text('Lt'),
-                    ),
-                  ],
-                ),
-              ],
+              ),
             ),
+            Container(width: 10),
+            Expanded(
+              child: Column(
+                children: [
+                  const Text(
+                    'Erro',
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(
+                    width: 200,
+                    child: TextField(
+                        enabled: false,
+                        decoration: const InputDecoration(
+                            border: OutlineInputBorder(), hintText: "Erro"),
+                        textAlign: TextAlign.center,
+                        controller: controladores.cimax),
+                  ),
+                  Container(height: 10),
+                  SizedBox(
+                    width: 200,
+                    child: TextField(
+                        enabled: false,
+                        decoration: const InputDecoration(
+                            border: OutlineInputBorder(), hintText: "Erro"),
+                        textAlign: TextAlign.center,
+                        controller: controladores.cimax),
+                  ),
+                ],
+              ),
+            ),
+            Container(width: 10),
+            Container(width: 10),
           ],
         ),
       ],
