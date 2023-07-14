@@ -1,4 +1,4 @@
-// ignore_for_file: unused_import
+// ignore_for_file: unused_import, depend_on_referenced_packages
 
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:http/http.dart' as http;
@@ -36,10 +36,7 @@ void collectAndSendInfo() async {
   );
 
   if (response.statusCode == 200) {
-    print('Info sent successfully');
-  } else {
-    print('Failed to send info');
-  }
+  } else {}
 }
 
 Future<Map<String, dynamic>> getClientInfo() async {

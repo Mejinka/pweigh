@@ -11,7 +11,7 @@ class Teste1 extends StatefulWidget {
 }
 
 class _Teste1State extends State<Teste1> {
-  String dropdownValue = 'Selecione a medida';
+  String? dropdownValue = 'Selecione a medida';
 
   final List<String> dropdownItems = [
     'kg',
@@ -28,9 +28,8 @@ class _Teste1State extends State<Teste1> {
 
   @override
   Widget build(BuildContext context) {
-    Controllers _controladores = Provider.of<Controllers>(context);
-    List<String> dropdownOptions = List.from(dropdownItems);
-    dropdownOptions.insert(0, dropdownValue);
+    Controllers controladores = Provider.of<Controllers>(context);
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
@@ -51,8 +50,8 @@ class _Teste1State extends State<Teste1> {
                     hintText: 'Max',
                   ),
                   textAlign: TextAlign.center,
-                  controller: _controladores.cimax,
-                  inputFormatters: [_controladores.cimaxF],
+                  controller: controladores.cimax,
+                  inputFormatters: [controladores.cimaxF],
                 ),
               ),
             ),
@@ -76,22 +75,32 @@ class _Teste1State extends State<Teste1> {
                         focusColor: Colors.transparent,
                         value: dropdownValue,
                         onChanged: (String? newValue) {
-                          setState(() {
-                            print(
-                                'Registro de Calibração: ${_controladores.dropdownController.text}');
-                            dropdownValue = newValue!;
-                            _controladores.dropdownController.text =
-                                dropdownValue;
-                          });
+                          if (newValue != 'Selecione a medida') {
+                            setState(() {
+                              dropdownValue = newValue;
+                              controladores.dropdownController.text =
+                                  dropdownValue!;
+                            });
+                          }
                         },
-                        items: dropdownOptions
+                        items: ['Selecione a medida']
                             .map<DropdownMenuItem<String>>((String value) {
                           return DropdownMenuItem<String>(
                             value: value,
                             alignment: Alignment.center,
                             child: Text(value),
                           );
-                        }).toList(),
+                        }).toList()
+                          ..addAll(
+                            dropdownItems
+                                .map<DropdownMenuItem<String>>((String value) {
+                              return DropdownMenuItem<String>(
+                                value: value,
+                                alignment: Alignment.center,
+                                child: Text(value),
+                              );
+                            }).toList(),
+                          ),
                       ),
                     ),
                   )),
@@ -110,8 +119,8 @@ class _Teste1State extends State<Teste1> {
                     hintText: 'd',
                   ),
                   textAlign: TextAlign.center,
-                  controller: _controladores.d,
-                  inputFormatters: [_controladores.dF],
+                  controller: controladores.d,
+                  inputFormatters: [controladores.dF],
                 ),
               ),
             ),
@@ -124,8 +133,8 @@ class _Teste1State extends State<Teste1> {
                     hintText: 'dT',
                   ),
                   textAlign: TextAlign.center,
-                  controller: _controladores.dT,
-                  inputFormatters: [_controladores.dTF],
+                  controller: controladores.dT,
+                  inputFormatters: [controladores.dTF],
                 ),
               ),
             ),

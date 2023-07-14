@@ -13,7 +13,7 @@ class BalancaWid extends StatefulWidget {
 class _BalancaWidState extends State<BalancaWid> {
   @override
   Widget build(BuildContext context) {
-    Controllers _controladores = Provider.of<Controllers>(context);
+    Controllers controladores = Provider.of<Controllers>(context);
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -34,12 +34,12 @@ class _BalancaWidState extends State<BalancaWid> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Divider(height: 100),
+                      const Divider(height: 100),
                       const Text("Não"),
                       Switch(
-                        value: _controladores.switchbalanca,
+                        value: controladores.switchbalanca,
                         onChanged: (bool newValue) {
-                          _controladores.setSwitchValue(newValue);
+                          controladores.setSwitchValue(newValue);
                         },
                       ),
                       const Text("Sim"),

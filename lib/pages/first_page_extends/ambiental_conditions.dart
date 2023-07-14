@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:cachapuz_2/pages/calibration.dart';
 import 'package:provider/provider.dart';
 
 import '../../controlers/controladores.dart';
@@ -16,7 +15,7 @@ class _Teste2State extends State<Teste2> {
 
   @override
   Widget build(BuildContext context) {
-    Controllers _controladores = Provider.of<Controllers>(context);
+    Controllers controladores = Provider.of<Controllers>(context);
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -39,8 +38,8 @@ class _Teste2State extends State<Teste2> {
                     hintText: 'Inicial',
                   ),
                   textAlign: TextAlign.center,
-                  controller: _controladores.tempInit,
-                  inputFormatters: [_controladores.tempInitF],
+                  controller: controladores.tempInit,
+                  inputFormatters: [controladores.tempInitF],
                 ),
               ),
             ),
@@ -53,8 +52,8 @@ class _Teste2State extends State<Teste2> {
                     hintText: 'Final',
                   ),
                   textAlign: TextAlign.center,
-                  controller: _controladores.tempFinal,
-                  inputFormatters: [_controladores.tempFinalF],
+                  controller: controladores.tempFinal,
+                  inputFormatters: [controladores.tempFinalF],
                 ),
               ),
             ),
@@ -63,7 +62,7 @@ class _Teste2State extends State<Teste2> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            SizedBox(width: 115, child: const Text('HR [ % ]:')),
+            const SizedBox(width: 115, child: Text('HR [ % ]:')),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -73,8 +72,8 @@ class _Teste2State extends State<Teste2> {
                     hintText: 'Inicial',
                   ),
                   textAlign: TextAlign.center,
-                  controller: _controladores.horaInit,
-                  inputFormatters: [_controladores.horaInitF],
+                  controller: controladores.horaInit,
+                  inputFormatters: [controladores.horaInitF],
                 ),
               ),
             ),
@@ -87,8 +86,8 @@ class _Teste2State extends State<Teste2> {
                     hintText: 'Final',
                   ),
                   textAlign: TextAlign.center,
-                  controller: _controladores.horaFinal,
-                  inputFormatters: [_controladores.horaFinalF],
+                  controller: controladores.horaFinal,
+                  inputFormatters: [controladores.horaFinalF],
                 ),
               ),
             ),

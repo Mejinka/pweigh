@@ -3,8 +3,6 @@ import 'package:cachapuz_2/pages/first_page_extends/carac_instrument.dart';
 import 'package:cachapuz_2/pages/first_page_extends/ambiental_conditions.dart';
 import 'package:cachapuz_2/pages/first_page_extends/balanca.dart';
 
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -54,11 +52,9 @@ class _CalibrationState extends State<Calibration> {
                     controller: _controladores.regCali,
                     onChanged: (value) {
                       setState(() {
-                        _controladores.certificado.text =
-                            _controladores.certificado.text =
-                                DateTime.now().year.toString() +
-                                    '-' +
-                                    _controladores.regCali.text;
+                        _controladores.certificado.text = _controladores
+                                .certificado.text =
+                            '${DateTime.now().year}-${_controladores.regCali.text}';
                       });
                     },
                   ),
@@ -109,9 +105,9 @@ class _CalibrationState extends State<Calibration> {
                 child: SizedBox(
                   width: 300,
                   child: customTextField(
+                    enabled: !showExtraWidget,
                     labelText: "Morada",
                     controller: _controladores.morada,
-                    enabled: true,
                   ),
                 ),
               ),
@@ -130,6 +126,7 @@ class _CalibrationState extends State<Calibration> {
                         ),
                         inputFormatters: [_controladores.cepF],
                         textAlign: TextAlign.center,
+                        enabled: !showExtraWidget,
                       ),
                     ],
                   ),
@@ -371,9 +368,6 @@ class _CalibrationState extends State<Calibration> {
                     ),
                     child: const Text('Enviar'),
                     onPressed: () async {
-                      print(
-                          'Registro de Calibração: ${_controladores.dT.text}');
-
                       bool success = await postCalibrationData(
                           _controladores.regCali.text,
                           _controladores.data.text,
@@ -397,6 +391,8 @@ class _CalibrationState extends State<Calibration> {
                           _controladores.dropdownController.text,
                           _controladores.d.text,
                           _controladores.dT.text,
+                          //balanca
+                          _controladores.switchStatus,
                           //condiçoes ambientais
                           _controladores.tempInit.text,
                           _controladores.tempFinal.text,

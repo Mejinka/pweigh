@@ -41,6 +41,7 @@ def create_tables():
             dropdown_controller VARCHAR(255),
             d VARCHAR(255),
             dt VARCHAR(255),
+            switch_status VARCHAR(255),
             temp_init VARCHAR(255),
             temp_final VARCHAR(255),
             hora_init VARCHAR(255),
@@ -116,6 +117,8 @@ def post_calibration_data():
     dropdown_controller = request.form.get('dropdown_controller')
     d = request.form.get('d')
     dt = request.form.get('dt')
+    ##################################################
+    switch_status = request.form.get('switch_status')
     ###################################################
     temp_init = request.form.get('temp_init')
     temp_final = request.form.get('temp_final')
@@ -127,12 +130,12 @@ def post_calibration_data():
         'INSERT INTO calibration(registro_calibracao, data, numero_certificado, cliente, morada, objeto,marca ,modelo ,'
         'nserie ,id_interna ,cep_controller , morada2 ,cep_controller2 ,'
         'altitude ,latitude ,ci_max ,dropdown_controller ,'
-        'd ,dt ,temp_init ,temp_final ,hora_init ,hora_final) '
+        'd ,dt , switch_status,temp_init ,temp_final ,hora_init ,hora_final) '
         'VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
-        '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)',
+        '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)',
         (registro_calibracao, data, numero_certificado, cliente, morada, objeto,
          marca, modelo, nserie, id_interna, cep_controller, morada2, cep_controller2,
-         altitude, latitude, ci_max, dropdown_controller, d, dt, temp_init,
+         altitude, latitude, ci_max, dropdown_controller, d, dt, switch_status, temp_init,
          temp_final, hora_init, hora_final)
     )
     mysql.connection.commit()

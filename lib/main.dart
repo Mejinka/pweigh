@@ -27,7 +27,7 @@ void main(List<String> args) {
           create: (context) => EnsaioExcentricoControllers(),
         ),
       ],
-      child: MyApp(),
+      child: const MyApp(),
     ),
   );
 }

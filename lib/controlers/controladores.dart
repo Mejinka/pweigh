@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
-import 'package:intl/intl.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
-import '../pages/first_page_extends/balanca.dart';
 import 'package:cachapuz_2/pages/calibration.dart';
 
 class Controllers with ChangeNotifier {
@@ -67,10 +65,13 @@ class Controllers with ChangeNotifier {
   final TextEditingController horaFinal = TextEditingController();
   final MaskTextInputFormatter horaFinalF =
       MaskTextInputFormatter(mask: '00.0', filter: {"0": RegExp(r'[0-9]')});
+
   bool switchbalanca = false;
+  String switchStatus = 'Não';
 
   void setSwitchValue(bool value) {
     switchbalanca = value;
+    switchStatus = value ? 'Sim' : 'Não';
     notifyListeners();
   }
 

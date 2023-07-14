@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
-import '../controlers/controladores.dart';
 
 Future<Map<String, dynamic>> loginUser(String user, String password) async {
   final response = await http.post(
@@ -68,8 +67,6 @@ Future<String?> getUsername() async {
   return prefs.getString('user');
 }
 
-Controllers _controladores = Controllers();
-
 Future<bool> postCalibrationData(
   String regCali,
   String data,
@@ -93,6 +90,8 @@ Future<bool> postCalibrationData(
   String dropdownController,
   String d,
   String dT,
+  //balanca
+  String switchStatus,
   //condiçoes ambientais
   String tempInit,
   String tempFinal,
@@ -122,9 +121,11 @@ Future<bool> postCalibrationData(
     'dropdown_controller': dropdownController,
     'd': d,
     'dt': dT,
+    //balanca
+    'switch_status': switchStatus,
     //condiçoes ambientais
     'temp_init': tempInit,
-    'tempo_final': tempFinal,
+    'temp_final': tempFinal,
     'hora_init': horaInit,
     'hora_final': horaFinal,
   };
