@@ -20,6 +20,12 @@ void main(List<String> args) {
         ChangeNotifierProvider<ControllersEnsarioPrevio>(
           create: (context) => ControllersEnsarioPrevio(),
         ),
+        ChangeNotifierProvider<EnsaioState>(
+          create: (context) => EnsaioState(),
+        ),
+        ChangeNotifierProvider<EnsaioExcentricoControllers>(
+          create: (context) => EnsaioExcentricoControllers(),
+        ),
       ],
       child: MyApp(),
     ),

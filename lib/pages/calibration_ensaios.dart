@@ -1,6 +1,5 @@
 import 'package:provider/provider.dart';
 
-import '../off/off_ensaios_previo.dart';
 import 'ensaios/ensaio_pesagem.dart';
 import 'package:flutter/material.dart';
 
@@ -18,11 +17,11 @@ class Ensaios extends StatefulWidget {
 
 class _EnsaiosState extends State<Ensaios> {
   late ControllersEnsarioPrevio controladores2;
-
+  late EnsaioExcentricoControllers controladores3;
   @override
   Widget build(BuildContext context) {
     controladores2 = Provider.of<ControllersEnsarioPrevio>(context);
-
+    controladores3 = Provider.of<EnsaioExcentricoControllers>(context);
     return Scaffold(
       body: body(),
     );
@@ -40,7 +39,7 @@ class _EnsaiosState extends State<Ensaios> {
           const Divider(
             height: 10,
           ),
-          const EnsaioExcentrico(),
+          EnsaioExcentrico(controladores: controladores3),
           const EnsaioPesagem(),
           const Divider(
             height: 40,
@@ -63,7 +62,7 @@ class _EnsaiosState extends State<Ensaios> {
                     child: const Text('Limpar'),
                     onPressed: () {
                       controladores2.clearAllFieldsEP();
-                      checkboxAjuste = false;
+                      controladores3.clearAllFields();
                       setState(() {});
                     },
                   ),
@@ -102,7 +101,7 @@ class _EnsaiosState extends State<Ensaios> {
                       backgroundColor:
                           const MaterialStatePropertyAll(Colors.red),
                     ),
-                    child: const Text('Proximo'),
+                    child: const Text('Confirmar'),
                     onPressed: () {
                       //widget.pageController.animateToPage(1,
                       //    duration: const Duration(milliseconds: 400),
@@ -116,6 +115,10 @@ class _EnsaiosState extends State<Ensaios> {
                     },
                   ),
                 ),
+              ),
+              const Divider(
+                height: 70,
+                color: Colors.transparent,
               ),
             ],
           )

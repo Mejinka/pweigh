@@ -11,12 +11,26 @@ class Teste1 extends StatefulWidget {
 }
 
 class _Teste1State extends State<Teste1> {
-  String dropdownValue = 'kg'; // valor padrão
+  String dropdownValue = 'Selecione a medida';
+
+  final List<String> dropdownItems = [
+    'kg',
+    'g',
+    'mg',
+    'mN',
+    'cN',
+    'N',
+    'daN',
+    'kn',
+    'oZ',
+    'glm2'
+  ];
 
   @override
   Widget build(BuildContext context) {
     Controllers _controladores = Provider.of<Controllers>(context);
-
+    List<String> dropdownOptions = List.from(dropdownItems);
+    dropdownOptions.insert(0, dropdownValue);
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
@@ -63,22 +77,15 @@ class _Teste1State extends State<Teste1> {
                         value: dropdownValue,
                         onChanged: (String? newValue) {
                           setState(() {
+                            print(
+                                'Registro de Calibração: ${_controladores.dropdownController.text}');
                             dropdownValue = newValue!;
+                            _controladores.dropdownController.text =
+                                dropdownValue;
                           });
                         },
-                        items: <String>[
-                          'kg',
-                          'g',
-                          'mg',
-                          'mN',
-                          'cN',
-                          'N',
-                          'daN',
-                          'kn',
-                          'lbf',
-                          'oZ',
-                          'glm2'
-                        ].map<DropdownMenuItem<String>>((String value) {
+                        items: dropdownOptions
+                            .map<DropdownMenuItem<String>>((String value) {
                           return DropdownMenuItem<String>(
                             value: value,
                             alignment: Alignment.center,

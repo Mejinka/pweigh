@@ -23,7 +23,7 @@ class TimerManager extends ChangeNotifier {
   }
 
   void startTimer() {
-    _timer = Timer.periodic(Duration(seconds: 10), (Timer timer) async {
+    _timer = Timer.periodic(Duration(hours: 1), (Timer timer) async {
       String? username = await getUsername();
       print('o usuario $username' ' está logado');
     });

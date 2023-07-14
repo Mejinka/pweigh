@@ -8,8 +8,8 @@ import '../api.dart';
 import '../controlers/time.dart';
 import 'about_page.dart';
 import 'calibration_ensaios.dart';
-import '../controlers/controladores.dart';
-import 'first_page_extends/balanca.dart';
+import 'ensaios/ensaio_pesagem.dart';
+import 'login/login.dart';
 
 class HomePage extends StatefulWidget {
   final String? username;
@@ -24,17 +24,16 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
-  late Controllers _controladores;
-
   PageController pageController = PageController(initialPage: 0);
   bool _showIconsOnly = false;
   bool isDrawerOpen = false;
-  int currentPageIndex = 0;
+  int currentPageIndex = 0; // Adicionar isso
 
   @override
   void initState() {
     super.initState();
 
+    // Adicione um ouvinte ao controlador de páginas
     pageController.addListener(() {
       if (pageController.page!.round() != currentPageIndex) {
         setState(() {
@@ -46,7 +45,7 @@ class HomePageState extends State<HomePage> {
 
   @override
   void dispose() {
-    pageController.dispose();
+    pageController.dispose(); // Lembre-se de dispor do controlador
     super.dispose();
   }
 
@@ -58,8 +57,6 @@ class HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    _controladores = Provider.of<Controllers>(context);
-
     const double drawerWidth = 250;
 
     return Scaffold(
@@ -67,30 +64,17 @@ class HomePageState extends State<HomePage> {
         title: const Text('Calibração de Balanças'),
         centerTitle: true,
         backgroundColor: Colors.redAccent.shade700,
-        //leading: IconButton(
-        //  icon: const Icon(Icons.menu),
-        //  onPressed: () {
-        //    setState(() {
-        //      _showIconsOnly = !_showIconsOnly;
-        //    });
-        //  },
-        //),
+        leading: IconButton(
+          icon: const Icon(Icons.menu),
+          onPressed: () {
+            setState(() {
+              _showIconsOnly = !_showIconsOnly;
+            });
+          },
+        ),
         actions: currentPageIndex == 0
-            ? [
-                IconButton(
-                    onPressed: () {
-                      _controladores.clearAllFields();
-
-                      setState(() {
-                        showExtraWidget = false;
-                        showExtraWidget1 = false;
-                        isSwitchOn = false;
-                        _controladores.switchbalanca = false;
-                      });
-                    },
-                    icon: const Icon(Icons.delete))
-              ]
-            : [],
+            ? [IconButton(onPressed: () => {}, icon: Icon(Icons.delete))]
+            : [], // Modificar essa linha
       ),
       body: Row(
         children: [
@@ -142,9 +126,9 @@ class NavDrawer extends StatelessWidget {
     required this.lastName,
     required this.pageController,
     required this.showIconsOnly,
-    required this.toggleShowIconsOnly,
+    required this.toggleShowIconsOnly, // Adicionar essa linha
   }) : super(key: key);
-  final VoidCallback toggleShowIconsOnly;
+  final VoidCallback toggleShowIconsOnly; // Adicionar essa linha
 
   final String? firstName;
   final String? lastName;
@@ -169,52 +153,47 @@ class NavDrawer extends StatelessWidget {
               child: IntrinsicHeight(
                 child: Column(
                   children: <Widget>[
-                    Container(
-                      width: double.infinity,
-                      child: DrawerHeader(
-                        decoration: BoxDecoration(
-                          color: Colors.redAccent.shade700,
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(Icons.person, size: showIconsOnly ? 50 : 100),
-                            showIconsOnly
-                                ? Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      FittedBox(
-                                        fit: BoxFit.fitWidth,
-                                        child: Text(
-                                          capitalize(firstName ?? ''),
-                                          style: const TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 20),
-                                        ),
+                    DrawerHeader(
+                      decoration: BoxDecoration(
+                        color: Colors.redAccent.shade700,
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.person, size: showIconsOnly ? 50 : 100),
+                          showIconsOnly
+                              ? Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    FittedBox(
+                                      fit: BoxFit.fitWidth,
+                                      child: Text(
+                                        capitalize(firstName ?? ''),
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 20),
                                       ),
-                                      FittedBox(
-                                        fit: BoxFit.fitWidth,
-                                        child: Text(
-                                          capitalize(lastName ?? ''),
-                                          style: const TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 20),
-                                        ),
-                                      ),
-                                    ],
-                                  )
-                                : FittedBox(
-                                    fit: BoxFit.fitWidth,
-                                    child: Text(
-                                      capitalize(firstName ?? '') +
-                                          ' ' +
-                                          capitalize(lastName ?? ''),
-                                      style: const TextStyle(
-                                          color: Colors.white, fontSize: 20),
                                     ),
+                                    FittedBox(
+                                      fit: BoxFit.fitWidth,
+                                      child: Text(
+                                        capitalize(lastName ?? ''),
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 20),
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              : FittedBox(
+                                  fit: BoxFit.fitWidth,
+                                  child: Text(
+                                    capitalize(firstName ?? '') +
+                                        ' ' +
+                                        capitalize(lastName ?? ''),
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 20),
                                   ),
-                          ],
-                        ),
+                                ),
+                        ],
                       ),
                     ),
                     SizedBox(
@@ -309,18 +288,15 @@ class NavDrawer extends StatelessWidget {
                     ),
                     Expanded(child: Container()), // Espaço vazio
 
-                    Align(
-                      alignment: Alignment.bottomCenter,
+                    Positioned(
+                      bottom: 0.0,
                       child: SizedBox(
                         height: showIconsOnly ? 48 : null,
                         child: ListTile(
                           leading: Padding(
                             padding:
-                                EdgeInsets.only(left: showIconsOnly ? 10 : 100),
-                            child: Icon(showIconsOnly
-                                ? Icons.arrow_forward
-                                : Icons
-                                    .arrow_back), // Ícone diferente com base em showIconsOnly
+                                EdgeInsets.only(left: showIconsOnly ? 10 : 0),
+                            child: const Icon(Icons.menu),
                           ),
                           title: Opacity(
                             opacity: showIconsOnly ? 0.0 : 1.0,

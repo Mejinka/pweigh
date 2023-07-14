@@ -1,6 +1,9 @@
+import 'package:cachapuz_2/api.dart';
 import 'package:cachapuz_2/pages/first_page_extends/carac_instrument.dart';
 import 'package:cachapuz_2/pages/first_page_extends/ambiental_conditions.dart';
 import 'package:cachapuz_2/pages/first_page_extends/balanca.dart';
+
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -17,8 +20,14 @@ class Calibration extends StatefulWidget {
   State<Calibration> createState() => _CalibrationState();
 }
 
+bool showExtraWidget = false;
+bool showExtraWidget1 = false;
+bool isSwitchOn = false;
+
 class _CalibrationState extends State<Calibration> {
-  late Controllers _controladores;
+  final TextEditingController regCali = TextEditingController();
+
+  Controllers _controladores = Controllers();
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +54,11 @@ class _CalibrationState extends State<Calibration> {
                     controller: _controladores.regCali,
                     onChanged: (value) {
                       setState(() {
-                        _controladores.certificado.text = generateCertificado();
+                        _controladores.certificado.text =
+                            _controladores.certificado.text =
+                                DateTime.now().year.toString() +
+                                    '-' +
+                                    _controladores.regCali.text;
                       });
                     },
                   ),
@@ -78,7 +91,7 @@ class _CalibrationState extends State<Calibration> {
           const Divider(
             height: 10,
           ),
-          //ROW FVCKING TWO
+
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -88,11 +101,6 @@ class _CalibrationState extends State<Calibration> {
                   child: customTextField(
                     labelText: "Cliente",
                     controller: _controladores.cliente,
-                    onChanged: (value) {
-                      setState(() {
-                        _controladores.certificado.text = generateCertificado();
-                      });
-                    },
                   ),
                 ),
               ),
@@ -215,11 +223,11 @@ class _CalibrationState extends State<Calibration> {
                 fit: FlexFit.tight,
                 child: customCheckbox(
                   label: "Localização diferente da morada da sede?",
-                  checkboxValue: _showExtraWidget,
+                  checkboxValue: showExtraWidget,
                   onChanged: (bool? newValue) {
                     if (newValue != null) {
                       setState(() {
-                        _showExtraWidget = newValue;
+                        showExtraWidget = newValue;
                       });
                     }
                   },
@@ -230,11 +238,11 @@ class _CalibrationState extends State<Calibration> {
                 child: customCheckbox(
                   label:
                       'Calibração nas instalações permanentes do laboratório?',
-                  checkboxValue: _isSwitchOn,
+                  checkboxValue: isSwitchOn,
                   onChanged: (bool? newValue) {
                     if (newValue != null) {
                       setState(() {
-                        _isSwitchOn = newValue;
+                        isSwitchOn = newValue;
                       });
                     }
                   },
@@ -244,11 +252,11 @@ class _CalibrationState extends State<Calibration> {
                 fit: FlexFit.tight,
                 child: customCheckbox(
                   label: 'Compensação da gravidade (Dm)?',
-                  checkboxValue: _showExtraWidget1,
+                  checkboxValue: showExtraWidget1,
                   onChanged: (bool? newValue) {
                     if (newValue != null) {
                       setState(() {
-                        _showExtraWidget1 = newValue;
+                        showExtraWidget1 = newValue;
                       });
                     }
                   },
@@ -257,7 +265,7 @@ class _CalibrationState extends State<Calibration> {
             ],
           ),
 
-          if (_showExtraWidget) ...[
+          if (showExtraWidget) ...[
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -275,7 +283,7 @@ class _CalibrationState extends State<Calibration> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Divider(height: 10),
-              if (_showExtraWidget1) ...[
+              if (showExtraWidget1) ...[
                 Container(width: 20),
                 const Divider(height: 80),
                 buildAddressRow("Inserir Latitude Destino",
@@ -302,7 +310,7 @@ class _CalibrationState extends State<Calibration> {
               Expanded(
                 child: Consumer<Controllers>(
                   builder: (context, controllers, child) {
-                    return const SizedBox(child: Teste3());
+                    return const SizedBox(child: BalancaWid());
                   },
                 ),
               ),
@@ -340,11 +348,66 @@ class _CalibrationState extends State<Calibration> {
                       _controladores.clearAllFields();
 
                       setState(() {
-                        _showExtraWidget = false;
-                        _showExtraWidget1 = false;
-                        _isSwitchOn = false;
-                        switchbalanca = false;
+                        showExtraWidget = false;
+                        showExtraWidget1 = false;
+                        isSwitchOn = false;
+                        _controladores.switchbalanca = false;
                       });
+                    },
+                  ),
+                ),
+              ),
+              Container(width: 10),
+              Flexible(
+                child: SizedBox(
+                  width: 100,
+                  height: 50,
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                      overlayColor:
+                          MaterialStatePropertyAll(Colors.red.shade600),
+                      backgroundColor:
+                          const MaterialStatePropertyAll(Colors.red),
+                    ),
+                    child: const Text('Enviar'),
+                    onPressed: () async {
+                      print(
+                          'Registro de Calibração: ${_controladores.dT.text}');
+
+                      bool success = await postCalibrationData(
+                          _controladores.regCali.text,
+                          _controladores.data.text,
+                          _controladores.certificado.text,
+                          _controladores.cliente.text,
+                          _controladores.morada.text,
+                          _controladores.objeto.text,
+                          _controladores.marca.text,
+                          _controladores.modelo.text,
+                          _controladores.nserie.text,
+                          _controladores.idinterna.text,
+                          _controladores.cepController.text,
+                          //localização diferente
+                          _controladores.morada2.text,
+                          _controladores.cepController2.text,
+                          //compensação de gravidade
+                          _controladores.altitude.text,
+                          _controladores.latitude.text,
+                          //caracteristicas dos instrumentos
+                          _controladores.cimax.text,
+                          _controladores.dropdownController.text,
+                          _controladores.d.text,
+                          _controladores.dT.text,
+                          //condiçoes ambientais
+                          _controladores.tempInit.text,
+                          _controladores.tempFinal.text,
+                          _controladores.horaInit.text,
+                          _controladores.horaFinal.text);
+
+                      if (success) {
+                        print('Dados enviados com sucesso!');
+                      } else {
+                        print('Falha ao enviar dados!');
+                      }
                     },
                   ),
                 ),
@@ -379,17 +442,5 @@ class _CalibrationState extends State<Calibration> {
         ],
       ),
     );
-  }
-
-  bool _showExtraWidget = false;
-  bool _showExtraWidget1 = false;
-  bool _isSwitchOn = false;
-
-  String dropdownValue = 'kg'; // valor padrão
-
-  String generateCertificado() {
-    String regCali = _controladores.regCali.text;
-    String year = _controladores.year.text.replaceAll('/', '');
-    return '$year-$regCali      ';
   }
 }

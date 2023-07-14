@@ -3,16 +3,14 @@ import 'package:provider/provider.dart';
 
 import '../../controlers/controladores.dart';
 
-class Teste3 extends StatefulWidget {
-  const Teste3({super.key});
+class BalancaWid extends StatefulWidget {
+  const BalancaWid({Key? key}) : super(key: key);
 
   @override
-  State<Teste3> createState() => _Teste3State();
+  State<BalancaWid> createState() => _BalancaWidState();
 }
 
-bool switchbalanca = false;
-
-class _Teste3State extends State<Teste3> {
+class _BalancaWidState extends State<BalancaWid> {
   @override
   Widget build(BuildContext context) {
     Controllers _controladores = Provider.of<Controllers>(context);
@@ -39,11 +37,9 @@ class _Teste3State extends State<Teste3> {
                       Divider(height: 100),
                       const Text("Não"),
                       Switch(
-                        value: switchbalanca,
+                        value: _controladores.switchbalanca,
                         onChanged: (bool newValue) {
-                          setState(() {
-                            switchbalanca = newValue;
-                          });
+                          _controladores.setSwitchValue(newValue);
                         },
                       ),
                       const Text("Sim"),

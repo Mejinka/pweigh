@@ -1,55 +1,74 @@
 import 'package:cachapuz_2/controlers/controladores.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../customlayouts/custom.dart';
 
 class EnsaioExcentrico extends StatefulWidget {
-  const EnsaioExcentrico({super.key});
+  const EnsaioExcentrico({Key? key, required this.controladores})
+      : super(key: key);
+  final EnsaioExcentricoControllers controladores;
 
   @override
   State<EnsaioExcentrico> createState() => _EnsaioExcentricoState();
 }
 
 class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
-  final Controllers _controladores = Controllers();
-  final TextEditingController _pontosApoioController = TextEditingController();
+  late EnsaioExcentricoControllers _controladores;
 
   @override
   void initState() {
     super.initState();
-    _pontosApoioController.addListener(_updateCampos);
+    _controladores = widget.controladores;
+    _controladores.pontosApoioController.addListener(_updateCampos);
   }
 
   @override
   void dispose() {
-    _pontosApoioController.dispose();
+    for (int i = 1; i <= _controladores.controladoresPontosApoio.length; i++) {
+      _controladores.disposePontoApoioController(i);
+    }
     super.dispose();
   }
 
   void _updateCampos() {
-    setState(() {});
+    int numPontosApoio;
+    try {
+      numPontosApoio = int.parse(_controladores.pontosApoioController.text);
+    } catch (e) {
+      numPontosApoio = 0;
+    }
+
+    Provider.of<EnsaioState>(context, listen: false).numPontosApoio =
+        numPontosApoio;
+    for (int i = 1; i <= numPontosApoio; i++) {
+      _controladores.getPontoApoioController(i);
+    }
+    setState(() {}); // Notifica o Flutter para reconstruir o widget
   }
 
   List<Widget> _gerarCampos(int quantidade) {
     List<Widget> lista = [];
-    int limit = 11;
+    int limit = 12;
     if (quantidade > limit) {
       quantidade = limit;
     }
     for (int i = 1; i <= quantidade; i++) {
+      var controller =
+          _controladores.getPontoApoioController(i) ?? TextEditingController();
       lista.add(
         Column(
           children: [
-            customTextField2('$i', _controladores.regCali),
-            customTextField2('', _controladores.regCali),
+            customTextField2('$i', controller),
+            customTextField2('', controller),
           ],
         ),
       );
       if (i < quantidade) {
-        lista.add(SizedBox(
-            width: 20)); // Add some space between each point of support
+        lista.add(const SizedBox(width: 20));
       }
     }
+
     return lista;
   }
 
@@ -57,7 +76,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
   Widget build(BuildContext context) {
     int numPontosApoio;
     try {
-      numPontosApoio = int.parse(_pontosApoioController.text);
+      numPontosApoio = int.parse(_controladores.pontosApoioController.text);
     } catch (e) {
       numPontosApoio = 0;
     }
@@ -67,9 +86,12 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
       children: [
         const Row(
           children: [
-            Text(
-              " Ensaio Excentricidade",
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.w400),
+            Tooltip(
+              message: 'Insira o numero de pontos de apoio de 1 a 11',
+              child: Text(
+                " Ensaio Excentricidade",
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w400),
+              ),
             ),
           ],
         ),
@@ -79,16 +101,16 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
         ),
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Expanded(
               flex: 0,
               child: Column(
                 children: [
+                  customTextField1('N.º Pontos de Apoio:',
+                      _controladores.pontosApoioController),
                   customTextField1(
-                      'N.º Pontos de Apoio:', _pontosApoioController),
-                  customTextField1(
-                      'Carga utilizada (Lexc):', _controladores.regCali),
+                      'Carga utilizada (Lexc):', _controladores.cargaUti),
                 ],
               ),
             ),
@@ -98,7 +120,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                     style: TextStyle(fontSize: 20),
                   )
                 : Expanded(
-                    flex: 1,
+                    flex: 0,
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -121,7 +143,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         hintText: "",
                         border: OutlineInputBorder(),
                       ),
-                      controller: _controladores.regCali,
+                      controller: _controladores.cargaUti,
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -130,7 +152,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
             ),
           ],
         ),
-        const Divider(height: 1),
+        const Divider(height: 10),
       ],
     );
   }

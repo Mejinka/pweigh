@@ -4,33 +4,23 @@ import 'package:intl/intl.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 import '../pages/first_page_extends/balanca.dart';
+import 'package:cachapuz_2/pages/calibration.dart';
 
 class Controllers with ChangeNotifier {
   final TextEditingController regCali = TextEditingController();
-  final TextEditingController data = TextEditingController(
-      text: DateFormat('dd/MM/yyyy').format(DateTime.now()));
-  final TextEditingController certificado = TextEditingController();
-  final TextEditingController year =
-      TextEditingController(text: DateFormat('yyyy').format(DateTime.now()));
+  final TextEditingController data =
+      TextEditingController(text: DateTime.now().toString().split(' ')[0]);
 
+  final TextEditingController certificado = TextEditingController();
   final TextEditingController cliente = TextEditingController();
   final TextEditingController morada = TextEditingController();
   final TextEditingController morada2 = TextEditingController();
-  //11
 
   final TextEditingController objeto = TextEditingController();
   final TextEditingController marca = TextEditingController();
   final TextEditingController modelo = TextEditingController();
   final TextEditingController nserie = TextEditingController();
   final TextEditingController idinterna = TextEditingController();
-
-  final TextEditingController altitude = TextEditingController();
-  final MaskTextInputFormatter altitudeF = MaskTextInputFormatter(
-      mask: '0000000000', filter: {"0": RegExp(r'[0-9]')});
-
-  final TextEditingController latitude = TextEditingController();
-  final MaskTextInputFormatter latitudeF = MaskTextInputFormatter(
-      mask: '0000000000', filter: {"0": RegExp(r'[0-9]')});
 
   final TextEditingController cepController = TextEditingController();
   final MaskTextInputFormatter cepF =
@@ -40,9 +30,19 @@ class Controllers with ChangeNotifier {
   final MaskTextInputFormatter cepF2 =
       MaskTextInputFormatter(mask: '0000-000', filter: {"0": RegExp(r'[0-9]')});
 
+  final TextEditingController altitude = TextEditingController();
+  final MaskTextInputFormatter altitudeF = MaskTextInputFormatter(
+      mask: '0000000000', filter: {"0": RegExp(r'[0-9]')});
+
+  final TextEditingController latitude = TextEditingController();
+  final MaskTextInputFormatter latitudeF = MaskTextInputFormatter(
+      mask: '0000000000', filter: {"0": RegExp(r'[0-9]')});
+
   final TextEditingController cimax = TextEditingController();
   final MaskTextInputFormatter cimaxF = MaskTextInputFormatter(
       mask: '0000000000', filter: {"0": RegExp(r'[0-9]')});
+
+  final TextEditingController dropdownController = TextEditingController();
 
   final TextEditingController d = TextEditingController();
   final MaskTextInputFormatter dF = MaskTextInputFormatter(
@@ -67,31 +67,37 @@ class Controllers with ChangeNotifier {
   final TextEditingController horaFinal = TextEditingController();
   final MaskTextInputFormatter horaFinalF =
       MaskTextInputFormatter(mask: '00.0', filter: {"0": RegExp(r'[0-9]')});
+  bool switchbalanca = false;
+
+  void setSwitchValue(bool value) {
+    switchbalanca = value;
+    notifyListeners();
+  }
 
   void clearAllFields() {
-    regCali.clear();
-    certificado.clear();
-    year.clear();
-    cliente.clear();
-    morada.clear();
-    morada2.clear();
-    objeto.clear();
-    marca.clear();
-    modelo.clear();
-    nserie.clear();
-    idinterna.clear();
-    altitude.clear();
-    latitude.clear();
-    cepController.clear();
-    cepController2.clear();
-    cimax.clear();
-    d.clear();
-    dT.clear();
-    tempInit.clear();
-    tempFinal.clear();
-    horaInit.clear();
-    horaFinal.clear();
-    switchbalanca;
+    //cliente.clear();
+    //morada.clear();
+    //morada2.clear();
+    //objeto.clear();
+    //marca.clear();
+    //modelo.clear();
+    //nserie.clear();
+    //idinterna.clear();
+    //altitude.clear();
+    //latitude.clear();
+    //cepController.clear();
+    //cepController2.clear();
+    //cimax.clear();
+    //d.clear();
+    //dT.clear();
+    //tempInit.clear();
+    //tempFinal.clear();
+    //horaInit.clear();
+    //horaFinal.clear();
+    //switchbalanca;
+    //showExtraWidget;
+    //showExtraWidget1;
+    //isSwitchOn;
     notifyListeners();
   }
 
@@ -118,7 +124,49 @@ class ControllersEnsarioPrevio with ChangeNotifier {
     indicaBalanca2.clear();
     cargaAjuste.clear();
     ref.clear();
-    switchbalanca;
+    showExtraWidget;
+    notifyListeners();
+  }
+}
+
+class EnsaioExcentricoControllers with ChangeNotifier {
+  final TextEditingController pontosApoioController = TextEditingController();
+  final TextEditingController cargaUti =
+      TextEditingController(); // Add this line
+
+  Map<int, TextEditingController> controladoresPontosApoio = {};
+
+  TextEditingController? getPontoApoioController(int index) {
+    if (!controladoresPontosApoio.containsKey(index)) {
+      controladoresPontosApoio[index] = TextEditingController();
+    }
+    return controladoresPontosApoio[index];
+  }
+
+  void disposePontoApoioController(int index) {
+    if (controladoresPontosApoio.containsKey(index)) {
+      controladoresPontosApoio[index]!.dispose();
+      controladoresPontosApoio.remove(index);
+    }
+  }
+
+  void clearAllFields() {
+    pontosApoioController.clear();
+    cargaUti.clear();
+    controladoresPontosApoio.forEach((key, controller) {
+      controller.clear();
+    });
+    notifyListeners();
+  }
+}
+
+class EnsaioState extends ChangeNotifier {
+  int _numPontosApoio = 0;
+
+  int get numPontosApoio => _numPontosApoio;
+
+  set numPontosApoio(int value) {
+    _numPontosApoio = value;
     notifyListeners();
   }
 }
