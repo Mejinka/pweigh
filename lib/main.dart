@@ -1,11 +1,38 @@
+import 'package:cachapuz_2/controlers/controladores.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 
 //import 'pages/page1.txt';
+import 'controlers/time.dart';
 import 'splash.dart';
 
 void main(List<String> args) {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider<TimerManager>(
+          create: (context) => TimerManager(),
+        ),
+        ChangeNotifierProvider<Controllers>(
+          create: (context) => Controllers(),
+        ),
+        ChangeNotifierProvider<ControllersEnsarioPrevio>(
+          create: (context) => ControllersEnsarioPrevio(),
+        ),
+        ChangeNotifierProvider<EnsaioState>(
+          create: (context) => EnsaioState(),
+        ),
+        ChangeNotifierProvider<EnsaioExcentricoControllers>(
+          create: (context) => EnsaioExcentricoControllers(),
+        ),
+        ChangeNotifierProvider<EnsaioPesagemControllers>(
+          create: (context) => EnsaioPesagemControllers(),
+        ),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {

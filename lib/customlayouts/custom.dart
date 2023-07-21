@@ -28,14 +28,14 @@ Widget buildAddressRow(String labelText, TextEditingController controller,
     List<TextInputFormatter>? inputFormatters) {
   return Flexible(
     child: SizedBox(
-      width: 300,
+      width: 200,
       child: Column(
         children: [
           Text(labelText),
           TextField(
             decoration: InputDecoration(
               hintText: labelText,
-              border: OutlineInputBorder(),
+              border: const OutlineInputBorder(),
             ),
             controller: controller,
             inputFormatters: inputFormatters,
@@ -54,6 +54,7 @@ Widget customTextField({
   Function(String)? onChanged,
 }) {
   return Column(
+    mainAxisAlignment: MainAxisAlignment.center,
     children: [
       Text(labelText, textAlign: TextAlign.center),
       TextField(
@@ -61,7 +62,7 @@ Widget customTextField({
         enabled: enabled,
         decoration: InputDecoration(
           hintText: labelText,
-          border: OutlineInputBorder(),
+          border: const OutlineInputBorder(),
         ),
         controller: controller,
         textAlign: TextAlign.center,
@@ -81,7 +82,7 @@ Widget buildTextFieldColumn(String labelText, TextEditingController controller,
           enabled: true,
           decoration: InputDecoration(
             hintText: labelText,
-            border: OutlineInputBorder(),
+            border: const OutlineInputBorder(),
           ),
           controller: controller,
           inputFormatters: inputFormatters,
@@ -114,49 +115,10 @@ Widget buildTextField(String labelText, TextEditingController controller,
           controller: controller,
           decoration: InputDecoration(
             hintText: labelText,
-            border: OutlineInputBorder(),
+            border: const OutlineInputBorder(),
           ),
           inputFormatters: formatters,
           textAlign: TextAlign.center,
-        ),
-      ],
-    ),
-  );
-}
-
-Widget buildDropdownButton(
-  String labelText,
-  String dropdownValue,
-  List<String> items,
-  ValueChanged<String?> onChanged,
-) {
-  return SizedBox(
-    width: 100,
-    child: Column(
-      children: [
-        Text(labelText),
-        Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8.0),
-            border: Border.all(
-              color: Colors.grey.withOpacity(0.5),
-              width: 1.0,
-            ),
-          ),
-          child: DropdownButton<String>(
-            value: dropdownValue,
-            onChanged: onChanged,
-            items: items.map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(
-                value: value,
-                child: Text(value),
-              );
-            }).toList(),
-            dropdownColor: Colors.white,
-            elevation: 2,
-            underline: Container(),
-            focusColor: Colors.transparent,
-          ),
         ),
       ],
     ),
@@ -174,7 +136,7 @@ Widget buildTextField2(String labelText, TextEditingController controller,
           controller: controller,
           decoration: InputDecoration(
             hintText: labelText,
-            border: OutlineInputBorder(),
+            border: const OutlineInputBorder(),
           ),
           inputFormatters: formatters,
           textAlign: TextAlign.center,
@@ -195,7 +157,7 @@ Widget buildSizedBoxColumn(String labelText, TextEditingController controller,
           enabled: true,
           decoration: InputDecoration(
             hintText: labelText,
-            border: OutlineInputBorder(),
+            border: const OutlineInputBorder(),
           ),
           controller: controller,
           inputFormatters: inputFormatters,
@@ -206,23 +168,162 @@ Widget buildSizedBoxColumn(String labelText, TextEditingController controller,
   );
 }
 
-Widget buildFlexibleColumn(String labelText, TextEditingController controller,
-    List<TextInputFormatter>? inputFormatters) {
-  return Flexible(
-    child: Column(
-      children: [
-        Text(labelText),
-        TextField(
+Widget customTextField1(String labelText, TextEditingController controller) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.center,
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Text(labelText),
+      const Divider(height: 10),
+      SizedBox(
+        width: 100,
+        child: TextField(
           enabled: true,
-          decoration: InputDecoration(
-            hintText: labelText,
+          decoration: const InputDecoration(
+            hintText: "",
             border: OutlineInputBorder(),
+          ),
+          controller: controller,
+          textAlign: TextAlign.center,
+        ),
+      ),
+      const Divider(height: 5),
+    ],
+  );
+}
+
+Widget customPontosApoio(String labelText, TextEditingController controller,
+    List<TextInputFormatter> inputFormatters, bool enabled) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.center,
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Text(
+        labelText,
+        textAlign: TextAlign.center,
+      ),
+      SizedBox(
+        width: 50,
+        child: TextField(
+          enabled: enabled,
+          decoration: InputDecoration(
+            filled: true,
+            fillColor: enabled ? Colors.white : Colors.black12,
+            hintText: "",
+            border: const OutlineInputBorder(),
           ),
           controller: controller,
           inputFormatters: inputFormatters,
           textAlign: TextAlign.center,
         ),
-      ],
+      ),
+      const Divider(height: 5),
+    ],
+  );
+}
+
+Widget pesoPad(TextEditingController controller,
+    List<TextInputFormatter> inputFormatters, bool enabled) {
+  return SizedBox(
+    width: 100,
+    child: TextField(
+      enabled: enabled,
+      decoration: InputDecoration(
+        filled: true,
+        fillColor: enabled ? Colors.white : Colors.black12,
+        hintText: "Peso Padrao",
+        border: const OutlineInputBorder(),
+      ),
+      controller: controller,
+      textAlign: TextAlign.center,
     ),
   );
 }
+
+Widget ensaioPrevioTextField(
+    String labelText, TextEditingController controller) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.center,
+    mainAxisAlignment: MainAxisAlignment.start,
+    children: [
+      SizedBox(
+        width: 50,
+        child: TextField(
+          enabled: true,
+          decoration: const InputDecoration(
+            hintText: "s",
+            border: OutlineInputBorder(),
+          ),
+          controller: controller,
+          textAlign: TextAlign.center,
+        ),
+      ),
+      const Divider(height: 5),
+    ],
+  );
+}
+
+Widget ajustesCheckBox(String labelText, TextEditingController controller,
+    List<TextInputFormatter>? inputFormatters) {
+  return Flexible(
+    child: SizedBox(
+      width: 2,
+      child: Column(
+        children: [
+          Text(labelText),
+          TextField(
+            decoration: InputDecoration(
+              hintText: labelText,
+              border: const OutlineInputBorder(),
+            ),
+            controller: controller,
+            inputFormatters: inputFormatters,
+            textAlign: TextAlign.center,
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+
+
+//Widget abrevPesos(TextEditingController controller) {
+//  return Column(
+//    children: [
+//      Row(
+//        mainAxisAlignment: MainAxisAlignment.center,
+//        children: [
+//          Column(
+//            children: [
+//              pesoPad(controller),
+//              const SizedBox(height: 10),
+//              pesoPad(controller),
+//              const SizedBox(height: 10),
+//              pesoPad(controller),
+//              const SizedBox(height: 10),
+//              pesoPad(controller),
+//              const SizedBox(height: 10),
+//              pesoPad(controller),
+//            ],
+//          ),
+//          Container(width: 10),
+//          Column(
+//            children: [
+//              pesoPad(controller),
+//              const SizedBox(height: 10),
+//              pesoPad(controller),
+//              const SizedBox(height: 10),
+//              pesoPad(controller),
+//              const SizedBox(height: 10),
+//              pesoPad(controller),
+//              const SizedBox(height: 10),
+//              pesoPad(controller),
+//            ],
+//          ),
+//        ],
+//      ),
+//    ],
+//  );
+//}
+//

@@ -1,7 +1,13 @@
+// ignore_for_file: prefer_interpolation_to_compose_strings
+
+import 'package:cachapuz_2/pages/first_page_extends/carac_instrument.dart';
+import 'package:cachapuz_2/pages/first_page_extends/ambiental_conditions.dart';
+import 'package:cachapuz_2/pages/first_page_extends/balanca.dart';
+
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../controlers/controladores.dart';
-import 'package:flutter/foundation.dart';
 
 import '../customlayouts/custom.dart';
 
@@ -13,11 +19,19 @@ class Calibration extends StatefulWidget {
   State<Calibration> createState() => _CalibrationState();
 }
 
+bool showExtraWidget = false;
+bool showExtraWidget1 = false;
+bool isSwitchOn = false;
+
 class _CalibrationState extends State<Calibration> {
-  final Controllers _controladores = Controllers();
+  final TextEditingController regCali = TextEditingController();
+
+  Controllers _controladores = Controllers();
 
   @override
   Widget build(BuildContext context) {
+    _controladores = Provider.of<Controllers>(context);
+
     return Scaffold(
       body: body(),
     );
@@ -36,16 +50,20 @@ class _CalibrationState extends State<Calibration> {
                   width: 300,
                   child: customTextField(
                     labelText: "Registro De Calibração",
-                    controller: _controladores.user,
+                    controller: _controladores.regCali,
                     onChanged: (value) {
                       setState(() {
-                        _controladores.certificado.text = generateCertificado();
+                        _controladores.certificado.text =
+                            _controladores.certificado.text =
+                                DateTime.now().year.toString() +
+                                    '-' +
+                                    _controladores.regCali.text;
                       });
                     },
                   ),
                 ),
               ),
-              Flexible(child: SizedBox(width: 150)),
+              const Flexible(child: SizedBox(width: 150)),
               Flexible(
                 child: SizedBox(
                   width: 300,
@@ -56,7 +74,7 @@ class _CalibrationState extends State<Calibration> {
                   ),
                 ),
               ),
-              Flexible(child: SizedBox(width: 150)),
+              const Flexible(child: SizedBox(width: 150)),
               Flexible(
                 child: SizedBox(
                   width: 300,
@@ -72,7 +90,7 @@ class _CalibrationState extends State<Calibration> {
           const Divider(
             height: 10,
           ),
-          //ROW FVCKING TWO
+
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -82,15 +100,10 @@ class _CalibrationState extends State<Calibration> {
                   child: customTextField(
                     labelText: "Cliente",
                     controller: _controladores.cliente,
-                    onChanged: (value) {
-                      setState(() {
-                        _controladores.certificado.text = generateCertificado();
-                      });
-                    },
                   ),
                 ),
               ),
-              Flexible(child: SizedBox(width: 150)),
+              const Flexible(child: SizedBox(width: 150)),
               Flexible(
                 child: SizedBox(
                   width: 300,
@@ -101,7 +114,7 @@ class _CalibrationState extends State<Calibration> {
                   ),
                 ),
               ),
-              Flexible(child: SizedBox(width: 150)),
+              const Flexible(child: SizedBox(width: 150)),
               Flexible(
                 child: SizedBox(
                   width: 300,
@@ -141,7 +154,7 @@ class _CalibrationState extends State<Calibration> {
                   ),
                 ),
               ),
-              Flexible(child: SizedBox(width: 150)),
+              const Flexible(child: SizedBox(width: 150)),
               Flexible(
                 child: SizedBox(
                   width: 300,
@@ -152,7 +165,7 @@ class _CalibrationState extends State<Calibration> {
                   ),
                 ),
               ),
-              Flexible(child: SizedBox(width: 150)),
+              const Flexible(child: SizedBox(width: 150)),
               Flexible(
                 child: SizedBox(
                   width: 300,
@@ -183,7 +196,7 @@ class _CalibrationState extends State<Calibration> {
                   ),
                 ),
               ),
-              Flexible(child: SizedBox(width: 150)),
+              const Flexible(child: SizedBox(width: 150)),
               Flexible(
                 child: SizedBox(
                   width: 300,
@@ -209,11 +222,11 @@ class _CalibrationState extends State<Calibration> {
                 fit: FlexFit.tight,
                 child: customCheckbox(
                   label: "Localização diferente da morada da sede?",
-                  checkboxValue: _showExtraWidget,
+                  checkboxValue: showExtraWidget,
                   onChanged: (bool? newValue) {
                     if (newValue != null) {
                       setState(() {
-                        _showExtraWidget = newValue;
+                        showExtraWidget = newValue;
                       });
                     }
                   },
@@ -224,11 +237,11 @@ class _CalibrationState extends State<Calibration> {
                 child: customCheckbox(
                   label:
                       'Calibração nas instalações permanentes do laboratório?',
-                  checkboxValue: _isSwitchOn,
+                  checkboxValue: isSwitchOn,
                   onChanged: (bool? newValue) {
                     if (newValue != null) {
                       setState(() {
-                        _isSwitchOn = newValue;
+                        isSwitchOn = newValue;
                       });
                     }
                   },
@@ -238,11 +251,11 @@ class _CalibrationState extends State<Calibration> {
                 fit: FlexFit.tight,
                 child: customCheckbox(
                   label: 'Compensação da gravidade (Dm)?',
-                  checkboxValue: _showExtraWidget1,
+                  checkboxValue: showExtraWidget1,
                   onChanged: (bool? newValue) {
                     if (newValue != null) {
                       setState(() {
-                        _showExtraWidget1 = newValue;
+                        showExtraWidget1 = newValue;
                       });
                     }
                   },
@@ -251,7 +264,7 @@ class _CalibrationState extends State<Calibration> {
             ],
           ),
 
-          if (_showExtraWidget) ...[
+          if (showExtraWidget) ...[
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -269,7 +282,7 @@ class _CalibrationState extends State<Calibration> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Divider(height: 10),
-              if (_showExtraWidget1) ...[
+              if (showExtraWidget1) ...[
                 Container(width: 20),
                 const Divider(height: 80),
                 buildAddressRow("Inserir Latitude Destino",
@@ -283,195 +296,33 @@ class _CalibrationState extends State<Calibration> {
           const Divider(height: 1),
 
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Column(
-                children: [
-                  const Divider(height: 20),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Container(
-                        width: 20,
-                      ),
-                      const Text(
-                        'Caracteristicas do Instrumento',
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    ],
-                  ),
-                  const Divider(
-                    height: 20,
-                  ),
-                  IntrinsicWidth(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Container(width: 20),
-                        const Divider(height: 150),
-                        Column(
-                          children: [
-                            buildTextField('Max:', _controladores.cimax,
-                                [_controladores.cimaxF]),
-                            SizedBox(width: 100),
-                            buildTextField(
-                                'd:', _controladores.d, [_controladores.dF]),
-                          ],
-                        ),
-                        Container(width: 100),
-                        Column(
-                          children: [
-                            buildDropdownButton('Unidade:', dropdownValue, [
-                              'kg',
-                              'g',
-                              'mg',
-                              'mN',
-                              'cN',
-                              'N',
-                              'daN',
-                              'kn',
-                              'lbf',
-                              'oZ',
-                              'glm2'
-                            ], (String? newValue) {
-                              setState(() {
-                                dropdownValue = newValue!;
-                              });
-                            }),
-                            SizedBox(width: 100),
-                            buildTextField2(
-                                'dT:', _controladores.dT, [_controladores.dTF]),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+              Expanded(
+                child: Consumer<Controllers>(
+                  builder: (context, controllers, child) {
+                    return const SizedBox(child: Teste1());
+                  },
+                ),
               ),
-              Container(width: 15),
-              Container(
-                height: 100,
-                width: 1.0,
-                color: Colors.grey.withOpacity(0.5),
+              Expanded(
+                child: Consumer<Controllers>(
+                  builder: (context, controllers, child) {
+                    return const SizedBox(child: BalancaWid());
+                  },
+                ),
               ),
-              Column(
-                children: [
-                  const Divider(height: 20),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Container(
-                        width: 20,
-                      ),
-                      const Text(
-                        'Balança com aprovação de modelo?',
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    ],
-                  ),
-                  const Divider(
-                    height: 20,
-                  ),
-                  Row(mainAxisAlignment: MainAxisAlignment.start, children: [
-                    Container(width: 20),
-                    const Divider(height: 150),
-                    SizedBox(
-                      child: Row(
-                        children: [
-                          const Text("Não"),
-                          Switch(
-                            value: _switchbalanca,
-                            onChanged: (bool newValue) {
-                              setState(() {
-                                _switchbalanca = newValue;
-                              });
-                            },
-                          ),
-                          const Text("Sim"),
-                        ],
-                      ),
-                    ),
-                  ]),
-                ],
-              ),
-              Container(width: 15),
-              Container(
-                height: 100,
-                width: 1.0,
-                color: Colors.grey.withOpacity(0.5),
-              ),
-              Column(
-                children: [
-                  const Divider(height: 20),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Container(
-                        width: 20,
-                      ),
-                      const Text(
-                        'Caracteristicas do Instrumento',
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    ],
-                  ),
-                  const Divider(
-                    height: 20,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(width: 20),
-                      Column(
-                        children: const [
-                          Text('Temperatura [ ºC ]:'),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          buildSizedBoxColumn(
-                            'Inicial:',
-                            _controladores.tempInit,
-                            [_controladores.tempInitF],
-                          ),
-                          Container(width: 100),
-                          buildSizedBoxColumn(
-                            'Final:',
-                            _controladores.tempFinal,
-                            [_controladores.tempFinalF],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(width: 80),
-                      const Text('HR [ % ]:'),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          buildSizedBoxColumn(
-                            'Inicial:',
-                            _controladores.objeto,
-                            [_controladores.tempInitF],
-                          ),
-                          Container(width: 100),
-                          buildSizedBoxColumn(
-                            'Final:',
-                            _controladores.marca,
-                            [_controladores.tempFinalF],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
+              Expanded(
+                child: Consumer<Controllers>(
+                  builder: (context, controllers, child) {
+                    return const SizedBox(child: Teste2());
+                  },
+                ),
               ),
             ],
           ),
+
           const Divider(
             height: 40,
             color: Colors.transparent,
@@ -480,34 +331,105 @@ class _CalibrationState extends State<Calibration> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(
-                width: 100,
-                height: 50,
-                child: ElevatedButton(
-                  child: const Text('Limpar'),
-                  onPressed: () {
-                    clearAllFields(_controladores);
+              Flexible(
+                child: SizedBox(
+                  width: 100,
+                  height: 50,
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                      overlayColor:
+                          MaterialStatePropertyAll(Colors.red.shade600),
+                      backgroundColor:
+                          const MaterialStatePropertyAll(Colors.red),
+                    ),
+                    child: const Text('Limpar'),
+                    onPressed: () {
+                      _controladores.clearAllFields();
 
-                    setState(() {
-                      _showExtraWidget = false;
-                      _showExtraWidget1 = false;
-                      _isSwitchOn = false;
-                      _switchbalanca = false;
-                    });
-                  },
+                      setState(() {
+                        showExtraWidget = false;
+                        showExtraWidget1 = false;
+                        isSwitchOn = false;
+                        _controladores.switchbalanca = false;
+                      });
+                    },
+                  ),
                 ),
               ),
+              // Container(width: 10),
+              // Flexible(
+              //   child: SizedBox(
+              //     width: 100,
+              //     height: 50,
+              //     child: ElevatedButton(
+              //       style: ButtonStyle(
+              //         overlayColor:
+              //             MaterialStatePropertyAll(Colors.red.shade600),
+              //         backgroundColor:
+              //             const MaterialStatePropertyAll(Colors.red),
+              //       ),
+              //       child: const Text('Enviar'),
+              //       onPressed: () async {
+              //         print(
+              //             'Registro de Calibração: ${_controladores.dT.text}');
+//
+              //         // bool success = await postCalibrationData(
+              //         //     _controladores.regCali.text,
+              //         //     _controladores.data.text,
+              //         //     _controladores.certificado.text,
+              //         //     _controladores.cliente.text,
+              //         //     _controladores.morada.text,
+              //         //     _controladores.objeto.text,
+              //         //     _controladores.marca.text,
+              //         //     _controladores.modelo.text,
+              //         //     _controladores.nserie.text,
+              //         //     _controladores.idinterna.text,
+              //         //     _controladores.cepController.text,
+              //         //     //localização diferente
+              //         //     _controladores.morada2.text,
+              //         //     _controladores.cepController2.text,
+              //         //     //compensação de gravidade
+              //         //     _controladores.altitude.text,
+              //         //     _controladores.latitude.text,
+              //         //     //caracteristicas dos instrumentos
+              //         //     _controladores.cimax.text,
+              //         //     _controladores.dropdownController.text,
+              //         //     _controladores.d.text,
+              //         //     _controladores.dT.text,
+              //         //     //condiçoes ambientais
+              //         //     _controladores.tempInit.text,
+              //         //     _controladores.tempFinal.text,
+              //         //     _controladores.horaInit.text,
+              //         //     _controladores.horaFinal.text);
+//
+              //         // if (success) {
+              //         //   print('Dados enviados com sucesso!');
+              //         // } else {
+              //         //   print('Falha ao enviar dados!');
+              //         // }
+              //       },
+              //     ),
+              //   ),
+              // ),
               Container(width: 10),
-              SizedBox(
-                width: 100,
-                height: 50,
-                child: ElevatedButton(
-                  child: const Text('Próximo'),
-                  onPressed: () {
-                    widget.pageController.animateToPage(1,
-                        duration: const Duration(milliseconds: 400),
-                        curve: Curves.easeInOut);
-                  },
+              Flexible(
+                child: SizedBox(
+                  width: 100,
+                  height: 50,
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                      overlayColor:
+                          MaterialStatePropertyAll(Colors.red.shade600),
+                      backgroundColor:
+                          const MaterialStatePropertyAll(Colors.red),
+                    ),
+                    child: const Text('Próximo'),
+                    onPressed: () {
+                      widget.pageController.animateToPage(1,
+                          duration: const Duration(milliseconds: 400),
+                          curve: Curves.easeInOut);
+                    },
+                  ),
                 ),
               ),
               const Divider(
@@ -519,18 +441,5 @@ class _CalibrationState extends State<Calibration> {
         ],
       ),
     );
-  }
-
-  bool _showExtraWidget = false;
-  bool _showExtraWidget1 = false;
-  bool _isSwitchOn = false;
-  bool _switchbalanca = false;
-
-  String dropdownValue = 'kg'; // valor padrão
-
-  String generateCertificado() {
-    String user = _controladores.user.text;
-    String year = _controladores.year.text.replaceAll('/', '');
-    return '$year-$user';
   }
 }
