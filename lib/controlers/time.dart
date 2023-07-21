@@ -25,9 +25,10 @@ class TimerManager extends ChangeNotifier {
   }
 
   void startTimer() {
+    stopTimer(); // First stop any running timer.
     _timer = Timer.periodic(const Duration(hours: 1), (Timer timer) async {
       String? username = await getUsername();
-      print('o usuario $username' ' está logado');
+      print('Timer está rodando para o usuário $username');
     });
   }
 

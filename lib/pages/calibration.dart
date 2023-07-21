@@ -108,9 +108,9 @@ class _CalibrationState extends State<Calibration> {
                 child: SizedBox(
                   width: 300,
                   child: customTextField(
+                    enabled: !showExtraWidget,
                     labelText: "Morada",
                     controller: _controladores.morada,
-                    enabled: true,
                   ),
                 ),
               ),
@@ -129,6 +129,7 @@ class _CalibrationState extends State<Calibration> {
                         ),
                         inputFormatters: [_controladores.cepF],
                         textAlign: TextAlign.center,
+                        enabled: !showExtraWidget,
                       ),
                     ],
                   ),

@@ -3,11 +3,15 @@ from flask_mysqldb import MySQL
 from flask_cors import CORS
 from datetime import datetime
 
+<<<<<<< HEAD
 import mysql.connector
+=======
+>>>>>>> 0c9b27035bd0f38653f7f404e1791c0ab8d7e1b4
 import json
 
 app = Flask(__name__)
 
+<<<<<<< HEAD
 conn = mysql.connector.connect(
     host='localhost',
     user='root',
@@ -45,6 +49,8 @@ cursor.execute('''
 conn.close()
 
 
+=======
+>>>>>>> 0c9b27035bd0f38653f7f404e1791c0ab8d7e1b4
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'Vof09325'
@@ -79,10 +85,15 @@ def create_tables():
             dropdown_controller VARCHAR(255),
             d VARCHAR(255),
             dt VARCHAR(255),
+<<<<<<< HEAD
+=======
+            switch_status VARCHAR(255),
+>>>>>>> 0c9b27035bd0f38653f7f404e1791c0ab8d7e1b4
             temp_init VARCHAR(255),
             temp_final VARCHAR(255),
             hora_init VARCHAR(255),
             hora_final VARCHAR(255),
+<<<<<<< HEAD
             pontos_cali VARCHAR(255),
             pontos_cali2 VARCHAR(255),
             indica_balanca VARCHAR(255),
@@ -101,6 +112,8 @@ def create_tables():
             ponto10 VARCHAR(255),
             ponto11 VARCHAR(255),
             ponto12 VARCHAR(255),
+=======
+>>>>>>> 0c9b27035bd0f38653f7f404e1791c0ab8d7e1b4
             PRIMARY KEY(id)
         )
     ''')
@@ -172,11 +185,17 @@ def post_calibration_data():
     dropdown_controller = request.form.get('dropdown_controller')
     d = request.form.get('d')
     dt = request.form.get('dt')
+<<<<<<< HEAD
+=======
+    ##################################################
+    switch_status = request.form.get('switch_status')
+>>>>>>> 0c9b27035bd0f38653f7f404e1791c0ab8d7e1b4
     ###################################################
     temp_init = request.form.get('temp_init')
     temp_final = request.form.get('temp_final')
     hora_init = request.form.get('hora_init')
     hora_final = request.form.get('hora_final')
+<<<<<<< HEAD
     ###################################################
     ################### Pagina 2 ######################
     ###################################################
@@ -218,6 +237,21 @@ def post_calibration_data():
          temp_final, hora_init, hora_final, pontos_cali, pontos_cali2,
          indica_balanca, indica_balanca2, carga_ajuste, ref, ponto1, ponto2, ponto3,
          ponto4, ponto5, ponto6, ponto7, ponto8, ponto9, ponto10, ponto11, ponto12)
+=======
+
+    cursor = mysql.connection.cursor()
+    cursor.execute(
+        'INSERT INTO calibration(registro_calibracao, data, numero_certificado, cliente, morada, objeto,marca ,modelo ,'
+        'nserie ,id_interna ,cep_controller , morada2 ,cep_controller2 ,'
+        'altitude ,latitude ,ci_max ,dropdown_controller ,'
+        'd ,dt , switch_status,temp_init ,temp_final ,hora_init ,hora_final) '
+        'VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
+        '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)',
+        (registro_calibracao, data, numero_certificado, cliente, morada, objeto,
+         marca, modelo, nserie, id_interna, cep_controller, morada2, cep_controller2,
+         altitude, latitude, ci_max, dropdown_controller, d, dt, switch_status, temp_init,
+         temp_final, hora_init, hora_final)
+>>>>>>> 0c9b27035bd0f38653f7f404e1791c0ab8d7e1b4
     )
     mysql.connection.commit()
     print(f"registro_calibracao: {registro_calibracao}")
