@@ -30,7 +30,7 @@ void main(List<String> args) {
           create: (context) => EnsaioPesagemControllers(),
         ),
       ],
-      child: const MyApp(),
+      child: MyApp(),
     ),
   );
 }
@@ -40,16 +40,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-      statusBarIconBrightness: Brightness.light,
-      systemNavigationBarColor: Colors.transparent,
-      systemNavigationBarIconBrightness: Brightness.light,
-    ));
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.light,
+        systemNavigationBarColor: Colors.transparent,
+        systemNavigationBarIconBrightness: Brightness.light,
+      ),
+    );
 
     return const MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'LabWeigh',
-        home: SplashScreen());
+      debugShowCheckedModeBanner: false,
+      title: 'LabWeigh',
+      home: SplashScreen(),
+    );
   }
 }

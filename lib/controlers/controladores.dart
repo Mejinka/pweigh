@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
+import 'package:intl/intl.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
+import '../pages/first_page_extends/balanca.dart';
 import 'package:cachapuz_2/pages/calibration.dart';
 
 class Controllers with ChangeNotifier {
@@ -367,6 +369,19 @@ class EnsaioPesagemControllers with ChangeNotifier {
   final TextEditingController aPesoPadrao118 = TextEditingController();
   final TextEditingController aPesoPadrao119 = TextEditingController();
   final TextEditingController aPesoPadrao120 = TextEditingController();
+
+  final TextEditingController result1 = TextEditingController();
+  final TextEditingController result2 = TextEditingController();
+  final TextEditingController result3 = TextEditingController();
+  final TextEditingController result4 = TextEditingController();
+  final TextEditingController result5 = TextEditingController();
+  final TextEditingController result6 = TextEditingController();
+  final TextEditingController result7 = TextEditingController();
+  final TextEditingController result8 = TextEditingController();
+  final TextEditingController result9 = TextEditingController();
+  final TextEditingController result10 = TextEditingController();
+  final TextEditingController result11 = TextEditingController();
+  final TextEditingController result12 = TextEditingController();
 
   Map<int, List<TextEditingController>> controladoresPontosApoio = {};
 

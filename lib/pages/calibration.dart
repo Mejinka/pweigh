@@ -1,8 +1,9 @@
-// ignore_for_file: prefer_interpolation_to_compose_strings
-
+import 'package:cachapuz_2/api.dart';
 import 'package:cachapuz_2/pages/first_page_extends/carac_instrument.dart';
 import 'package:cachapuz_2/pages/first_page_extends/ambiental_conditions.dart';
 import 'package:cachapuz_2/pages/first_page_extends/balanca.dart';
+
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -345,6 +346,8 @@ class _CalibrationState extends State<Calibration> {
                     ),
                     child: const Text('Limpar'),
                     onPressed: () {
+                      print('${_controladores.cliente.text}');
+
                       _controladores.clearAllFields();
 
                       setState(() {

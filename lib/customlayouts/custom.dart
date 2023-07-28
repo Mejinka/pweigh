@@ -240,26 +240,20 @@ Widget pesoPad(TextEditingController controller,
   );
 }
 
-Widget ensaioPrevioTextField(
-    String labelText, TextEditingController controller) {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.center,
-    mainAxisAlignment: MainAxisAlignment.start,
-    children: [
-      SizedBox(
-        width: 50,
-        child: TextField(
-          enabled: true,
-          decoration: const InputDecoration(
-            hintText: "s",
-            border: OutlineInputBorder(),
-          ),
-          controller: controller,
-          textAlign: TextAlign.center,
-        ),
+Widget caixaCustom(TextEditingController controller, bool enabled) {
+  return SizedBox(
+    width: 100,
+    child: TextField(
+      enabled: false,
+      decoration: InputDecoration(
+        filled: true,
+        fillColor: enabled ? Colors.white : Colors.black12,
+        hintText: "",
+        border: const OutlineInputBorder(),
       ),
-      const Divider(height: 5),
-    ],
+      textAlign: TextAlign.center,
+      controller: controller,
+    ),
   );
 }
 

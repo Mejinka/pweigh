@@ -402,25 +402,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         ),
                       ],
                       Container(width: 10),
-                      Flexible(
-                        child: Column(
-                          children: [
-                            Container(width: 80),
-                            SizedBox(
-                              width: 50,
-                              child: TextField(
-                                enabled: true,
-                                decoration: const InputDecoration(
-                                  hintText: "",
-                                  border: OutlineInputBorder(),
-                                ),
-                                textAlign: TextAlign.center,
-                                controller: controladores.aPesoPadrao1,
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
+                      caixaCustom(controladores.result1, numPontosApoio >= 1),
                     ],
                   ),
                 ),
@@ -491,25 +473,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         ),
                       ],
                       Container(width: 10),
-                      Flexible(
-                        child: Column(
-                          children: [
-                            Container(width: 80),
-                            SizedBox(
-                              width: 50,
-                              child: TextField(
-                                enabled: true,
-                                decoration: const InputDecoration(
-                                  hintText: "",
-                                  border: OutlineInputBorder(),
-                                ),
-                                textAlign: TextAlign.center,
-                                controller: controladores.aPesoPadrao1,
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
+                      caixaCustom(controladores.result2, numPontosApoio >= 2),
                     ],
                   ),
                 ),
@@ -580,25 +544,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         ),
                       ],
                       Container(width: 10),
-                      Flexible(
-                        child: Column(
-                          children: [
-                            Container(width: 80),
-                            SizedBox(
-                              width: 50,
-                              child: TextField(
-                                enabled: true,
-                                decoration: const InputDecoration(
-                                  hintText: "",
-                                  border: OutlineInputBorder(),
-                                ),
-                                textAlign: TextAlign.center,
-                                controller: controladores.aPesoPadrao1,
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
+                      caixaCustom(controladores.result3, numPontosApoio >= 3),
                     ],
                   ),
                 ),
@@ -669,25 +615,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         ),
                       ],
                       Container(width: 10),
-                      Flexible(
-                        child: Column(
-                          children: [
-                            Container(width: 80),
-                            SizedBox(
-                              width: 50,
-                              child: TextField(
-                                enabled: true,
-                                decoration: const InputDecoration(
-                                  hintText: "",
-                                  border: OutlineInputBorder(),
-                                ),
-                                textAlign: TextAlign.center,
-                                controller: controladores.aPesoPadrao1,
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
+                      caixaCustom(controladores.result4, numPontosApoio >= 4),
                     ],
                   ),
                 ),
@@ -758,25 +686,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         ),
                       ],
                       Container(width: 10),
-                      Flexible(
-                        child: Column(
-                          children: [
-                            Container(width: 80),
-                            SizedBox(
-                              width: 50,
-                              child: TextField(
-                                enabled: true,
-                                decoration: const InputDecoration(
-                                  hintText: "",
-                                  border: OutlineInputBorder(),
-                                ),
-                                textAlign: TextAlign.center,
-                                controller: controladores.aPesoPadrao1,
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
+                      caixaCustom(controladores.result5, numPontosApoio >= 5),
                     ],
                   ),
                 ),
@@ -847,25 +757,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         ),
                       ],
                       Container(width: 10),
-                      Flexible(
-                        child: Column(
-                          children: [
-                            Container(width: 80),
-                            SizedBox(
-                              width: 50,
-                              child: TextField(
-                                enabled: true,
-                                decoration: const InputDecoration(
-                                  hintText: "",
-                                  border: OutlineInputBorder(),
-                                ),
-                                textAlign: TextAlign.center,
-                                controller: controladores.aPesoPadrao1,
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
+                      caixaCustom(controladores.result6, numPontosApoio >= 6),
                     ],
                   ),
                 ),
@@ -943,25 +835,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         ),
                       ],
                       Container(width: 10),
-                      Flexible(
-                        child: Column(
-                          children: [
-                            Container(width: 80),
-                            SizedBox(
-                              width: 50,
-                              child: TextField(
-                                enabled: true,
-                                decoration: const InputDecoration(
-                                  hintText: "",
-                                  border: OutlineInputBorder(),
-                                ),
-                                textAlign: TextAlign.center,
-                                controller: controladores.aPesoPadrao1,
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
+                      caixaCustom(controladores.result7, numPontosApoio >= 7),
                     ],
                   ),
                 ),
@@ -1032,25 +906,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         ),
                       ],
                       Container(width: 10),
-                      Flexible(
-                        child: Column(
-                          children: [
-                            Container(width: 80),
-                            SizedBox(
-                              width: 50,
-                              child: TextField(
-                                enabled: true,
-                                decoration: const InputDecoration(
-                                  hintText: "",
-                                  border: OutlineInputBorder(),
-                                ),
-                                textAlign: TextAlign.center,
-                                controller: controladores.aPesoPadrao1,
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
+                      caixaCustom(controladores.result8, numPontosApoio >= 8),
                     ],
                   ),
                 ),
@@ -1121,25 +977,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         ),
                       ],
                       Container(width: 10),
-                      Flexible(
-                        child: Column(
-                          children: [
-                            Container(width: 80),
-                            SizedBox(
-                              width: 50,
-                              child: TextField(
-                                enabled: true,
-                                decoration: const InputDecoration(
-                                  hintText: "",
-                                  border: OutlineInputBorder(),
-                                ),
-                                textAlign: TextAlign.center,
-                                controller: controladores.aPesoPadrao1,
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
+                      caixaCustom(controladores.result9, numPontosApoio >= 9),
                     ],
                   ),
                 ),
@@ -1210,25 +1048,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         ),
                       ],
                       Container(width: 10),
-                      Flexible(
-                        child: Column(
-                          children: [
-                            Container(width: 80),
-                            SizedBox(
-                              width: 50,
-                              child: TextField(
-                                enabled: true,
-                                decoration: const InputDecoration(
-                                  hintText: "",
-                                  border: OutlineInputBorder(),
-                                ),
-                                textAlign: TextAlign.center,
-                                controller: controladores.aPesoPadrao1,
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
+                      caixaCustom(controladores.result10, numPontosApoio >= 10),
                     ],
                   ),
                 ),
@@ -1299,25 +1119,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         ),
                       ],
                       Container(width: 10),
-                      Flexible(
-                        child: Column(
-                          children: [
-                            Container(width: 80),
-                            SizedBox(
-                              width: 50,
-                              child: TextField(
-                                enabled: true,
-                                decoration: const InputDecoration(
-                                  hintText: "",
-                                  border: OutlineInputBorder(),
-                                ),
-                                textAlign: TextAlign.center,
-                                controller: controladores.aPesoPadrao1,
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
+                      caixaCustom(controladores.result11, numPontosApoio >= 11),
                     ],
                   ),
                 ),
@@ -1388,25 +1190,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         ),
                       ],
                       Container(width: 10),
-                      Flexible(
-                        child: Column(
-                          children: [
-                            Container(width: 80),
-                            SizedBox(
-                              width: 50,
-                              child: TextField(
-                                enabled: true,
-                                decoration: const InputDecoration(
-                                  hintText: "",
-                                  border: OutlineInputBorder(),
-                                ),
-                                textAlign: TextAlign.center,
-                                controller: controladores.aPesoPadrao1,
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
+                      caixaCustom(controladores.result12, numPontosApoio >= 12),
                     ],
                   ),
                 ),
