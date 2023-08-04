@@ -237,6 +237,7 @@ Future<bool> postCalibrationData(
   String aPesoPadrao118,
   String aPesoPadrao119,
   String aPesoPadrao120,
+  String result1,
 ) async {
   final body = {
     'registro_calibracao': regCali,
@@ -407,6 +408,7 @@ Future<bool> postCalibrationData(
     'peso_padrao118': aPesoPadrao118,
     'peso_padrao119': aPesoPadrao119,
     'peso_padrao120': aPesoPadrao120,
+    'result1': result1
   };
 
   print('REQ: $body');

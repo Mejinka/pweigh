@@ -127,6 +127,7 @@ class _EnsaiosState extends State<Ensaios> {
                                 TextButton(
                                   child: Text('Sim'),
                                   onPressed: () async {
+                                    print(controladores4.result1.text);
                                     Navigator.of(context).pop();
                                     print(DateTime.now());
                                     bool success = await postCalibrationData(
@@ -298,6 +299,7 @@ class _EnsaiosState extends State<Ensaios> {
                                       controladores4.aPesoPadrao118.text,
                                       controladores4.aPesoPadrao119.text,
                                       controladores4.aPesoPadrao120.text,
+                                      controladores4.result1.text,
                                     );
 
                                     if (success) {

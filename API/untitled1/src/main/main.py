@@ -232,6 +232,7 @@ cursor.execute('''
             peso_padrao118 VARCHAR(30),
             peso_padrao119 VARCHAR(30),
             peso_padrao120 VARCHAR(30),
+            result1 VARCHAR(30),
             PRIMARY KEY(id)
     )
 ''')
@@ -453,6 +454,7 @@ def post_calibration_data():
     peso_padrao118 = request.form.get('peso_padrao118')
     peso_padrao119 = request.form.get('peso_padrao119')
     peso_padrao120 = request.form.get('peso_padrao120')
+    result1 = request.form.get('result1')
 
     cursor = conn.cursor()
     cursor.execute(
@@ -487,7 +489,7 @@ def post_calibration_data():
         'peso_padrao104, peso_padrao105, peso_padrao106, peso_padrao107, peso_padrao108,'
         'peso_padrao109, peso_padrao110, peso_padrao111, peso_padrao112, peso_padrao113,'
         'peso_padrao114, peso_padrao115, peso_padrao116, peso_padrao117, peso_padrao118,'
-        'peso_padrao119, peso_padrao120)'
+        'peso_padrao119, peso_padrao120, result1)'
         'VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
         '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,'
         '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,'
@@ -498,7 +500,7 @@ def post_calibration_data():
         '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s ,%s, %s,'
         '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,'
         '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,'
-        '%s, %s, %s, %s)',
+        '%s, %s, %s, %s, %s)',
         (registro_calibracao, data, numero_certificado, cliente, morada, objeto,
          marca, modelo, nserie, id_interna, cep_controller, morada2, cep_controller2,
          altitude, latitude, ci_max, dropdown_controller, d, dt, temp_init,
@@ -528,7 +530,8 @@ def post_calibration_data():
          peso_padrao101, peso_padrao102, peso_padrao103, peso_padrao104, peso_padrao105,
          peso_padrao106, peso_padrao107, peso_padrao108, peso_padrao109, peso_padrao110,
          peso_padrao111, peso_padrao112, peso_padrao113, peso_padrao114, peso_padrao115,
-         peso_padrao116, peso_padrao117, peso_padrao118, peso_padrao119, peso_padrao120)
+         peso_padrao116, peso_padrao117, peso_padrao118, peso_padrao119, peso_padrao120,
+         result1,)
     )
     conn.commit()
 

@@ -15,22 +15,397 @@ class EnsaioExcentrico extends StatefulWidget {
 
 class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
   late EnsaioExcentricoControllers _controladores;
+  late EnsaioPesagemControllers _controladoresPesagem;
+
   int numPontosApoio = 0;
   bool _isSelected = false;
+  List<bool> _contem715 = List.filled(5, false);
+  List<bool> _contem716 = List.filled(5, false);
+  // Crie controladores para cada par de campos de texto.
 
+  TextEditingController _getControllerByIndex(int index) {
+    switch (index) {
+      case 0:
+        return _controladoresPesagem.aPesoPadrao1;
+      case 1:
+        return _controladoresPesagem.aPesoPadrao2;
+      case 2:
+        return _controladoresPesagem.aPesoPadrao3;
+      case 3:
+        return _controladoresPesagem.aPesoPadrao4;
+      case 4:
+        return _controladoresPesagem.aPesoPadrao5;
+      case 5:
+        return _controladoresPesagem.aPesoPadrao5;
+      case 6:
+        return _controladoresPesagem.aPesoPadrao6;
+      case 7:
+        return _controladoresPesagem.aPesoPadrao7;
+      case 8:
+        return _controladoresPesagem.aPesoPadrao8;
+      case 9:
+        return _controladoresPesagem.aPesoPadrao9;
+      case 10:
+        return _controladoresPesagem.aPesoPadrao10;
+      case 11:
+        return _controladoresPesagem.aPesoPadrao11;
+      case 12:
+        return _controladoresPesagem.aPesoPadrao12;
+      case 13:
+        return _controladoresPesagem.aPesoPadrao13;
+      case 14:
+        return _controladoresPesagem.aPesoPadrao14;
+      case 15:
+        return _controladoresPesagem.aPesoPadrao15;
+      case 16:
+        return _controladoresPesagem.aPesoPadrao16;
+      case 17:
+        return _controladoresPesagem.aPesoPadrao17;
+      case 18:
+        return _controladoresPesagem.aPesoPadrao18;
+      case 19:
+        return _controladoresPesagem.aPesoPadrao19;
+      case 20:
+        return _controladoresPesagem.aPesoPadrao20;
+      case 21:
+        return _controladoresPesagem.aPesoPadrao21;
+      case 22:
+        return _controladoresPesagem.aPesoPadrao22;
+      case 23:
+        return _controladoresPesagem.aPesoPadrao23;
+      case 24:
+        return _controladoresPesagem.aPesoPadrao24;
+      case 25:
+        return _controladoresPesagem.aPesoPadrao25;
+      case 26:
+        return _controladoresPesagem.aPesoPadrao26;
+      case 27:
+        return _controladoresPesagem.aPesoPadrao27;
+      case 28:
+        return _controladoresPesagem.aPesoPadrao28;
+      case 29:
+        return _controladoresPesagem.aPesoPadrao29;
+      case 30:
+        return _controladoresPesagem.aPesoPadrao30;
+      case 31:
+        return _controladoresPesagem.aPesoPadrao31;
+      case 32:
+        return _controladoresPesagem.aPesoPadrao32;
+      case 33:
+        return _controladoresPesagem.aPesoPadrao33;
+      case 34:
+        return _controladoresPesagem.aPesoPadrao34;
+      case 35:
+        return _controladoresPesagem.aPesoPadrao35;
+      case 36:
+        return _controladoresPesagem.aPesoPadrao36;
+      case 37:
+        return _controladoresPesagem.aPesoPadrao37;
+      case 38:
+        return _controladoresPesagem.aPesoPadrao38;
+      case 39:
+        return _controladoresPesagem.aPesoPadrao39;
+      case 40:
+        return _controladoresPesagem.aPesoPadrao40;
+      case 41:
+        return _controladoresPesagem.aPesoPadrao41;
+      case 42:
+        return _controladoresPesagem.aPesoPadrao42;
+      case 43:
+        return _controladoresPesagem.aPesoPadrao43;
+      case 44:
+        return _controladoresPesagem.aPesoPadrao44;
+      case 45:
+        return _controladoresPesagem.aPesoPadrao45;
+      case 46:
+        return _controladoresPesagem.aPesoPadrao46;
+      case 47:
+        return _controladoresPesagem.aPesoPadrao47;
+      case 48:
+        return _controladoresPesagem.aPesoPadrao48;
+      case 49:
+        return _controladoresPesagem.aPesoPadrao49;
+      case 50:
+        return _controladoresPesagem.aPesoPadrao50;
+      case 51:
+        return _controladoresPesagem.aPesoPadrao51;
+      case 52:
+        return _controladoresPesagem.aPesoPadrao52;
+      case 53:
+        return _controladoresPesagem.aPesoPadrao53;
+      case 54:
+        return _controladoresPesagem.aPesoPadrao54;
+      case 55:
+        return _controladoresPesagem.aPesoPadrao55;
+      case 56:
+        return _controladoresPesagem.aPesoPadrao56;
+      case 57:
+        return _controladoresPesagem.aPesoPadrao57;
+      case 58:
+        return _controladoresPesagem.aPesoPadrao58;
+      case 59:
+        return _controladoresPesagem.aPesoPadrao59;
+      case 60:
+        return _controladoresPesagem.aPesoPadrao60;
+      case 61:
+        return _controladoresPesagem.aPesoPadrao61;
+      case 62:
+        return _controladoresPesagem.aPesoPadrao62;
+      case 63:
+        return _controladoresPesagem.aPesoPadrao63;
+      case 64:
+        return _controladoresPesagem.aPesoPadrao64;
+      case 65:
+        return _controladoresPesagem.aPesoPadrao65;
+      case 66:
+        return _controladoresPesagem.aPesoPadrao66;
+      case 67:
+        return _controladoresPesagem.aPesoPadrao67;
+      case 68:
+        return _controladoresPesagem.aPesoPadrao68;
+      case 69:
+        return _controladoresPesagem.aPesoPadrao69;
+      case 70:
+        return _controladoresPesagem.aPesoPadrao70;
+      case 71:
+        return _controladoresPesagem.aPesoPadrao71;
+      case 72:
+        return _controladoresPesagem.aPesoPadrao72;
+      case 73:
+        return _controladoresPesagem.aPesoPadrao73;
+      case 74:
+        return _controladoresPesagem.aPesoPadrao74;
+      case 75:
+        return _controladoresPesagem.aPesoPadrao75;
+      case 76:
+        return _controladoresPesagem.aPesoPadrao76;
+      case 77:
+        return _controladoresPesagem.aPesoPadrao77;
+      case 78:
+        return _controladoresPesagem.aPesoPadrao78;
+      case 79:
+        return _controladoresPesagem.aPesoPadrao79;
+      case 80:
+        return _controladoresPesagem.aPesoPadrao80;
+      case 81:
+        return _controladoresPesagem.aPesoPadrao81;
+      case 82:
+        return _controladoresPesagem.aPesoPadrao82;
+      case 83:
+        return _controladoresPesagem.aPesoPadrao83;
+      case 84:
+        return _controladoresPesagem.aPesoPadrao84;
+      case 85:
+        return _controladoresPesagem.aPesoPadrao85;
+      case 86:
+        return _controladoresPesagem.aPesoPadrao86;
+      case 87:
+        return _controladoresPesagem.aPesoPadrao87;
+      case 88:
+        return _controladoresPesagem.aPesoPadrao88;
+      case 89:
+        return _controladoresPesagem.aPesoPadrao89;
+      case 90:
+        return _controladoresPesagem.aPesoPadrao90;
+      case 91:
+        return _controladoresPesagem.aPesoPadrao91;
+      case 92:
+        return _controladoresPesagem.aPesoPadrao92;
+      case 93:
+        return _controladoresPesagem.aPesoPadrao93;
+      case 94:
+        return _controladoresPesagem.aPesoPadrao94;
+      case 95:
+        return _controladoresPesagem.aPesoPadrao95;
+      case 96:
+        return _controladoresPesagem.aPesoPadrao96;
+      case 97:
+        return _controladoresPesagem.aPesoPadrao97;
+      case 98:
+        return _controladoresPesagem.aPesoPadrao98;
+      case 99:
+        return _controladoresPesagem.aPesoPadrao99;
+      case 100:
+        return _controladoresPesagem.aPesoPadrao100;
+      case 101:
+        return _controladoresPesagem.aPesoPadrao101;
+      case 102:
+        return _controladoresPesagem.aPesoPadrao102;
+      case 103:
+        return _controladoresPesagem.aPesoPadrao103;
+      case 104:
+        return _controladoresPesagem.aPesoPadrao104;
+      case 105:
+        return _controladoresPesagem.aPesoPadrao105;
+      case 106:
+        return _controladoresPesagem.aPesoPadrao106;
+      case 107:
+        return _controladoresPesagem.aPesoPadrao107;
+      case 108:
+        return _controladoresPesagem.aPesoPadrao108;
+      case 109:
+        return _controladoresPesagem.aPesoPadrao109;
+      case 110:
+        return _controladoresPesagem.aPesoPadrao110;
+      case 111:
+        return _controladoresPesagem.aPesoPadrao111;
+      case 112:
+        return _controladoresPesagem.aPesoPadrao112;
+      case 113:
+        return _controladoresPesagem.aPesoPadrao113;
+      case 114:
+        return _controladoresPesagem.aPesoPadrao114;
+      case 115:
+        return _controladoresPesagem.aPesoPadrao115;
+      case 116:
+        return _controladoresPesagem.aPesoPadrao116;
+      case 117:
+        return _controladoresPesagem.aPesoPadrao117;
+      case 118:
+        return _controladoresPesagem.aPesoPadrao118;
+      case 119:
+        return _controladoresPesagem.aPesoPadrao119;
+      default:
+        throw ArgumentError("Index must be between 0 and 119");
+    }
+  }
+
+  List<TextEditingController> _controladoresDesativados =
+      List.generate(5, (index) => TextEditingController());
+
+  TextEditingController _controller715 = TextEditingController();
+  TextEditingController _controller716 = TextEditingController();
+  final Map<String, String> mapeamento = {
+    '1m': '0,0010009',
+    '2m': '0,0019997',
+    '2mº': '0,0019967',
+    '5m': '0,0049960',
+    '10m': '0,0099967',
+    '20m': '0,0200006',
+    '20mº': '0,0199988',
+    '50m': '0,0500039',
+    '100m': '0,1000038',
+    '200m': '0,2000001',
+    '200mº': '0,1999915',
+    '500m': '0,5000021',
+    '1': '1,0000010',
+    '2': '1,9999870',
+    '2º': '2,0000180',
+    '5': '5,0000190',
+    '10': '10,0000140',
+    '20': '20,0000440',
+    '20º': '20,0000270',
+    '50': '50,0000230',
+    '100': '100,0000530',
+    '200': '199,9999600',
+    '200º': '199,9999800',
+    '500': '499,9996900',
+    '1000': '1000,0008200',
+  };
+
+  final Map<String, String> mapeamentoF = {
+    'F1m': '0,0010034',
+    'F2m': '0,0020011',
+    'F2mº': '0,0020046',
+    'F5m': '0,0050032',
+    'F10m': '0,0099981',
+    'F20m': '0,0200110',
+    'F20mº': '0,0200100',
+    'F50m': '0,0500044',
+    'F100m': '0,1000210',
+    'F200m': '0,2000250',
+    'F200mº': '0,2000210',
+    'F500m': '0,5000310',
+    'F1': '1,0000300',
+    'F2': '2,0000220',
+    'F2º': '2,0000400',
+    'F5': '5,0000440',
+    'F10': '10,0000150',
+    'F20': '20,0000700',
+    'F20º': '20,0000590',
+    'F50': '50,0000150',
+    'F100': '100,0003300',
+    'F200': '200,0000900',
+    'F200º': '200,0001800',
+    'F500': '500,0013100',
+    'F1k': '1000,0025000',
+    'F2k': '2000,0038000',
+    'F2kº': '2000,0047000',
+    'F5k': '5000,0036000',
+  };
   @override
   void initState() {
     super.initState();
     _controladores = widget.controladores;
     _controladores.pontosApoioController.addListener(_updateCampos);
+    _controladoresPesagem =
+        Provider.of<EnsaioPesagemControllers>(context, listen: false);
+
+    for (int i = 0; i < 5; i++) {
+      // Número de controladores
+      _getControllerByIndex(i).addListener(() {
+        var valor = _getControllerByIndex(i).text;
+
+        if (mapeamento.containsKey(valor)) {
+          _controladoresDesativados[i].text = mapeamento[valor]!;
+          _contem715[i] = true;
+          _contem716[i] = false;
+        } else if (mapeamentoF.containsKey(valor)) {
+          _controladoresDesativados[i].text = mapeamentoF[valor]!;
+          _contem716[i] = true;
+          _contem715[i] = false;
+        } else {
+          _controladoresDesativados[i].text = '';
+          _contem715[i] = false;
+          _contem716[i] = false;
+        }
+
+        atualizarSoma();
+
+        // Só atualize os campos 715 e 716 se não houver correspondências restantes
+        if (!_contem715.contains(true)) {
+          _controller715.text = "";
+        } else {
+          _controller715.text = "715";
+        }
+
+        if (!_contem716.contains(true)) {
+          _controller716.text = "";
+        } else {
+          _controller716.text = "716";
+        }
+      });
+    }
   }
 
   @override
   void dispose() {
-    for (int i = 1; i <= _controladores.controladoresPontosApoio.length; i++) {
+    for (int i = 2; i <= _controladores.controladoresPontosApoio.length; i++) {
       _controladores.disposePontoApoioControllers(i);
     }
+
+    _controladoresPesagem.result1.dispose();
+    _controladoresPesagem.result2.dispose();
+    _controller715.dispose();
+    _controller716.dispose();
     super.dispose();
+  }
+
+  void atualizarSoma() {
+    double soma = 0.0;
+
+    for (var controller in _controladoresDesativados) {
+      var valorTexto = controller.text;
+      double valor = valorTexto.isNotEmpty
+          ? double.parse(valorTexto.replaceAll(",", "."))
+          : 0.0;
+      soma += valor;
+    }
+
+    _controladoresPesagem.result1.text =
+        soma.toStringAsFixed(6).replaceAll(".", ",");
+    _controladoresPesagem.result2.text =
+        soma.toStringAsFixed(6).replaceAll(".", ",");
   }
 
   void _updateCampos() {
@@ -92,32 +467,6 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                 ],
               ),
             ),
-            //Expanded(
-            //  flex: 0,
-            //  child: SingleChildScrollView(
-            //    scrollDirection: Axis.horizontal,
-            //    child: Row(
-            //      crossAxisAlignment: CrossAxisAlignment.center,
-            //      mainAxisAlignment: MainAxisAlignment.center,
-            //      children: [
-            //        for (int i = 0; i < 12; i++)
-            //          Padding(
-            //            padding: EdgeInsets.only(right: i < 11 ? 10.0 : 0.0),
-            //            child: Column(
-            //              children: [
-            //                customPontosApoio(
-            //                    '${i + 1}', controladoresPontoApoio[i]),
-            //                customPontosApoio(
-            //                    '',
-            //                    controladoresPontoApoio[
-            //                        i]), // Se você precisa de um segundo controlador por campo, considere criar outra lista
-            //              ],
-            //            ),
-            //          ),
-            //      ],
-            //    ),
-            //  ),
-            //),
             Expanded(
                 child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -343,27 +692,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                controladores.aPesoPadrao1,
+                                _controladoresPesagem.aPesoPadrao1,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 1),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao2,
+                                _controladoresPesagem.aPesoPadrao2,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 1),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao3,
+                                _controladoresPesagem.aPesoPadrao3,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 1),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao4,
+                                _controladoresPesagem.aPesoPadrao4,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 1),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao5,
+                                _controladoresPesagem.aPesoPadrao5,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 1),
                           ],
@@ -374,27 +723,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                           child: Column(
                             children: [
                               pesoPad(
-                                  controladores.aPesoPadrao6,
+                                  _controladoresPesagem.aPesoPadrao6,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 1),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao7,
+                                  _controladoresPesagem.aPesoPadrao7,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 1),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao8,
+                                  _controladoresPesagem.aPesoPadrao8,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 1),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao9,
+                                  _controladoresPesagem.aPesoPadrao9,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 1),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao10,
+                                  _controladoresPesagem.aPesoPadrao10,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 1),
                             ],
@@ -402,7 +751,8 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         ),
                       ],
                       Container(width: 10),
-                      caixaCustom(controladores.result1, numPontosApoio >= 1),
+                      caixaCustom(
+                          _controladoresPesagem.result1, numPontosApoio >= 1),
                     ],
                   ),
                 ),
@@ -414,27 +764,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                controladores.aPesoPadrao11,
+                                _controladoresPesagem.aPesoPadrao11,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 2),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao12,
+                                _controladoresPesagem.aPesoPadrao12,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 2),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao13,
+                                _controladoresPesagem.aPesoPadrao13,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 2),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao14,
+                                _controladoresPesagem.aPesoPadrao14,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 2),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao15,
+                                _controladoresPesagem.aPesoPadrao15,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 2),
                           ],
@@ -445,27 +795,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                           child: Column(
                             children: [
                               pesoPad(
-                                  controladores.aPesoPadrao16,
+                                  _controladoresPesagem.aPesoPadrao16,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 2),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao17,
+                                  _controladoresPesagem.aPesoPadrao17,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 2),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao18,
+                                  _controladoresPesagem.aPesoPadrao18,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 2),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao19,
+                                  _controladoresPesagem.aPesoPadrao19,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 2),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao20,
+                                  _controladoresPesagem.aPesoPadrao20,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 2),
                             ],
@@ -485,27 +835,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                controladores.aPesoPadrao21,
+                                _controladoresPesagem.aPesoPadrao21,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 3),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao22,
+                                _controladoresPesagem.aPesoPadrao22,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 3),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao23,
+                                _controladoresPesagem.aPesoPadrao23,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 3),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao24,
+                                _controladoresPesagem.aPesoPadrao24,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 3),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao25,
+                                _controladoresPesagem.aPesoPadrao25,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 3),
                           ],
@@ -516,27 +866,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                           child: Column(
                             children: [
                               pesoPad(
-                                  controladores.aPesoPadrao26,
+                                  _controladoresPesagem.aPesoPadrao26,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 3),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao27,
+                                  _controladoresPesagem.aPesoPadrao27,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 3),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao28,
+                                  _controladoresPesagem.aPesoPadrao28,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 3),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao29,
+                                  _controladoresPesagem.aPesoPadrao29,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 3),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao30,
+                                  _controladoresPesagem.aPesoPadrao30,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 3),
                             ],
@@ -556,27 +906,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                controladores.aPesoPadrao31,
+                                _controladoresPesagem.aPesoPadrao31,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 4),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao32,
+                                _controladoresPesagem.aPesoPadrao32,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 4),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao33,
+                                _controladoresPesagem.aPesoPadrao33,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 4),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao34,
+                                _controladoresPesagem.aPesoPadrao34,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 4),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao35,
+                                _controladoresPesagem.aPesoPadrao35,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 4),
                           ],
@@ -587,27 +937,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                           child: Column(
                             children: [
                               pesoPad(
-                                  controladores.aPesoPadrao36,
+                                  _controladoresPesagem.aPesoPadrao36,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 4),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao37,
+                                  _controladoresPesagem.aPesoPadrao37,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 4),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao38,
+                                  _controladoresPesagem.aPesoPadrao38,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 4),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao39,
+                                  _controladoresPesagem.aPesoPadrao39,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 4),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao40,
+                                  _controladoresPesagem.aPesoPadrao40,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 4),
                             ],
@@ -627,27 +977,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                controladores.aPesoPadrao41,
+                                _controladoresPesagem.aPesoPadrao41,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 5),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao42,
+                                _controladoresPesagem.aPesoPadrao42,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 5),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao43,
+                                _controladoresPesagem.aPesoPadrao43,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 5),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao44,
+                                _controladoresPesagem.aPesoPadrao44,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 5),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao45,
+                                _controladoresPesagem.aPesoPadrao45,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 5),
                           ],
@@ -658,27 +1008,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                           child: Column(
                             children: [
                               pesoPad(
-                                  controladores.aPesoPadrao46,
+                                  _controladoresPesagem.aPesoPadrao46,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 5),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao47,
+                                  _controladoresPesagem.aPesoPadrao47,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 5),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao48,
+                                  _controladoresPesagem.aPesoPadrao48,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 5),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao49,
+                                  _controladoresPesagem.aPesoPadrao49,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 5),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao50,
+                                  _controladoresPesagem.aPesoPadrao50,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 5),
                             ],
@@ -698,27 +1048,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                controladores.aPesoPadrao51,
+                                _controladoresPesagem.aPesoPadrao51,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 6),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao52,
+                                _controladoresPesagem.aPesoPadrao52,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 6),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao53,
+                                _controladoresPesagem.aPesoPadrao53,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 6),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao54,
+                                _controladoresPesagem.aPesoPadrao54,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 6),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao55,
+                                _controladoresPesagem.aPesoPadrao55,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 6),
                           ],
@@ -729,27 +1079,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                           child: Column(
                             children: [
                               pesoPad(
-                                  controladores.aPesoPadrao56,
+                                  _controladoresPesagem.aPesoPadrao56,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 6),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao57,
+                                  _controladoresPesagem.aPesoPadrao57,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 6),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao58,
+                                  _controladoresPesagem.aPesoPadrao58,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 6),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao59,
+                                  _controladoresPesagem.aPesoPadrao59,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 6),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao60,
+                                  _controladoresPesagem.aPesoPadrao60,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 6),
                             ],
@@ -776,27 +1126,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                controladores.aPesoPadrao61,
+                                _controladoresPesagem.aPesoPadrao61,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 7),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao62,
+                                _controladoresPesagem.aPesoPadrao62,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 7),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao63,
+                                _controladoresPesagem.aPesoPadrao63,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 7),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao64,
+                                _controladoresPesagem.aPesoPadrao64,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 7),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao65,
+                                _controladoresPesagem.aPesoPadrao65,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 7),
                           ],
@@ -807,27 +1157,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                           child: Column(
                             children: [
                               pesoPad(
-                                  controladores.aPesoPadrao66,
+                                  _controladoresPesagem.aPesoPadrao66,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 7),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao67,
+                                  _controladoresPesagem.aPesoPadrao67,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 7),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao68,
+                                  _controladoresPesagem.aPesoPadrao68,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 7),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao69,
+                                  _controladoresPesagem.aPesoPadrao69,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 7),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao70,
+                                  _controladoresPesagem.aPesoPadrao70,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 7),
                             ],
@@ -847,27 +1197,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                controladores.aPesoPadrao71,
+                                _controladoresPesagem.aPesoPadrao71,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 8),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao72,
+                                _controladoresPesagem.aPesoPadrao72,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 8),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao73,
+                                _controladoresPesagem.aPesoPadrao73,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 8),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao74,
+                                _controladoresPesagem.aPesoPadrao74,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 8),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao75,
+                                _controladoresPesagem.aPesoPadrao75,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 8),
                           ],
@@ -878,27 +1228,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                           child: Column(
                             children: [
                               pesoPad(
-                                  controladores.aPesoPadrao76,
+                                  _controladoresPesagem.aPesoPadrao76,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 8),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao77,
+                                  _controladoresPesagem.aPesoPadrao77,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 8),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao78,
+                                  _controladoresPesagem.aPesoPadrao78,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 8),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao79,
+                                  _controladoresPesagem.aPesoPadrao79,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 8),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao80,
+                                  _controladoresPesagem.aPesoPadrao80,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 8),
                             ],
@@ -918,27 +1268,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                controladores.aPesoPadrao81,
+                                _controladoresPesagem.aPesoPadrao81,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 9),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao82,
+                                _controladoresPesagem.aPesoPadrao82,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 9),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao83,
+                                _controladoresPesagem.aPesoPadrao83,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 9),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao84,
+                                _controladoresPesagem.aPesoPadrao84,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 9),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao85,
+                                _controladoresPesagem.aPesoPadrao85,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 9),
                           ],
@@ -949,27 +1299,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                           child: Column(
                             children: [
                               pesoPad(
-                                  controladores.aPesoPadrao86,
+                                  _controladoresPesagem.aPesoPadrao86,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 9),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao87,
+                                  _controladoresPesagem.aPesoPadrao87,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 9),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao88,
+                                  _controladoresPesagem.aPesoPadrao88,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 9),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao89,
+                                  _controladoresPesagem.aPesoPadrao89,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 9),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao90,
+                                  _controladoresPesagem.aPesoPadrao90,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 9),
                             ],
@@ -989,27 +1339,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                controladores.aPesoPadrao91,
+                                _controladoresPesagem.aPesoPadrao91,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 10),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao92,
+                                _controladoresPesagem.aPesoPadrao92,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 10),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao93,
+                                _controladoresPesagem.aPesoPadrao93,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 10),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao94,
+                                _controladoresPesagem.aPesoPadrao94,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 10),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao95,
+                                _controladoresPesagem.aPesoPadrao95,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 10),
                           ],
@@ -1020,27 +1370,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                           child: Column(
                             children: [
                               pesoPad(
-                                  controladores.aPesoPadrao96,
+                                  _controladoresPesagem.aPesoPadrao96,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 10),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao97,
+                                  _controladoresPesagem.aPesoPadrao97,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 10),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao98,
+                                  _controladoresPesagem.aPesoPadrao98,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 10),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao99,
+                                  _controladoresPesagem.aPesoPadrao99,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 10),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao100,
+                                  _controladoresPesagem.aPesoPadrao100,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 10),
                             ],
@@ -1060,27 +1410,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                controladores.aPesoPadrao101,
+                                _controladoresPesagem.aPesoPadrao101,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 11),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao102,
+                                _controladoresPesagem.aPesoPadrao102,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 11),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao103,
+                                _controladoresPesagem.aPesoPadrao103,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 11),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao104,
+                                _controladoresPesagem.aPesoPadrao104,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 11),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao105,
+                                _controladoresPesagem.aPesoPadrao105,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 11),
                           ],
@@ -1091,27 +1441,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                           child: Column(
                             children: [
                               pesoPad(
-                                  controladores.aPesoPadrao106,
+                                  _controladoresPesagem.aPesoPadrao106,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 11),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao107,
+                                  _controladoresPesagem.aPesoPadrao107,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 11),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao108,
+                                  _controladoresPesagem.aPesoPadrao108,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 11),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao109,
+                                  _controladoresPesagem.aPesoPadrao109,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 11),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao110,
+                                  _controladoresPesagem.aPesoPadrao110,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 11),
                             ],
@@ -1131,27 +1481,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                controladores.aPesoPadrao111,
+                                _controladoresPesagem.aPesoPadrao111,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 12),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao112,
+                                _controladoresPesagem.aPesoPadrao112,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 12),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao113,
+                                _controladoresPesagem.aPesoPadrao113,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 12),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao114,
+                                _controladoresPesagem.aPesoPadrao114,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 12),
                             const SizedBox(height: 10),
                             pesoPad(
-                                controladores.aPesoPadrao115,
+                                _controladoresPesagem.aPesoPadrao115,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 12),
                           ],
@@ -1162,27 +1512,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                           child: Column(
                             children: [
                               pesoPad(
-                                  controladores.aPesoPadrao116,
+                                  _controladoresPesagem.aPesoPadrao116,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 12),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao117,
+                                  _controladoresPesagem.aPesoPadrao117,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 12),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao118,
+                                  _controladoresPesagem.aPesoPadrao118,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 12),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao119,
+                                  _controladoresPesagem.aPesoPadrao119,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 12),
                               const SizedBox(height: 10),
                               pesoPad(
-                                  controladores.aPesoPadrao120,
+                                  _controladoresPesagem.aPesoPadrao120,
                                   [controladores.aPesoPadrao1F],
                                   numPontosApoio >= 12),
                             ],
