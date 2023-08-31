@@ -116,16 +116,16 @@ class _EnsaiosState extends State<Ensaios> {
                           context: context,
                           builder: (BuildContext context) {
                             return AlertDialog(
-                              title: Text('Gerar PDF?'),
+                              title: const Text('Gerar PDF?'),
                               actions: <Widget>[
                                 TextButton(
-                                  child: Text('Não'),
+                                  child: const Text('Não'),
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   },
                                 ),
                                 TextButton(
-                                  child: Text('Sim'),
+                                  child: const Text('Sim'),
                                   onPressed: () async {
                                     print(controladores4.result1.text);
                                     Navigator.of(context).pop();

@@ -1,9 +1,6 @@
-import 'package:cachapuz_2/api.dart';
 import 'package:cachapuz_2/pages/first_page_extends/carac_instrument.dart';
 import 'package:cachapuz_2/pages/first_page_extends/ambiental_conditions.dart';
 import 'package:cachapuz_2/pages/first_page_extends/balanca.dart';
-
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -54,11 +51,9 @@ class _CalibrationState extends State<Calibration> {
                     controller: _controladores.regCali,
                     onChanged: (value) {
                       setState(() {
-                        _controladores.certificado.text =
-                            _controladores.certificado.text =
-                                DateTime.now().year.toString() +
-                                    '-' +
-                                    _controladores.regCali.text;
+                        _controladores.certificado.text = _controladores
+                                .certificado.text =
+                            '${DateTime.now().year}-${_controladores.regCali.text}';
                       });
                     },
                   ),

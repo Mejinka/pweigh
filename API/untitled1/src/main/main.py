@@ -12,13 +12,13 @@ from reportlab.lib.colors import black, white, HexColor
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 
-arial_font_path = "C:/Windows/Fonts/arial.ttf"  # Replace with the actual path to the Arial font file on your system
+arial_font_path = "C:/Windows/Fonts/arial.ttf" 
 pdfmetrics.registerFont(TTFont("Arial", arial_font_path))
 
-arial_bold_font_path = "assets/fonts/arialbd.ttf"  # Replace with the actual path to the Arial-Bold font file on your system
+arial_bold_font_path = "assets/fonts/arialbd.ttf"  
 pdfmetrics.registerFont(TTFont("Arial-Bold", arial_bold_font_path))
 
-arial_italic_font_path = "assets/fonts/ariali.ttf"  # Replace with the actual path to the Arial-Italic font file on your system
+arial_italic_font_path = "assets/fonts/ariali.ttf"  
 pdfmetrics.registerFont(TTFont("Arial-Italic", arial_italic_font_path))
 
 import mysql.connector

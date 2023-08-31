@@ -228,39 +228,16 @@ class EnsaioPesagemControllers with ChangeNotifier {
   final MaskTextInputFormatter aPesoPadrao1F =
       MaskTextInputFormatter(mask: '000000', filter: {"0": RegExp(r'[0-9]')});
   final TextEditingController aPesoPadrao2 = TextEditingController();
-  final MaskTextInputFormatter aPesoPadrao2F =
-      MaskTextInputFormatter(mask: '000000', filter: {"0": RegExp(r'[0-9]')});
   final TextEditingController aPesoPadrao3 = TextEditingController();
-  final MaskTextInputFormatter aPesoPadrao3F =
-      MaskTextInputFormatter(mask: '000000', filter: {"0": RegExp(r'[0-9]')});
   final TextEditingController aPesoPadrao4 = TextEditingController();
-  final MaskTextInputFormatter aPesoPadrao4F =
-      MaskTextInputFormatter(mask: '000000', filter: {"0": RegExp(r'[0-9]')});
   final TextEditingController aPesoPadrao5 = TextEditingController();
-  final MaskTextInputFormatter aPesoPadrao5F =
-      MaskTextInputFormatter(mask: '000000', filter: {"0": RegExp(r'[0-9]')});
   final TextEditingController aPesoPadrao6 = TextEditingController();
-  final MaskTextInputFormatter aPesoPadrao6F =
-      MaskTextInputFormatter(mask: '000000', filter: {"0": RegExp(r'[0-9]')});
   final TextEditingController aPesoPadrao7 = TextEditingController();
-  final MaskTextInputFormatter aPesoPadrao7F =
-      MaskTextInputFormatter(mask: '000000', filter: {"0": RegExp(r'[0-9]')});
   final TextEditingController aPesoPadrao8 = TextEditingController();
-  final MaskTextInputFormatter aPesoPadrao8F =
-      MaskTextInputFormatter(mask: '000000', filter: {"0": RegExp(r'[0-9]')});
   final TextEditingController aPesoPadrao9 = TextEditingController();
-  final MaskTextInputFormatter aPesoPadrao9F =
-      MaskTextInputFormatter(mask: '000000', filter: {"0": RegExp(r'[0-9]')});
   final TextEditingController aPesoPadrao10 = TextEditingController();
-  final MaskTextInputFormatter aPesoPadrao10F =
-      MaskTextInputFormatter(mask: '000000', filter: {"0": RegExp(r'[0-9]')});
   final TextEditingController aPesoPadrao11 = TextEditingController();
-  final MaskTextInputFormatter aPesoPadrao11F =
-      MaskTextInputFormatter(mask: '000000', filter: {"0": RegExp(r'[0-9]')});
   final TextEditingController aPesoPadrao12 = TextEditingController();
-  final MaskTextInputFormatter aPesoPadrao12F =
-      MaskTextInputFormatter(mask: '000000', filter: {"0": RegExp(r'[0-9]')});
-
   final TextEditingController aPesoPadrao13 = TextEditingController();
   final TextEditingController aPesoPadrao14 = TextEditingController();
   final TextEditingController aPesoPadrao15 = TextEditingController();

@@ -225,7 +225,7 @@ Widget customPontosApoio(String labelText, TextEditingController controller,
 Widget pesoPad(TextEditingController controller,
     List<TextInputFormatter> inputFormatters, bool enabled) {
   return SizedBox(
-    width: 100,
+    width: 70,
     child: TextField(
       enabled: enabled,
       decoration: InputDecoration(
@@ -240,9 +240,9 @@ Widget pesoPad(TextEditingController controller,
   );
 }
 
-Widget caixaCustom(TextEditingController controller, bool enabled) {
+Widget resultBox(TextEditingController controller, bool enabled) {
   return SizedBox(
-    width: 100,
+    width: 110,
     child: TextField(
       enabled: false,
       decoration: InputDecoration(

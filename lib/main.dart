@@ -30,7 +30,7 @@ void main(List<String> args) {
           create: (context) => EnsaioPesagemControllers(),
         ),
       ],
-      child: MyApp(),
+      child: const MyApp(),
     ),
   );
 }
