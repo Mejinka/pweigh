@@ -238,6 +238,7 @@ Future<bool> postCalibrationData(
   String aPesoPadrao119,
   String aPesoPadrao120,
   String result1,
+  String containsValueFromMap,
 ) async {
   final body = {
     'registro_calibracao': regCali,
@@ -408,7 +409,8 @@ Future<bool> postCalibrationData(
     'peso_padrao118': aPesoPadrao118,
     'peso_padrao119': aPesoPadrao119,
     'peso_padrao120': aPesoPadrao120,
-    'result1': result1
+    'result1': result1,
+    'containsValueFromMap': containsValueFromMap
   };
 
   print('REQ: $body');

@@ -1265,8 +1265,8 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
         somaColuna4.toStringAsFixed(7).replaceAll(".", ",");
     _controladoresPesagem.result5.text =
         somaColuna5.toStringAsFixed(7).replaceAll(".", ",");
-    _controladoresPesagem.result7.text =
-        somaColuna7.toStringAsFixed(7).replaceAll(".", ",");
+    _controladoresPesagem.result6.text =
+        somaColuna6.toStringAsFixed(7).replaceAll(".", ",");
     _controladoresPesagem.result7.text =
         somaColuna7.toStringAsFixed(7).replaceAll(".", ",");
     _controladoresPesagem.result8.text =

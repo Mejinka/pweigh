@@ -239,7 +239,15 @@ cursor.execute('''
 
 conn.commit()
 
-
+def save_value():
+    value_to_save = request.json.get('value', None)
+    
+    if value_to_save:
+        # Salvar value_to_save no banco de dados
+        # ...
+        return {"status": "success"}, 200
+    else:
+        return {"status": "value not provided"}, 400
 
 @app.route('/login', methods=['POST'])
 def login():
