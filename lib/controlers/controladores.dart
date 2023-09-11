@@ -360,6 +360,34 @@ class EnsaioPesagemControllers with ChangeNotifier {
   final TextEditingController result11 = TextEditingController();
   final TextEditingController result12 = TextEditingController();
 
+  final TextEditingController mapa = TextEditingController();
+  final TextEditingController mapa2 = TextEditingController();
+  final TextEditingController mapa3 = TextEditingController();
+  final TextEditingController mapa4 = TextEditingController();
+  final TextEditingController mapa5 = TextEditingController();
+  final TextEditingController mapa6 = TextEditingController();
+  final TextEditingController mapa7 = TextEditingController();
+  final TextEditingController mapa8 = TextEditingController();
+  final TextEditingController mapa9 = TextEditingController();
+  final TextEditingController mapa10 = TextEditingController();
+  final TextEditingController mapa11 = TextEditingController();
+  final TextEditingController mapa12 = TextEditingController();
+  final TextEditingController mapa13 = TextEditingController();
+
+  final TextEditingController mapa14 = TextEditingController();
+  final TextEditingController mapa15 = TextEditingController();
+  final TextEditingController mapa16 = TextEditingController();
+  final TextEditingController mapa17 = TextEditingController();
+  final TextEditingController mapa18 = TextEditingController();
+  final TextEditingController mapa19 = TextEditingController();
+  final TextEditingController mapa20 = TextEditingController();
+  final TextEditingController mapa21 = TextEditingController();
+  final TextEditingController mapa22 = TextEditingController();
+  final TextEditingController mapa23 = TextEditingController();
+  final TextEditingController mapa24 = TextEditingController();
+  final TextEditingController mapa25 = TextEditingController();
+  final TextEditingController mapa26 = TextEditingController();
+
   Map<int, List<TextEditingController>> controladoresPontosApoio = {};
 
   List<TextEditingController> getPontoApoioControllers(int index) {

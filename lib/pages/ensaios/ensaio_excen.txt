@@ -148,122 +148,6 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
         return _controladoresPesagem.aPesoPadrao61;
       case 61:
         return _controladoresPesagem.aPesoPadrao62;
-      case 62:
-        return _controladoresPesagem.aPesoPadrao63;
-      case 63:
-        return _controladoresPesagem.aPesoPadrao64;
-      case 64:
-        return _controladoresPesagem.aPesoPadrao65;
-      case 65:
-        return _controladoresPesagem.aPesoPadrao66;
-      case 66:
-        return _controladoresPesagem.aPesoPadrao67;
-      case 67:
-        return _controladoresPesagem.aPesoPadrao68;
-      case 68:
-        return _controladoresPesagem.aPesoPadrao69;
-      case 69:
-        return _controladoresPesagem.aPesoPadrao70;
-      case 70:
-        return _controladoresPesagem.aPesoPadrao71;
-      case 71:
-        return _controladoresPesagem.aPesoPadrao72;
-      case 72:
-        return _controladoresPesagem.aPesoPadrao73;
-      case 73:
-        return _controladoresPesagem.aPesoPadrao74;
-      case 74:
-        return _controladoresPesagem.aPesoPadrao75;
-      case 75:
-        return _controladoresPesagem.aPesoPadrao76;
-      case 76:
-        return _controladoresPesagem.aPesoPadrao77;
-      case 77:
-        return _controladoresPesagem.aPesoPadrao78;
-      case 78:
-        return _controladoresPesagem.aPesoPadrao79;
-      case 79:
-        return _controladoresPesagem.aPesoPadrao80;
-      case 80:
-        return _controladoresPesagem.aPesoPadrao81;
-      case 81:
-        return _controladoresPesagem.aPesoPadrao82;
-      case 82:
-        return _controladoresPesagem.aPesoPadrao83;
-      case 83:
-        return _controladoresPesagem.aPesoPadrao84;
-      case 84:
-        return _controladoresPesagem.aPesoPadrao85;
-      case 85:
-        return _controladoresPesagem.aPesoPadrao86;
-      case 86:
-        return _controladoresPesagem.aPesoPadrao87;
-      case 87:
-        return _controladoresPesagem.aPesoPadrao88;
-      case 88:
-        return _controladoresPesagem.aPesoPadrao89;
-      case 89:
-        return _controladoresPesagem.aPesoPadrao90;
-      case 90:
-        return _controladoresPesagem.aPesoPadrao91;
-      case 91:
-        return _controladoresPesagem.aPesoPadrao92;
-      case 92:
-        return _controladoresPesagem.aPesoPadrao93;
-      case 93:
-        return _controladoresPesagem.aPesoPadrao94;
-      case 94:
-        return _controladoresPesagem.aPesoPadrao95;
-      case 95:
-        return _controladoresPesagem.aPesoPadrao96;
-      case 96:
-        return _controladoresPesagem.aPesoPadrao97;
-      case 97:
-        return _controladoresPesagem.aPesoPadrao98;
-      case 98:
-        return _controladoresPesagem.aPesoPadrao99;
-      case 99:
-        return _controladoresPesagem.aPesoPadrao100;
-      case 100:
-        return _controladoresPesagem.aPesoPadrao101;
-      case 101:
-        return _controladoresPesagem.aPesoPadrao102;
-      case 102:
-        return _controladoresPesagem.aPesoPadrao103;
-      case 103:
-        return _controladoresPesagem.aPesoPadrao104;
-      case 104:
-        return _controladoresPesagem.aPesoPadrao105;
-      case 105:
-        return _controladoresPesagem.aPesoPadrao106;
-      case 106:
-        return _controladoresPesagem.aPesoPadrao107;
-      case 107:
-        return _controladoresPesagem.aPesoPadrao108;
-      case 108:
-        return _controladoresPesagem.aPesoPadrao109;
-      case 109:
-        return _controladoresPesagem.aPesoPadrao110;
-      case 110:
-        return _controladoresPesagem.aPesoPadrao111;
-      case 111:
-        return _controladoresPesagem.aPesoPadrao112;
-      case 112:
-        return _controladoresPesagem.aPesoPadrao113;
-      case 113:
-        return _controladoresPesagem.aPesoPadrao114;
-      case 114:
-        return _controladoresPesagem.aPesoPadrao115;
-      case 115:
-        return _controladoresPesagem.aPesoPadrao116;
-      case 116:
-        return _controladoresPesagem.aPesoPadrao117;
-      case 117:
-        return _controladoresPesagem.aPesoPadrao118;
-      case 118:
-        return _controladoresPesagem.aPesoPadrao119;
-      case 119:
-        return _controladoresPesagem.aPesoPadrao120;
       default:
         throw ArgumentError("Index must be between 0 and 119");
     }
@@ -274,7 +158,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
 
   final TextEditingController _controller715 = TextEditingController();
   final TextEditingController _controller716 = TextEditingController();
-  final Map<String, String> mapeamento = {
+  final Map<String, String> mapa715 = {
     '1m': '0,0010009',
     '2m': '0,0019997',
     '2mº': '0,0019967',
@@ -302,7 +186,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
     '1000': '1000,0008200',
   };
 
-  final Map<String, String> mapeamentoF = {
+  final Map<String, String> mapa716 = {
     'F1m': '0,0010034',
     'F2m': '0,0020011',
     'F2mº': '0,0020046',
@@ -332,6 +216,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
     'F2kº': '2000,0047000',
     'F5k': '5000,0036000',
   };
+
   @override
   void initState() {
     super.initState();
@@ -344,12 +229,12 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
       _getControllerByIndex(i).addListener(() {
         var valor = _getControllerByIndex(i).text;
 
-        if (mapeamento.containsKey(valor)) {
-          _controladoresDesativados[i].text = mapeamento[valor]!;
+        if (mapa715.containsKey(valor)) {
+          _controladoresDesativados[i].text = mapa715[valor]!;
           _contem715[i] = true;
           _contem716[i] = false;
-        } else if (mapeamentoF.containsKey(valor)) {
-          _controladoresDesativados[i].text = mapeamentoF[valor]!;
+        } else if (mapa716.containsKey(valor)) {
+          _controladoresDesativados[i].text = mapa716[valor]!;
           _contem716[i] = true;
           _contem715[i] = false;
         } else {
@@ -359,7 +244,6 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
         }
 
         atualizarSoma();
-        atualizarSoma2();
 
         if (!_contem715.contains(true)) {
           _controller715.text = "";
@@ -389,33 +273,54 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
   }
 
   void atualizarSoma() {
-    double soma = 0.0;
+    double somaColuna1 = 0.0;
+    double somaColuna2 = 0.0;
 
-    for (var controller in _controladoresDesativados) {
+    var coluna1 = [
+      _controladoresPesagem.aPesoPadrao1,
+      _controladoresPesagem.aPesoPadrao2,
+      _controladoresPesagem.aPesoPadrao3,
+      _controladoresPesagem.aPesoPadrao4,
+      _controladoresPesagem.aPesoPadrao5,
+    ];
+
+    var coluna2 = [
+      _controladoresPesagem.aPesoPadrao6,
+      _controladoresPesagem.aPesoPadrao7,
+      _controladoresPesagem.aPesoPadrao8,
+      _controladoresPesagem.aPesoPadrao9,
+      _controladoresPesagem.aPesoPadrao10,
+    ];
+
+    for (var controller in coluna1) {
       var valorTexto = controller.text;
-      double valor = valorTexto.isNotEmpty
-          ? double.parse(valorTexto.replaceAll(",", "."))
-          : 0.0;
-      soma += valor;
+
+      if (mapa715.containsKey(valorTexto)) {
+        double valor = double.parse(mapa715[valorTexto]!.replaceAll(",", "."));
+        somaColuna1 += valor;
+      } else if (mapa716.containsKey(valorTexto)) {
+        double valor = double.parse(mapa716[valorTexto]!.replaceAll(",", "."));
+        somaColuna1 += valor;
+      }
+    }
+
+    for (var controller in coluna2) {
+      var valorTexto = controller.text;
+
+      if (mapa715.containsKey(valorTexto)) {
+        double valor = double.parse(mapa715[valorTexto]!.replaceAll(",", "."));
+        somaColuna2 += valor;
+      } else if (mapa716.containsKey(valorTexto)) {
+        double valor = double.parse(mapa716[valorTexto]!.replaceAll(",", "."));
+        somaColuna2 += valor;
+      }
     }
 
     _controladoresPesagem.result1.text =
-        soma.toStringAsFixed(6).replaceAll(".", ",");
-  }
-
-  void atualizarSoma2() {
-    double soma = 0.0;
-
-    for (var controller in _controladoresDesativados) {
-      var valorTexto = controller.text;
-      double valor = valorTexto.isNotEmpty
-          ? double.parse(valorTexto.replaceAll(",", "."))
-          : 0.0;
-      soma += valor;
-    }
-
+        somaColuna1.toStringAsFixed(7).replaceAll(".", ",");
     _controladoresPesagem.result2.text =
-        soma.toStringAsFixed(6).replaceAll(".", ",");
+        somaColuna2.toStringAsFixed(7).replaceAll(".", ",");
+
   }
 
   void _updateCampos() {
@@ -485,8 +390,6 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                     children: [
                       customPontosApoio('1', _controladores.ponto1,
                           [_controladores.ponto1F], numPontosApoio >= 1),
-                      customPontosApoio(' ', _controladores.ponto1,
-                          [_controladores.ponto1F], numPontosApoio >= 1),
                     ],
                   ),
                 ),
@@ -495,8 +398,6 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                   child: Column(
                     children: [
                       customPontosApoio('2', _controladores.ponto2,
-                          [_controladores.ponto2F], numPontosApoio >= 2),
-                      customPontosApoio(' ', _controladores.ponto2,
                           [_controladores.ponto2F], numPontosApoio >= 2),
                     ],
                   ),
@@ -507,8 +408,6 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                     children: [
                       customPontosApoio('3', _controladores.ponto3,
                           [_controladores.ponto3F], numPontosApoio >= 3),
-                      customPontosApoio(' ', _controladores.ponto1,
-                          [_controladores.ponto1F], numPontosApoio >= 3),
                     ],
                   ),
                 ),
@@ -518,8 +417,6 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                     children: [
                       customPontosApoio('4', _controladores.ponto4,
                           [_controladores.ponto4F], numPontosApoio >= 4),
-                      customPontosApoio(' ', _controladores.ponto1,
-                          [_controladores.ponto1F], numPontosApoio >= 4),
                     ],
                   ),
                 ),
@@ -529,8 +426,6 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                     children: [
                       customPontosApoio('5', _controladores.ponto5,
                           [_controladores.ponto5F], numPontosApoio >= 5),
-                      customPontosApoio(' ', _controladores.ponto1,
-                          [_controladores.ponto1F], numPontosApoio >= 5),
                     ],
                   ),
                 ),
@@ -540,8 +435,6 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                     children: [
                       customPontosApoio('6', _controladores.ponto6,
                           [_controladores.ponto6F], numPontosApoio >= 6),
-                      customPontosApoio(' ', _controladores.ponto1,
-                          [_controladores.ponto1F], numPontosApoio >= 6),
                     ],
                   ),
                 ),
@@ -551,8 +444,6 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                     children: [
                       customPontosApoio('7', _controladores.ponto7,
                           [_controladores.ponto7F], numPontosApoio >= 7),
-                      customPontosApoio(' ', _controladores.ponto1,
-                          [_controladores.ponto1F], numPontosApoio >= 7),
                     ],
                   ),
                 ),
@@ -562,8 +453,6 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                     children: [
                       customPontosApoio('8', _controladores.ponto8,
                           [_controladores.ponto8F], numPontosApoio >= 8),
-                      customPontosApoio(' ', _controladores.ponto1,
-                          [_controladores.ponto1F], numPontosApoio >= 8),
                     ],
                   ),
                 ),
@@ -573,8 +462,6 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                     children: [
                       customPontosApoio('9', _controladores.ponto9,
                           [_controladores.ponto9F], numPontosApoio >= 9),
-                      customPontosApoio(' ', _controladores.ponto1,
-                          [_controladores.ponto1F], numPontosApoio >= 9),
                     ],
                   ),
                 ),
@@ -584,8 +471,6 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                     children: [
                       customPontosApoio('10', _controladores.ponto10,
                           [_controladores.ponto10F], numPontosApoio >= 10),
-                      customPontosApoio(' ', _controladores.ponto1,
-                          [_controladores.ponto1F], numPontosApoio >= 10),
                     ],
                   ),
                 ),
@@ -595,8 +480,6 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                     children: [
                       customPontosApoio('11', _controladores.ponto11,
                           [_controladores.ponto11F], numPontosApoio >= 11),
-                      customPontosApoio(' ', _controladores.ponto1,
-                          [_controladores.ponto1F], numPontosApoio >= 11),
                     ],
                   ),
                 ),
@@ -606,8 +489,6 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                     children: [
                       customPontosApoio('12', _controladores.ponto12,
                           [_controladores.ponto12F], numPontosApoio >= 12),
-                      customPontosApoio(' ', _controladores.ponto1,
-                          [_controladores.ponto1F], numPontosApoio >= 12),
                     ],
                   ),
                 ),
@@ -725,40 +606,8 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                           ],
                         ),
                       ),
-                      if (_isSelected) ...[
-                        Flexible(
-                          child: Column(
-                            children: [
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao6,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 1),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao7,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 1),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao8,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 1),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao9,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 1),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao10,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 1),
-                            ],
-                          ),
-                        ),
-                      ],
                       Container(width: 10),
-                      caixaCustom(
+                      resultBox(
                           _controladoresPesagem.result1, numPontosApoio >= 1),
                     ],
                   ),
@@ -771,791 +620,41 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao11,
+                                _controladoresPesagem.aPesoPadrao6,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 2),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao12,
+                                _controladoresPesagem.aPesoPadrao7,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 2),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao13,
+                                _controladoresPesagem.aPesoPadrao8,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 2),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao14,
+                                _controladoresPesagem.aPesoPadrao9,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 2),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao15,
+                                _controladoresPesagem.aPesoPadrao10,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 2),
                           ],
                         ),
                       ),
-                      if (_isSelected) ...[
-                        Flexible(
-                          child: Column(
-                            children: [
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao16,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 2),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao17,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 2),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao18,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 2),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao19,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 2),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao20,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 2),
-                            ],
-                          ),
-                        ),
-                      ],
                       Container(width: 10),
-                      caixaCustom(
+                      resultBox(
                           _controladoresPesagem.result2, numPontosApoio >= 2),
                     ],
                   ),
                 ),
-                Flexible(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Flexible(
-                        child: Column(
-                          children: [
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao21,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 3),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao22,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 3),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao23,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 3),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao24,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 3),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao25,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 3),
-                          ],
-                        ),
-                      ),
-                      if (_isSelected) ...[
-                        Flexible(
-                          child: Column(
-                            children: [
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao26,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 3),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao27,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 3),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao28,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 3),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao29,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 3),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao30,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 3),
-                            ],
-                          ),
-                        ),
-                      ],
-                      Container(width: 10),
-                      caixaCustom(
-                          _controladoresPesagem.result3, numPontosApoio >= 3),
-                    ],
-                  ),
-                ),
-                Flexible(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Flexible(
-                        child: Column(
-                          children: [
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao31,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 4),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao32,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 4),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao33,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 4),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao34,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 4),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao35,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 4),
-                          ],
-                        ),
-                      ),
-                      if (_isSelected) ...[
-                        Flexible(
-                          child: Column(
-                            children: [
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao36,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 4),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao37,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 4),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao38,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 4),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao39,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 4),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao40,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 4),
-                            ],
-                          ),
-                        ),
-                      ],
-                      Container(width: 10),
-                      caixaCustom(controladores.result4, numPontosApoio >= 4),
-                    ],
-                  ),
-                ),
-                Flexible(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Flexible(
-                        child: Column(
-                          children: [
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao41,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 5),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao42,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 5),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao43,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 5),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao44,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 5),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao45,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 5),
-                          ],
-                        ),
-                      ),
-                      if (_isSelected) ...[
-                        Flexible(
-                          child: Column(
-                            children: [
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao46,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 5),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao47,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 5),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao48,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 5),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao49,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 5),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao50,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 5),
-                            ],
-                          ),
-                        ),
-                      ],
-                      Container(width: 10),
-                      caixaCustom(controladores.result5, numPontosApoio >= 5),
-                    ],
-                  ),
-                ),
-                Flexible(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Flexible(
-                        child: Column(
-                          children: [
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao51,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 6),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao52,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 6),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao53,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 6),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao54,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 6),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao55,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 6),
-                          ],
-                        ),
-                      ),
-                      if (_isSelected) ...[
-                        Flexible(
-                          child: Column(
-                            children: [
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao56,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 6),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao57,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 6),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao58,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 6),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao59,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 6),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao60,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 6),
-                            ],
-                          ),
-                        ),
-                      ],
-                      Container(width: 10),
-                      caixaCustom(controladores.result6, numPontosApoio >= 6),
-                    ],
-                  ),
-                ),
               ],
             ),
-            const Divider(),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Flexible(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Flexible(
-                        child: Column(
-                          children: [
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao61,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 7),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao62,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 7),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao63,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 7),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao64,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 7),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao65,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 7),
-                          ],
-                        ),
-                      ),
-                      if (_isSelected) ...[
-                        Flexible(
-                          child: Column(
-                            children: [
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao66,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 7),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao67,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 7),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao68,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 7),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao69,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 7),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao70,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 7),
-                            ],
-                          ),
-                        ),
-                      ],
-                      Container(width: 10),
-                      caixaCustom(controladores.result7, numPontosApoio >= 7),
-                    ],
-                  ),
-                ),
-                Flexible(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Flexible(
-                        child: Column(
-                          children: [
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao71,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 8),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao72,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 8),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao73,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 8),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao74,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 8),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao75,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 8),
-                          ],
-                        ),
-                      ),
-                      if (_isSelected) ...[
-                        Flexible(
-                          child: Column(
-                            children: [
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao76,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 8),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao77,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 8),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao78,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 8),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao79,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 8),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao80,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 8),
-                            ],
-                          ),
-                        ),
-                      ],
-                      Container(width: 10),
-                      caixaCustom(controladores.result8, numPontosApoio >= 8),
-                    ],
-                  ),
-                ),
-                Flexible(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Flexible(
-                        child: Column(
-                          children: [
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao81,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 9),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao82,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 9),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao83,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 9),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao84,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 9),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao85,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 9),
-                          ],
-                        ),
-                      ),
-                      if (_isSelected) ...[
-                        Flexible(
-                          child: Column(
-                            children: [
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao86,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 9),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao87,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 9),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao88,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 9),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao89,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 9),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao90,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 9),
-                            ],
-                          ),
-                        ),
-                      ],
-                      Container(width: 10),
-                      caixaCustom(controladores.result9, numPontosApoio >= 9),
-                    ],
-                  ),
-                ),
-                Flexible(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Flexible(
-                        child: Column(
-                          children: [
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao91,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 10),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao92,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 10),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao93,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 10),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao94,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 10),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao95,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 10),
-                          ],
-                        ),
-                      ),
-                      if (_isSelected) ...[
-                        Flexible(
-                          child: Column(
-                            children: [
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao96,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 10),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao97,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 10),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao98,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 10),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao99,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 10),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao100,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 10),
-                            ],
-                          ),
-                        ),
-                      ],
-                      Container(width: 10),
-                      caixaCustom(controladores.result10, numPontosApoio >= 10),
-                    ],
-                  ),
-                ),
-                Flexible(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Flexible(
-                        child: Column(
-                          children: [
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao101,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 11),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao102,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 11),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao103,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 11),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao104,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 11),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao105,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 11),
-                          ],
-                        ),
-                      ),
-                      if (_isSelected) ...[
-                        Flexible(
-                          child: Column(
-                            children: [
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao106,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 11),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao107,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 11),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao108,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 11),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao109,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 11),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao110,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 11),
-                            ],
-                          ),
-                        ),
-                      ],
-                      Container(width: 10),
-                      caixaCustom(controladores.result11, numPontosApoio >= 11),
-                    ],
-                  ),
-                ),
-                Flexible(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Flexible(
-                        child: Column(
-                          children: [
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao111,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 12),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao112,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 12),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao113,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 12),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao114,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 12),
-                            const SizedBox(height: 10),
-                            pesoPad(
-                                _controladoresPesagem.aPesoPadrao115,
-                                [controladores.aPesoPadrao1F],
-                                numPontosApoio >= 12),
-                          ],
-                        ),
-                      ),
-                      if (_isSelected) ...[
-                        Flexible(
-                          child: Column(
-                            children: [
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao116,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 12),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao117,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 12),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao118,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 12),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao119,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 12),
-                              const SizedBox(height: 10),
-                              pesoPad(
-                                  _controladoresPesagem.aPesoPadrao120,
-                                  [controladores.aPesoPadrao1F],
-                                  numPontosApoio >= 12),
-                            ],
-                          ),
-                        ),
-                      ],
-                      Container(width: 10),
-                      caixaCustom(controladores.result12, numPontosApoio >= 12),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            const Divider(),
+            Divider(),
             const Divider(
               color: Colors.transparent,
               height: 30,

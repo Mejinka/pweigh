@@ -280,6 +280,26 @@ Widget ajustesCheckBox(String labelText, TextEditingController controller,
   );
 }
 
+Widget mapasNumeros(
+  TextEditingController controller,
+) {
+  return Visibility(
+    visible: true,
+    child: SizedBox(
+      width: 100,
+      child: TextField(
+        enabled: true,
+        decoration: const InputDecoration(
+          hintText: "",
+          border: OutlineInputBorder(),
+        ),
+        controller: controller,
+        textAlign: TextAlign.center,
+      ),
+    ),
+  );
+}
+
 
 
 //Widget abrevPesos(TextEditingController controller) {

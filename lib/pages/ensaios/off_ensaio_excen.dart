@@ -269,7 +269,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
     '940k': '940000,0000000',
     '960k': '960000,0000000',
     '980k': '980000,0000000',
-    '1000k*': '1000000,0000000',
+    '1000k': '1000000,0000000',
     '1020k': '1020000,0000000',
     '1040k': '1040000,0000000',
     '1060k': '1060000,0000000',
@@ -435,17 +435,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
     }
   }
 
-  bool contemValorDoMapaNaColuna(
-      Map<String, String> mapa, List<TextEditingController> coluna) {
-    for (var controller in coluna) {
-      if (mapa.containsKey(controller.text)) {
-        return true;
-      }
-    }
-    return false;
-  }
-
-  void _verificaEAtualizaControllerMapa() {
+  bool contemValorDoMapa(Map<String, String> mapa) {
     var coluna1 = [
       _controladoresPesagem.aPesoPadrao1,
       _controladoresPesagem.aPesoPadrao2,
@@ -460,264 +450,168 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
       _controladoresPesagem.aPesoPadrao9,
       _controladoresPesagem.aPesoPadrao10,
     ];
-    var coluna3 = [
-      _controladoresPesagem.aPesoPadrao11,
-      _controladoresPesagem.aPesoPadrao12,
-      _controladoresPesagem.aPesoPadrao13,
-      _controladoresPesagem.aPesoPadrao14,
-      _controladoresPesagem.aPesoPadrao15,
-    ];
-    bool temValor715Coluna1 = contemValorDoMapaNaColuna(mapa715, coluna1);
-    bool temValor716Coluna1 = contemValorDoMapaNaColuna(mapa716, coluna1);
-    bool temValor717Coluna1 = contemValorDoMapaNaColuna(mapa717, coluna1);
-    bool temValorGrandeColuna1 = contemValorDoMapaNaColuna(mapaGrande, coluna1);
-    bool temValor529Coluna1 = contemValorDoMapaNaColuna(mapa529, coluna1);
-    bool temValor530Coluna1 = contemValorDoMapaNaColuna(mapa530, coluna1);
-    bool temValor531Coluna1 = contemValorDoMapaNaColuna(mapa531, coluna1);
-    bool temValor532Coluna1 = contemValorDoMapaNaColuna(mapa532, coluna1);
-    bool temValor533Coluna1 = contemValorDoMapaNaColuna(mapa533, coluna1);
-    bool temValor633a641Coluna1 =
-        contemValorDoMapaNaColuna(mapa633a641, coluna1);
-    bool temValor642a650Coluna1 =
-        contemValorDoMapaNaColuna(mapa642a650, coluna1);
-    bool temValor713Coluna1 = contemValorDoMapaNaColuna(mapa713, coluna1);
-    bool temValor714Coluna1 = contemValorDoMapaNaColuna(mapa714, coluna1);
-    /////////////////////////////////
-    bool temValor715Coluna2 = contemValorDoMapaNaColuna(mapa715, coluna2);
-    bool temValor716Coluna2 = contemValorDoMapaNaColuna(mapa716, coluna2);
-    bool temValor717Coluna2 = contemValorDoMapaNaColuna(mapa717, coluna2);
-    bool temValorGrandeColuna2 = contemValorDoMapaNaColuna(mapaGrande, coluna2);
-    bool temValor529Coluna2 = contemValorDoMapaNaColuna(mapa529, coluna2);
-    bool temValor530Coluna2 = contemValorDoMapaNaColuna(mapa530, coluna2);
-    bool temValor531Coluna2 = contemValorDoMapaNaColuna(mapa531, coluna2);
-    bool temValor532Coluna2 = contemValorDoMapaNaColuna(mapa532, coluna2);
-    bool temValor533Coluna2 = contemValorDoMapaNaColuna(mapa533, coluna2);
-    bool temValor633a641Coluna2 =
-        contemValorDoMapaNaColuna(mapa633a641, coluna2);
-    bool temValor642a650Coluna2 =
-        contemValorDoMapaNaColuna(mapa642a650, coluna2);
-    bool temValor713Coluna2 = contemValorDoMapaNaColuna(mapa713, coluna2);
-    bool temValor714Coluna2 = contemValorDoMapaNaColuna(mapa714, coluna2);
-    /////////////////////////////////
-    bool temValor715Coluna3 = contemValorDoMapaNaColuna(mapa715, coluna3);
-    bool temValor716Coluna3 = contemValorDoMapaNaColuna(mapa716, coluna3);
-    bool temValor717Coluna3 = contemValorDoMapaNaColuna(mapa717, coluna3);
-    bool temValorGrandeColuna3 = contemValorDoMapaNaColuna(mapaGrande, coluna3);
-    bool temValor529Coluna3 = contemValorDoMapaNaColuna(mapa529, coluna3);
-    bool temValor530Coluna3 = contemValorDoMapaNaColuna(mapa530, coluna3);
-    bool temValor531Coluna3 = contemValorDoMapaNaColuna(mapa531, coluna3);
-    bool temValor532Coluna3 = contemValorDoMapaNaColuna(mapa532, coluna3);
-    bool temValor533Coluna3 = contemValorDoMapaNaColuna(mapa533, coluna3);
-    bool temValor633a641Coluna3 =
-        contemValorDoMapaNaColuna(mapa633a641, coluna3);
-    bool temValor642a650Coluna3 =
-        contemValorDoMapaNaColuna(mapa642a650, coluna3);
-    bool temValor713Coluna3 = contemValorDoMapaNaColuna(mapa713, coluna3);
-    bool temValor714Coluna3 = contemValorDoMapaNaColuna(mapa714, coluna3);
 
-    if (temValor715Coluna1) {
+    for (var controller in coluna1) {
+      if (mapa.containsKey(controller.text)) {
+        return true;
+      }
+    }
+    for (var controller in coluna2) {
+      if (mapa.containsKey(controller.text)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  void _verificaEAtualizaControllerMapa() {
+    bool temValor715 = contemValorDoMapa(mapa715);
+    bool temValor716 = contemValorDoMapa(mapa716);
+    bool temValor717 = contemValorDoMapa(mapa717);
+    bool temValorgrande = contemValorDoMapa(mapaGrande);
+    bool temValor529 = contemValorDoMapa(mapa529);
+    bool temValor530 = contemValorDoMapa(mapa530);
+    bool temValor531 = contemValorDoMapa(mapa531);
+    bool temValor532 = contemValorDoMapa(mapa532);
+    bool temValor533 = contemValorDoMapa(mapa533);
+    bool temValor633a641 = contemValorDoMapa(mapa633a641);
+    bool temValor642a650 = contemValorDoMapa(mapa642a650);
+    bool temValor713 = contemValorDoMapa(mapa713);
+    bool temValor714 = contemValorDoMapa(mapa714);
+
+    if (temValor715) {
       _controladoresPesagem.mapa.text = "715";
     } else {
       _controladoresPesagem.mapa.text = "";
     }
 
-    if (temValor716Coluna1) {
+    if (temValor716) {
       _controladoresPesagem.mapa2.text = "716";
     } else {
       _controladoresPesagem.mapa2.text = "";
     }
-    if (temValor717Coluna1) {
+    if (temValor717) {
       _controladoresPesagem.mapa3.text = "717";
     } else {
       _controladoresPesagem.mapa3.text = "";
     }
-    if (temValorGrandeColuna1) {
+    if (temValorgrande) {
       _controladoresPesagem.mapa4.text =
           "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
     } else {
       _controladoresPesagem.mapa4.text = "";
     }
-    if (temValor529Coluna1) {
+    if (temValor529) {
       _controladoresPesagem.mapa5.text = "529";
     } else {
       _controladoresPesagem.mapa5.text = "";
     }
-    if (temValor530Coluna1) {
+    if (temValor530) {
       _controladoresPesagem.mapa6.text = "530";
     } else {
       _controladoresPesagem.mapa6.text = "";
     }
-    if (temValor531Coluna1) {
+    if (temValor531) {
       _controladoresPesagem.mapa7.text = "531";
     } else {
       _controladoresPesagem.mapa7.text = "";
     }
-    if (temValor532Coluna1) {
+    if (temValor532) {
       _controladoresPesagem.mapa8.text = "532";
     } else {
       _controladoresPesagem.mapa8.text = "";
     }
-    if (temValor533Coluna1) {
+    if (temValor533) {
       _controladoresPesagem.mapa9.text = "533";
     } else {
       _controladoresPesagem.mapa9.text = "";
     }
-    if (temValor633a641Coluna1) {
-      _controladoresPesagem.mapa10.text = "633 a 641";
+    if (temValor633a641) {
+      _controladoresPesagem.mapa10.text = "633, 641";
     } else {
       _controladoresPesagem.mapa10.text = "";
     }
-    if (temValor642a650Coluna1) {
-      _controladoresPesagem.mapa11.text = "642 a 650";
+    if (temValor642a650) {
+      _controladoresPesagem.mapa11.text = "642, 650";
     } else {
       _controladoresPesagem.mapa11.text = "";
     }
-    if (temValor713Coluna1) {
+    if (temValor713) {
       _controladoresPesagem.mapa12.text = "713";
     } else {
       _controladoresPesagem.mapa12.text = "";
     }
-    if (temValor714Coluna1) {
+    if (temValor714) {
       _controladoresPesagem.mapa13.text = "714";
     } else {
       _controladoresPesagem.mapa13.text = "";
     }
-////////////////////
-    if (temValor715Coluna2) {
+    if (temValor715) {
       _controladoresPesagem.mapa14.text = "715";
     } else {
       _controladoresPesagem.mapa14.text = "";
     }
 
-    if (temValor716Coluna2) {
+    if (temValor716) {
       _controladoresPesagem.mapa15.text = "716";
     } else {
       _controladoresPesagem.mapa15.text = "";
     }
-    if (temValor717Coluna2) {
+    if (temValor717) {
       _controladoresPesagem.mapa16.text = "717";
     } else {
       _controladoresPesagem.mapa16.text = "";
     }
-    if (temValorGrandeColuna2) {
+    if (temValorgrande) {
       _controladoresPesagem.mapa17.text =
           "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
     } else {
       _controladoresPesagem.mapa17.text = "";
     }
-    if (temValor529Coluna2) {
+    if (temValor529) {
       _controladoresPesagem.mapa18.text = "529";
     } else {
       _controladoresPesagem.mapa18.text = "";
     }
-    if (temValor530Coluna2) {
+    if (temValor530) {
       _controladoresPesagem.mapa19.text = "530";
     } else {
       _controladoresPesagem.mapa19.text = "";
     }
-    if (temValor531Coluna2) {
+    if (temValor531) {
       _controladoresPesagem.mapa20.text = "531";
     } else {
       _controladoresPesagem.mapa20.text = "";
     }
-    if (temValor532Coluna2) {
+    if (temValor532) {
       _controladoresPesagem.mapa21.text = "532";
     } else {
       _controladoresPesagem.mapa21.text = "";
     }
-    if (temValor533Coluna2) {
+    if (temValor533) {
       _controladoresPesagem.mapa22.text = "533";
     } else {
       _controladoresPesagem.mapa22.text = "";
     }
-    if (temValor633a641Coluna2) {
-      _controladoresPesagem.mapa23.text = "633 a 641";
+    if (temValor633a641) {
+      _controladoresPesagem.mapa23.text = "633, 641";
     } else {
       _controladoresPesagem.mapa23.text = "";
     }
-    if (temValor642a650Coluna2) {
-      _controladoresPesagem.mapa24.text = "642 a 650";
+    if (temValor642a650) {
+      _controladoresPesagem.mapa24.text = "642, 650";
     } else {
       _controladoresPesagem.mapa24.text = "";
     }
-    if (temValor713Coluna2) {
+    if (temValor713) {
       _controladoresPesagem.mapa25.text = "713";
     } else {
       _controladoresPesagem.mapa25.text = "";
     }
-    if (temValor714Coluna2) {
+    if (temValor714) {
       _controladoresPesagem.mapa26.text = "714";
     } else {
       _controladoresPesagem.mapa26.text = "";
-    }
-
-////////////////////
-    if (temValor715Coluna3) {
-      _controladoresPesagem.mapa27.text = "715";
-    } else {
-      _controladoresPesagem.mapa27.text = "";
-    }
-
-    if (temValor716Coluna3) {
-      _controladoresPesagem.mapa28.text = "716";
-    } else {
-      _controladoresPesagem.mapa28.text = "";
-    }
-    if (temValor717Coluna3) {
-      _controladoresPesagem.mapa29.text = "717";
-    } else {
-      _controladoresPesagem.mapa29.text = "";
-    }
-    if (temValorGrandeColuna3) {
-      _controladoresPesagem.mapa30.text =
-          "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
-    } else {
-      _controladoresPesagem.mapa30.text = "";
-    }
-    if (temValor529Coluna3) {
-      _controladoresPesagem.mapa31.text = "529";
-    } else {
-      _controladoresPesagem.mapa31.text = "";
-    }
-    if (temValor530Coluna3) {
-      _controladoresPesagem.mapa32.text = "530";
-    } else {
-      _controladoresPesagem.mapa32.text = "";
-    }
-    if (temValor531Coluna3) {
-      _controladoresPesagem.mapa33.text = "531";
-    } else {
-      _controladoresPesagem.mapa33.text = "";
-    }
-    if (temValor532Coluna3) {
-      _controladoresPesagem.mapa34.text = "532";
-    } else {
-      _controladoresPesagem.mapa34.text = "";
-    }
-    if (temValor533Coluna3) {
-      _controladoresPesagem.mapa35.text = "533";
-    } else {
-      _controladoresPesagem.mapa35.text = "";
-    }
-    if (temValor633a641Coluna3) {
-      _controladoresPesagem.mapa36.text = "633 a 641";
-    } else {
-      _controladoresPesagem.mapa36.text = "";
-    }
-    if (temValor642a650Coluna3) {
-      _controladoresPesagem.mapa37.text = "642 a 650";
-    } else {
-      _controladoresPesagem.mapa37.text = "";
-    }
-    if (temValor713Coluna3) {
-      _controladoresPesagem.mapa38.text = "713";
-    } else {
-      _controladoresPesagem.mapa38.text = "";
-    }
-    if (temValor714Coluna3) {
-      _controladoresPesagem.mapa39.text = "714";
-    } else {
-      _controladoresPesagem.mapa39.text = "";
     }
   }
 
@@ -807,42 +701,6 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
         somaColuna2 += valor;
       } else if (mapa716.containsKey(valorTexto)) {
         double valor = double.parse(mapa716[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapa717.containsKey(valorTexto)) {
-        double valor = double.parse(mapa717[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapaGrande.containsKey(valorTexto)) {
-        double valor =
-            double.parse(mapaGrande[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapa529.containsKey(valorTexto)) {
-        double valor = double.parse(mapa529[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapa530.containsKey(valorTexto)) {
-        double valor = double.parse(mapa530[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapa531.containsKey(valorTexto)) {
-        double valor = double.parse(mapa531[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapa532.containsKey(valorTexto)) {
-        double valor = double.parse(mapa532[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapa533.containsKey(valorTexto)) {
-        double valor = double.parse(mapa533[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapa633a641.containsKey(valorTexto)) {
-        double valor =
-            double.parse(mapa633a641[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapa642a650.containsKey(valorTexto)) {
-        double valor =
-            double.parse(mapa642a650[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapa713.containsKey(valorTexto)) {
-        double valor = double.parse(mapa713[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapa714.containsKey(valorTexto)) {
-        double valor = double.parse(mapa714[valorTexto]!.replaceAll(",", "."));
         somaColuna2 += valor;
       }
     }
@@ -1038,19 +896,201 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         children: [
                           resultBox(_controladoresPesagem.result1,
                               numPontosApoio >= 1),
-                          mapasNumeros(_controladoresPesagem.mapa),
-                          mapasNumeros(_controladoresPesagem.mapa2),
-                          mapasNumeros(_controladoresPesagem.mapa3),
-                          mapasNumeros(_controladoresPesagem.mapa4),
-                          mapasNumeros(_controladoresPesagem.mapa5),
-                          mapasNumeros(_controladoresPesagem.mapa6),
-                          mapasNumeros(_controladoresPesagem.mapa7),
-                          mapasNumeros(_controladoresPesagem.mapa8),
-                          mapasNumeros(_controladoresPesagem.mapa9),
-                          mapasNumeros(_controladoresPesagem.mapa10),
-                          mapasNumeros(_controladoresPesagem.mapa11),
-                          mapasNumeros(_controladoresPesagem.mapa12),
-                          mapasNumeros(_controladoresPesagem.mapa13),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa2,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa3,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa4,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa5,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa6,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa7,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa8,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa9,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa10,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa11,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa12,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa13,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ],
@@ -1095,19 +1135,201 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         children: [
                           resultBox(_controladoresPesagem.result2,
                               numPontosApoio >= 2),
-                          mapasNumeros(_controladoresPesagem.mapa14),
-                          mapasNumeros(_controladoresPesagem.mapa15),
-                          mapasNumeros(_controladoresPesagem.mapa16),
-                          mapasNumeros(_controladoresPesagem.mapa17),
-                          mapasNumeros(_controladoresPesagem.mapa18),
-                          mapasNumeros(_controladoresPesagem.mapa19),
-                          mapasNumeros(_controladoresPesagem.mapa20),
-                          mapasNumeros(_controladoresPesagem.mapa21),
-                          mapasNumeros(_controladoresPesagem.mapa22),
-                          mapasNumeros(_controladoresPesagem.mapa23),
-                          mapasNumeros(_controladoresPesagem.mapa24),
-                          mapasNumeros(_controladoresPesagem.mapa25),
-                          mapasNumeros(_controladoresPesagem.mapa26),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa14,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa15,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa16,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa17,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa18,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa19,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa20,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa21,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa22,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa23,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa24,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa25,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          Visibility(
+                            visible: true,
+                            child: SizedBox(
+                              width: 100,
+                              child: TextField(
+                                enabled: true,
+                                decoration: const InputDecoration(
+                                  hintText: "",
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: _controladoresPesagem.mapa26,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ],
