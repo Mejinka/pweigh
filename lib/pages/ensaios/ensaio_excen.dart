@@ -467,6 +467,69 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
       _controladoresPesagem.aPesoPadrao14,
       _controladoresPesagem.aPesoPadrao15,
     ];
+    var coluna4 = [
+      _controladoresPesagem.aPesoPadrao16,
+      _controladoresPesagem.aPesoPadrao17,
+      _controladoresPesagem.aPesoPadrao18,
+      _controladoresPesagem.aPesoPadrao19,
+      _controladoresPesagem.aPesoPadrao20,
+    ];
+    var coluna5 = [
+      _controladoresPesagem.aPesoPadrao21,
+      _controladoresPesagem.aPesoPadrao22,
+      _controladoresPesagem.aPesoPadrao23,
+      _controladoresPesagem.aPesoPadrao24,
+      _controladoresPesagem.aPesoPadrao25,
+    ];
+    var coluna6 = [
+      _controladoresPesagem.aPesoPadrao26,
+      _controladoresPesagem.aPesoPadrao27,
+      _controladoresPesagem.aPesoPadrao28,
+      _controladoresPesagem.aPesoPadrao29,
+      _controladoresPesagem.aPesoPadrao30,
+    ];
+    var coluna7 = [
+      _controladoresPesagem.aPesoPadrao31,
+      _controladoresPesagem.aPesoPadrao32,
+      _controladoresPesagem.aPesoPadrao33,
+      _controladoresPesagem.aPesoPadrao34,
+      _controladoresPesagem.aPesoPadrao35,
+    ];
+    var coluna8 = [
+      _controladoresPesagem.aPesoPadrao36,
+      _controladoresPesagem.aPesoPadrao37,
+      _controladoresPesagem.aPesoPadrao38,
+      _controladoresPesagem.aPesoPadrao39,
+      _controladoresPesagem.aPesoPadrao40,
+    ];
+    var coluna9 = [
+      _controladoresPesagem.aPesoPadrao41,
+      _controladoresPesagem.aPesoPadrao42,
+      _controladoresPesagem.aPesoPadrao43,
+      _controladoresPesagem.aPesoPadrao44,
+      _controladoresPesagem.aPesoPadrao45,
+    ];
+    var coluna10 = [
+      _controladoresPesagem.aPesoPadrao46,
+      _controladoresPesagem.aPesoPadrao47,
+      _controladoresPesagem.aPesoPadrao48,
+      _controladoresPesagem.aPesoPadrao49,
+      _controladoresPesagem.aPesoPadrao50,
+    ];
+    var coluna11 = [
+      _controladoresPesagem.aPesoPadrao51,
+      _controladoresPesagem.aPesoPadrao52,
+      _controladoresPesagem.aPesoPadrao53,
+      _controladoresPesagem.aPesoPadrao54,
+      _controladoresPesagem.aPesoPadrao55,
+    ];
+    var coluna12 = [
+      _controladoresPesagem.aPesoPadrao56,
+      _controladoresPesagem.aPesoPadrao57,
+      _controladoresPesagem.aPesoPadrao58,
+      _controladoresPesagem.aPesoPadrao59,
+      _controladoresPesagem.aPesoPadrao60,
+    ];
     bool temValor715Coluna1 = contemValorDoMapaNaColuna(mapa715, coluna1);
     bool temValor716Coluna1 = contemValorDoMapaNaColuna(mapa716, coluna1);
     bool temValor717Coluna1 = contemValorDoMapaNaColuna(mapa717, coluna1);
@@ -514,6 +577,153 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
         contemValorDoMapaNaColuna(mapa642a650, coluna3);
     bool temValor713Coluna3 = contemValorDoMapaNaColuna(mapa713, coluna3);
     bool temValor714Coluna3 = contemValorDoMapaNaColuna(mapa714, coluna3);
+    /////////////////////////////////
+    bool temValor715Coluna4 = contemValorDoMapaNaColuna(mapa715, coluna4);
+    bool temValor716Coluna4 = contemValorDoMapaNaColuna(mapa716, coluna4);
+    bool temValor717Coluna4 = contemValorDoMapaNaColuna(mapa717, coluna4);
+    bool temValorGrandeColuna4 = contemValorDoMapaNaColuna(mapaGrande, coluna4);
+    bool temValor529Coluna4 = contemValorDoMapaNaColuna(mapa529, coluna4);
+    bool temValor530Coluna4 = contemValorDoMapaNaColuna(mapa530, coluna4);
+    bool temValor531Coluna4 = contemValorDoMapaNaColuna(mapa531, coluna4);
+    bool temValor532Coluna4 = contemValorDoMapaNaColuna(mapa532, coluna4);
+    bool temValor533Coluna4 = contemValorDoMapaNaColuna(mapa533, coluna4);
+    bool temValor633a641Coluna4 =
+        contemValorDoMapaNaColuna(mapa633a641, coluna4);
+    bool temValor642a650Coluna4 =
+        contemValorDoMapaNaColuna(mapa642a650, coluna4);
+    bool temValor713Coluna4 = contemValorDoMapaNaColuna(mapa713, coluna4);
+    bool temValor714Coluna4 = contemValorDoMapaNaColuna(mapa714, coluna4);
+    /////////////////////////////////
+    bool temValor715Coluna5 = contemValorDoMapaNaColuna(mapa715, coluna5);
+    bool temValor716Coluna5 = contemValorDoMapaNaColuna(mapa716, coluna5);
+    bool temValor717Coluna5 = contemValorDoMapaNaColuna(mapa717, coluna5);
+    bool temValorGrandeColuna5 = contemValorDoMapaNaColuna(mapaGrande, coluna5);
+    bool temValor529Coluna5 = contemValorDoMapaNaColuna(mapa529, coluna5);
+    bool temValor530Coluna5 = contemValorDoMapaNaColuna(mapa530, coluna5);
+    bool temValor531Coluna5 = contemValorDoMapaNaColuna(mapa531, coluna5);
+    bool temValor532Coluna5 = contemValorDoMapaNaColuna(mapa532, coluna5);
+    bool temValor533Coluna5 = contemValorDoMapaNaColuna(mapa533, coluna5);
+    bool temValor633a641Coluna5 =
+        contemValorDoMapaNaColuna(mapa633a641, coluna5);
+    bool temValor642a650Coluna5 =
+        contemValorDoMapaNaColuna(mapa642a650, coluna5);
+    bool temValor713Coluna5 = contemValorDoMapaNaColuna(mapa713, coluna5);
+    bool temValor714Coluna5 = contemValorDoMapaNaColuna(mapa714, coluna5);
+    /////////////////////////////////
+    bool temValor715Coluna6 = contemValorDoMapaNaColuna(mapa715, coluna6);
+    bool temValor716Coluna6 = contemValorDoMapaNaColuna(mapa716, coluna6);
+    bool temValor717Coluna6 = contemValorDoMapaNaColuna(mapa717, coluna6);
+    bool temValorGrandeColuna6 = contemValorDoMapaNaColuna(mapaGrande, coluna6);
+    bool temValor529Coluna6 = contemValorDoMapaNaColuna(mapa529, coluna6);
+    bool temValor530Coluna6 = contemValorDoMapaNaColuna(mapa530, coluna6);
+    bool temValor531Coluna6 = contemValorDoMapaNaColuna(mapa531, coluna6);
+    bool temValor532Coluna6 = contemValorDoMapaNaColuna(mapa532, coluna6);
+    bool temValor533Coluna6 = contemValorDoMapaNaColuna(mapa533, coluna6);
+    bool temValor633a641Coluna6 =
+        contemValorDoMapaNaColuna(mapa633a641, coluna6);
+    bool temValor642a650Coluna6 =
+        contemValorDoMapaNaColuna(mapa642a650, coluna6);
+    bool temValor713Coluna6 = contemValorDoMapaNaColuna(mapa713, coluna6);
+    bool temValor714Coluna6 = contemValorDoMapaNaColuna(mapa714, coluna6);
+    /////////////////////////////////
+    bool temValor715Coluna7 = contemValorDoMapaNaColuna(mapa715, coluna7);
+    bool temValor716Coluna7 = contemValorDoMapaNaColuna(mapa716, coluna7);
+    bool temValor717Coluna7 = contemValorDoMapaNaColuna(mapa717, coluna7);
+    bool temValorGrandeColuna7 = contemValorDoMapaNaColuna(mapaGrande, coluna7);
+    bool temValor529Coluna7 = contemValorDoMapaNaColuna(mapa529, coluna7);
+    bool temValor530Coluna7 = contemValorDoMapaNaColuna(mapa530, coluna7);
+    bool temValor531Coluna7 = contemValorDoMapaNaColuna(mapa531, coluna7);
+    bool temValor532Coluna7 = contemValorDoMapaNaColuna(mapa532, coluna7);
+    bool temValor533Coluna7 = contemValorDoMapaNaColuna(mapa533, coluna7);
+    bool temValor633a641Coluna7 =
+        contemValorDoMapaNaColuna(mapa633a641, coluna7);
+    bool temValor642a650Coluna7 =
+        contemValorDoMapaNaColuna(mapa642a650, coluna7);
+    bool temValor713Coluna7 = contemValorDoMapaNaColuna(mapa713, coluna7);
+    bool temValor714Coluna7 = contemValorDoMapaNaColuna(mapa714, coluna7);
+    /////////////////////////////////
+    bool temValor715Coluna8 = contemValorDoMapaNaColuna(mapa715, coluna8);
+    bool temValor716Coluna8 = contemValorDoMapaNaColuna(mapa716, coluna8);
+    bool temValor717Coluna8 = contemValorDoMapaNaColuna(mapa717, coluna8);
+    bool temValorGrandeColuna8 = contemValorDoMapaNaColuna(mapaGrande, coluna8);
+    bool temValor529Coluna8 = contemValorDoMapaNaColuna(mapa529, coluna8);
+    bool temValor530Coluna8 = contemValorDoMapaNaColuna(mapa530, coluna8);
+    bool temValor531Coluna8 = contemValorDoMapaNaColuna(mapa531, coluna8);
+    bool temValor532Coluna8 = contemValorDoMapaNaColuna(mapa532, coluna8);
+    bool temValor533Coluna8 = contemValorDoMapaNaColuna(mapa533, coluna8);
+    bool temValor633a641Coluna8 =
+        contemValorDoMapaNaColuna(mapa633a641, coluna8);
+    bool temValor642a650Coluna8 =
+        contemValorDoMapaNaColuna(mapa642a650, coluna8);
+    bool temValor713Coluna8 = contemValorDoMapaNaColuna(mapa713, coluna8);
+    bool temValor714Coluna8 = contemValorDoMapaNaColuna(mapa714, coluna8);
+    /////////////////////////////////
+    bool temValor715Coluna9 = contemValorDoMapaNaColuna(mapa715, coluna9);
+    bool temValor716Coluna9 = contemValorDoMapaNaColuna(mapa716, coluna9);
+    bool temValor717Coluna9 = contemValorDoMapaNaColuna(mapa717, coluna9);
+    bool temValorGrandeColuna9 = contemValorDoMapaNaColuna(mapaGrande, coluna9);
+    bool temValor529Coluna9 = contemValorDoMapaNaColuna(mapa529, coluna9);
+    bool temValor530Coluna9 = contemValorDoMapaNaColuna(mapa530, coluna9);
+    bool temValor531Coluna9 = contemValorDoMapaNaColuna(mapa531, coluna9);
+    bool temValor532Coluna9 = contemValorDoMapaNaColuna(mapa532, coluna9);
+    bool temValor533Coluna9 = contemValorDoMapaNaColuna(mapa533, coluna9);
+    bool temValor633a641Coluna9 =
+        contemValorDoMapaNaColuna(mapa633a641, coluna9);
+    bool temValor642a650Coluna9 =
+        contemValorDoMapaNaColuna(mapa642a650, coluna9);
+    bool temValor713Coluna9 = contemValorDoMapaNaColuna(mapa713, coluna9);
+    bool temValor714Coluna9 = contemValorDoMapaNaColuna(mapa714, coluna9);
+    /////////////////////////////////
+    bool temValor715Coluna10 = contemValorDoMapaNaColuna(mapa715, coluna10);
+    bool temValor716Coluna10 = contemValorDoMapaNaColuna(mapa716, coluna10);
+    bool temValor717Coluna10 = contemValorDoMapaNaColuna(mapa717, coluna10);
+    bool temValorGrandeColuna10 =
+        contemValorDoMapaNaColuna(mapaGrande, coluna10);
+    bool temValor529Coluna10 = contemValorDoMapaNaColuna(mapa529, coluna10);
+    bool temValor530Coluna10 = contemValorDoMapaNaColuna(mapa530, coluna10);
+    bool temValor531Coluna10 = contemValorDoMapaNaColuna(mapa531, coluna10);
+    bool temValor532Coluna10 = contemValorDoMapaNaColuna(mapa532, coluna10);
+    bool temValor533Coluna10 = contemValorDoMapaNaColuna(mapa533, coluna10);
+    bool temValor633a641Coluna10 =
+        contemValorDoMapaNaColuna(mapa633a641, coluna10);
+    bool temValor642a650Coluna10 =
+        contemValorDoMapaNaColuna(mapa642a650, coluna10);
+    bool temValor713Coluna10 = contemValorDoMapaNaColuna(mapa713, coluna10);
+    bool temValor714Coluna10 = contemValorDoMapaNaColuna(mapa714, coluna10);
+    /////////////////////////////////
+    bool temValor715Coluna11 = contemValorDoMapaNaColuna(mapa715, coluna11);
+    bool temValor716Coluna11 = contemValorDoMapaNaColuna(mapa716, coluna11);
+    bool temValor717Coluna11 = contemValorDoMapaNaColuna(mapa717, coluna11);
+    bool temValorGrandeColuna11 =
+        contemValorDoMapaNaColuna(mapaGrande, coluna11);
+    bool temValor529Coluna11 = contemValorDoMapaNaColuna(mapa529, coluna11);
+    bool temValor530Coluna11 = contemValorDoMapaNaColuna(mapa530, coluna11);
+    bool temValor531Coluna11 = contemValorDoMapaNaColuna(mapa531, coluna11);
+    bool temValor532Coluna11 = contemValorDoMapaNaColuna(mapa532, coluna11);
+    bool temValor533Coluna11 = contemValorDoMapaNaColuna(mapa533, coluna11);
+    bool temValor633a641Coluna11 =
+        contemValorDoMapaNaColuna(mapa633a641, coluna11);
+    bool temValor642a650Coluna11 =
+        contemValorDoMapaNaColuna(mapa642a650, coluna11);
+    bool temValor713Coluna11 = contemValorDoMapaNaColuna(mapa713, coluna11);
+    bool temValor714Coluna11 = contemValorDoMapaNaColuna(mapa714, coluna11);
+    /////////////////////////////////
+    bool temValor715Coluna12 = contemValorDoMapaNaColuna(mapa715, coluna12);
+    bool temValor716Coluna12 = contemValorDoMapaNaColuna(mapa716, coluna12);
+    bool temValor717Coluna12 = contemValorDoMapaNaColuna(mapa717, coluna12);
+    bool temValorGrandeColuna12 =
+        contemValorDoMapaNaColuna(mapaGrande, coluna12);
+    bool temValor529Coluna12 = contemValorDoMapaNaColuna(mapa529, coluna12);
+    bool temValor530Coluna12 = contemValorDoMapaNaColuna(mapa530, coluna12);
+    bool temValor531Coluna12 = contemValorDoMapaNaColuna(mapa531, coluna12);
+    bool temValor532Coluna12 = contemValorDoMapaNaColuna(mapa532, coluna12);
+    bool temValor533Coluna12 = contemValorDoMapaNaColuna(mapa533, coluna12);
+    bool temValor633a641Coluna12 =
+        contemValorDoMapaNaColuna(mapa633a641, coluna12);
+    bool temValor642a650Coluna12 =
+        contemValorDoMapaNaColuna(mapa642a650, coluna12);
+    bool temValor713Coluna12 = contemValorDoMapaNaColuna(mapa713, coluna12);
+    bool temValor714Coluna12 = contemValorDoMapaNaColuna(mapa714, coluna12);
 
     if (temValor715Coluna1) {
       _controladoresPesagem.mapa.text = "715";
@@ -719,6 +929,661 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
     } else {
       _controladoresPesagem.mapa39.text = "";
     }
+////////////////////
+    if (temValor715Coluna4) {
+      _controladoresPesagem.mapa40.text = "715";
+    } else {
+      _controladoresPesagem.mapa40.text = "";
+    }
+
+    if (temValor716Coluna4) {
+      _controladoresPesagem.mapa41.text = "716";
+    } else {
+      _controladoresPesagem.mapa41.text = "";
+    }
+    if (temValor717Coluna4) {
+      _controladoresPesagem.mapa42.text = "717";
+    } else {
+      _controladoresPesagem.mapa42.text = "";
+    }
+    if (temValorGrandeColuna4) {
+      _controladoresPesagem.mapa43.text =
+          "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
+    } else {
+      _controladoresPesagem.mapa43.text = "";
+    }
+    if (temValor529Coluna4) {
+      _controladoresPesagem.mapa44.text = "529";
+    } else {
+      _controladoresPesagem.mapa44.text = "";
+    }
+    if (temValor530Coluna4) {
+      _controladoresPesagem.mapa45.text = "530";
+    } else {
+      _controladoresPesagem.mapa45.text = "";
+    }
+    if (temValor531Coluna4) {
+      _controladoresPesagem.mapa46.text = "531";
+    } else {
+      _controladoresPesagem.mapa46.text = "";
+    }
+    if (temValor532Coluna4) {
+      _controladoresPesagem.mapa47.text = "532";
+    } else {
+      _controladoresPesagem.mapa47.text = "";
+    }
+    if (temValor533Coluna4) {
+      _controladoresPesagem.mapa48.text = "533";
+    } else {
+      _controladoresPesagem.mapa48.text = "";
+    }
+    if (temValor633a641Coluna4) {
+      _controladoresPesagem.mapa49.text = "633 a 641";
+    } else {
+      _controladoresPesagem.mapa49.text = "";
+    }
+    if (temValor642a650Coluna4) {
+      _controladoresPesagem.mapa50.text = "642 a 650";
+    } else {
+      _controladoresPesagem.mapa50.text = "";
+    }
+    if (temValor713Coluna4) {
+      _controladoresPesagem.mapa51.text = "713";
+    } else {
+      _controladoresPesagem.mapa51.text = "";
+    }
+    if (temValor714Coluna4) {
+      _controladoresPesagem.mapa52.text = "714";
+    } else {
+      _controladoresPesagem.mapa52.text = "";
+    }
+////////////////////
+    if (temValor715Coluna5) {
+      _controladoresPesagem.mapa53.text = "715";
+    } else {
+      _controladoresPesagem.mapa53.text = "";
+    }
+
+    if (temValor716Coluna5) {
+      _controladoresPesagem.mapa54.text = "716";
+    } else {
+      _controladoresPesagem.mapa54.text = "";
+    }
+    if (temValor717Coluna5) {
+      _controladoresPesagem.mapa55.text = "717";
+    } else {
+      _controladoresPesagem.mapa55.text = "";
+    }
+    if (temValorGrandeColuna5) {
+      _controladoresPesagem.mapa56.text =
+          "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
+    } else {
+      _controladoresPesagem.mapa56.text = "";
+    }
+    if (temValor529Coluna5) {
+      _controladoresPesagem.mapa57.text = "529";
+    } else {
+      _controladoresPesagem.mapa57.text = "";
+    }
+    if (temValor530Coluna5) {
+      _controladoresPesagem.mapa58.text = "530";
+    } else {
+      _controladoresPesagem.mapa58.text = "";
+    }
+    if (temValor531Coluna5) {
+      _controladoresPesagem.mapa59.text = "531";
+    } else {
+      _controladoresPesagem.mapa59.text = "";
+    }
+    if (temValor532Coluna5) {
+      _controladoresPesagem.mapa60.text = "532";
+    } else {
+      _controladoresPesagem.mapa60.text = "";
+    }
+    if (temValor533Coluna5) {
+      _controladoresPesagem.mapa61.text = "533";
+    } else {
+      _controladoresPesagem.mapa61.text = "";
+    }
+    if (temValor633a641Coluna5) {
+      _controladoresPesagem.mapa62.text = "633 a 641";
+    } else {
+      _controladoresPesagem.mapa62.text = "";
+    }
+    if (temValor642a650Coluna5) {
+      _controladoresPesagem.mapa63.text = "642 a 650";
+    } else {
+      _controladoresPesagem.mapa63.text = "";
+    }
+    if (temValor713Coluna5) {
+      _controladoresPesagem.mapa64.text = "713";
+    } else {
+      _controladoresPesagem.mapa64.text = "";
+    }
+    if (temValor714Coluna5) {
+      _controladoresPesagem.mapa65.text = "714";
+    } else {
+      _controladoresPesagem.mapa65.text = "";
+    }
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+    if (temValor715Coluna6) {
+      _controladoresPesagem.mapa66.text = "715";
+    } else {
+      _controladoresPesagem.mapa66.text = "";
+    }
+
+    if (temValor716Coluna6) {
+      _controladoresPesagem.mapa67.text = "716";
+    } else {
+      _controladoresPesagem.mapa67.text = "";
+    }
+    if (temValor717Coluna6) {
+      _controladoresPesagem.mapa68.text = "717";
+    } else {
+      _controladoresPesagem.mapa68.text = "";
+    }
+    if (temValorGrandeColuna6) {
+      _controladoresPesagem.mapa69.text =
+          "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
+    } else {
+      _controladoresPesagem.mapa69.text = "";
+    }
+    if (temValor529Coluna6) {
+      _controladoresPesagem.mapa70.text = "529";
+    } else {
+      _controladoresPesagem.mapa70.text = "";
+    }
+    if (temValor530Coluna6) {
+      _controladoresPesagem.mapa71.text = "530";
+    } else {
+      _controladoresPesagem.mapa71.text = "";
+    }
+    if (temValor531Coluna6) {
+      _controladoresPesagem.mapa72.text = "531";
+    } else {
+      _controladoresPesagem.mapa72.text = "";
+    }
+    if (temValor532Coluna6) {
+      _controladoresPesagem.mapa73.text = "532";
+    } else {
+      _controladoresPesagem.mapa73.text = "";
+    }
+    if (temValor533Coluna6) {
+      _controladoresPesagem.mapa74.text = "533";
+    } else {
+      _controladoresPesagem.mapa74.text = "";
+    }
+    if (temValor633a641Coluna6) {
+      _controladoresPesagem.mapa75.text = "633 a 641";
+    } else {
+      _controladoresPesagem.mapa75.text = "";
+    }
+    if (temValor642a650Coluna6) {
+      _controladoresPesagem.mapa76.text = "642 a 650";
+    } else {
+      _controladoresPesagem.mapa76.text = "";
+    }
+    if (temValor713Coluna6) {
+      _controladoresPesagem.mapa77.text = "713";
+    } else {
+      _controladoresPesagem.mapa77.text = "";
+    }
+    if (temValor714Coluna6) {
+      _controladoresPesagem.mapa78.text = "714";
+    } else {
+      _controladoresPesagem.mapa78.text = "";
+    }
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+    if (temValor715Coluna7) {
+      _controladoresPesagem.mapa79.text = "715";
+    } else {
+      _controladoresPesagem.mapa79.text = "";
+    }
+
+    if (temValor716Coluna7) {
+      _controladoresPesagem.mapa80.text = "716";
+    } else {
+      _controladoresPesagem.mapa80.text = "";
+    }
+    if (temValor717Coluna7) {
+      _controladoresPesagem.mapa81.text = "717";
+    } else {
+      _controladoresPesagem.mapa81.text = "";
+    }
+    if (temValorGrandeColuna7) {
+      _controladoresPesagem.mapa82.text =
+          "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
+    } else {
+      _controladoresPesagem.mapa82.text = "";
+    }
+    if (temValor529Coluna7) {
+      _controladoresPesagem.mapa83.text = "529";
+    } else {
+      _controladoresPesagem.mapa83.text = "";
+    }
+    if (temValor530Coluna7) {
+      _controladoresPesagem.mapa84.text = "530";
+    } else {
+      _controladoresPesagem.mapa84.text = "";
+    }
+    if (temValor531Coluna7) {
+      _controladoresPesagem.mapa85.text = "531";
+    } else {
+      _controladoresPesagem.mapa85.text = "";
+    }
+    if (temValor532Coluna7) {
+      _controladoresPesagem.mapa86.text = "532";
+    } else {
+      _controladoresPesagem.mapa86.text = "";
+    }
+    if (temValor533Coluna7) {
+      _controladoresPesagem.mapa87.text = "533";
+    } else {
+      _controladoresPesagem.mapa87.text = "";
+    }
+    if (temValor633a641Coluna7) {
+      _controladoresPesagem.mapa88.text = "633 a 641";
+    } else {
+      _controladoresPesagem.mapa88.text = "";
+    }
+    if (temValor642a650Coluna7) {
+      _controladoresPesagem.mapa89.text = "642 a 650";
+    } else {
+      _controladoresPesagem.mapa89.text = "";
+    }
+    if (temValor713Coluna7) {
+      _controladoresPesagem.mapa90.text = "713";
+    } else {
+      _controladoresPesagem.mapa90.text = "";
+    }
+    if (temValor714Coluna7) {
+      _controladoresPesagem.mapa91.text = "714";
+    } else {
+      _controladoresPesagem.mapa91.text = "";
+    }
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+    if (temValor715Coluna8) {
+      _controladoresPesagem.mapa92.text = "715";
+    } else {
+      _controladoresPesagem.mapa92.text = "";
+    }
+
+    if (temValor716Coluna8) {
+      _controladoresPesagem.mapa93.text = "716";
+    } else {
+      _controladoresPesagem.mapa93.text = "";
+    }
+    if (temValor717Coluna8) {
+      _controladoresPesagem.mapa94.text = "717";
+    } else {
+      _controladoresPesagem.mapa94.text = "";
+    }
+    if (temValorGrandeColuna8) {
+      _controladoresPesagem.mapa95.text =
+          "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
+    } else {
+      _controladoresPesagem.mapa95.text = "";
+    }
+    if (temValor529Coluna8) {
+      _controladoresPesagem.mapa96.text = "529";
+    } else {
+      _controladoresPesagem.mapa96.text = "";
+    }
+    if (temValor530Coluna8) {
+      _controladoresPesagem.mapa97.text = "530";
+    } else {
+      _controladoresPesagem.mapa97.text = "";
+    }
+    if (temValor531Coluna8) {
+      _controladoresPesagem.mapa98.text = "531";
+    } else {
+      _controladoresPesagem.mapa98.text = "";
+    }
+    if (temValor532Coluna8) {
+      _controladoresPesagem.mapa99.text = "532";
+    } else {
+      _controladoresPesagem.mapa99.text = "";
+    }
+    if (temValor533Coluna8) {
+      _controladoresPesagem.mapa100.text = "533";
+    } else {
+      _controladoresPesagem.mapa100.text = "";
+    }
+    if (temValor633a641Coluna8) {
+      _controladoresPesagem.mapa101.text = "633 a 641";
+    } else {
+      _controladoresPesagem.mapa101.text = "";
+    }
+    if (temValor642a650Coluna8) {
+      _controladoresPesagem.mapa102.text = "642 a 650";
+    } else {
+      _controladoresPesagem.mapa102.text = "";
+    }
+    if (temValor713Coluna8) {
+      _controladoresPesagem.mapa103.text = "713";
+    } else {
+      _controladoresPesagem.mapa103.text = "";
+    }
+    if (temValor714Coluna8) {
+      _controladoresPesagem.mapa104.text = "714";
+    } else {
+      _controladoresPesagem.mapa104.text = "";
+    }
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+    if (temValor715Coluna9) {
+      _controladoresPesagem.mapa105.text = "715";
+    } else {
+      _controladoresPesagem.mapa105.text = "";
+    }
+
+    if (temValor716Coluna9) {
+      _controladoresPesagem.mapa106.text = "716";
+    } else {
+      _controladoresPesagem.mapa106.text = "";
+    }
+    if (temValor717Coluna9) {
+      _controladoresPesagem.mapa107.text = "717";
+    } else {
+      _controladoresPesagem.mapa107.text = "";
+    }
+    if (temValorGrandeColuna9) {
+      _controladoresPesagem.mapa108.text =
+          "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
+    } else {
+      _controladoresPesagem.mapa108.text = "";
+    }
+    if (temValor529Coluna9) {
+      _controladoresPesagem.mapa109.text = "529";
+    } else {
+      _controladoresPesagem.mapa109.text = "";
+    }
+    if (temValor530Coluna9) {
+      _controladoresPesagem.mapa110.text = "530";
+    } else {
+      _controladoresPesagem.mapa110.text = "";
+    }
+    if (temValor531Coluna9) {
+      _controladoresPesagem.mapa111.text = "531";
+    } else {
+      _controladoresPesagem.mapa111.text = "";
+    }
+    if (temValor532Coluna9) {
+      _controladoresPesagem.mapa112.text = "532";
+    } else {
+      _controladoresPesagem.mapa112.text = "";
+    }
+    if (temValor533Coluna9) {
+      _controladoresPesagem.mapa113.text = "533";
+    } else {
+      _controladoresPesagem.mapa113.text = "";
+    }
+    if (temValor633a641Coluna9) {
+      _controladoresPesagem.mapa114.text = "633 a 641";
+    } else {
+      _controladoresPesagem.mapa114.text = "";
+    }
+    if (temValor642a650Coluna9) {
+      _controladoresPesagem.mapa115.text = "642 a 650";
+    } else {
+      _controladoresPesagem.mapa115.text = "";
+    }
+    if (temValor713Coluna9) {
+      _controladoresPesagem.mapa116.text = "713";
+    } else {
+      _controladoresPesagem.mapa116.text = "";
+    }
+    if (temValor714Coluna9) {
+      _controladoresPesagem.mapa117.text = "714";
+    } else {
+      _controladoresPesagem.mapa117.text = "";
+    }
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+    if (temValor715Coluna10) {
+      _controladoresPesagem.mapa118.text = "715";
+    } else {
+      _controladoresPesagem.mapa118.text = "";
+    }
+
+    if (temValor716Coluna10) {
+      _controladoresPesagem.mapa119.text = "716";
+    } else {
+      _controladoresPesagem.mapa119.text = "";
+    }
+    if (temValor717Coluna10) {
+      _controladoresPesagem.mapa120.text = "717";
+    } else {
+      _controladoresPesagem.mapa120.text = "";
+    }
+    if (temValorGrandeColuna10) {
+      _controladoresPesagem.mapa121.text =
+          "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
+    } else {
+      _controladoresPesagem.mapa121.text = "";
+    }
+    if (temValor529Coluna10) {
+      _controladoresPesagem.mapa122.text = "529";
+    } else {
+      _controladoresPesagem.mapa122.text = "";
+    }
+    if (temValor530Coluna10) {
+      _controladoresPesagem.mapa123.text = "530";
+    } else {
+      _controladoresPesagem.mapa123.text = "";
+    }
+    if (temValor531Coluna10) {
+      _controladoresPesagem.mapa124.text = "531";
+    } else {
+      _controladoresPesagem.mapa124.text = "";
+    }
+    if (temValor532Coluna10) {
+      _controladoresPesagem.mapa125.text = "532";
+    } else {
+      _controladoresPesagem.mapa125.text = "";
+    }
+    if (temValor533Coluna10) {
+      _controladoresPesagem.mapa126.text = "533";
+    } else {
+      _controladoresPesagem.mapa126.text = "";
+    }
+    if (temValor633a641Coluna10) {
+      _controladoresPesagem.mapa127.text = "633 a 641";
+    } else {
+      _controladoresPesagem.mapa127.text = "";
+    }
+    if (temValor642a650Coluna10) {
+      _controladoresPesagem.mapa128.text = "642 a 650";
+    } else {
+      _controladoresPesagem.mapa128.text = "";
+    }
+    if (temValor713Coluna10) {
+      _controladoresPesagem.mapa129.text = "713";
+    } else {
+      _controladoresPesagem.mapa129.text = "";
+    }
+    if (temValor714Coluna10) {
+      _controladoresPesagem.mapa130.text = "714";
+    } else {
+      _controladoresPesagem.mapa130.text = "";
+    }
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+    if (temValor715Coluna11) {
+      _controladoresPesagem.mapa131.text = "715";
+    } else {
+      _controladoresPesagem.mapa131.text = "";
+    }
+
+    if (temValor716Coluna11) {
+      _controladoresPesagem.mapa132.text = "716";
+    } else {
+      _controladoresPesagem.mapa132.text = "";
+    }
+    if (temValor717Coluna11) {
+      _controladoresPesagem.mapa133.text = "717";
+    } else {
+      _controladoresPesagem.mapa133.text = "";
+    }
+    if (temValorGrandeColuna11) {
+      _controladoresPesagem.mapa134.text =
+          "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
+    } else {
+      _controladoresPesagem.mapa134.text = "";
+    }
+    if (temValor529Coluna11) {
+      _controladoresPesagem.mapa135.text = "529";
+    } else {
+      _controladoresPesagem.mapa135.text = "";
+    }
+    if (temValor530Coluna11) {
+      _controladoresPesagem.mapa136.text = "530";
+    } else {
+      _controladoresPesagem.mapa136.text = "";
+    }
+    if (temValor531Coluna11) {
+      _controladoresPesagem.mapa137.text = "531";
+    } else {
+      _controladoresPesagem.mapa137.text = "";
+    }
+    if (temValor532Coluna11) {
+      _controladoresPesagem.mapa138.text = "532";
+    } else {
+      _controladoresPesagem.mapa138.text = "";
+    }
+    if (temValor533Coluna11) {
+      _controladoresPesagem.mapa139.text = "533";
+    } else {
+      _controladoresPesagem.mapa139.text = "";
+    }
+    if (temValor633a641Coluna11) {
+      _controladoresPesagem.mapa140.text = "633 a 641";
+    } else {
+      _controladoresPesagem.mapa140.text = "";
+    }
+    if (temValor642a650Coluna11) {
+      _controladoresPesagem.mapa141.text = "642 a 650";
+    } else {
+      _controladoresPesagem.mapa141.text = "";
+    }
+    if (temValor713Coluna11) {
+      _controladoresPesagem.mapa142.text = "713";
+    } else {
+      _controladoresPesagem.mapa142.text = "";
+    }
+    if (temValor714Coluna11) {
+      _controladoresPesagem.mapa143.text = "714";
+    } else {
+      _controladoresPesagem.mapa143.text = "";
+    }
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+////////////////////
+    if (temValor715Coluna12) {
+      _controladoresPesagem.mapa144.text = "715";
+    } else {
+      _controladoresPesagem.mapa144.text = "";
+    }
+
+    if (temValor716Coluna12) {
+      _controladoresPesagem.mapa145.text = "716";
+    } else {
+      _controladoresPesagem.mapa145.text = "";
+    }
+    if (temValor717Coluna12) {
+      _controladoresPesagem.mapa146.text = "717";
+    } else {
+      _controladoresPesagem.mapa146.text = "";
+    }
+    if (temValorGrandeColuna12) {
+      _controladoresPesagem.mapa147.text =
+          "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
+    } else {
+      _controladoresPesagem.mapa147.text = "";
+    }
+    if (temValor529Coluna12) {
+      _controladoresPesagem.mapa148.text = "529";
+    } else {
+      _controladoresPesagem.mapa148.text = "";
+    }
+    if (temValor530Coluna12) {
+      _controladoresPesagem.mapa149.text = "530";
+    } else {
+      _controladoresPesagem.mapa149.text = "";
+    }
+    if (temValor531Coluna12) {
+      _controladoresPesagem.mapa150.text = "531";
+    } else {
+      _controladoresPesagem.mapa150.text = "";
+    }
+    if (temValor532Coluna12) {
+      _controladoresPesagem.mapa151.text = "532";
+    } else {
+      _controladoresPesagem.mapa151.text = "";
+    }
+    if (temValor533Coluna12) {
+      _controladoresPesagem.mapa152.text = "533";
+    } else {
+      _controladoresPesagem.mapa152.text = "";
+    }
+    if (temValor633a641Coluna12) {
+      _controladoresPesagem.mapa153.text = "633 a 641";
+    } else {
+      _controladoresPesagem.mapa153.text = "";
+    }
+    if (temValor642a650Coluna12) {
+      _controladoresPesagem.mapa154.text = "642 a 650";
+    } else {
+      _controladoresPesagem.mapa154.text = "";
+    }
+    if (temValor713Coluna12) {
+      _controladoresPesagem.mapa155.text = "713";
+    } else {
+      _controladoresPesagem.mapa155.text = "";
+    }
+    if (temValor714Coluna12) {
+      _controladoresPesagem.mapa156.text = "714";
+    } else {
+      _controladoresPesagem.mapa156.text = "";
+    }
   }
 
   @override
@@ -734,6 +1599,16 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
   void atualizarSoma() {
     double somaColuna1 = 0.0;
     double somaColuna2 = 0.0;
+    double somaColuna3 = 0.0;
+    double somaColuna4 = 0.0;
+    double somaColuna5 = 0.0;
+    double somaColuna6 = 0.0;
+    double somaColuna7 = 0.0;
+    double somaColuna8 = 0.0;
+    double somaColuna9 = 0.0;
+    double somaColuna10 = 0.0;
+    double somaColuna11 = 0.0;
+    double somaColuna12 = 0.0;
 
     var coluna1 = [
       _controladoresPesagem.aPesoPadrao1,
@@ -750,100 +1625,224 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
       _controladoresPesagem.aPesoPadrao9,
       _controladoresPesagem.aPesoPadrao10,
     ];
+    var coluna3 = [
+      _controladoresPesagem.aPesoPadrao11,
+      _controladoresPesagem.aPesoPadrao12,
+      _controladoresPesagem.aPesoPadrao13,
+      _controladoresPesagem.aPesoPadrao14,
+      _controladoresPesagem.aPesoPadrao15,
+    ];
+    var coluna4 = [
+      _controladoresPesagem.aPesoPadrao16,
+      _controladoresPesagem.aPesoPadrao17,
+      _controladoresPesagem.aPesoPadrao18,
+      _controladoresPesagem.aPesoPadrao19,
+      _controladoresPesagem.aPesoPadrao20,
+    ];
+    var coluna5 = [
+      _controladoresPesagem.aPesoPadrao21,
+      _controladoresPesagem.aPesoPadrao22,
+      _controladoresPesagem.aPesoPadrao23,
+      _controladoresPesagem.aPesoPadrao24,
+      _controladoresPesagem.aPesoPadrao25,
+    ];
+    var coluna6 = [
+      _controladoresPesagem.aPesoPadrao26,
+      _controladoresPesagem.aPesoPadrao27,
+      _controladoresPesagem.aPesoPadrao28,
+      _controladoresPesagem.aPesoPadrao29,
+      _controladoresPesagem.aPesoPadrao30,
+    ];
+    var coluna7 = [
+      _controladoresPesagem.aPesoPadrao31,
+      _controladoresPesagem.aPesoPadrao32,
+      _controladoresPesagem.aPesoPadrao33,
+      _controladoresPesagem.aPesoPadrao34,
+      _controladoresPesagem.aPesoPadrao35,
+    ];
+
+    var coluna8 = [
+      _controladoresPesagem.aPesoPadrao36,
+      _controladoresPesagem.aPesoPadrao37,
+      _controladoresPesagem.aPesoPadrao38,
+      _controladoresPesagem.aPesoPadrao39,
+      _controladoresPesagem.aPesoPadrao40,
+    ];
+    var coluna9 = [
+      _controladoresPesagem.aPesoPadrao41,
+      _controladoresPesagem.aPesoPadrao42,
+      _controladoresPesagem.aPesoPadrao43,
+      _controladoresPesagem.aPesoPadrao44,
+      _controladoresPesagem.aPesoPadrao45,
+    ];
+    var coluna10 = [
+      _controladoresPesagem.aPesoPadrao46,
+      _controladoresPesagem.aPesoPadrao47,
+      _controladoresPesagem.aPesoPadrao48,
+      _controladoresPesagem.aPesoPadrao49,
+      _controladoresPesagem.aPesoPadrao50,
+    ];
+    var coluna11 = [
+      _controladoresPesagem.aPesoPadrao51,
+      _controladoresPesagem.aPesoPadrao52,
+      _controladoresPesagem.aPesoPadrao53,
+      _controladoresPesagem.aPesoPadrao54,
+      _controladoresPesagem.aPesoPadrao55,
+    ];
+    var coluna12 = [
+      _controladoresPesagem.aPesoPadrao56,
+      _controladoresPesagem.aPesoPadrao57,
+      _controladoresPesagem.aPesoPadrao58,
+      _controladoresPesagem.aPesoPadrao59,
+      _controladoresPesagem.aPesoPadrao60,
+    ];
+
+    List<Map<String, String>> mapas = [
+      mapa715,
+      mapa716,
+      mapa717,
+      mapaGrande,
+      mapa529,
+      mapa530,
+      mapa531,
+      mapa532,
+      mapa533,
+      mapa633a641,
+      mapa642a650,
+      mapa713,
+      mapa714
+    ];
 
     for (var controller in coluna1) {
       var valorTexto = controller.text;
 
-      if (mapa715.containsKey(valorTexto)) {
-        double valor = double.parse(mapa715[valorTexto]!.replaceAll(",", "."));
-        somaColuna1 += valor;
-      } else if (mapa716.containsKey(valorTexto)) {
-        double valor = double.parse(mapa716[valorTexto]!.replaceAll(",", "."));
-        somaColuna1 += valor;
-      } else if (mapa717.containsKey(valorTexto)) {
-        double valor = double.parse(mapa717[valorTexto]!.replaceAll(",", "."));
-        somaColuna1 += valor;
-      } else if (mapaGrande.containsKey(valorTexto)) {
-        double valor =
-            double.parse(mapaGrande[valorTexto]!.replaceAll(",", "."));
-        somaColuna1 += valor;
-      } else if (mapa529.containsKey(valorTexto)) {
-        double valor = double.parse(mapa529[valorTexto]!.replaceAll(",", "."));
-        somaColuna1 += valor;
-      } else if (mapa530.containsKey(valorTexto)) {
-        double valor = double.parse(mapa530[valorTexto]!.replaceAll(",", "."));
-        somaColuna1 += valor;
-      } else if (mapa531.containsKey(valorTexto)) {
-        double valor = double.parse(mapa531[valorTexto]!.replaceAll(",", "."));
-        somaColuna1 += valor;
-      } else if (mapa532.containsKey(valorTexto)) {
-        double valor = double.parse(mapa532[valorTexto]!.replaceAll(",", "."));
-        somaColuna1 += valor;
-      } else if (mapa533.containsKey(valorTexto)) {
-        double valor = double.parse(mapa533[valorTexto]!.replaceAll(",", "."));
-        somaColuna1 += valor;
-      } else if (mapa633a641.containsKey(valorTexto)) {
-        double valor =
-            double.parse(mapa633a641[valorTexto]!.replaceAll(",", "."));
-        somaColuna1 += valor;
-      } else if (mapa642a650.containsKey(valorTexto)) {
-        double valor =
-            double.parse(mapa642a650[valorTexto]!.replaceAll(",", "."));
-        somaColuna1 += valor;
-      } else if (mapa713.containsKey(valorTexto)) {
-        double valor = double.parse(mapa713[valorTexto]!.replaceAll(",", "."));
-        somaColuna1 += valor;
-      } else if (mapa714.containsKey(valorTexto)) {
-        double valor = double.parse(mapa714[valorTexto]!.replaceAll(",", "."));
-        somaColuna1 += valor;
+      for (var mapa in mapas) {
+        if (mapa.containsKey(valorTexto)) {
+          double valor = double.parse(mapa[valorTexto]!.replaceAll(",", "."));
+          somaColuna1 += valor;
+          break;
+        }
       }
     }
-
     for (var controller in coluna2) {
       var valorTexto = controller.text;
 
-      if (mapa715.containsKey(valorTexto)) {
-        double valor = double.parse(mapa715[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapa716.containsKey(valorTexto)) {
-        double valor = double.parse(mapa716[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapa717.containsKey(valorTexto)) {
-        double valor = double.parse(mapa717[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapaGrande.containsKey(valorTexto)) {
-        double valor =
-            double.parse(mapaGrande[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapa529.containsKey(valorTexto)) {
-        double valor = double.parse(mapa529[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapa530.containsKey(valorTexto)) {
-        double valor = double.parse(mapa530[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapa531.containsKey(valorTexto)) {
-        double valor = double.parse(mapa531[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapa532.containsKey(valorTexto)) {
-        double valor = double.parse(mapa532[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapa533.containsKey(valorTexto)) {
-        double valor = double.parse(mapa533[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapa633a641.containsKey(valorTexto)) {
-        double valor =
-            double.parse(mapa633a641[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapa642a650.containsKey(valorTexto)) {
-        double valor =
-            double.parse(mapa642a650[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapa713.containsKey(valorTexto)) {
-        double valor = double.parse(mapa713[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
-      } else if (mapa714.containsKey(valorTexto)) {
-        double valor = double.parse(mapa714[valorTexto]!.replaceAll(",", "."));
-        somaColuna2 += valor;
+      for (var mapa in mapas) {
+        if (mapa.containsKey(valorTexto)) {
+          double valor = double.parse(mapa[valorTexto]!.replaceAll(",", "."));
+          somaColuna2 += valor;
+          break;
+        }
+      }
+    }
+    for (var controller in coluna3) {
+      var valorTexto = controller.text;
+
+      for (var mapa in mapas) {
+        if (mapa.containsKey(valorTexto)) {
+          double valor = double.parse(mapa[valorTexto]!.replaceAll(",", "."));
+          somaColuna3 += valor;
+          break;
+        }
+      }
+    }
+    for (var controller in coluna4) {
+      var valorTexto = controller.text;
+
+      for (var mapa in mapas) {
+        if (mapa.containsKey(valorTexto)) {
+          double valor = double.parse(mapa[valorTexto]!.replaceAll(",", "."));
+          somaColuna4 += valor;
+          break;
+        }
+      }
+    }
+    for (var controller in coluna5) {
+      var valorTexto = controller.text;
+
+      for (var mapa in mapas) {
+        if (mapa.containsKey(valorTexto)) {
+          double valor = double.parse(mapa[valorTexto]!.replaceAll(",", "."));
+          somaColuna5 += valor;
+          break;
+        }
+      }
+    }
+    for (var controller in coluna6) {
+      var valorTexto = controller.text;
+
+      for (var mapa in mapas) {
+        if (mapa.containsKey(valorTexto)) {
+          double valor = double.parse(mapa[valorTexto]!.replaceAll(",", "."));
+          somaColuna6 += valor;
+          break;
+        }
+      }
+    }
+    for (var controller in coluna7) {
+      var valorTexto = controller.text;
+
+      for (var mapa in mapas) {
+        if (mapa.containsKey(valorTexto)) {
+          double valor = double.parse(mapa[valorTexto]!.replaceAll(",", "."));
+          somaColuna7 += valor;
+          break;
+        }
+      }
+    }
+    for (var controller in coluna8) {
+      var valorTexto = controller.text;
+
+      for (var mapa in mapas) {
+        if (mapa.containsKey(valorTexto)) {
+          double valor = double.parse(mapa[valorTexto]!.replaceAll(",", "."));
+          somaColuna8 += valor;
+          break;
+        }
+      }
+    }
+    for (var controller in coluna9) {
+      var valorTexto = controller.text;
+
+      for (var mapa in mapas) {
+        if (mapa.containsKey(valorTexto)) {
+          double valor = double.parse(mapa[valorTexto]!.replaceAll(",", "."));
+          somaColuna9 += valor;
+          break;
+        }
+      }
+    }
+    for (var controller in coluna10) {
+      var valorTexto = controller.text;
+
+      for (var mapa in mapas) {
+        if (mapa.containsKey(valorTexto)) {
+          double valor = double.parse(mapa[valorTexto]!.replaceAll(",", "."));
+          somaColuna10 += valor;
+          break;
+        }
+      }
+    }
+    for (var controller in coluna11) {
+      var valorTexto = controller.text;
+
+      for (var mapa in mapas) {
+        if (mapa.containsKey(valorTexto)) {
+          double valor = double.parse(mapa[valorTexto]!.replaceAll(",", "."));
+          somaColuna11 += valor;
+          break;
+        }
+      }
+    }
+    for (var controller in coluna12) {
+      var valorTexto = controller.text;
+
+      for (var mapa in mapas) {
+        if (mapa.containsKey(valorTexto)) {
+          double valor = double.parse(mapa[valorTexto]!.replaceAll(",", "."));
+          somaColuna12 += valor;
+          break;
+        }
       }
     }
 
@@ -851,6 +1850,26 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
         somaColuna1.toStringAsFixed(7).replaceAll(".", ",");
     _controladoresPesagem.result2.text =
         somaColuna2.toStringAsFixed(7).replaceAll(".", ",");
+    _controladoresPesagem.result3.text =
+        somaColuna3.toStringAsFixed(7).replaceAll(".", ",");
+    _controladoresPesagem.result4.text =
+        somaColuna4.toStringAsFixed(7).replaceAll(".", ",");
+    _controladoresPesagem.result5.text =
+        somaColuna5.toStringAsFixed(7).replaceAll(".", ",");
+    _controladoresPesagem.result6.text =
+        somaColuna6.toStringAsFixed(7).replaceAll(".", ",");
+    _controladoresPesagem.result7.text =
+        somaColuna7.toStringAsFixed(7).replaceAll(".", ",");
+    _controladoresPesagem.result8.text =
+        somaColuna8.toStringAsFixed(7).replaceAll(".", ",");
+    _controladoresPesagem.result9.text =
+        somaColuna9.toStringAsFixed(7).replaceAll(".", ",");
+    _controladoresPesagem.result10.text =
+        somaColuna10.toStringAsFixed(7).replaceAll(".", ",");
+    _controladoresPesagem.result11.text =
+        somaColuna11.toStringAsFixed(7).replaceAll(".", ",");
+    _controladoresPesagem.result12.text =
+        somaColuna12.toStringAsFixed(7).replaceAll(".", ",");
   }
 
   void _updateCampos() {
@@ -1113,9 +2132,594 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                     ],
                   ),
                 ),
+                Flexible(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Flexible(
+                        child: Column(
+                          children: [
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao11,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 3),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao12,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 3),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao13,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 3),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao14,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 3),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao15,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 3),
+                          ],
+                        ),
+                      ),
+                      Container(width: 10),
+                      Column(
+                        children: [
+                          resultBox(_controladoresPesagem.result3,
+                              numPontosApoio >= 3),
+                          mapasNumeros(_controladoresPesagem.mapa27),
+                          mapasNumeros(_controladoresPesagem.mapa28),
+                          mapasNumeros(_controladoresPesagem.mapa29),
+                          mapasNumeros(_controladoresPesagem.mapa30),
+                          mapasNumeros(_controladoresPesagem.mapa31),
+                          mapasNumeros(_controladoresPesagem.mapa32),
+                          mapasNumeros(_controladoresPesagem.mapa33),
+                          mapasNumeros(_controladoresPesagem.mapa34),
+                          mapasNumeros(_controladoresPesagem.mapa35),
+                          mapasNumeros(_controladoresPesagem.mapa36),
+                          mapasNumeros(_controladoresPesagem.mapa37),
+                          mapasNumeros(_controladoresPesagem.mapa38),
+                          mapasNumeros(_controladoresPesagem.mapa39),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                Flexible(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Flexible(
+                        child: Column(
+                          children: [
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao16,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 4),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao17,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 4),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao18,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 4),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao19,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 4),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao20,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 4),
+                          ],
+                        ),
+                      ),
+                      Container(width: 10),
+                      Column(
+                        children: [
+                          resultBox(_controladoresPesagem.result4,
+                              numPontosApoio >= 4),
+                          mapasNumeros(_controladoresPesagem.mapa40),
+                          mapasNumeros(_controladoresPesagem.mapa41),
+                          mapasNumeros(_controladoresPesagem.mapa42),
+                          mapasNumeros(_controladoresPesagem.mapa43),
+                          mapasNumeros(_controladoresPesagem.mapa44),
+                          mapasNumeros(_controladoresPesagem.mapa45),
+                          mapasNumeros(_controladoresPesagem.mapa46),
+                          mapasNumeros(_controladoresPesagem.mapa47),
+                          mapasNumeros(_controladoresPesagem.mapa48),
+                          mapasNumeros(_controladoresPesagem.mapa59),
+                          mapasNumeros(_controladoresPesagem.mapa50),
+                          mapasNumeros(_controladoresPesagem.mapa51),
+                          mapasNumeros(_controladoresPesagem.mapa52),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                Flexible(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Flexible(
+                        child: Column(
+                          children: [
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao21,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 5),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao22,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 5),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao23,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 5),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao24,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 5),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao25,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 5),
+                          ],
+                        ),
+                      ),
+                      Container(width: 10),
+                      Column(
+                        children: [
+                          resultBox(_controladoresPesagem.result5,
+                              numPontosApoio >= 5),
+                          mapasNumeros(_controladoresPesagem.mapa53),
+                          mapasNumeros(_controladoresPesagem.mapa54),
+                          mapasNumeros(_controladoresPesagem.mapa55),
+                          mapasNumeros(_controladoresPesagem.mapa56),
+                          mapasNumeros(_controladoresPesagem.mapa57),
+                          mapasNumeros(_controladoresPesagem.mapa58),
+                          mapasNumeros(_controladoresPesagem.mapa59),
+                          mapasNumeros(_controladoresPesagem.mapa60),
+                          mapasNumeros(_controladoresPesagem.mapa61),
+                          mapasNumeros(_controladoresPesagem.mapa62),
+                          mapasNumeros(_controladoresPesagem.mapa63),
+                          mapasNumeros(_controladoresPesagem.mapa64),
+                          mapasNumeros(_controladoresPesagem.mapa65),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                Flexible(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Flexible(
+                        child: Column(
+                          children: [
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao26,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 6),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao27,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 6),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao28,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 6),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao29,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 6),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao30,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 6),
+                          ],
+                        ),
+                      ),
+                      Container(width: 10),
+                      Column(
+                        children: [
+                          resultBox(_controladoresPesagem.result6,
+                              numPontosApoio >= 6),
+                          mapasNumeros(_controladoresPesagem.mapa66),
+                          mapasNumeros(_controladoresPesagem.mapa67),
+                          mapasNumeros(_controladoresPesagem.mapa68),
+                          mapasNumeros(_controladoresPesagem.mapa69),
+                          mapasNumeros(_controladoresPesagem.mapa70),
+                          mapasNumeros(_controladoresPesagem.mapa71),
+                          mapasNumeros(_controladoresPesagem.mapa72),
+                          mapasNumeros(_controladoresPesagem.mapa73),
+                          mapasNumeros(_controladoresPesagem.mapa74),
+                          mapasNumeros(_controladoresPesagem.mapa75),
+                          mapasNumeros(_controladoresPesagem.mapa76),
+                          mapasNumeros(_controladoresPesagem.mapa77),
+                          mapasNumeros(_controladoresPesagem.mapa78),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
             const Divider(),
+            //////////////////////////
+            //////////////////////////
+            //////////////////////////
+            //////////////////////////
+            //////////////////////////
+            //////////////////////////
+            //////////////////////////
+            //////////////////////////
+            //////////////////////////
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Flexible(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Flexible(
+                        child: Column(
+                          children: [
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao31,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 7),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao32,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 7),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao33,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 7),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao34,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 7),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao35,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 7),
+                          ],
+                        ),
+                      ),
+                      Container(width: 10),
+                      Column(
+                        children: [
+                          resultBox(_controladoresPesagem.result7,
+                              numPontosApoio >= 7),
+                          mapasNumeros(_controladoresPesagem.mapa79),
+                          mapasNumeros(_controladoresPesagem.mapa80),
+                          mapasNumeros(_controladoresPesagem.mapa81),
+                          mapasNumeros(_controladoresPesagem.mapa82),
+                          mapasNumeros(_controladoresPesagem.mapa83),
+                          mapasNumeros(_controladoresPesagem.mapa84),
+                          mapasNumeros(_controladoresPesagem.mapa85),
+                          mapasNumeros(_controladoresPesagem.mapa86),
+                          mapasNumeros(_controladoresPesagem.mapa87),
+                          mapasNumeros(_controladoresPesagem.mapa88),
+                          mapasNumeros(_controladoresPesagem.mapa89),
+                          mapasNumeros(_controladoresPesagem.mapa90),
+                          mapasNumeros(_controladoresPesagem.mapa91),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                Flexible(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Flexible(
+                        child: Column(
+                          children: [
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao36,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 8),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao37,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 8),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao38,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 8),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao39,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 8),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao40,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 8),
+                          ],
+                        ),
+                      ),
+                      Container(width: 10),
+                      Column(
+                        children: [
+                          resultBox(_controladoresPesagem.result8,
+                              numPontosApoio >= 8),
+                          mapasNumeros(_controladoresPesagem.mapa92),
+                          mapasNumeros(_controladoresPesagem.mapa93),
+                          mapasNumeros(_controladoresPesagem.mapa94),
+                          mapasNumeros(_controladoresPesagem.mapa95),
+                          mapasNumeros(_controladoresPesagem.mapa96),
+                          mapasNumeros(_controladoresPesagem.mapa97),
+                          mapasNumeros(_controladoresPesagem.mapa98),
+                          mapasNumeros(_controladoresPesagem.mapa99),
+                          mapasNumeros(_controladoresPesagem.mapa100),
+                          mapasNumeros(_controladoresPesagem.mapa101),
+                          mapasNumeros(_controladoresPesagem.mapa102),
+                          mapasNumeros(_controladoresPesagem.mapa103),
+                          mapasNumeros(_controladoresPesagem.mapa104),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                Flexible(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Flexible(
+                        child: Column(
+                          children: [
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao41,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 9),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao42,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 9),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao43,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 9),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao44,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 9),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao45,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 9),
+                          ],
+                        ),
+                      ),
+                      Container(width: 10),
+                      Column(
+                        children: [
+                          resultBox(_controladoresPesagem.result9,
+                              numPontosApoio >= 9),
+                          mapasNumeros(_controladoresPesagem.mapa105),
+                          mapasNumeros(_controladoresPesagem.mapa106),
+                          mapasNumeros(_controladoresPesagem.mapa107),
+                          mapasNumeros(_controladoresPesagem.mapa108),
+                          mapasNumeros(_controladoresPesagem.mapa109),
+                          mapasNumeros(_controladoresPesagem.mapa110),
+                          mapasNumeros(_controladoresPesagem.mapa111),
+                          mapasNumeros(_controladoresPesagem.mapa112),
+                          mapasNumeros(_controladoresPesagem.mapa113),
+                          mapasNumeros(_controladoresPesagem.mapa114),
+                          mapasNumeros(_controladoresPesagem.mapa115),
+                          mapasNumeros(_controladoresPesagem.mapa116),
+                          mapasNumeros(_controladoresPesagem.mapa117),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                Flexible(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Flexible(
+                        child: Column(
+                          children: [
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao46,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 10),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao47,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 10),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao48,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 10),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao49,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 10),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao50,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 10),
+                          ],
+                        ),
+                      ),
+                      Container(width: 10),
+                      Column(
+                        children: [
+                          resultBox(_controladoresPesagem.result10,
+                              numPontosApoio >= 10),
+                          mapasNumeros(_controladoresPesagem.mapa118),
+                          mapasNumeros(_controladoresPesagem.mapa119),
+                          mapasNumeros(_controladoresPesagem.mapa120),
+                          mapasNumeros(_controladoresPesagem.mapa121),
+                          mapasNumeros(_controladoresPesagem.mapa122),
+                          mapasNumeros(_controladoresPesagem.mapa123),
+                          mapasNumeros(_controladoresPesagem.mapa124),
+                          mapasNumeros(_controladoresPesagem.mapa125),
+                          mapasNumeros(_controladoresPesagem.mapa126),
+                          mapasNumeros(_controladoresPesagem.mapa127),
+                          mapasNumeros(_controladoresPesagem.mapa128),
+                          mapasNumeros(_controladoresPesagem.mapa129),
+                          mapasNumeros(_controladoresPesagem.mapa130),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                Flexible(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Flexible(
+                        child: Column(
+                          children: [
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao51,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 11),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao52,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 11),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao53,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 11),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao54,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 11),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao55,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 11),
+                          ],
+                        ),
+                      ),
+                      Container(width: 10),
+                      Column(
+                        children: [
+                          resultBox(_controladoresPesagem.result11,
+                              numPontosApoio >= 11),
+                          mapasNumeros(_controladoresPesagem.mapa131),
+                          mapasNumeros(_controladoresPesagem.mapa132),
+                          mapasNumeros(_controladoresPesagem.mapa133),
+                          mapasNumeros(_controladoresPesagem.mapa134),
+                          mapasNumeros(_controladoresPesagem.mapa135),
+                          mapasNumeros(_controladoresPesagem.mapa136),
+                          mapasNumeros(_controladoresPesagem.mapa137),
+                          mapasNumeros(_controladoresPesagem.mapa138),
+                          mapasNumeros(_controladoresPesagem.mapa139),
+                          mapasNumeros(_controladoresPesagem.mapa140),
+                          mapasNumeros(_controladoresPesagem.mapa141),
+                          mapasNumeros(_controladoresPesagem.mapa142),
+                          mapasNumeros(_controladoresPesagem.mapa143),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                Flexible(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Flexible(
+                        child: Column(
+                          children: [
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao56,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 12),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao57,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 12),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao58,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 12),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao59,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 12),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao60,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 12),
+                          ],
+                        ),
+                      ),
+                      Container(width: 10),
+                      Column(
+                        children: [
+                          resultBox(_controladoresPesagem.result12,
+                              numPontosApoio >= 12),
+                          mapasNumeros(_controladoresPesagem.mapa144),
+                          mapasNumeros(_controladoresPesagem.mapa145),
+                          mapasNumeros(_controladoresPesagem.mapa146),
+                          mapasNumeros(_controladoresPesagem.mapa147),
+                          mapasNumeros(_controladoresPesagem.mapa148),
+                          mapasNumeros(_controladoresPesagem.mapa149),
+                          mapasNumeros(_controladoresPesagem.mapa150),
+                          mapasNumeros(_controladoresPesagem.mapa151),
+                          mapasNumeros(_controladoresPesagem.mapa152),
+                          mapasNumeros(_controladoresPesagem.mapa153),
+                          mapasNumeros(_controladoresPesagem.mapa154),
+                          mapasNumeros(_controladoresPesagem.mapa155),
+                          mapasNumeros(_controladoresPesagem.mapa156),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
             const Divider(
               color: Colors.transparent,
               height: 30,

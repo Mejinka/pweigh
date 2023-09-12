@@ -1,114 +1,158 @@
-_controladoresPesagem.aPesoPadrao6,
-_controladoresPesagem.aPesoPadrao7,
-_controladoresPesagem.aPesoPadrao8,
-_controladoresPesagem.aPesoPadrao9,
-_controladoresPesagem.aPesoPadrao10,
-_controladoresPesagem.aPesoPadrao11,
-_controladoresPesagem.aPesoPadrao12,
-_controladoresPesagem.aPesoPadrao13,
-_controladoresPesagem.aPesoPadrao14,
-_controladoresPesagem.aPesoPadrao15,
-_controladoresPesagem.aPesoPadrao16,
-_controladoresPesagem.aPesoPadrao17,
-_controladoresPesagem.aPesoPadrao18,
-_controladoresPesagem.aPesoPadrao19,
-_controladoresPesagem.aPesoPadrao20,
-_controladoresPesagem.aPesoPadrao21,
-_controladoresPesagem.aPesoPadrao22,
-_controladoresPesagem.aPesoPadrao23,
-_controladoresPesagem.aPesoPadrao24,
-_controladoresPesagem.aPesoPadrao25,
-_controladoresPesagem.aPesoPadrao26,
-_controladoresPesagem.aPesoPadrao27,
-_controladoresPesagem.aPesoPadrao28,
-_controladoresPesagem.aPesoPadrao29,
-_controladoresPesagem.aPesoPadrao30,
-_controladoresPesagem.aPesoPadrao31,
-_controladoresPesagem.aPesoPadrao32,
-_controladoresPesagem.aPesoPadrao33,
-_controladoresPesagem.aPesoPadrao34,
-_controladoresPesagem.aPesoPadrao35,
-_controladoresPesagem.aPesoPadrao36,
-_controladoresPesagem.aPesoPadrao37,
-_controladoresPesagem.aPesoPadrao38,
-_controladoresPesagem.aPesoPadrao39,
-_controladoresPesagem.aPesoPadrao40,
-_controladoresPesagem.aPesoPadrao41,
-_controladoresPesagem.aPesoPadrao42,
-_controladoresPesagem.aPesoPadrao43,
-_controladoresPesagem.aPesoPadrao44,
-_controladoresPesagem.aPesoPadrao45,
-_controladoresPesagem.aPesoPadrao46,
-_controladoresPesagem.aPesoPadrao47,
-_controladoresPesagem.aPesoPadrao48,
-_controladoresPesagem.aPesoPadrao49,
-_controladoresPesagem.aPesoPadrao50,
-_controladoresPesagem.aPesoPadrao51,
-_controladoresPesagem.aPesoPadrao52,
-_controladoresPesagem.aPesoPadrao53,
-_controladoresPesagem.aPesoPadrao54,
-_controladoresPesagem.aPesoPadrao55,
-_controladoresPesagem.aPesoPadrao56,
-_controladoresPesagem.aPesoPadrao57,
-_controladoresPesagem.aPesoPadrao58,
-_controladoresPesagem.aPesoPadrao59,
-_controladoresPesagem.aPesoPadrao60,
-_controladoresPesagem.aPesoPadrao61,
-_controladoresPesagem.aPesoPadrao62,
-_controladoresPesagem.aPesoPadrao63,
-_controladoresPesagem.aPesoPadrao64,
-_controladoresPesagem.aPesoPadrao65,
-_controladoresPesagem.aPesoPadrao66,
-_controladoresPesagem.aPesoPadrao67,
-_controladoresPesagem.aPesoPadrao68,
-_controladoresPesagem.aPesoPadrao69,
-_controladoresPesagem.aPesoPadrao70,
-_controladoresPesagem.aPesoPadrao71,
-_controladoresPesagem.aPesoPadrao72,
-_controladoresPesagem.aPesoPadrao73,
-_controladoresPesagem.aPesoPadrao74,
-_controladoresPesagem.aPesoPadrao75,
-_controladoresPesagem.aPesoPadrao76,
-_controladoresPesagem.aPesoPadrao77,
-_controladoresPesagem.aPesoPadrao78,
-_controladoresPesagem.aPesoPadrao79,
-_controladoresPesagem.aPesoPadrao80,
-_controladoresPesagem.aPesoPadrao81,
-_controladoresPesagem.aPesoPadrao82,
-_controladoresPesagem.aPesoPadrao83,
-_controladoresPesagem.aPesoPadrao84,
-_controladoresPesagem.aPesoPadrao85,
-_controladoresPesagem.aPesoPadrao86,
-_controladoresPesagem.aPesoPadrao87,
-_controladoresPesagem.aPesoPadrao88,
-_controladoresPesagem.aPesoPadrao89,
-_controladoresPesagem.aPesoPadrao90,
-_controladoresPesagem.aPesoPadrao91,
-_controladoresPesagem.aPesoPadrao92,
-_controladoresPesagem.aPesoPadrao93,
-_controladoresPesagem.aPesoPadrao94,
-_controladoresPesagem.aPesoPadrao95,
-_controladoresPesagem.aPesoPadrao96,
-_controladoresPesagem.aPesoPadrao97,
-_controladoresPesagem.aPesoPadrao98,
-_controladoresPesagem.aPesoPadrao99,
-_controladoresPesagem.aPesoPadrao100,
-_controladoresPesagem.aPesoPadrao101,
-_controladoresPesagem.aPesoPadrao102,
-_controladoresPesagem.aPesoPadrao103,
-_controladoresPesagem.aPesoPadrao104,
-_controladoresPesagem.aPesoPadrao105,
-_controladoresPesagem.aPesoPadrao106,
-_controladoresPesagem.aPesoPadrao107,
-_controladoresPesagem.aPesoPadrao108,
-_controladoresPesagem.aPesoPadrao109,
-_controladoresPesagem.aPesoPadrao110,
-_controladoresPesagem.aPesoPadrao111,
-_controladoresPesagem.aPesoPadrao112,
-_controladoresPesagem.aPesoPadrao113,
-_controladoresPesagem.aPesoPadrao114,
-_controladoresPesagem.aPesoPadrao115,
-_controladoresPesagem.aPesoPadrao116,
-_controladoresPesagem.aPesoPadrao117,
-_controladoresPesagem.aPesoPadrao118,
-_controladoresPesagem.aPesoPadrao119,
+    mapa0 = request.form.get('mapa0')
+    mapa1 = request.form.get('mapa1')
+    mapa2 = request.form.get('mapa2')
+    mapa3 = request.form.get('mapa3')
+    mapa4 = request.form.get('mapa4')
+    mapa5 = request.form.get('mapa5')
+    mapa6 = request.form.get('mapa6')
+    mapa7 = request.form.get('mapa7')
+    mapa8 = request.form.get('mapa8')
+    mapa9 = request.form.get('mapa9')
+    mapa10 = request.form.get('mapa10')
+    mapa11 = request.form.get('mapa11')
+    mapa12 = request.form.get('mapa12')
+    mapa13 = request.form.get('mapa13')
+    mapa14 = request.form.get('mapa14')
+    mapa15 = request.form.get('mapa15')
+    mapa16 = request.form.get('mapa16')
+    mapa17 = request.form.get('mapa17')
+    mapa18 = request.form.get('mapa18')
+    mapa19 = request.form.get('mapa19')
+    mapa20 = request.form.get('mapa20')
+    mapa21 = request.form.get('mapa21')
+    mapa22 = request.form.get('mapa22')
+    mapa23 = request.form.get('mapa23')
+    mapa24 = request.form.get('mapa24')
+    mapa25 = request.form.get('mapa25')
+    mapa26 = request.form.get('mapa26')
+    mapa27 = request.form.get('mapa27')
+    mapa28 = request.form.get('mapa28')
+    mapa29 = request.form.get('mapa29')
+    mapa30 = request.form.get('mapa30')
+    mapa31 = request.form.get('mapa31')
+    mapa32 = request.form.get('mapa32')
+    mapa33 = request.form.get('mapa33')
+    mapa34 = request.form.get('mapa34')
+    mapa35 = request.form.get('mapa35')
+    mapa36 = request.form.get('mapa36')
+    mapa37 = request.form.get('mapa37')
+    mapa38 = request.form.get('mapa38')
+    mapa39 = request.form.get('mapa39')
+    mapa40 = request.form.get('mapa40')
+    mapa41 = request.form.get('mapa41')
+    mapa42 = request.form.get('mapa42')
+    mapa43 = request.form.get('mapa43')
+    mapa44 = request.form.get('mapa44')
+    mapa45 = request.form.get('mapa45')
+    mapa46 = request.form.get('mapa46')
+    mapa47 = request.form.get('mapa47')
+    mapa48 = request.form.get('mapa48')
+    mapa49 = request.form.get('mapa49')
+    mapa50 = request.form.get('mapa50')
+    mapa51 = request.form.get('mapa51')
+    mapa52 = request.form.get('mapa52')
+    mapa53 = request.form.get('mapa53')
+    mapa54 = request.form.get('mapa54')
+    mapa55 = request.form.get('mapa55')
+    mapa56 = request.form.get('mapa56')
+    mapa57 = request.form.get('mapa57')
+    mapa58 = request.form.get('mapa58')
+    mapa59 = request.form.get('mapa59')
+    mapa60 = request.form.get('mapa60')
+    mapa61 = request.form.get('mapa61')
+    mapa62 = request.form.get('mapa62')
+    mapa63 = request.form.get('mapa63')
+    mapa64 = request.form.get('mapa64')
+    mapa65 = request.form.get('mapa65')
+    mapa66 = request.form.get('mapa66')
+    mapa67 = request.form.get('mapa67')
+    mapa68 = request.form.get('mapa68')
+    mapa69 = request.form.get('mapa69')
+    mapa70 = request.form.get('mapa70')
+    mapa71 = request.form.get('mapa71')
+    mapa72 = request.form.get('mapa72')
+    mapa73 = request.form.get('mapa73')
+    mapa74 = request.form.get('mapa74')
+    mapa75 = request.form.get('mapa75')
+    mapa76 = request.form.get('mapa76')
+    mapa77 = request.form.get('mapa77')
+    mapa78 = request.form.get('mapa78')
+    mapa79 = request.form.get('mapa79')
+    mapa80 = request.form.get('mapa80')
+    mapa81 = request.form.get('mapa81')
+    mapa82 = request.form.get('mapa82')
+    mapa83 = request.form.get('mapa83')
+    mapa84 = request.form.get('mapa84')
+    mapa85 = request.form.get('mapa85')
+    mapa86 = request.form.get('mapa86')
+    mapa87 = request.form.get('mapa87')
+    mapa88 = request.form.get('mapa88')
+    mapa89 = request.form.get('mapa89')
+    mapa90 = request.form.get('mapa90')
+    mapa91 = request.form.get('mapa91')
+    mapa92 = request.form.get('mapa92')
+    mapa93 = request.form.get('mapa93')
+    mapa94 = request.form.get('mapa94')
+    mapa95 = request.form.get('mapa95')
+    mapa96 = request.form.get('mapa96')
+    mapa97 = request.form.get('mapa97')
+    mapa98 = request.form.get('mapa98')
+    mapa99 = request.form.get('mapa99')
+    mapa100 = request.form.get('mapa100')
+    mapa101 = request.form.get('mapa101')
+    mapa102 = request.form.get('mapa102')
+    mapa103 = request.form.get('mapa103')
+    mapa104 = request.form.get('mapa104')
+    mapa105 = request.form.get('mapa105')
+    mapa106 = request.form.get('mapa106')
+    mapa107 = request.form.get('mapa107')
+    mapa108 = request.form.get('mapa108')
+    mapa109 = request.form.get('mapa109')
+    mapa110 = request.form.get('mapa110')
+    mapa111 = request.form.get('mapa111')
+    mapa112 = request.form.get('mapa112')
+    mapa113 = request.form.get('mapa113')
+    mapa114 = request.form.get('mapa114')
+    mapa115 = request.form.get('mapa115')
+    mapa116 = request.form.get('mapa116')
+    mapa117 = request.form.get('mapa117')
+    mapa118 = request.form.get('mapa118')
+    mapa119 = request.form.get('mapa119')
+    mapa120 = request.form.get('mapa120')
+    mapa121 = request.form.get('mapa121')
+    mapa122 = request.form.get('mapa122')
+    mapa123 = request.form.get('mapa123')
+    mapa124 = request.form.get('mapa124')
+    mapa125 = request.form.get('mapa125')
+    mapa126 = request.form.get('mapa126')
+    mapa127 = request.form.get('mapa127')
+    mapa128 = request.form.get('mapa128')
+    mapa129 = request.form.get('mapa129')
+    mapa130 = request.form.get('mapa130')
+    mapa131 = request.form.get('mapa131')
+    mapa132 = request.form.get('mapa132')
+    mapa133 = request.form.get('mapa133')
+    mapa134 = request.form.get('mapa134')
+    mapa135 = request.form.get('mapa135')
+    mapa136 = request.form.get('mapa136')
+    mapa137 = request.form.get('mapa137')
+    mapa138 = request.form.get('mapa138')
+    mapa139 = request.form.get('mapa139')
+    mapa140 = request.form.get('mapa140')
+    mapa141 = request.form.get('mapa141')
+    mapa142 = request.form.get('mapa142')
+    mapa143 = request.form.get('mapa143')
+    mapa144 = request.form.get('mapa144')
+    mapa145 = request.form.get('mapa145')
+    mapa146 = request.form.get('mapa146')
+    mapa147 = request.form.get('mapa147')
+    mapa148 = request.form.get('mapa148')
+    mapa149 = request.form.get('mapa149')
+    mapa150 = request.form.get('mapa150')
+    mapa151 = request.form.get('mapa151')
+    mapa152 = request.form.get('mapa152')
+    mapa153 = request.form.get('mapa153')
+    mapa154 = request.form.get('mapa154')
+    mapa155 = request.form.get('mapa155')
+    mapa156 = request.form.get('mapa156')
+    mapa157 = request.form.get('mapa157')

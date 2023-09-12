@@ -174,65 +174,175 @@ cursor.execute('''
             peso_padrao60 VARCHAR(30),
             peso_padrao61 VARCHAR(30),
             peso_padrao62 VARCHAR(30),
-            peso_padrao63 VARCHAR(30),
-            peso_padrao64 VARCHAR(30),
-            peso_padrao65 VARCHAR(30),
-            peso_padrao66 VARCHAR(30),
-            peso_padrao67 VARCHAR(30),
-            peso_padrao68 VARCHAR(30),
-            peso_padrao69 VARCHAR(30),
-            peso_padrao70 VARCHAR(30),
-            peso_padrao71 VARCHAR(30),
-            peso_padrao72 VARCHAR(30),
-            peso_padrao73 VARCHAR(30),
-            peso_padrao74 VARCHAR(30),
-            peso_padrao75 VARCHAR(30),
-            peso_padrao76 VARCHAR(30),
-            peso_padrao77 VARCHAR(30),
-            peso_padrao78 VARCHAR(30),
-            peso_padrao79 VARCHAR(30),
-            peso_padrao80 VARCHAR(30),
-            peso_padrao81 VARCHAR(30),
-            peso_padrao82 VARCHAR(30),
-            peso_padrao83 VARCHAR(30),
-            peso_padrao84 VARCHAR(30),
-            peso_padrao85 VARCHAR(30),
-            peso_padrao86 VARCHAR(30),
-            peso_padrao87 VARCHAR(30),
-            peso_padrao88 VARCHAR(30),
-            peso_padrao89 VARCHAR(30),
-            peso_padrao90 VARCHAR(30),
-            peso_padrao91 VARCHAR(30),
-            peso_padrao92 VARCHAR(30),
-            peso_padrao93 VARCHAR(30),
-            peso_padrao94 VARCHAR(30),
-            peso_padrao95 VARCHAR(30),
-            peso_padrao96 VARCHAR(30),
-            peso_padrao97 VARCHAR(30),
-            peso_padrao98 VARCHAR(30),
-            peso_padrao99 VARCHAR(30),
-            peso_padrao100 VARCHAR(30),
-            peso_padrao101 VARCHAR(30),
-            peso_padrao102 VARCHAR(30),
-            peso_padrao103 VARCHAR(30),
-            peso_padrao104 VARCHAR(30),
-            peso_padrao105 VARCHAR(30),
-            peso_padrao106 VARCHAR(30),
-            peso_padrao107 VARCHAR(30),
-            peso_padrao108 VARCHAR(30),
-            peso_padrao109 VARCHAR(30),
-            peso_padrao110 VARCHAR(30),
-            peso_padrao111 VARCHAR(30),
-            peso_padrao112 VARCHAR(30),
-            peso_padrao113 VARCHAR(30),
-            peso_padrao114 VARCHAR(30),
-            peso_padrao115 VARCHAR(30),
-            peso_padrao116 VARCHAR(30),
-            peso_padrao117 VARCHAR(30),
-            peso_padrao118 VARCHAR(30),
-            peso_padrao119 VARCHAR(30),
-            peso_padrao120 VARCHAR(30),
             result1 VARCHAR(30),
+            result2 VARCHAR(30),
+            result3 VARCHAR(30),
+            result4 VARCHAR(30),
+            result5 VARCHAR(30),
+            result6 VARCHAR(30),
+            result7 VARCHAR(30),
+            result8 VARCHAR(30),
+            result9 VARCHAR(30),
+            result10 VARCHAR(30),
+            result11 VARCHAR(30),
+            result12 VARCHAR(30),
+            mapa VARCHAR(30),
+            mapa2 VARCHAR(30),
+            mapa3 VARCHAR(30),
+            mapa4 VARCHAR(30),
+            mapa5 VARCHAR(30),
+            mapa6 VARCHAR(30),
+            mapa7 VARCHAR(30),
+            mapa8 VARCHAR(30),
+            mapa9 VARCHAR(30),
+            mapa10 VARCHAR(30),
+            mapa11 VARCHAR(30),
+            mapa12 VARCHAR(30),
+            mapa13 VARCHAR(30),
+            mapa14 VARCHAR(30),
+            mapa15 VARCHAR(30),
+            mapa16 VARCHAR(30),
+            mapa17 VARCHAR(30),
+            mapa18 VARCHAR(30),
+            mapa19 VARCHAR(30),
+            mapa20 VARCHAR(30),
+            mapa21 VARCHAR(30),
+            mapa22 VARCHAR(30),
+            mapa23 VARCHAR(30),
+            mapa24 VARCHAR(30),
+            mapa25 VARCHAR(30),
+            mapa26 VARCHAR(30),
+            mapa27 VARCHAR(30),
+            mapa28 VARCHAR(30),
+            mapa29 VARCHAR(30),
+            mapa30 VARCHAR(30),
+            mapa31 VARCHAR(30),
+            mapa32 VARCHAR(30),
+            mapa33 VARCHAR(30),
+            mapa34 VARCHAR(30),
+            mapa35 VARCHAR(30),
+            mapa36 VARCHAR(30),
+            mapa37 VARCHAR(30),
+            mapa38 VARCHAR(30),
+            mapa39 VARCHAR(30),
+            mapa40 VARCHAR(30),
+            mapa41 VARCHAR(30),
+            mapa42 VARCHAR(30),
+            mapa43 VARCHAR(30),
+            mapa44 VARCHAR(30),
+            mapa45 VARCHAR(30),
+            mapa46 VARCHAR(30),
+            mapa47 VARCHAR(30),
+            mapa48 VARCHAR(30),
+            mapa49 VARCHAR(30),
+            mapa50 VARCHAR(30),
+            mapa51 VARCHAR(30),
+            mapa52 VARCHAR(30),
+            mapa53 VARCHAR(30),
+            mapa54 VARCHAR(30),
+            mapa55 VARCHAR(30),
+            mapa56 VARCHAR(30),
+            mapa57 VARCHAR(30),
+            mapa58 VARCHAR(30),
+            mapa59 VARCHAR(30),
+            mapa60 VARCHAR(30),
+            mapa61 VARCHAR(30),
+            mapa62 VARCHAR(30),
+            mapa63 VARCHAR(30),
+            mapa64 VARCHAR(30),
+            mapa65 VARCHAR(30),
+            mapa66 VARCHAR(30),
+            mapa67 VARCHAR(30),
+            mapa68 VARCHAR(30),
+            mapa69 VARCHAR(30),
+            mapa70 VARCHAR(30),
+            mapa71 VARCHAR(30),
+            mapa72 VARCHAR(30),
+            mapa73 VARCHAR(30),
+            mapa74 VARCHAR(30),
+            mapa75 VARCHAR(30),
+            mapa76 VARCHAR(30),
+            mapa77 VARCHAR(30),
+            mapa78 VARCHAR(30),
+            mapa79 VARCHAR(30),
+            mapa80 VARCHAR(30),
+            mapa81 VARCHAR(30),
+            mapa82 VARCHAR(30),
+            mapa83 VARCHAR(30),
+            mapa84 VARCHAR(30),
+            mapa85 VARCHAR(30),
+            mapa86 VARCHAR(30),
+            mapa87 VARCHAR(30),
+            mapa88 VARCHAR(30),
+            mapa89 VARCHAR(30),
+            mapa90 VARCHAR(30),
+            mapa91 VARCHAR(30),
+            mapa92 VARCHAR(30),
+            mapa93 VARCHAR(30),
+            mapa94 VARCHAR(30),
+            mapa95 VARCHAR(30),
+            mapa96 VARCHAR(30),
+            mapa97 VARCHAR(30),
+            mapa98 VARCHAR(30),
+            mapa99 VARCHAR(30),
+            mapa100 VARCHAR(30),
+            mapa101 VARCHAR(30),
+            mapa102 VARCHAR(30),
+            mapa103 VARCHAR(30),
+            mapa104 VARCHAR(30),
+            mapa105 VARCHAR(30),
+            mapa106 VARCHAR(30),
+            mapa107 VARCHAR(30),
+            mapa108 VARCHAR(30),
+            mapa109 VARCHAR(30),
+            mapa110 VARCHAR(30),
+            mapa111 VARCHAR(30),
+            mapa112 VARCHAR(30),
+            mapa113 VARCHAR(30),
+            mapa114 VARCHAR(30),
+            mapa115 VARCHAR(30),
+            mapa116 VARCHAR(30),
+            mapa117 VARCHAR(30),
+            mapa118 VARCHAR(30),
+            mapa119 VARCHAR(30),
+            mapa120 VARCHAR(30),
+            mapa121 VARCHAR(30),
+            mapa122 VARCHAR(30),
+            mapa123 VARCHAR(30),
+            mapa124 VARCHAR(30),
+            mapa125 VARCHAR(30),
+            mapa126 VARCHAR(30),
+            mapa127 VARCHAR(30),
+            mapa128 VARCHAR(30),
+            mapa129 VARCHAR(30),
+            mapa130 VARCHAR(30),
+            mapa131 VARCHAR(30),
+            mapa132 VARCHAR(30),
+            mapa133 VARCHAR(30),
+            mapa134 VARCHAR(30),
+            mapa135 VARCHAR(30),
+            mapa136 VARCHAR(30),
+            mapa137 VARCHAR(30),
+            mapa138 VARCHAR(30),
+            mapa139 VARCHAR(30),
+            mapa140 VARCHAR(30),
+            mapa141 VARCHAR(30),
+            mapa142 VARCHAR(30),
+            mapa143 VARCHAR(30),
+            mapa144 VARCHAR(30),
+            mapa145 VARCHAR(30),
+            mapa146 VARCHAR(30),
+            mapa147 VARCHAR(30),
+            mapa148 VARCHAR(30),
+            mapa149 VARCHAR(30),
+            mapa150 VARCHAR(30),
+            mapa151 VARCHAR(30),
+            mapa152 VARCHAR(30),
+            mapa153 VARCHAR(30),
+            mapa154 VARCHAR(30),
+            mapa155 VARCHAR(30),
+            mapa156 VARCHAR(30),
+
             PRIMARY KEY(id)
     )
 ''')
@@ -404,65 +514,183 @@ def post_calibration_data():
     peso_padrao60 = request.form.get('peso_padrao60')
     peso_padrao61 = request.form.get('peso_padrao61')
     peso_padrao62 = request.form.get('peso_padrao62')
-    peso_padrao63 = request.form.get('peso_padrao63')
-    peso_padrao64 = request.form.get('peso_padrao64')
-    peso_padrao65 = request.form.get('peso_padrao65')
-    peso_padrao66 = request.form.get('peso_padrao66')
-    peso_padrao67 = request.form.get('peso_padrao67')
-    peso_padrao68 = request.form.get('peso_padrao68')
-    peso_padrao69 = request.form.get('peso_padrao69')
-    peso_padrao70 = request.form.get('peso_padrao70')
-    peso_padrao71 = request.form.get('peso_padrao71')
-    peso_padrao72 = request.form.get('peso_padrao72')
-    peso_padrao73 = request.form.get('peso_padrao73')
-    peso_padrao74 = request.form.get('peso_padrao74')
-    peso_padrao75 = request.form.get('peso_padrao75')
-    peso_padrao76 = request.form.get('peso_padrao76')
-    peso_padrao77 = request.form.get('peso_padrao77')
-    peso_padrao78 = request.form.get('peso_padrao78')
-    peso_padrao79 = request.form.get('peso_padrao79')
-    peso_padrao80 = request.form.get('peso_padrao80')
-    peso_padrao81 = request.form.get('peso_padrao81')
-    peso_padrao82 = request.form.get('peso_padrao82')
-    peso_padrao83 = request.form.get('peso_padrao83')
-    peso_padrao84 = request.form.get('peso_padrao84')
-    peso_padrao85 = request.form.get('peso_padrao85')
-    peso_padrao86 = request.form.get('peso_padrao86')
-    peso_padrao87 = request.form.get('peso_padrao87')
-    peso_padrao88 = request.form.get('peso_padrao88')
-    peso_padrao89 = request.form.get('peso_padrao89')
-    peso_padrao90 = request.form.get('peso_padrao90')
-    peso_padrao91 = request.form.get('peso_padrao91')
-    peso_padrao92 = request.form.get('peso_padrao92')
-    peso_padrao93 = request.form.get('peso_padrao93')
-    peso_padrao94 = request.form.get('peso_padrao94')
-    peso_padrao95 = request.form.get('peso_padrao95')
-    peso_padrao96 = request.form.get('peso_padrao96')
-    peso_padrao97 = request.form.get('peso_padrao97')
-    peso_padrao98 = request.form.get('peso_padrao98')
-    peso_padrao99 = request.form.get('peso_padrao99')
-    peso_padrao100 = request.form.get('peso_padrao100')
-    peso_padrao101 = request.form.get('peso_padrao101')
-    peso_padrao102 = request.form.get('peso_padrao102')
-    peso_padrao103 = request.form.get('peso_padrao103')
-    peso_padrao104 = request.form.get('peso_padrao104')
-    peso_padrao105 = request.form.get('peso_padrao105')
-    peso_padrao106 = request.form.get('peso_padrao106')
-    peso_padrao107 = request.form.get('peso_padrao107')
-    peso_padrao108 = request.form.get('peso_padrao108')
-    peso_padrao109 = request.form.get('peso_padrao109')
-    peso_padrao110 = request.form.get('peso_padrao110')
-    peso_padrao111 = request.form.get('peso_padrao111')
-    peso_padrao112 = request.form.get('peso_padrao112')
-    peso_padrao113 = request.form.get('peso_padrao113')
-    peso_padrao114 = request.form.get('peso_padrao114')
-    peso_padrao115 = request.form.get('peso_padrao115')
-    peso_padrao116 = request.form.get('peso_padrao116')
-    peso_padrao117 = request.form.get('peso_padrao117')
-    peso_padrao118 = request.form.get('peso_padrao118')
-    peso_padrao119 = request.form.get('peso_padrao119')
-    peso_padrao120 = request.form.get('peso_padrao120')
+    #################################################
+    #################################################
+    #################################################
     result1 = request.form.get('result1')
+    result2 = request.form.get('result2')
+    result3 = request.form.get('result3')
+    result4 = request.form.get('result4')
+    result5 = request.form.get('result5')
+    result6 = request.form.get('result6')
+    result7 = request.form.get('result7')
+    result8 = request.form.get('result8')
+    result9 = request.form.get('result9')
+    result10 = request.form.get('result10')
+    result11 = request.form.get('result11')
+    result12 = request.form.get('result12')
+    ###################################################
+    ###################################################
+    ###################################################
+    ###################################################
+    ###################################################
+    mapa = request.form.get('mapa')
+    mapa2 = request.form.get('mapa2')
+    mapa3 = request.form.get('mapa3')
+    mapa4 = request.form.get('mapa4')
+    mapa5 = request.form.get('mapa5')
+    mapa6 = request.form.get('mapa6')
+    mapa7 = request.form.get('mapa7')
+    mapa8 = request.form.get('mapa8')
+    mapa9 = request.form.get('mapa9')
+    mapa10 = request.form.get('mapa10')
+    mapa11 = request.form.get('mapa11')
+    mapa12 = request.form.get('mapa12')
+    mapa13 = request.form.get('mapa13')
+    mapa14 = request.form.get('mapa14')
+    mapa15 = request.form.get('mapa15')
+    mapa16 = request.form.get('mapa16')
+    mapa17 = request.form.get('mapa17')
+    mapa18 = request.form.get('mapa18')
+    mapa19 = request.form.get('mapa19')
+    mapa20 = request.form.get('mapa20')
+    mapa21 = request.form.get('mapa21')
+    mapa22 = request.form.get('mapa22')
+    mapa23 = request.form.get('mapa23')
+    mapa24 = request.form.get('mapa24')
+    mapa25 = request.form.get('mapa25')
+    mapa26 = request.form.get('mapa26')
+    mapa27 = request.form.get('mapa27')
+    mapa28 = request.form.get('mapa28')
+    mapa29 = request.form.get('mapa29')
+    mapa30 = request.form.get('mapa30')
+    mapa31 = request.form.get('mapa31')
+    mapa32 = request.form.get('mapa32')
+    mapa33 = request.form.get('mapa33')
+    mapa34 = request.form.get('mapa34')
+    mapa35 = request.form.get('mapa35')
+    mapa36 = request.form.get('mapa36')
+    mapa37 = request.form.get('mapa37')
+    mapa38 = request.form.get('mapa38')
+    mapa39 = request.form.get('mapa39')
+    mapa40 = request.form.get('mapa40')
+    mapa41 = request.form.get('mapa41')
+    mapa42 = request.form.get('mapa42')
+    mapa43 = request.form.get('mapa43')
+    mapa44 = request.form.get('mapa44')
+    mapa45 = request.form.get('mapa45')
+    mapa46 = request.form.get('mapa46')
+    mapa47 = request.form.get('mapa47')
+    mapa48 = request.form.get('mapa48')
+    mapa49 = request.form.get('mapa49')
+    mapa50 = request.form.get('mapa50')
+    mapa51 = request.form.get('mapa51')
+    mapa52 = request.form.get('mapa52')
+    mapa53 = request.form.get('mapa53')
+    mapa54 = request.form.get('mapa54')
+    mapa55 = request.form.get('mapa55')
+    mapa56 = request.form.get('mapa56')
+    mapa57 = request.form.get('mapa57')
+    mapa58 = request.form.get('mapa58')
+    mapa59 = request.form.get('mapa59')
+    mapa60 = request.form.get('mapa60')
+    mapa61 = request.form.get('mapa61')
+    mapa62 = request.form.get('mapa62')
+    mapa63 = request.form.get('mapa63')
+    mapa64 = request.form.get('mapa64')
+    mapa65 = request.form.get('mapa65')
+    mapa66 = request.form.get('mapa66')
+    mapa67 = request.form.get('mapa67')
+    mapa68 = request.form.get('mapa68')
+    mapa69 = request.form.get('mapa69')
+    mapa70 = request.form.get('mapa70')
+    mapa71 = request.form.get('mapa71')
+    mapa72 = request.form.get('mapa72')
+    mapa73 = request.form.get('mapa73')
+    mapa74 = request.form.get('mapa74')
+    mapa75 = request.form.get('mapa75')
+    mapa76 = request.form.get('mapa76')
+    mapa77 = request.form.get('mapa77')
+    mapa78 = request.form.get('mapa78')
+    mapa79 = request.form.get('mapa79')
+    mapa80 = request.form.get('mapa80')
+    mapa81 = request.form.get('mapa81')
+    mapa82 = request.form.get('mapa82')
+    mapa83 = request.form.get('mapa83')
+    mapa84 = request.form.get('mapa84')
+    mapa85 = request.form.get('mapa85')
+    mapa86 = request.form.get('mapa86')
+    mapa87 = request.form.get('mapa87')
+    mapa88 = request.form.get('mapa88')
+    mapa89 = request.form.get('mapa89')
+    mapa90 = request.form.get('mapa90')
+    mapa91 = request.form.get('mapa91')
+    mapa92 = request.form.get('mapa92')
+    mapa93 = request.form.get('mapa93')
+    mapa94 = request.form.get('mapa94')
+    mapa95 = request.form.get('mapa95')
+    mapa96 = request.form.get('mapa96')
+    mapa97 = request.form.get('mapa97')
+    mapa98 = request.form.get('mapa98')
+    mapa99 = request.form.get('mapa99')
+    mapa100 = request.form.get('mapa100')
+    mapa101 = request.form.get('mapa101')
+    mapa102 = request.form.get('mapa102')
+    mapa103 = request.form.get('mapa103')
+    mapa104 = request.form.get('mapa104')
+    mapa105 = request.form.get('mapa105')
+    mapa106 = request.form.get('mapa106')
+    mapa107 = request.form.get('mapa107')
+    mapa108 = request.form.get('mapa108')
+    mapa109 = request.form.get('mapa109')
+    mapa110 = request.form.get('mapa110')
+    mapa111 = request.form.get('mapa111')
+    mapa112 = request.form.get('mapa112')
+    mapa113 = request.form.get('mapa113')
+    mapa114 = request.form.get('mapa114')
+    mapa115 = request.form.get('mapa115')
+    mapa116 = request.form.get('mapa116')
+    mapa117 = request.form.get('mapa117')
+    mapa118 = request.form.get('mapa118')
+    mapa119 = request.form.get('mapa119')
+    mapa120 = request.form.get('mapa120')
+    mapa121 = request.form.get('mapa121')
+    mapa122 = request.form.get('mapa122')
+    mapa123 = request.form.get('mapa123')
+    mapa124 = request.form.get('mapa124')
+    mapa125 = request.form.get('mapa125')
+    mapa126 = request.form.get('mapa126')
+    mapa127 = request.form.get('mapa127')
+    mapa128 = request.form.get('mapa128')
+    mapa129 = request.form.get('mapa129')
+    mapa130 = request.form.get('mapa130')
+    mapa131 = request.form.get('mapa131')
+    mapa132 = request.form.get('mapa132')
+    mapa133 = request.form.get('mapa133')
+    mapa134 = request.form.get('mapa134')
+    mapa135 = request.form.get('mapa135')
+    mapa136 = request.form.get('mapa136')
+    mapa137 = request.form.get('mapa137')
+    mapa138 = request.form.get('mapa138')
+    mapa139 = request.form.get('mapa139')
+    mapa140 = request.form.get('mapa140')
+    mapa141 = request.form.get('mapa141')
+    mapa142 = request.form.get('mapa142')
+    mapa143 = request.form.get('mapa143')
+    mapa144 = request.form.get('mapa144')
+    mapa145 = request.form.get('mapa145')
+    mapa146 = request.form.get('mapa146')
+    mapa147 = request.form.get('mapa147')
+    mapa148 = request.form.get('mapa148')
+    mapa149 = request.form.get('mapa149')
+    mapa150 = request.form.get('mapa150')
+    mapa151 = request.form.get('mapa151')
+    mapa152 = request.form.get('mapa152')
+    mapa153 = request.form.get('mapa153')
+    mapa154 = request.form.get('mapa154')
+    mapa155 = request.form.get('mapa155')
+    mapa156 = request.form.get('mapa156')
+
 
     cursor = conn.cursor()
     cursor.execute(
@@ -485,30 +713,37 @@ def post_calibration_data():
         'peso_padrao44, peso_padrao45, peso_padrao46, peso_padrao47, peso_padrao48,'
         'peso_padrao49, peso_padrao50, peso_padrao51, peso_padrao52, peso_padrao53,'
         'peso_padrao54, peso_padrao55, peso_padrao56, peso_padrao57, peso_padrao58,'
-        'peso_padrao59, peso_padrao60, peso_padrao61, peso_padrao62, peso_padrao63,'
-        'peso_padrao64, peso_padrao65, peso_padrao66, peso_padrao67, peso_padrao68,'
-        'peso_padrao69, peso_padrao70, peso_padrao71, peso_padrao72, peso_padrao73,'
-        'peso_padrao74, peso_padrao75, peso_padrao76, peso_padrao77, peso_padrao78,'
-        'peso_padrao79, peso_padrao80, peso_padrao81, peso_padrao82, peso_padrao83,'
-        'peso_padrao84, peso_padrao85, peso_padrao86, peso_padrao87, peso_padrao88,'
-        'peso_padrao89, peso_padrao90, peso_padrao91, peso_padrao92, peso_padrao93,'
-        'peso_padrao94, peso_padrao95, peso_padrao96, peso_padrao97, peso_padrao98,'
-        'peso_padrao99, peso_padrao100, peso_padrao101, peso_padrao102, peso_padrao103,'
-        'peso_padrao104, peso_padrao105, peso_padrao106, peso_padrao107, peso_padrao108,'
-        'peso_padrao109, peso_padrao110, peso_padrao111, peso_padrao112, peso_padrao113,'
-        'peso_padrao114, peso_padrao115, peso_padrao116, peso_padrao117, peso_padrao118,'
-        'peso_padrao119, peso_padrao120, result1)'
-        'VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
-        '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,'
-        '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,'
-        '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,'
-        '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,'
-        '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,'
-        '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,'
-        '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s ,%s, %s,'
-        '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,'
-        '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,'
-        '%s, %s, %s, %s, %s)',
+        'peso_padrao59, peso_padrao60, peso_padrao61, peso_padrao62, result1,'
+        'result2, result3, result4, result5, result6, result7, result8, result9,'
+        'result10, resullt11, resullt12, mapa, mapa2, mapa3, mapa4, mapa5, mapa6,' 
+        'mapa7, mapa8, mapa9, mapa10, mapa11, mapa12, mapa13, mapa14, mapa15, mapa16,'
+        'mapa17, mapa18, mapa19, mapa20, mapa21, mapa22, mapa23, mapa24, mapa25,'
+        'mapa26, mapa27, mapa28, mapa29, mapa30, mapa31, mapa32, mapa33, mapa34,'
+        'mapa35, mapa36, mapa37, mapa38, mapa39, mapa40, mapa41, mapa42, mapa43,'
+        'mapa44, mapa45, mapa46, mapa47, mapa48, mapa49, mapa50, mapa51, mapa52,'
+        'mapa53, mapa54, mapa55, mapa56, mapa57, mapa58, mapa59, mapa60, mapa61,'
+        'mapa62, mapa63, mapa64, mapa65, mapa66, mapa67, mapa68, mapa69, mapa70,'
+        'mapa71, mapa72, mapa73, mapa74, mapa75, mapa76, mapa77, mapa78, mapa79,'
+        'mapa80, mapa81, mapa82, mapa83, mapa84, mapa85, mapa86, mapa87, mapa88,'
+        'mapa89, mapa90, mapa91, mapa92, mapa93, mapa94, mapa95, mapa96, mapa97,'
+        'mapa98, mapa99, mapa100, mapa101, mapa102, mapa103, mapa104, mapa105, mapa106,'
+        'mapa107, mapa108, mapa109, mapa110, mapa111, mapa112, mapa113, mapa114, mapa115,'
+        'mapa116, mapa117, mapa118, mapa119, mapa120, mapa121, mapa122, mapa123, mapa124,'
+        'mapa125, mapa126, mapa127, mapa128, mapa129, mapa130, mapa131, mapa132, mapa133,'
+        'mapa134, mapa135, mapa136, mapa137, mapa138, mapa139, mapa140, mapa141, mapa142,'
+        'mapa143, mapa144, mapa145, mapa146, mapa147, mapa148, mapa149, mapa150, mapa151,'
+        'mapa152, mapa153, mapa154, mapa155, mapa156, )'
+        'VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
+            '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
+            '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
+            '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
+            '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
+            '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
+            '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
+            '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
+            '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
+            '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
+            '%s, %s, %s, %s, %s, %s)',
         (registro_calibracao, data, numero_certificado, cliente, morada, objeto,
          marca, modelo, nserie, id_interna, cep_controller, morada2, cep_controller2,
          altitude, latitude, ci_max, dropdown_controller, d, dt, temp_init,
