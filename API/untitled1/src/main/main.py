@@ -78,7 +78,7 @@ cursor.execute('''
             morada VARCHAR(255),
             objeto VARCHAR(255),
             marca VARCHAR(200),
-            modelo VARCHAR(200),
+            modelo VARCHAR(100),
             nserie VARCHAR(50),
             id_interna VARCHAR(50),
             cep_controller VARCHAR(30),
@@ -90,15 +90,15 @@ cursor.execute('''
             dropdown_controller VARCHAR(255),
             d VARCHAR(30),
             dt VARCHAR(30),
-            temp_init VARCHAR(30),
-            temp_final VARCHAR(30),
-            hora_init VARCHAR(30),
-            hora_final VARCHAR(30),
-            pontos_cali VARCHAR(30),
-            pontos_cali2 VARCHAR(30),
-            indica_balanca VARCHAR(30),
-            indica_balanca2 VARCHAR(30),
-            carga_ajuste VARCHAR(255),
+            temp_init VARCHAR(6),
+            temp_final VARCHAR(6),
+            hora_init VARCHAR(6),
+            hora_final VARCHAR(6),
+            pontos_cali VARCHAR(20),
+            pontos_cali2 VARCHAR(20),
+            indica_balanca VARCHAR(20),
+            indica_balanca2 VARCHAR(20),
+            carga_ajuste VARCHAR(100),
             ref VARCHAR(100),
             ponto1 VARCHAR(30),
             ponto2 VARCHAR(30),
@@ -186,6 +186,18 @@ cursor.execute('''
             result10 VARCHAR(30),
             result11 VARCHAR(30),
             result12 VARCHAR(30),
+            PRIMARY KEY(id)
+    )
+''')
+
+conn.commit()
+
+
+cursor = conn.cursor()
+
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS mapas(
+            id INT AUTO_INCREMENT,
             mapa VARCHAR(30),
             mapa2 VARCHAR(30),
             mapa3 VARCHAR(30),
@@ -342,7 +354,7 @@ cursor.execute('''
             mapa154 VARCHAR(30),
             mapa155 VARCHAR(30),
             mapa156 VARCHAR(30),
-
+            
             PRIMARY KEY(id)
     )
 ''')
@@ -529,11 +541,65 @@ def post_calibration_data():
     result10 = request.form.get('result10')
     result11 = request.form.get('result11')
     result12 = request.form.get('result12')
-    ###################################################
-    ###################################################
-    ###################################################
-    ###################################################
-    ###################################################
+   
+
+    cursor = conn.cursor()
+    cursor.execute(
+        'INSERT INTO calibration(registro_calibracao, data, numero_certificado, '
+        'cliente, morada, objeto, marca ,modelo ,'
+        'nserie ,id_interna ,cep_controller , morada2 ,cep_controller2 ,'
+        'altitude ,latitude ,ci_max ,dropdown_controller ,'
+        'd ,dt ,temp_init ,temp_final ,hora_init ,hora_final ,pontos_cali, '
+        'pontos_cali2, indica_balanca, indica_balanca2, carga_ajuste, ref,'
+        'ponto1, ponto2, ponto3, ponto4, ponto5, ponto6, ponto7, ponto8, ponto9,'
+        'ponto10, ponto11, ponto12, peso_padrao1, peso_padrao2, peso_padrao3,'
+        'peso_padrao4, peso_padrao5, peso_padrao6, peso_padrao7, peso_padrao8,'
+        'peso_padrao9, peso_padrao10, peso_padrao11, peso_padrao12, peso_padrao13,'
+        'peso_padrao14, peso_padrao15, peso_padrao16, peso_padrao17, peso_padrao18,'
+        'peso_padrao19, peso_padrao20, peso_padrao21, peso_padrao22, peso_padrao23,'
+        'peso_padrao24, peso_padrao25, peso_padrao26, peso_padrao27, peso_padrao28,'
+        'peso_padrao29, peso_padrao30, peso_padrao31, peso_padrao32, peso_padrao33,'
+        'peso_padrao34, peso_padrao35, peso_padrao36, peso_padrao37, peso_padrao38,'
+        'peso_padrao39, peso_padrao40, peso_padrao41, peso_padrao42, peso_padrao43,'
+        'peso_padrao44, peso_padrao45, peso_padrao46, peso_padrao47, peso_padrao48,'
+        'peso_padrao49, peso_padrao50, peso_padrao51, peso_padrao52, peso_padrao53,'
+        'peso_padrao54, peso_padrao55, peso_padrao56, peso_padrao57, peso_padrao58,'
+        'peso_padrao59, peso_padrao60, peso_padrao61, peso_padrao62, result1,'
+        'result2, result3, result4, result5, result6, result7, result8, result9,'
+        'result10, result11, result12)'
+        'VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
+            '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
+            '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
+            '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
+            '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
+            '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)',
+        (registro_calibracao, data, numero_certificado, cliente, morada, objeto,
+         marca, modelo, nserie, id_interna, cep_controller, morada2, cep_controller2,
+         altitude, latitude, ci_max, dropdown_controller, d, dt, temp_init,
+         temp_final, hora_init, hora_final, pontos_cali, pontos_cali2,
+         indica_balanca, indica_balanca2, carga_ajuste, ref, ponto1, ponto2, ponto3,
+         ponto4, ponto5, ponto6, ponto7, ponto8, ponto9, ponto10, ponto11, ponto12,
+         peso_padrao1, peso_padrao2, peso_padrao3, peso_padrao4, peso_padrao5,
+         peso_padrao6, peso_padrao7, peso_padrao8, peso_padrao9, peso_padrao10,
+         peso_padrao11, peso_padrao12, peso_padrao13, peso_padrao14, peso_padrao15,
+         peso_padrao16, peso_padrao17, peso_padrao18, peso_padrao19, peso_padrao20,
+         peso_padrao21, peso_padrao22, peso_padrao23, peso_padrao24, peso_padrao25,
+         peso_padrao26, peso_padrao27, peso_padrao28, peso_padrao29, peso_padrao30,
+         peso_padrao31, peso_padrao32, peso_padrao33, peso_padrao34, peso_padrao35,
+         peso_padrao36, peso_padrao37, peso_padrao38, peso_padrao39, peso_padrao40,
+         peso_padrao41, peso_padrao42, peso_padrao43, peso_padrao44, peso_padrao45,
+         peso_padrao46, peso_padrao47, peso_padrao48, peso_padrao49, peso_padrao50,
+         peso_padrao51, peso_padrao52, peso_padrao53, peso_padrao54, peso_padrao55,
+         peso_padrao56, peso_padrao57, peso_padrao58, peso_padrao59, peso_padrao60,
+         peso_padrao61, peso_padrao62,  result1,result2, result3, result4, result5,
+         result6, result7, result8, result9, result10, result11, result12)
+    )
+    conn.commit()
+
+    return {"success": True}
+
+@app.route('/mapas', methods=['POST'])
+def mapas():
     mapa = request.form.get('mapa')
     mapa2 = request.form.get('mapa2')
     mapa3 = request.form.get('mapa3')
@@ -694,28 +760,7 @@ def post_calibration_data():
 
     cursor = conn.cursor()
     cursor.execute(
-        'INSERT INTO calibration(registro_calibracao, data, numero_certificado, '
-        'cliente, morada, objeto,marca ,modelo ,'
-        'nserie ,id_interna ,cep_controller , morada2 ,cep_controller2 ,'
-        'altitude ,latitude ,ci_max ,dropdown_controller ,'
-        'd ,dt ,temp_init ,temp_final ,hora_init ,hora_final ,pontos_cali, '
-        'pontos_cali2, indica_balanca, indica_balanca2, carga_ajuste, ref,'
-        'ponto1, ponto2, ponto3, ponto4, ponto5, ponto6, ponto7, ponto8, ponto9,'
-        'ponto10, ponto11, ponto12, peso_padrao1, peso_padrao2, peso_padrao3,'
-        'peso_padrao4, peso_padrao5, peso_padrao6, peso_padrao7, peso_padrao8,'
-        'peso_padrao9, peso_padrao10, peso_padrao11, peso_padrao12, peso_padrao13,'
-        'peso_padrao14, peso_padrao15, peso_padrao16, peso_padrao17, peso_padrao18,'
-        'peso_padrao19, peso_padrao20, peso_padrao21, peso_padrao22, peso_padrao23,'
-        'peso_padrao24, peso_padrao25, peso_padrao26, peso_padrao27, peso_padrao28,'
-        'peso_padrao29, peso_padrao30, peso_padrao31, peso_padrao32, peso_padrao33,'
-        'peso_padrao34, peso_padrao35, peso_padrao36, peso_padrao37, peso_padrao38,'
-        'peso_padrao39, peso_padrao40, peso_padrao41, peso_padrao42, peso_padrao43,'
-        'peso_padrao44, peso_padrao45, peso_padrao46, peso_padrao47, peso_padrao48,'
-        'peso_padrao49, peso_padrao50, peso_padrao51, peso_padrao52, peso_padrao53,'
-        'peso_padrao54, peso_padrao55, peso_padrao56, peso_padrao57, peso_padrao58,'
-        'peso_padrao59, peso_padrao60, peso_padrao61, peso_padrao62, result1,'
-        'result2, result3, result4, result5, result6, result7, result8, result9,'
-        'result10, resullt11, resullt12, mapa, mapa2, mapa3, mapa4, mapa5, mapa6,' 
+        'INSERT INTO mapas(mapa, mapa2, mapa3, mapa4, mapa5, mapa6,' 
         'mapa7, mapa8, mapa9, mapa10, mapa11, mapa12, mapa13, mapa14, mapa15, mapa16,'
         'mapa17, mapa18, mapa19, mapa20, mapa21, mapa22, mapa23, mapa24, mapa25,'
         'mapa26, mapa27, mapa28, mapa29, mapa30, mapa31, mapa32, mapa33, mapa34,'
@@ -732,7 +777,7 @@ def post_calibration_data():
         'mapa125, mapa126, mapa127, mapa128, mapa129, mapa130, mapa131, mapa132, mapa133,'
         'mapa134, mapa135, mapa136, mapa137, mapa138, mapa139, mapa140, mapa141, mapa142,'
         'mapa143, mapa144, mapa145, mapa146, mapa147, mapa148, mapa149, mapa150, mapa151,'
-        'mapa152, mapa153, mapa154, mapa155, mapa156, )'
+        'mapa152, mapa153, mapa154, mapa155, mapa156)'
         'VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
             '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
             '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
@@ -740,41 +785,25 @@ def post_calibration_data():
             '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
             '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
             '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
-            '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
-            '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
-            '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
-            '%s, %s, %s, %s, %s, %s)',
-        (registro_calibracao, data, numero_certificado, cliente, morada, objeto,
-         marca, modelo, nserie, id_interna, cep_controller, morada2, cep_controller2,
-         altitude, latitude, ci_max, dropdown_controller, d, dt, temp_init,
-         temp_final, hora_init, hora_final, pontos_cali, pontos_cali2,
-         indica_balanca, indica_balanca2, carga_ajuste, ref, ponto1, ponto2, ponto3,
-         ponto4, ponto5, ponto6, ponto7, ponto8, ponto9, ponto10, ponto11, ponto12,
-         peso_padrao1, peso_padrao2, peso_padrao3, peso_padrao4, peso_padrao5,
-         peso_padrao6, peso_padrao7, peso_padrao8, peso_padrao9, peso_padrao10,
-         peso_padrao11, peso_padrao12, peso_padrao13, peso_padrao14, peso_padrao15,
-         peso_padrao16, peso_padrao17, peso_padrao18, peso_padrao19, peso_padrao20,
-         peso_padrao21, peso_padrao22, peso_padrao23, peso_padrao24, peso_padrao25,
-         peso_padrao26, peso_padrao27, peso_padrao28, peso_padrao29, peso_padrao30,
-         peso_padrao31, peso_padrao32, peso_padrao33, peso_padrao34, peso_padrao35,
-         peso_padrao36, peso_padrao37, peso_padrao38, peso_padrao39, peso_padrao40,
-         peso_padrao41, peso_padrao42, peso_padrao43, peso_padrao44, peso_padrao45,
-         peso_padrao46, peso_padrao47, peso_padrao48, peso_padrao49, peso_padrao50,
-         peso_padrao51, peso_padrao52, peso_padrao53, peso_padrao54, peso_padrao55,
-         peso_padrao56, peso_padrao57, peso_padrao58, peso_padrao59, peso_padrao60,
-         peso_padrao61, peso_padrao62, peso_padrao63, peso_padrao64, peso_padrao65,
-         peso_padrao66, peso_padrao67, peso_padrao68, peso_padrao69, peso_padrao70,
-         peso_padrao71, peso_padrao72, peso_padrao73, peso_padrao74, peso_padrao75,
-         peso_padrao76, peso_padrao77, peso_padrao78, peso_padrao79, peso_padrao80,
-         peso_padrao81, peso_padrao82, peso_padrao83, peso_padrao84, peso_padrao85,
-         peso_padrao86, peso_padrao87, peso_padrao88, peso_padrao89, peso_padrao90,
-         peso_padrao91, peso_padrao92, peso_padrao93, peso_padrao94, peso_padrao95,
-         peso_padrao96, peso_padrao97, peso_padrao98, peso_padrao99, peso_padrao100,
-         peso_padrao101, peso_padrao102, peso_padrao103, peso_padrao104, peso_padrao105,
-         peso_padrao106, peso_padrao107, peso_padrao108, peso_padrao109, peso_padrao110,
-         peso_padrao111, peso_padrao112, peso_padrao113, peso_padrao114, peso_padrao115,
-         peso_padrao116, peso_padrao117, peso_padrao118, peso_padrao119, peso_padrao120,
-         result1,)
+            '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)',
+        ( mapa, mapa2, mapa3, mapa4, mapa5, mapa6,mapa7, mapa8, mapa9, mapa10, mapa11, 
+         mapa12, mapa13, mapa14, mapa15, mapa16, mapa17, mapa18, mapa19, mapa20,
+         mapa21, mapa22, mapa23, mapa24, mapa25, mapa26, mapa27, mapa28, mapa29,
+         mapa30, mapa31, mapa32, mapa33, mapa34, mapa35, mapa36, mapa37, mapa38,
+         mapa39, mapa40, mapa41, mapa42, mapa43, mapa44, mapa45, mapa46, mapa47,
+         mapa48, mapa49, mapa50, mapa51, mapa52, mapa53, mapa54, mapa55, mapa56,
+         mapa57, mapa58, mapa59, mapa60, mapa61, mapa62, mapa63, mapa64, mapa65,
+         mapa66, mapa67, mapa68, mapa69, mapa70, mapa71, mapa72, mapa73, mapa74,
+         mapa75, mapa76, mapa77, mapa78, mapa79, mapa80, mapa81, mapa82, mapa83,
+         mapa84, mapa85, mapa86, mapa87, mapa88, mapa89, mapa90, mapa91, mapa92,
+         mapa93, mapa94, mapa95, mapa96, mapa97, mapa98, mapa99, mapa100, mapa101,
+         mapa102, mapa103, mapa104, mapa105, mapa106, mapa107, mapa108, mapa109,
+         mapa110, mapa111, mapa112, mapa113, mapa114, mapa115, mapa116, mapa117,
+         mapa118, mapa119, mapa120, mapa121, mapa122, mapa123, mapa124, mapa125,
+         mapa126, mapa127, mapa128, mapa129, mapa130, mapa131, mapa132, mapa133,
+         mapa134, mapa135, mapa136, mapa137, mapa138, mapa139, mapa140, mapa141,
+         mapa142, mapa143, mapa144, mapa145, mapa146, mapa147, mapa148, mapa149,
+         mapa150, mapa151, mapa152, mapa153, mapa154, mapa155, mapa156,)
     )
     conn.commit()
 
@@ -833,9 +862,17 @@ def generate_pdf():
     hora_final = data[0][hora_final_index]
     
     data_para_exibir = data_banco.strftime('%d/%m/%Y')
-
-    c = canvas.Canvas("certficado de calibração.pdf", pagesize=letter)
     
+    cursor.execute('SELECT * FROM mapas ORDER BY id DESC')
+    data_mapas = cursor.fetchall()
+    if not data_mapas:
+        return {"success": False, "message": "No data found for mapas"}
+
+    column_headers_mapas = [i[0] for i in cursor.description]
+    mapa_index = column_headers_mapas.index("mapa")
+    mapa = data_mapas[0][mapa_index]
+    c = canvas.Canvas("certficado de calibração.pdf", pagesize=letter)
+
     c.setFillColor(black)
     c.setFont("Arial-Bold", 14)
     c.drawString(20, 760, "CERTIFICADO DE CALIBRAÇÃO")
@@ -950,7 +987,8 @@ def generate_pdf():
     c.setFillColorRGB(0, 0, 0)
     c.drawString(220, 275 + 20 / 2, "Código")
     c.drawString(360, 275 + 20 / 2,"Peso(s) Padrão")
-    
+    c.setFont("Arial", 102)
+    c.drawString(200, 275, f"{mapa}")
     
     
 

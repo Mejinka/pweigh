@@ -127,9 +127,6 @@ class _EnsaiosState extends State<Ensaios> {
                                 TextButton(
                                   child: const Text('Sim'),
                                   onPressed: () async {
-                                    ;
-
-                                    print(controladores4.result1.text);
                                     Navigator.of(context).pop();
                                     print(DateTime.now());
 
@@ -256,6 +253,9 @@ class _EnsaiosState extends State<Ensaios> {
                                       controladores4.result10.text,
                                       controladores4.result11.text,
                                       controladores4.result12.text,
+                                    );
+
+                                    bool success1 = await mapas(
                                       controladores4.mapa.text,
                                       controladores4.mapa2.text,
                                       controladores4.mapa3.text,
@@ -333,7 +333,6 @@ class _EnsaiosState extends State<Ensaios> {
                                       controladores4.mapa75.text,
                                       controladores4.mapa76.text,
                                       controladores4.mapa77.text,
-                                      controladores4.mapa78.text,
                                       controladores4.mapa78.text,
                                       controladores4.mapa79.text,
                                       controladores4.mapa80.text,
@@ -414,10 +413,8 @@ class _EnsaiosState extends State<Ensaios> {
                                       controladores4.mapa155.text,
                                       controladores4.mapa156.text,
                                     );
-
-                                    if (success) {
+                                    if (success && success1) {
                                       await PDFService().callPDFGeneration();
-
                                       print('Dados enviados com sucesso!');
                                     } else {
                                       print('Falha ao enviar dados!');
