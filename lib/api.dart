@@ -491,6 +491,9 @@ Future<bool> mapas(
   String mapa154,
   String mapa155,
   String mapa156,
+  String idController1,
+  String idController2,
+  String idController3,
 ) async {
   final body = {
     'mapa': mapa,
@@ -649,6 +652,9 @@ Future<bool> mapas(
     'mapa154': mapa154,
     'mapa155': mapa155,
     'mapa156': mapa156,
+    'idController1': idController1,
+    'idController2': idController2,
+    'idController3': idController3,
   };
 
   print('REQ: $body');

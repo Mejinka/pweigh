@@ -470,6 +470,10 @@ class EnsaioPesagemControllers with ChangeNotifier {
   final TextEditingController mapa155 = TextEditingController();
   final TextEditingController mapa156 = TextEditingController();
 
+  final TextEditingController idMapas1 = TextEditingController();
+  final TextEditingController idMapas2 = TextEditingController();
+  final TextEditingController idMapas3 = TextEditingController();
+
   Map<int, List<TextEditingController>> controladoresPontosApoio = {};
 
   List<TextEditingController> getPontoApoioControllers(int index) {

@@ -215,6 +215,43 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
     'F2kº': '2000,0047000',
     'F5k': '5000,0036000',
   };
+  final Map<String, String> mapa717 = {
+    'F10k': '9999,9950000',
+    'F20k': '20000,0080000',
+  };
+  final Map<String, String> mapa530 = {
+    '1k': '1000,0000000',
+    '2k': '2000,0000000',
+    '3k': '3000,0000000',
+    '4k': '4000,0000000',
+    '5k': '5000,0000000',
+    '6k': '6000,0000000',
+    '7k': '7000,0000000',
+    '8k': '8000,0000000',
+    '9k': '9000,0000000',
+    '10k': '10000,0000000'
+  };
+  List<int> mapasReferenciados = [];
+
+  void checkMap(int value) {
+    if (mapa715.containsKey(value)) {
+      mapasReferenciados.add(715);
+    }
+    if (mapa716.containsKey(value)) {
+      mapasReferenciados.add(716);
+    }
+    // Adicione verificações para outros mapas aqui...
+  }
+
+  void processColumns(int col1, int col2, int col3) {
+    checkMap(col1);
+    checkMap(col2);
+    checkMap(col3);
+
+    // Use um conjunto para remover duplicatas
+    Set<int> mapasUnicos = mapasReferenciados.toSet();
+    print(mapasUnicos);
+  }
 
   @override
   void initState() {
@@ -263,37 +300,34 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
       _controladoresPesagem.aPesoPadrao9,
       _controladoresPesagem.aPesoPadrao10,
     ];
+    var coluna3 = [
+      _controladoresPesagem.aPesoPadrao11,
+      _controladoresPesagem.aPesoPadrao12,
+      _controladoresPesagem.aPesoPadrao13,
+      _controladoresPesagem.aPesoPadrao14,
+      _controladoresPesagem.aPesoPadrao15,
+    ];
+
     bool temValor715Coluna1 = contemValorDoMapaNaColuna(mapa715, coluna1);
     bool temValor716Coluna1 = contemValorDoMapaNaColuna(mapa716, coluna1);
     bool temValor717Coluna1 = contemValorDoMapaNaColuna(mapa717, coluna1);
-    bool temValorGrandeColuna1 = contemValorDoMapaNaColuna(mapaGrande, coluna1);
-    bool temValor529Coluna1 = contemValorDoMapaNaColuna(mapa529, coluna1);
+
     bool temValor530Coluna1 = contemValorDoMapaNaColuna(mapa530, coluna1);
-    bool temValor531Coluna1 = contemValorDoMapaNaColuna(mapa531, coluna1);
-    bool temValor532Coluna1 = contemValorDoMapaNaColuna(mapa532, coluna1);
-    bool temValor533Coluna1 = contemValorDoMapaNaColuna(mapa533, coluna1);
-    bool temValor633a641Coluna1 =
-        contemValorDoMapaNaColuna(mapa633a641, coluna1);
-    bool temValor642a650Coluna1 =
-        contemValorDoMapaNaColuna(mapa642a650, coluna1);
-    bool temValor713Coluna1 = contemValorDoMapaNaColuna(mapa713, coluna1);
-    bool temValor714Coluna1 = contemValorDoMapaNaColuna(mapa714, coluna1);
+
     /////////////////////////////////
     bool temValor715Coluna2 = contemValorDoMapaNaColuna(mapa715, coluna2);
     bool temValor716Coluna2 = contemValorDoMapaNaColuna(mapa716, coluna2);
     bool temValor717Coluna2 = contemValorDoMapaNaColuna(mapa717, coluna2);
-    bool temValorGrandeColuna2 = contemValorDoMapaNaColuna(mapaGrande, coluna2);
-    bool temValor529Coluna2 = contemValorDoMapaNaColuna(mapa529, coluna2);
+
     bool temValor530Coluna2 = contemValorDoMapaNaColuna(mapa530, coluna2);
-    bool temValor531Coluna2 = contemValorDoMapaNaColuna(mapa531, coluna2);
-    bool temValor532Coluna2 = contemValorDoMapaNaColuna(mapa532, coluna2);
-    bool temValor533Coluna2 = contemValorDoMapaNaColuna(mapa533, coluna2);
-    bool temValor633a641Coluna2 =
-        contemValorDoMapaNaColuna(mapa633a641, coluna2);
-    bool temValor642a650Coluna2 =
-        contemValorDoMapaNaColuna(mapa642a650, coluna2);
-    bool temValor713Coluna2 = contemValorDoMapaNaColuna(mapa713, coluna2);
-    bool temValor714Coluna2 = contemValorDoMapaNaColuna(mapa714, coluna2);
+
+    /////////////////////////////////
+    bool temValor715Coluna3 = contemValorDoMapaNaColuna(mapa715, coluna3);
+    bool temValor716Coluna3 = contemValorDoMapaNaColuna(mapa716, coluna3);
+    bool temValor717Coluna3 = contemValorDoMapaNaColuna(mapa717, coluna3);
+
+    bool temValor530Coluna3 = contemValorDoMapaNaColuna(mapa530, coluna3);
+
     /////////////////////////////////
 
     if (temValor715Coluna1) {
@@ -312,57 +346,13 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
     } else {
       _controladoresPesagem.mapa3.text = "";
     }
-    if (temValorGrandeColuna1) {
-      _controladoresPesagem.mapa4.text =
-          "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
-    } else {
-      _controladoresPesagem.mapa4.text = "";
-    }
-    if (temValor529Coluna1) {
-      _controladoresPesagem.mapa5.text = "529";
-    } else {
-      _controladoresPesagem.mapa5.text = "";
-    }
+
     if (temValor530Coluna1) {
       _controladoresPesagem.mapa6.text = "530";
     } else {
       _controladoresPesagem.mapa6.text = "";
     }
-    if (temValor531Coluna1) {
-      _controladoresPesagem.mapa7.text = "531";
-    } else {
-      _controladoresPesagem.mapa7.text = "";
-    }
-    if (temValor532Coluna1) {
-      _controladoresPesagem.mapa8.text = "532";
-    } else {
-      _controladoresPesagem.mapa8.text = "";
-    }
-    if (temValor533Coluna1) {
-      _controladoresPesagem.mapa9.text = "533";
-    } else {
-      _controladoresPesagem.mapa9.text = "";
-    }
-    if (temValor633a641Coluna1) {
-      _controladoresPesagem.mapa10.text = "633 a 641";
-    } else {
-      _controladoresPesagem.mapa10.text = "";
-    }
-    if (temValor642a650Coluna1) {
-      _controladoresPesagem.mapa11.text = "642 a 650";
-    } else {
-      _controladoresPesagem.mapa11.text = "";
-    }
-    if (temValor713Coluna1) {
-      _controladoresPesagem.mapa12.text = "713";
-    } else {
-      _controladoresPesagem.mapa12.text = "";
-    }
-    if (temValor714Coluna1) {
-      _controladoresPesagem.mapa13.text = "714";
-    } else {
-      _controladoresPesagem.mapa13.text = "";
-    }
+
 ////////////////////
     if (temValor715Coluna2) {
       _controladoresPesagem.mapa14.text = "715";
@@ -380,57 +370,38 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
     } else {
       _controladoresPesagem.mapa16.text = "";
     }
-    if (temValorGrandeColuna2) {
-      _controladoresPesagem.mapa17.text =
-          "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
-    } else {
-      _controladoresPesagem.mapa17.text = "";
-    }
-    if (temValor529Coluna2) {
-      _controladoresPesagem.mapa18.text = "529";
-    } else {
-      _controladoresPesagem.mapa18.text = "";
-    }
+
     if (temValor530Coluna2) {
       _controladoresPesagem.mapa19.text = "530";
     } else {
       _controladoresPesagem.mapa19.text = "";
     }
-    if (temValor531Coluna2) {
-      _controladoresPesagem.mapa20.text = "531";
+
+////////////////////
+    if (temValor715Coluna3) {
+      _controladoresPesagem.mapa27.text = "715";
     } else {
-      _controladoresPesagem.mapa20.text = "";
+      _controladoresPesagem.mapa27.text = "";
     }
-    if (temValor532Coluna2) {
-      _controladoresPesagem.mapa21.text = "532";
+
+    if (temValor716Coluna3) {
+      _controladoresPesagem.mapa28.text = "716";
     } else {
-      _controladoresPesagem.mapa21.text = "";
+      _controladoresPesagem.mapa28.text = "";
     }
-    if (temValor533Coluna2) {
-      _controladoresPesagem.mapa22.text = "533";
+    if (temValor717Coluna3) {
+      _controladoresPesagem.mapa29.text = "717";
     } else {
-      _controladoresPesagem.mapa22.text = "";
+      _controladoresPesagem.mapa29.text = "";
     }
-    if (temValor633a641Coluna2) {
-      _controladoresPesagem.mapa23.text = "633 a 641";
+
+    if (temValor530Coluna3) {
+      _controladoresPesagem.mapa32.text = "530";
     } else {
-      _controladoresPesagem.mapa23.text = "";
+      _controladoresPesagem.mapa32.text = "";
     }
-    if (temValor642a650Coluna2) {
-      _controladoresPesagem.mapa24.text = "642 a 650";
-    } else {
-      _controladoresPesagem.mapa24.text = "";
-    }
-    if (temValor713Coluna2) {
-      _controladoresPesagem.mapa25.text = "713";
-    } else {
-      _controladoresPesagem.mapa25.text = "";
-    }
-    if (temValor714Coluna2) {
-      _controladoresPesagem.mapa26.text = "714";
-    } else {
-      _controladoresPesagem.mapa26.text = "";
-    }
+
+////////////////////
   }
 
   @override
@@ -446,6 +417,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
   void atualizarSoma() {
     double somaColuna1 = 0.0;
     double somaColuna2 = 0.0;
+    double somaColuna3 = 0.0;
 
     var coluna1 = [
       _controladoresPesagem.aPesoPadrao1,
@@ -462,21 +434,19 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
       _controladoresPesagem.aPesoPadrao9,
       _controladoresPesagem.aPesoPadrao10,
     ];
+    var coluna3 = [
+      _controladoresPesagem.aPesoPadrao11,
+      _controladoresPesagem.aPesoPadrao12,
+      _controladoresPesagem.aPesoPadrao13,
+      _controladoresPesagem.aPesoPadrao14,
+      _controladoresPesagem.aPesoPadrao15,
+    ];
 
     List<Map<String, String>> mapas = [
       mapa715,
       mapa716,
       mapa717,
-      mapaGrande,
-      mapa529,
       mapa530,
-      mapa531,
-      mapa532,
-      mapa533,
-      mapa633a641,
-      mapa642a650,
-      mapa713,
-      mapa714
     ];
 
     for (var controller in coluna1) {
@@ -501,11 +471,24 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
         }
       }
     }
+    for (var controller in coluna3) {
+      var valorTexto = controller.text;
+
+      for (var mapa in mapas) {
+        if (mapa.containsKey(valorTexto)) {
+          double valor = double.parse(mapa[valorTexto]!.replaceAll(",", "."));
+          somaColuna3 += valor;
+          break;
+        }
+      }
+    }
 
     _controladoresPesagem.result1.text =
         somaColuna1.toStringAsFixed(7).replaceAll(".", ",");
     _controladoresPesagem.result2.text =
         somaColuna2.toStringAsFixed(7).replaceAll(".", ",");
+    _controladoresPesagem.result3.text =
+        somaColuna3.toStringAsFixed(7).replaceAll(".", ",");
   }
 
   void _updateCampos() {
@@ -768,9 +751,65 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                     ],
                   ),
                 ),
+                Flexible(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Flexible(
+                        child: Column(
+                          children: [
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao11,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 3),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao12,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 3),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao13,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 3),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao14,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 3),
+                            const SizedBox(height: 10),
+                            pesoPad(
+                                _controladoresPesagem.aPesoPadrao15,
+                                [controladores.aPesoPadrao1F],
+                                numPontosApoio >= 3),
+                          ],
+                        ),
+                      ),
+                      Container(width: 10),
+                      Column(
+                        children: [
+                          resultBox(_controladoresPesagem.result3,
+                              numPontosApoio >= 3),
+                          mapasNumeros(_controladoresPesagem.mapa27),
+                          mapasNumeros(_controladoresPesagem.mapa28),
+                          mapasNumeros(_controladoresPesagem.mapa29),
+                          mapasNumeros(_controladoresPesagem.mapa30),
+                          mapasNumeros(_controladoresPesagem.mapa31),
+                          mapasNumeros(_controladoresPesagem.mapa32),
+                          mapasNumeros(_controladoresPesagem.mapa33),
+                          mapasNumeros(_controladoresPesagem.mapa34),
+                          mapasNumeros(_controladoresPesagem.mapa35),
+                          mapasNumeros(_controladoresPesagem.mapa36),
+                          mapasNumeros(_controladoresPesagem.mapa37),
+                          mapasNumeros(_controladoresPesagem.mapa38),
+                          mapasNumeros(_controladoresPesagem.mapa39),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
-            const Divider(),
             const Divider(
               color: Colors.transparent,
               height: 30,

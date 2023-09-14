@@ -129,7 +129,6 @@ class _EnsaiosState extends State<Ensaios> {
                                   onPressed: () async {
                                     Navigator.of(context).pop();
                                     print(DateTime.now());
-
                                     bool success = await postCalibrationData(
                                       controladores1.regCali.text,
                                       controladores1.data.text,
@@ -412,6 +411,9 @@ class _EnsaiosState extends State<Ensaios> {
                                       controladores4.mapa154.text,
                                       controladores4.mapa155.text,
                                       controladores4.mapa156.text,
+                                      controladores4.idMapas1.text,
+                                      controladores4.idMapas2.text,
+                                      controladores4.idMapas3.text,
                                     );
                                     if (success && success1) {
                                       await PDFService().callPDFGeneration();
