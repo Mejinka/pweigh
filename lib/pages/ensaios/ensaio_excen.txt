@@ -15,7 +15,7 @@ class EnsaioExcentrico extends StatefulWidget {
 
 class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
   late EnsaioExcentricoControllers _controladores;
-  late EnsaioPesagemControllers _controladoresPesagem;
+  late EnsaioPesagemControllers controladoresPesagem;
 
   int numPontosApoio = 0;
   final List<bool> _contem715 = List.filled(61, false);
@@ -24,129 +24,129 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
   TextEditingController _getControllerByIndex(int index) {
     switch (index) {
       case 0:
-        return _controladoresPesagem.aPesoPadrao1;
+        return controladoresPesagem.aPesoPadrao1;
       case 1:
-        return _controladoresPesagem.aPesoPadrao2;
+        return controladoresPesagem.aPesoPadrao2;
       case 2:
-        return _controladoresPesagem.aPesoPadrao3;
+        return controladoresPesagem.aPesoPadrao3;
       case 3:
-        return _controladoresPesagem.aPesoPadrao4;
+        return controladoresPesagem.aPesoPadrao4;
       case 4:
-        return _controladoresPesagem.aPesoPadrao5;
+        return controladoresPesagem.aPesoPadrao5;
       case 5:
-        return _controladoresPesagem.aPesoPadrao6;
+        return controladoresPesagem.aPesoPadrao6;
       case 6:
-        return _controladoresPesagem.aPesoPadrao7;
+        return controladoresPesagem.aPesoPadrao7;
       case 7:
-        return _controladoresPesagem.aPesoPadrao8;
+        return controladoresPesagem.aPesoPadrao8;
       case 8:
-        return _controladoresPesagem.aPesoPadrao9;
+        return controladoresPesagem.aPesoPadrao9;
       case 9:
-        return _controladoresPesagem.aPesoPadrao10;
+        return controladoresPesagem.aPesoPadrao10;
       case 10:
-        return _controladoresPesagem.aPesoPadrao11;
+        return controladoresPesagem.aPesoPadrao11;
       case 11:
-        return _controladoresPesagem.aPesoPadrao12;
+        return controladoresPesagem.aPesoPadrao12;
       case 12:
-        return _controladoresPesagem.aPesoPadrao13;
+        return controladoresPesagem.aPesoPadrao13;
       case 13:
-        return _controladoresPesagem.aPesoPadrao14;
+        return controladoresPesagem.aPesoPadrao14;
       case 14:
-        return _controladoresPesagem.aPesoPadrao15;
+        return controladoresPesagem.aPesoPadrao15;
       case 15:
-        return _controladoresPesagem.aPesoPadrao16;
+        return controladoresPesagem.aPesoPadrao16;
       case 16:
-        return _controladoresPesagem.aPesoPadrao17;
+        return controladoresPesagem.aPesoPadrao17;
       case 17:
-        return _controladoresPesagem.aPesoPadrao18;
+        return controladoresPesagem.aPesoPadrao18;
       case 18:
-        return _controladoresPesagem.aPesoPadrao19;
+        return controladoresPesagem.aPesoPadrao19;
       case 19:
-        return _controladoresPesagem.aPesoPadrao20;
+        return controladoresPesagem.aPesoPadrao20;
       case 20:
-        return _controladoresPesagem.aPesoPadrao21;
+        return controladoresPesagem.aPesoPadrao21;
       case 21:
-        return _controladoresPesagem.aPesoPadrao22;
+        return controladoresPesagem.aPesoPadrao22;
       case 22:
-        return _controladoresPesagem.aPesoPadrao23;
+        return controladoresPesagem.aPesoPadrao23;
       case 23:
-        return _controladoresPesagem.aPesoPadrao24;
+        return controladoresPesagem.aPesoPadrao24;
       case 24:
-        return _controladoresPesagem.aPesoPadrao25;
+        return controladoresPesagem.aPesoPadrao25;
       case 25:
-        return _controladoresPesagem.aPesoPadrao26;
+        return controladoresPesagem.aPesoPadrao26;
       case 26:
-        return _controladoresPesagem.aPesoPadrao27;
+        return controladoresPesagem.aPesoPadrao27;
       case 27:
-        return _controladoresPesagem.aPesoPadrao28;
+        return controladoresPesagem.aPesoPadrao28;
       case 28:
-        return _controladoresPesagem.aPesoPadrao29;
+        return controladoresPesagem.aPesoPadrao29;
       case 29:
-        return _controladoresPesagem.aPesoPadrao30;
+        return controladoresPesagem.aPesoPadrao30;
       case 30:
-        return _controladoresPesagem.aPesoPadrao31;
+        return controladoresPesagem.aPesoPadrao31;
       case 31:
-        return _controladoresPesagem.aPesoPadrao32;
+        return controladoresPesagem.aPesoPadrao32;
       case 32:
-        return _controladoresPesagem.aPesoPadrao33;
+        return controladoresPesagem.aPesoPadrao33;
       case 33:
-        return _controladoresPesagem.aPesoPadrao34;
+        return controladoresPesagem.aPesoPadrao34;
       case 34:
-        return _controladoresPesagem.aPesoPadrao35;
+        return controladoresPesagem.aPesoPadrao35;
       case 35:
-        return _controladoresPesagem.aPesoPadrao36;
+        return controladoresPesagem.aPesoPadrao36;
       case 36:
-        return _controladoresPesagem.aPesoPadrao37;
+        return controladoresPesagem.aPesoPadrao37;
       case 37:
-        return _controladoresPesagem.aPesoPadrao38;
+        return controladoresPesagem.aPesoPadrao38;
       case 38:
-        return _controladoresPesagem.aPesoPadrao39;
+        return controladoresPesagem.aPesoPadrao39;
       case 39:
-        return _controladoresPesagem.aPesoPadrao40;
+        return controladoresPesagem.aPesoPadrao40;
       case 40:
-        return _controladoresPesagem.aPesoPadrao41;
+        return controladoresPesagem.aPesoPadrao41;
       case 41:
-        return _controladoresPesagem.aPesoPadrao42;
+        return controladoresPesagem.aPesoPadrao42;
       case 42:
-        return _controladoresPesagem.aPesoPadrao43;
+        return controladoresPesagem.aPesoPadrao43;
       case 43:
-        return _controladoresPesagem.aPesoPadrao44;
+        return controladoresPesagem.aPesoPadrao44;
       case 44:
-        return _controladoresPesagem.aPesoPadrao45;
+        return controladoresPesagem.aPesoPadrao45;
       case 45:
-        return _controladoresPesagem.aPesoPadrao46;
+        return controladoresPesagem.aPesoPadrao46;
       case 46:
-        return _controladoresPesagem.aPesoPadrao47;
+        return controladoresPesagem.aPesoPadrao47;
       case 47:
-        return _controladoresPesagem.aPesoPadrao48;
+        return controladoresPesagem.aPesoPadrao48;
       case 48:
-        return _controladoresPesagem.aPesoPadrao49;
+        return controladoresPesagem.aPesoPadrao49;
       case 49:
-        return _controladoresPesagem.aPesoPadrao50;
+        return controladoresPesagem.aPesoPadrao50;
       case 50:
-        return _controladoresPesagem.aPesoPadrao51;
+        return controladoresPesagem.aPesoPadrao51;
       case 51:
-        return _controladoresPesagem.aPesoPadrao52;
+        return controladoresPesagem.aPesoPadrao52;
       case 52:
-        return _controladoresPesagem.aPesoPadrao53;
+        return controladoresPesagem.aPesoPadrao53;
       case 53:
-        return _controladoresPesagem.aPesoPadrao54;
+        return controladoresPesagem.aPesoPadrao54;
       case 54:
-        return _controladoresPesagem.aPesoPadrao55;
+        return controladoresPesagem.aPesoPadrao55;
       case 55:
-        return _controladoresPesagem.aPesoPadrao56;
+        return controladoresPesagem.aPesoPadrao56;
       case 56:
-        return _controladoresPesagem.aPesoPadrao57;
+        return controladoresPesagem.aPesoPadrao57;
       case 57:
-        return _controladoresPesagem.aPesoPadrao58;
+        return controladoresPesagem.aPesoPadrao58;
       case 58:
-        return _controladoresPesagem.aPesoPadrao59;
+        return controladoresPesagem.aPesoPadrao59;
       case 59:
-        return _controladoresPesagem.aPesoPadrao60;
+        return controladoresPesagem.aPesoPadrao60;
       case 60:
-        return _controladoresPesagem.aPesoPadrao61;
+        return controladoresPesagem.aPesoPadrao61;
       case 61:
-        return _controladoresPesagem.aPesoPadrao62;
+        return controladoresPesagem.aPesoPadrao62;
       default:
         throw ArgumentError("Index must be between 0 and 119");
     }
@@ -418,7 +418,7 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
     super.initState();
     _controladores = widget.controladores;
     _controladores.pontosApoioController.addListener(_updateCampos);
-    _controladoresPesagem =
+    controladoresPesagem =
         Provider.of<EnsaioPesagemControllers>(context, listen: false);
 
     for (int i = 0; i < 61; i++) {
@@ -447,88 +447,88 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
 
   void _verificaEAtualizaControllerMapa() {
     var coluna1 = [
-      _controladoresPesagem.aPesoPadrao1,
-      _controladoresPesagem.aPesoPadrao2,
-      _controladoresPesagem.aPesoPadrao3,
-      _controladoresPesagem.aPesoPadrao4,
-      _controladoresPesagem.aPesoPadrao5,
+      controladoresPesagem.aPesoPadrao1,
+      controladoresPesagem.aPesoPadrao2,
+      controladoresPesagem.aPesoPadrao3,
+      controladoresPesagem.aPesoPadrao4,
+      controladoresPesagem.aPesoPadrao5,
     ];
     var coluna2 = [
-      _controladoresPesagem.aPesoPadrao6,
-      _controladoresPesagem.aPesoPadrao7,
-      _controladoresPesagem.aPesoPadrao8,
-      _controladoresPesagem.aPesoPadrao9,
-      _controladoresPesagem.aPesoPadrao10,
+      controladoresPesagem.aPesoPadrao6,
+      controladoresPesagem.aPesoPadrao7,
+      controladoresPesagem.aPesoPadrao8,
+      controladoresPesagem.aPesoPadrao9,
+      controladoresPesagem.aPesoPadrao10,
     ];
     var coluna3 = [
-      _controladoresPesagem.aPesoPadrao11,
-      _controladoresPesagem.aPesoPadrao12,
-      _controladoresPesagem.aPesoPadrao13,
-      _controladoresPesagem.aPesoPadrao14,
-      _controladoresPesagem.aPesoPadrao15,
+      controladoresPesagem.aPesoPadrao11,
+      controladoresPesagem.aPesoPadrao12,
+      controladoresPesagem.aPesoPadrao13,
+      controladoresPesagem.aPesoPadrao14,
+      controladoresPesagem.aPesoPadrao15,
     ];
     var coluna4 = [
-      _controladoresPesagem.aPesoPadrao16,
-      _controladoresPesagem.aPesoPadrao17,
-      _controladoresPesagem.aPesoPadrao18,
-      _controladoresPesagem.aPesoPadrao19,
-      _controladoresPesagem.aPesoPadrao20,
+      controladoresPesagem.aPesoPadrao16,
+      controladoresPesagem.aPesoPadrao17,
+      controladoresPesagem.aPesoPadrao18,
+      controladoresPesagem.aPesoPadrao19,
+      controladoresPesagem.aPesoPadrao20,
     ];
     var coluna5 = [
-      _controladoresPesagem.aPesoPadrao21,
-      _controladoresPesagem.aPesoPadrao22,
-      _controladoresPesagem.aPesoPadrao23,
-      _controladoresPesagem.aPesoPadrao24,
-      _controladoresPesagem.aPesoPadrao25,
+      controladoresPesagem.aPesoPadrao21,
+      controladoresPesagem.aPesoPadrao22,
+      controladoresPesagem.aPesoPadrao23,
+      controladoresPesagem.aPesoPadrao24,
+      controladoresPesagem.aPesoPadrao25,
     ];
     var coluna6 = [
-      _controladoresPesagem.aPesoPadrao26,
-      _controladoresPesagem.aPesoPadrao27,
-      _controladoresPesagem.aPesoPadrao28,
-      _controladoresPesagem.aPesoPadrao29,
-      _controladoresPesagem.aPesoPadrao30,
+      controladoresPesagem.aPesoPadrao26,
+      controladoresPesagem.aPesoPadrao27,
+      controladoresPesagem.aPesoPadrao28,
+      controladoresPesagem.aPesoPadrao29,
+      controladoresPesagem.aPesoPadrao30,
     ];
     var coluna7 = [
-      _controladoresPesagem.aPesoPadrao31,
-      _controladoresPesagem.aPesoPadrao32,
-      _controladoresPesagem.aPesoPadrao33,
-      _controladoresPesagem.aPesoPadrao34,
-      _controladoresPesagem.aPesoPadrao35,
+      controladoresPesagem.aPesoPadrao31,
+      controladoresPesagem.aPesoPadrao32,
+      controladoresPesagem.aPesoPadrao33,
+      controladoresPesagem.aPesoPadrao34,
+      controladoresPesagem.aPesoPadrao35,
     ];
     var coluna8 = [
-      _controladoresPesagem.aPesoPadrao36,
-      _controladoresPesagem.aPesoPadrao37,
-      _controladoresPesagem.aPesoPadrao38,
-      _controladoresPesagem.aPesoPadrao39,
-      _controladoresPesagem.aPesoPadrao40,
+      controladoresPesagem.aPesoPadrao36,
+      controladoresPesagem.aPesoPadrao37,
+      controladoresPesagem.aPesoPadrao38,
+      controladoresPesagem.aPesoPadrao39,
+      controladoresPesagem.aPesoPadrao40,
     ];
     var coluna9 = [
-      _controladoresPesagem.aPesoPadrao41,
-      _controladoresPesagem.aPesoPadrao42,
-      _controladoresPesagem.aPesoPadrao43,
-      _controladoresPesagem.aPesoPadrao44,
-      _controladoresPesagem.aPesoPadrao45,
+      controladoresPesagem.aPesoPadrao41,
+      controladoresPesagem.aPesoPadrao42,
+      controladoresPesagem.aPesoPadrao43,
+      controladoresPesagem.aPesoPadrao44,
+      controladoresPesagem.aPesoPadrao45,
     ];
     var coluna10 = [
-      _controladoresPesagem.aPesoPadrao46,
-      _controladoresPesagem.aPesoPadrao47,
-      _controladoresPesagem.aPesoPadrao48,
-      _controladoresPesagem.aPesoPadrao49,
-      _controladoresPesagem.aPesoPadrao50,
+      controladoresPesagem.aPesoPadrao46,
+      controladoresPesagem.aPesoPadrao47,
+      controladoresPesagem.aPesoPadrao48,
+      controladoresPesagem.aPesoPadrao49,
+      controladoresPesagem.aPesoPadrao50,
     ];
     var coluna11 = [
-      _controladoresPesagem.aPesoPadrao51,
-      _controladoresPesagem.aPesoPadrao52,
-      _controladoresPesagem.aPesoPadrao53,
-      _controladoresPesagem.aPesoPadrao54,
-      _controladoresPesagem.aPesoPadrao55,
+      controladoresPesagem.aPesoPadrao51,
+      controladoresPesagem.aPesoPadrao52,
+      controladoresPesagem.aPesoPadrao53,
+      controladoresPesagem.aPesoPadrao54,
+      controladoresPesagem.aPesoPadrao55,
     ];
     var coluna12 = [
-      _controladoresPesagem.aPesoPadrao56,
-      _controladoresPesagem.aPesoPadrao57,
-      _controladoresPesagem.aPesoPadrao58,
-      _controladoresPesagem.aPesoPadrao59,
-      _controladoresPesagem.aPesoPadrao60,
+      controladoresPesagem.aPesoPadrao56,
+      controladoresPesagem.aPesoPadrao57,
+      controladoresPesagem.aPesoPadrao58,
+      controladoresPesagem.aPesoPadrao59,
+      controladoresPesagem.aPesoPadrao60,
     ];
     bool temValor715Coluna1 = contemValorDoMapaNaColuna(mapa715, coluna1);
     bool temValor716Coluna1 = contemValorDoMapaNaColuna(mapa716, coluna1);
@@ -726,344 +726,344 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
     bool temValor714Coluna12 = contemValorDoMapaNaColuna(mapa714, coluna12);
 
     if (temValor715Coluna1) {
-      _controladoresPesagem.mapa.text = "715";
+      controladoresPesagem.mapa.text = "715";
     } else {
-      _controladoresPesagem.mapa.text = "";
+      controladoresPesagem.mapa.text = "";
     }
 
     if (temValor716Coluna1) {
-      _controladoresPesagem.mapa2.text = "716";
+      controladoresPesagem.mapa2.text = "716";
     } else {
-      _controladoresPesagem.mapa2.text = "";
+      controladoresPesagem.mapa2.text = "";
     }
     if (temValor717Coluna1) {
-      _controladoresPesagem.mapa3.text = "717";
+      controladoresPesagem.mapa3.text = "717";
     } else {
-      _controladoresPesagem.mapa3.text = "";
+      controladoresPesagem.mapa3.text = "";
     }
     if (temValorGrandeColuna1) {
-      _controladoresPesagem.mapa4.text =
+      controladoresPesagem.mapa4.text =
           "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
     } else {
-      _controladoresPesagem.mapa4.text = "";
+      controladoresPesagem.mapa4.text = "";
     }
     if (temValor529Coluna1) {
-      _controladoresPesagem.mapa5.text = "529";
+      controladoresPesagem.mapa5.text = "529";
     } else {
-      _controladoresPesagem.mapa5.text = "";
+      controladoresPesagem.mapa5.text = "";
     }
     if (temValor530Coluna1) {
-      _controladoresPesagem.mapa6.text = "530";
+      controladoresPesagem.mapa6.text = "530";
     } else {
-      _controladoresPesagem.mapa6.text = "";
+      controladoresPesagem.mapa6.text = "";
     }
     if (temValor531Coluna1) {
-      _controladoresPesagem.mapa7.text = "531";
+      controladoresPesagem.mapa7.text = "531";
     } else {
-      _controladoresPesagem.mapa7.text = "";
+      controladoresPesagem.mapa7.text = "";
     }
     if (temValor532Coluna1) {
-      _controladoresPesagem.mapa8.text = "532";
+      controladoresPesagem.mapa8.text = "532";
     } else {
-      _controladoresPesagem.mapa8.text = "";
+      controladoresPesagem.mapa8.text = "";
     }
     if (temValor533Coluna1) {
-      _controladoresPesagem.mapa9.text = "533";
+      controladoresPesagem.mapa9.text = "533";
     } else {
-      _controladoresPesagem.mapa9.text = "";
+      controladoresPesagem.mapa9.text = "";
     }
     if (temValor633a641Coluna1) {
-      _controladoresPesagem.mapa10.text = "633 a 641";
+      controladoresPesagem.mapa10.text = "633 a 641";
     } else {
-      _controladoresPesagem.mapa10.text = "";
+      controladoresPesagem.mapa10.text = "";
     }
     if (temValor642a650Coluna1) {
-      _controladoresPesagem.mapa11.text = "642 a 650";
+      controladoresPesagem.mapa11.text = "642 a 650";
     } else {
-      _controladoresPesagem.mapa11.text = "";
+      controladoresPesagem.mapa11.text = "";
     }
     if (temValor713Coluna1) {
-      _controladoresPesagem.mapa12.text = "713";
+      controladoresPesagem.mapa12.text = "713";
     } else {
-      _controladoresPesagem.mapa12.text = "";
+      controladoresPesagem.mapa12.text = "";
     }
     if (temValor714Coluna1) {
-      _controladoresPesagem.mapa13.text = "714";
+      controladoresPesagem.mapa13.text = "714";
     } else {
-      _controladoresPesagem.mapa13.text = "";
+      controladoresPesagem.mapa13.text = "";
     }
 ////////////////////
     if (temValor715Coluna2) {
-      _controladoresPesagem.mapa14.text = "715";
+      controladoresPesagem.mapa14.text = "715";
     } else {
-      _controladoresPesagem.mapa14.text = "";
+      controladoresPesagem.mapa14.text = "";
     }
 
     if (temValor716Coluna2) {
-      _controladoresPesagem.mapa15.text = "716";
+      controladoresPesagem.mapa15.text = "716";
     } else {
-      _controladoresPesagem.mapa15.text = "";
+      controladoresPesagem.mapa15.text = "";
     }
     if (temValor717Coluna2) {
-      _controladoresPesagem.mapa16.text = "717";
+      controladoresPesagem.mapa16.text = "717";
     } else {
-      _controladoresPesagem.mapa16.text = "";
+      controladoresPesagem.mapa16.text = "";
     }
     if (temValorGrandeColuna2) {
-      _controladoresPesagem.mapa17.text =
+      controladoresPesagem.mapa17.text =
           "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
     } else {
-      _controladoresPesagem.mapa17.text = "";
+      controladoresPesagem.mapa17.text = "";
     }
     if (temValor529Coluna2) {
-      _controladoresPesagem.mapa18.text = "529";
+      controladoresPesagem.mapa18.text = "529";
     } else {
-      _controladoresPesagem.mapa18.text = "";
+      controladoresPesagem.mapa18.text = "";
     }
     if (temValor530Coluna2) {
-      _controladoresPesagem.mapa19.text = "530";
+      controladoresPesagem.mapa19.text = "530";
     } else {
-      _controladoresPesagem.mapa19.text = "";
+      controladoresPesagem.mapa19.text = "";
     }
     if (temValor531Coluna2) {
-      _controladoresPesagem.mapa20.text = "531";
+      controladoresPesagem.mapa20.text = "531";
     } else {
-      _controladoresPesagem.mapa20.text = "";
+      controladoresPesagem.mapa20.text = "";
     }
     if (temValor532Coluna2) {
-      _controladoresPesagem.mapa21.text = "532";
+      controladoresPesagem.mapa21.text = "532";
     } else {
-      _controladoresPesagem.mapa21.text = "";
+      controladoresPesagem.mapa21.text = "";
     }
     if (temValor533Coluna2) {
-      _controladoresPesagem.mapa22.text = "533";
+      controladoresPesagem.mapa22.text = "533";
     } else {
-      _controladoresPesagem.mapa22.text = "";
+      controladoresPesagem.mapa22.text = "";
     }
     if (temValor633a641Coluna2) {
-      _controladoresPesagem.mapa23.text = "633 a 641";
+      controladoresPesagem.mapa23.text = "633 a 641";
     } else {
-      _controladoresPesagem.mapa23.text = "";
+      controladoresPesagem.mapa23.text = "";
     }
     if (temValor642a650Coluna2) {
-      _controladoresPesagem.mapa24.text = "642 a 650";
+      controladoresPesagem.mapa24.text = "642 a 650";
     } else {
-      _controladoresPesagem.mapa24.text = "";
+      controladoresPesagem.mapa24.text = "";
     }
     if (temValor713Coluna2) {
-      _controladoresPesagem.mapa25.text = "713";
+      controladoresPesagem.mapa25.text = "713";
     } else {
-      _controladoresPesagem.mapa25.text = "";
+      controladoresPesagem.mapa25.text = "";
     }
     if (temValor714Coluna2) {
-      _controladoresPesagem.mapa26.text = "714";
+      controladoresPesagem.mapa26.text = "714";
     } else {
-      _controladoresPesagem.mapa26.text = "";
+      controladoresPesagem.mapa26.text = "";
     }
 
 ////////////////////
     if (temValor715Coluna3) {
-      _controladoresPesagem.mapa27.text = "715";
+      controladoresPesagem.mapa27.text = "715";
     } else {
-      _controladoresPesagem.mapa27.text = "";
+      controladoresPesagem.mapa27.text = "";
     }
 
     if (temValor716Coluna3) {
-      _controladoresPesagem.mapa28.text = "716";
+      controladoresPesagem.mapa28.text = "716";
     } else {
-      _controladoresPesagem.mapa28.text = "";
+      controladoresPesagem.mapa28.text = "";
     }
     if (temValor717Coluna3) {
-      _controladoresPesagem.mapa29.text = "717";
+      controladoresPesagem.mapa29.text = "717";
     } else {
-      _controladoresPesagem.mapa29.text = "";
+      controladoresPesagem.mapa29.text = "";
     }
     if (temValorGrandeColuna3) {
-      _controladoresPesagem.mapa30.text =
+      controladoresPesagem.mapa30.text =
           "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
     } else {
-      _controladoresPesagem.mapa30.text = "";
+      controladoresPesagem.mapa30.text = "";
     }
     if (temValor529Coluna3) {
-      _controladoresPesagem.mapa31.text = "529";
+      controladoresPesagem.mapa31.text = "529";
     } else {
-      _controladoresPesagem.mapa31.text = "";
+      controladoresPesagem.mapa31.text = "";
     }
     if (temValor530Coluna3) {
-      _controladoresPesagem.mapa32.text = "530";
+      controladoresPesagem.mapa32.text = "530";
     } else {
-      _controladoresPesagem.mapa32.text = "";
+      controladoresPesagem.mapa32.text = "";
     }
     if (temValor531Coluna3) {
-      _controladoresPesagem.mapa33.text = "531";
+      controladoresPesagem.mapa33.text = "531";
     } else {
-      _controladoresPesagem.mapa33.text = "";
+      controladoresPesagem.mapa33.text = "";
     }
     if (temValor532Coluna3) {
-      _controladoresPesagem.mapa34.text = "532";
+      controladoresPesagem.mapa34.text = "532";
     } else {
-      _controladoresPesagem.mapa34.text = "";
+      controladoresPesagem.mapa34.text = "";
     }
     if (temValor533Coluna3) {
-      _controladoresPesagem.mapa35.text = "533";
+      controladoresPesagem.mapa35.text = "533";
     } else {
-      _controladoresPesagem.mapa35.text = "";
+      controladoresPesagem.mapa35.text = "";
     }
     if (temValor633a641Coluna3) {
-      _controladoresPesagem.mapa36.text = "633 a 641";
+      controladoresPesagem.mapa36.text = "633 a 641";
     } else {
-      _controladoresPesagem.mapa36.text = "";
+      controladoresPesagem.mapa36.text = "";
     }
     if (temValor642a650Coluna3) {
-      _controladoresPesagem.mapa37.text = "642 a 650";
+      controladoresPesagem.mapa37.text = "642 a 650";
     } else {
-      _controladoresPesagem.mapa37.text = "";
+      controladoresPesagem.mapa37.text = "";
     }
     if (temValor713Coluna3) {
-      _controladoresPesagem.mapa38.text = "713";
+      controladoresPesagem.mapa38.text = "713";
     } else {
-      _controladoresPesagem.mapa38.text = "";
+      controladoresPesagem.mapa38.text = "";
     }
     if (temValor714Coluna3) {
-      _controladoresPesagem.mapa39.text = "714";
+      controladoresPesagem.mapa39.text = "714";
     } else {
-      _controladoresPesagem.mapa39.text = "";
+      controladoresPesagem.mapa39.text = "";
     }
 ////////////////////
     if (temValor715Coluna4) {
-      _controladoresPesagem.mapa40.text = "715";
+      controladoresPesagem.mapa40.text = "715";
     } else {
-      _controladoresPesagem.mapa40.text = "";
+      controladoresPesagem.mapa40.text = "";
     }
 
     if (temValor716Coluna4) {
-      _controladoresPesagem.mapa41.text = "716";
+      controladoresPesagem.mapa41.text = "716";
     } else {
-      _controladoresPesagem.mapa41.text = "";
+      controladoresPesagem.mapa41.text = "";
     }
     if (temValor717Coluna4) {
-      _controladoresPesagem.mapa42.text = "717";
+      controladoresPesagem.mapa42.text = "717";
     } else {
-      _controladoresPesagem.mapa42.text = "";
+      controladoresPesagem.mapa42.text = "";
     }
     if (temValorGrandeColuna4) {
-      _controladoresPesagem.mapa43.text =
+      controladoresPesagem.mapa43.text =
           "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
     } else {
-      _controladoresPesagem.mapa43.text = "";
+      controladoresPesagem.mapa43.text = "";
     }
     if (temValor529Coluna4) {
-      _controladoresPesagem.mapa44.text = "529";
+      controladoresPesagem.mapa44.text = "529";
     } else {
-      _controladoresPesagem.mapa44.text = "";
+      controladoresPesagem.mapa44.text = "";
     }
     if (temValor530Coluna4) {
-      _controladoresPesagem.mapa45.text = "530";
+      controladoresPesagem.mapa45.text = "530";
     } else {
-      _controladoresPesagem.mapa45.text = "";
+      controladoresPesagem.mapa45.text = "";
     }
     if (temValor531Coluna4) {
-      _controladoresPesagem.mapa46.text = "531";
+      controladoresPesagem.mapa46.text = "531";
     } else {
-      _controladoresPesagem.mapa46.text = "";
+      controladoresPesagem.mapa46.text = "";
     }
     if (temValor532Coluna4) {
-      _controladoresPesagem.mapa47.text = "532";
+      controladoresPesagem.mapa47.text = "532";
     } else {
-      _controladoresPesagem.mapa47.text = "";
+      controladoresPesagem.mapa47.text = "";
     }
     if (temValor533Coluna4) {
-      _controladoresPesagem.mapa48.text = "533";
+      controladoresPesagem.mapa48.text = "533";
     } else {
-      _controladoresPesagem.mapa48.text = "";
+      controladoresPesagem.mapa48.text = "";
     }
     if (temValor633a641Coluna4) {
-      _controladoresPesagem.mapa49.text = "633 a 641";
+      controladoresPesagem.mapa49.text = "633 a 641";
     } else {
-      _controladoresPesagem.mapa49.text = "";
+      controladoresPesagem.mapa49.text = "";
     }
     if (temValor642a650Coluna4) {
-      _controladoresPesagem.mapa50.text = "642 a 650";
+      controladoresPesagem.mapa50.text = "642 a 650";
     } else {
-      _controladoresPesagem.mapa50.text = "";
+      controladoresPesagem.mapa50.text = "";
     }
     if (temValor713Coluna4) {
-      _controladoresPesagem.mapa51.text = "713";
+      controladoresPesagem.mapa51.text = "713";
     } else {
-      _controladoresPesagem.mapa51.text = "";
+      controladoresPesagem.mapa51.text = "";
     }
     if (temValor714Coluna4) {
-      _controladoresPesagem.mapa52.text = "714";
+      controladoresPesagem.mapa52.text = "714";
     } else {
-      _controladoresPesagem.mapa52.text = "";
+      controladoresPesagem.mapa52.text = "";
     }
 ////////////////////
     if (temValor715Coluna5) {
-      _controladoresPesagem.mapa53.text = "715";
+      controladoresPesagem.mapa53.text = "715";
     } else {
-      _controladoresPesagem.mapa53.text = "";
+      controladoresPesagem.mapa53.text = "";
     }
 
     if (temValor716Coluna5) {
-      _controladoresPesagem.mapa54.text = "716";
+      controladoresPesagem.mapa54.text = "716";
     } else {
-      _controladoresPesagem.mapa54.text = "";
+      controladoresPesagem.mapa54.text = "";
     }
     if (temValor717Coluna5) {
-      _controladoresPesagem.mapa55.text = "717";
+      controladoresPesagem.mapa55.text = "717";
     } else {
-      _controladoresPesagem.mapa55.text = "";
+      controladoresPesagem.mapa55.text = "";
     }
     if (temValorGrandeColuna5) {
-      _controladoresPesagem.mapa56.text =
+      controladoresPesagem.mapa56.text =
           "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
     } else {
-      _controladoresPesagem.mapa56.text = "";
+      controladoresPesagem.mapa56.text = "";
     }
     if (temValor529Coluna5) {
-      _controladoresPesagem.mapa57.text = "529";
+      controladoresPesagem.mapa57.text = "529";
     } else {
-      _controladoresPesagem.mapa57.text = "";
+      controladoresPesagem.mapa57.text = "";
     }
     if (temValor530Coluna5) {
-      _controladoresPesagem.mapa58.text = "530";
+      controladoresPesagem.mapa58.text = "530";
     } else {
-      _controladoresPesagem.mapa58.text = "";
+      controladoresPesagem.mapa58.text = "";
     }
     if (temValor531Coluna5) {
-      _controladoresPesagem.mapa59.text = "531";
+      controladoresPesagem.mapa59.text = "531";
     } else {
-      _controladoresPesagem.mapa59.text = "";
+      controladoresPesagem.mapa59.text = "";
     }
     if (temValor532Coluna5) {
-      _controladoresPesagem.mapa60.text = "532";
+      controladoresPesagem.mapa60.text = "532";
     } else {
-      _controladoresPesagem.mapa60.text = "";
+      controladoresPesagem.mapa60.text = "";
     }
     if (temValor533Coluna5) {
-      _controladoresPesagem.mapa61.text = "533";
+      controladoresPesagem.mapa61.text = "533";
     } else {
-      _controladoresPesagem.mapa61.text = "";
+      controladoresPesagem.mapa61.text = "";
     }
     if (temValor633a641Coluna5) {
-      _controladoresPesagem.mapa62.text = "633 a 641";
+      controladoresPesagem.mapa62.text = "633 a 641";
     } else {
-      _controladoresPesagem.mapa62.text = "";
+      controladoresPesagem.mapa62.text = "";
     }
     if (temValor642a650Coluna5) {
-      _controladoresPesagem.mapa63.text = "642 a 650";
+      controladoresPesagem.mapa63.text = "642 a 650";
     } else {
-      _controladoresPesagem.mapa63.text = "";
+      controladoresPesagem.mapa63.text = "";
     }
     if (temValor713Coluna5) {
-      _controladoresPesagem.mapa64.text = "713";
+      controladoresPesagem.mapa64.text = "713";
     } else {
-      _controladoresPesagem.mapa64.text = "";
+      controladoresPesagem.mapa64.text = "";
     }
     if (temValor714Coluna5) {
-      _controladoresPesagem.mapa65.text = "714";
+      controladoresPesagem.mapa65.text = "714";
     } else {
-      _controladoresPesagem.mapa65.text = "";
+      controladoresPesagem.mapa65.text = "";
     }
 ////////////////////
 ////////////////////
@@ -1074,71 +1074,71 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
 ////////////////////
 ////////////////////
     if (temValor715Coluna6) {
-      _controladoresPesagem.mapa66.text = "715";
+      controladoresPesagem.mapa66.text = "715";
     } else {
-      _controladoresPesagem.mapa66.text = "";
+      controladoresPesagem.mapa66.text = "";
     }
 
     if (temValor716Coluna6) {
-      _controladoresPesagem.mapa67.text = "716";
+      controladoresPesagem.mapa67.text = "716";
     } else {
-      _controladoresPesagem.mapa67.text = "";
+      controladoresPesagem.mapa67.text = "";
     }
     if (temValor717Coluna6) {
-      _controladoresPesagem.mapa68.text = "717";
+      controladoresPesagem.mapa68.text = "717";
     } else {
-      _controladoresPesagem.mapa68.text = "";
+      controladoresPesagem.mapa68.text = "";
     }
     if (temValorGrandeColuna6) {
-      _controladoresPesagem.mapa69.text =
+      controladoresPesagem.mapa69.text =
           "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
     } else {
-      _controladoresPesagem.mapa69.text = "";
+      controladoresPesagem.mapa69.text = "";
     }
     if (temValor529Coluna6) {
-      _controladoresPesagem.mapa70.text = "529";
+      controladoresPesagem.mapa70.text = "529";
     } else {
-      _controladoresPesagem.mapa70.text = "";
+      controladoresPesagem.mapa70.text = "";
     }
     if (temValor530Coluna6) {
-      _controladoresPesagem.mapa71.text = "530";
+      controladoresPesagem.mapa71.text = "530";
     } else {
-      _controladoresPesagem.mapa71.text = "";
+      controladoresPesagem.mapa71.text = "";
     }
     if (temValor531Coluna6) {
-      _controladoresPesagem.mapa72.text = "531";
+      controladoresPesagem.mapa72.text = "531";
     } else {
-      _controladoresPesagem.mapa72.text = "";
+      controladoresPesagem.mapa72.text = "";
     }
     if (temValor532Coluna6) {
-      _controladoresPesagem.mapa73.text = "532";
+      controladoresPesagem.mapa73.text = "532";
     } else {
-      _controladoresPesagem.mapa73.text = "";
+      controladoresPesagem.mapa73.text = "";
     }
     if (temValor533Coluna6) {
-      _controladoresPesagem.mapa74.text = "533";
+      controladoresPesagem.mapa74.text = "533";
     } else {
-      _controladoresPesagem.mapa74.text = "";
+      controladoresPesagem.mapa74.text = "";
     }
     if (temValor633a641Coluna6) {
-      _controladoresPesagem.mapa75.text = "633 a 641";
+      controladoresPesagem.mapa75.text = "633 a 641";
     } else {
-      _controladoresPesagem.mapa75.text = "";
+      controladoresPesagem.mapa75.text = "";
     }
     if (temValor642a650Coluna6) {
-      _controladoresPesagem.mapa76.text = "642 a 650";
+      controladoresPesagem.mapa76.text = "642 a 650";
     } else {
-      _controladoresPesagem.mapa76.text = "";
+      controladoresPesagem.mapa76.text = "";
     }
     if (temValor713Coluna6) {
-      _controladoresPesagem.mapa77.text = "713";
+      controladoresPesagem.mapa77.text = "713";
     } else {
-      _controladoresPesagem.mapa77.text = "";
+      controladoresPesagem.mapa77.text = "";
     }
     if (temValor714Coluna6) {
-      _controladoresPesagem.mapa78.text = "714";
+      controladoresPesagem.mapa78.text = "714";
     } else {
-      _controladoresPesagem.mapa78.text = "";
+      controladoresPesagem.mapa78.text = "";
     }
 ////////////////////
 ////////////////////
@@ -1148,71 +1148,71 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
 ////////////////////
 ////////////////////
     if (temValor715Coluna7) {
-      _controladoresPesagem.mapa79.text = "715";
+      controladoresPesagem.mapa79.text = "715";
     } else {
-      _controladoresPesagem.mapa79.text = "";
+      controladoresPesagem.mapa79.text = "";
     }
 
     if (temValor716Coluna7) {
-      _controladoresPesagem.mapa80.text = "716";
+      controladoresPesagem.mapa80.text = "716";
     } else {
-      _controladoresPesagem.mapa80.text = "";
+      controladoresPesagem.mapa80.text = "";
     }
     if (temValor717Coluna7) {
-      _controladoresPesagem.mapa81.text = "717";
+      controladoresPesagem.mapa81.text = "717";
     } else {
-      _controladoresPesagem.mapa81.text = "";
+      controladoresPesagem.mapa81.text = "";
     }
     if (temValorGrandeColuna7) {
-      _controladoresPesagem.mapa82.text =
+      controladoresPesagem.mapa82.text =
           "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
     } else {
-      _controladoresPesagem.mapa82.text = "";
+      controladoresPesagem.mapa82.text = "";
     }
     if (temValor529Coluna7) {
-      _controladoresPesagem.mapa83.text = "529";
+      controladoresPesagem.mapa83.text = "529";
     } else {
-      _controladoresPesagem.mapa83.text = "";
+      controladoresPesagem.mapa83.text = "";
     }
     if (temValor530Coluna7) {
-      _controladoresPesagem.mapa84.text = "530";
+      controladoresPesagem.mapa84.text = "530";
     } else {
-      _controladoresPesagem.mapa84.text = "";
+      controladoresPesagem.mapa84.text = "";
     }
     if (temValor531Coluna7) {
-      _controladoresPesagem.mapa85.text = "531";
+      controladoresPesagem.mapa85.text = "531";
     } else {
-      _controladoresPesagem.mapa85.text = "";
+      controladoresPesagem.mapa85.text = "";
     }
     if (temValor532Coluna7) {
-      _controladoresPesagem.mapa86.text = "532";
+      controladoresPesagem.mapa86.text = "532";
     } else {
-      _controladoresPesagem.mapa86.text = "";
+      controladoresPesagem.mapa86.text = "";
     }
     if (temValor533Coluna7) {
-      _controladoresPesagem.mapa87.text = "533";
+      controladoresPesagem.mapa87.text = "533";
     } else {
-      _controladoresPesagem.mapa87.text = "";
+      controladoresPesagem.mapa87.text = "";
     }
     if (temValor633a641Coluna7) {
-      _controladoresPesagem.mapa88.text = "633 a 641";
+      controladoresPesagem.mapa88.text = "633 a 641";
     } else {
-      _controladoresPesagem.mapa88.text = "";
+      controladoresPesagem.mapa88.text = "";
     }
     if (temValor642a650Coluna7) {
-      _controladoresPesagem.mapa89.text = "642 a 650";
+      controladoresPesagem.mapa89.text = "642 a 650";
     } else {
-      _controladoresPesagem.mapa89.text = "";
+      controladoresPesagem.mapa89.text = "";
     }
     if (temValor713Coluna7) {
-      _controladoresPesagem.mapa90.text = "713";
+      controladoresPesagem.mapa90.text = "713";
     } else {
-      _controladoresPesagem.mapa90.text = "";
+      controladoresPesagem.mapa90.text = "";
     }
     if (temValor714Coluna7) {
-      _controladoresPesagem.mapa91.text = "714";
+      controladoresPesagem.mapa91.text = "714";
     } else {
-      _controladoresPesagem.mapa91.text = "";
+      controladoresPesagem.mapa91.text = "";
     }
 ////////////////////
 ////////////////////
@@ -1222,71 +1222,71 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
 ////////////////////
 ////////////////////
     if (temValor715Coluna8) {
-      _controladoresPesagem.mapa92.text = "715";
+      controladoresPesagem.mapa92.text = "715";
     } else {
-      _controladoresPesagem.mapa92.text = "";
+      controladoresPesagem.mapa92.text = "";
     }
 
     if (temValor716Coluna8) {
-      _controladoresPesagem.mapa93.text = "716";
+      controladoresPesagem.mapa93.text = "716";
     } else {
-      _controladoresPesagem.mapa93.text = "";
+      controladoresPesagem.mapa93.text = "";
     }
     if (temValor717Coluna8) {
-      _controladoresPesagem.mapa94.text = "717";
+      controladoresPesagem.mapa94.text = "717";
     } else {
-      _controladoresPesagem.mapa94.text = "";
+      controladoresPesagem.mapa94.text = "";
     }
     if (temValorGrandeColuna8) {
-      _controladoresPesagem.mapa95.text =
+      controladoresPesagem.mapa95.text =
           "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
     } else {
-      _controladoresPesagem.mapa95.text = "";
+      controladoresPesagem.mapa95.text = "";
     }
     if (temValor529Coluna8) {
-      _controladoresPesagem.mapa96.text = "529";
+      controladoresPesagem.mapa96.text = "529";
     } else {
-      _controladoresPesagem.mapa96.text = "";
+      controladoresPesagem.mapa96.text = "";
     }
     if (temValor530Coluna8) {
-      _controladoresPesagem.mapa97.text = "530";
+      controladoresPesagem.mapa97.text = "530";
     } else {
-      _controladoresPesagem.mapa97.text = "";
+      controladoresPesagem.mapa97.text = "";
     }
     if (temValor531Coluna8) {
-      _controladoresPesagem.mapa98.text = "531";
+      controladoresPesagem.mapa98.text = "531";
     } else {
-      _controladoresPesagem.mapa98.text = "";
+      controladoresPesagem.mapa98.text = "";
     }
     if (temValor532Coluna8) {
-      _controladoresPesagem.mapa99.text = "532";
+      controladoresPesagem.mapa99.text = "532";
     } else {
-      _controladoresPesagem.mapa99.text = "";
+      controladoresPesagem.mapa99.text = "";
     }
     if (temValor533Coluna8) {
-      _controladoresPesagem.mapa100.text = "533";
+      controladoresPesagem.mapa100.text = "533";
     } else {
-      _controladoresPesagem.mapa100.text = "";
+      controladoresPesagem.mapa100.text = "";
     }
     if (temValor633a641Coluna8) {
-      _controladoresPesagem.mapa101.text = "633 a 641";
+      controladoresPesagem.mapa101.text = "633 a 641";
     } else {
-      _controladoresPesagem.mapa101.text = "";
+      controladoresPesagem.mapa101.text = "";
     }
     if (temValor642a650Coluna8) {
-      _controladoresPesagem.mapa102.text = "642 a 650";
+      controladoresPesagem.mapa102.text = "642 a 650";
     } else {
-      _controladoresPesagem.mapa102.text = "";
+      controladoresPesagem.mapa102.text = "";
     }
     if (temValor713Coluna8) {
-      _controladoresPesagem.mapa103.text = "713";
+      controladoresPesagem.mapa103.text = "713";
     } else {
-      _controladoresPesagem.mapa103.text = "";
+      controladoresPesagem.mapa103.text = "";
     }
     if (temValor714Coluna8) {
-      _controladoresPesagem.mapa104.text = "714";
+      controladoresPesagem.mapa104.text = "714";
     } else {
-      _controladoresPesagem.mapa104.text = "";
+      controladoresPesagem.mapa104.text = "";
     }
 ////////////////////
 ////////////////////
@@ -1296,71 +1296,71 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
 ////////////////////
 ////////////////////
     if (temValor715Coluna9) {
-      _controladoresPesagem.mapa105.text = "715";
+      controladoresPesagem.mapa105.text = "715";
     } else {
-      _controladoresPesagem.mapa105.text = "";
+      controladoresPesagem.mapa105.text = "";
     }
 
     if (temValor716Coluna9) {
-      _controladoresPesagem.mapa106.text = "716";
+      controladoresPesagem.mapa106.text = "716";
     } else {
-      _controladoresPesagem.mapa106.text = "";
+      controladoresPesagem.mapa106.text = "";
     }
     if (temValor717Coluna9) {
-      _controladoresPesagem.mapa107.text = "717";
+      controladoresPesagem.mapa107.text = "717";
     } else {
-      _controladoresPesagem.mapa107.text = "";
+      controladoresPesagem.mapa107.text = "";
     }
     if (temValorGrandeColuna9) {
-      _controladoresPesagem.mapa108.text =
+      controladoresPesagem.mapa108.text =
           "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
     } else {
-      _controladoresPesagem.mapa108.text = "";
+      controladoresPesagem.mapa108.text = "";
     }
     if (temValor529Coluna9) {
-      _controladoresPesagem.mapa109.text = "529";
+      controladoresPesagem.mapa109.text = "529";
     } else {
-      _controladoresPesagem.mapa109.text = "";
+      controladoresPesagem.mapa109.text = "";
     }
     if (temValor530Coluna9) {
-      _controladoresPesagem.mapa110.text = "530";
+      controladoresPesagem.mapa110.text = "530";
     } else {
-      _controladoresPesagem.mapa110.text = "";
+      controladoresPesagem.mapa110.text = "";
     }
     if (temValor531Coluna9) {
-      _controladoresPesagem.mapa111.text = "531";
+      controladoresPesagem.mapa111.text = "531";
     } else {
-      _controladoresPesagem.mapa111.text = "";
+      controladoresPesagem.mapa111.text = "";
     }
     if (temValor532Coluna9) {
-      _controladoresPesagem.mapa112.text = "532";
+      controladoresPesagem.mapa112.text = "532";
     } else {
-      _controladoresPesagem.mapa112.text = "";
+      controladoresPesagem.mapa112.text = "";
     }
     if (temValor533Coluna9) {
-      _controladoresPesagem.mapa113.text = "533";
+      controladoresPesagem.mapa113.text = "533";
     } else {
-      _controladoresPesagem.mapa113.text = "";
+      controladoresPesagem.mapa113.text = "";
     }
     if (temValor633a641Coluna9) {
-      _controladoresPesagem.mapa114.text = "633 a 641";
+      controladoresPesagem.mapa114.text = "633 a 641";
     } else {
-      _controladoresPesagem.mapa114.text = "";
+      controladoresPesagem.mapa114.text = "";
     }
     if (temValor642a650Coluna9) {
-      _controladoresPesagem.mapa115.text = "642 a 650";
+      controladoresPesagem.mapa115.text = "642 a 650";
     } else {
-      _controladoresPesagem.mapa115.text = "";
+      controladoresPesagem.mapa115.text = "";
     }
     if (temValor713Coluna9) {
-      _controladoresPesagem.mapa116.text = "713";
+      controladoresPesagem.mapa116.text = "713";
     } else {
-      _controladoresPesagem.mapa116.text = "";
+      controladoresPesagem.mapa116.text = "";
     }
     if (temValor714Coluna9) {
-      _controladoresPesagem.mapa117.text = "714";
+      controladoresPesagem.mapa117.text = "714";
     } else {
-      _controladoresPesagem.mapa117.text = "";
+      controladoresPesagem.mapa117.text = "";
     }
 ////////////////////
 ////////////////////
@@ -1370,71 +1370,71 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
 ////////////////////
 ////////////////////
     if (temValor715Coluna10) {
-      _controladoresPesagem.mapa118.text = "715";
+      controladoresPesagem.mapa118.text = "715";
     } else {
-      _controladoresPesagem.mapa118.text = "";
+      controladoresPesagem.mapa118.text = "";
     }
 
     if (temValor716Coluna10) {
-      _controladoresPesagem.mapa119.text = "716";
+      controladoresPesagem.mapa119.text = "716";
     } else {
-      _controladoresPesagem.mapa119.text = "";
+      controladoresPesagem.mapa119.text = "";
     }
     if (temValor717Coluna10) {
-      _controladoresPesagem.mapa120.text = "717";
+      controladoresPesagem.mapa120.text = "717";
     } else {
-      _controladoresPesagem.mapa120.text = "";
+      controladoresPesagem.mapa120.text = "";
     }
     if (temValorGrandeColuna10) {
-      _controladoresPesagem.mapa121.text =
+      controladoresPesagem.mapa121.text =
           "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
     } else {
-      _controladoresPesagem.mapa121.text = "";
+      controladoresPesagem.mapa121.text = "";
     }
     if (temValor529Coluna10) {
-      _controladoresPesagem.mapa122.text = "529";
+      controladoresPesagem.mapa122.text = "529";
     } else {
-      _controladoresPesagem.mapa122.text = "";
+      controladoresPesagem.mapa122.text = "";
     }
     if (temValor530Coluna10) {
-      _controladoresPesagem.mapa123.text = "530";
+      controladoresPesagem.mapa123.text = "530";
     } else {
-      _controladoresPesagem.mapa123.text = "";
+      controladoresPesagem.mapa123.text = "";
     }
     if (temValor531Coluna10) {
-      _controladoresPesagem.mapa124.text = "531";
+      controladoresPesagem.mapa124.text = "531";
     } else {
-      _controladoresPesagem.mapa124.text = "";
+      controladoresPesagem.mapa124.text = "";
     }
     if (temValor532Coluna10) {
-      _controladoresPesagem.mapa125.text = "532";
+      controladoresPesagem.mapa125.text = "532";
     } else {
-      _controladoresPesagem.mapa125.text = "";
+      controladoresPesagem.mapa125.text = "";
     }
     if (temValor533Coluna10) {
-      _controladoresPesagem.mapa126.text = "533";
+      controladoresPesagem.mapa126.text = "533";
     } else {
-      _controladoresPesagem.mapa126.text = "";
+      controladoresPesagem.mapa126.text = "";
     }
     if (temValor633a641Coluna10) {
-      _controladoresPesagem.mapa127.text = "633 a 641";
+      controladoresPesagem.mapa127.text = "633 a 641";
     } else {
-      _controladoresPesagem.mapa127.text = "";
+      controladoresPesagem.mapa127.text = "";
     }
     if (temValor642a650Coluna10) {
-      _controladoresPesagem.mapa128.text = "642 a 650";
+      controladoresPesagem.mapa128.text = "642 a 650";
     } else {
-      _controladoresPesagem.mapa128.text = "";
+      controladoresPesagem.mapa128.text = "";
     }
     if (temValor713Coluna10) {
-      _controladoresPesagem.mapa129.text = "713";
+      controladoresPesagem.mapa129.text = "713";
     } else {
-      _controladoresPesagem.mapa129.text = "";
+      controladoresPesagem.mapa129.text = "";
     }
     if (temValor714Coluna10) {
-      _controladoresPesagem.mapa130.text = "714";
+      controladoresPesagem.mapa130.text = "714";
     } else {
-      _controladoresPesagem.mapa130.text = "";
+      controladoresPesagem.mapa130.text = "";
     }
 ////////////////////
 ////////////////////
@@ -1444,71 +1444,71 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
 ////////////////////
 ////////////////////
     if (temValor715Coluna11) {
-      _controladoresPesagem.mapa131.text = "715";
+      controladoresPesagem.mapa131.text = "715";
     } else {
-      _controladoresPesagem.mapa131.text = "";
+      controladoresPesagem.mapa131.text = "";
     }
 
     if (temValor716Coluna11) {
-      _controladoresPesagem.mapa132.text = "716";
+      controladoresPesagem.mapa132.text = "716";
     } else {
-      _controladoresPesagem.mapa132.text = "";
+      controladoresPesagem.mapa132.text = "";
     }
     if (temValor717Coluna11) {
-      _controladoresPesagem.mapa133.text = "717";
+      controladoresPesagem.mapa133.text = "717";
     } else {
-      _controladoresPesagem.mapa133.text = "";
+      controladoresPesagem.mapa133.text = "";
     }
     if (temValorGrandeColuna11) {
-      _controladoresPesagem.mapa134.text =
+      controladoresPesagem.mapa134.text =
           "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
     } else {
-      _controladoresPesagem.mapa134.text = "";
+      controladoresPesagem.mapa134.text = "";
     }
     if (temValor529Coluna11) {
-      _controladoresPesagem.mapa135.text = "529";
+      controladoresPesagem.mapa135.text = "529";
     } else {
-      _controladoresPesagem.mapa135.text = "";
+      controladoresPesagem.mapa135.text = "";
     }
     if (temValor530Coluna11) {
-      _controladoresPesagem.mapa136.text = "530";
+      controladoresPesagem.mapa136.text = "530";
     } else {
-      _controladoresPesagem.mapa136.text = "";
+      controladoresPesagem.mapa136.text = "";
     }
     if (temValor531Coluna11) {
-      _controladoresPesagem.mapa137.text = "531";
+      controladoresPesagem.mapa137.text = "531";
     } else {
-      _controladoresPesagem.mapa137.text = "";
+      controladoresPesagem.mapa137.text = "";
     }
     if (temValor532Coluna11) {
-      _controladoresPesagem.mapa138.text = "532";
+      controladoresPesagem.mapa138.text = "532";
     } else {
-      _controladoresPesagem.mapa138.text = "";
+      controladoresPesagem.mapa138.text = "";
     }
     if (temValor533Coluna11) {
-      _controladoresPesagem.mapa139.text = "533";
+      controladoresPesagem.mapa139.text = "533";
     } else {
-      _controladoresPesagem.mapa139.text = "";
+      controladoresPesagem.mapa139.text = "";
     }
     if (temValor633a641Coluna11) {
-      _controladoresPesagem.mapa140.text = "633 a 641";
+      controladoresPesagem.mapa140.text = "633 a 641";
     } else {
-      _controladoresPesagem.mapa140.text = "";
+      controladoresPesagem.mapa140.text = "";
     }
     if (temValor642a650Coluna11) {
-      _controladoresPesagem.mapa141.text = "642 a 650";
+      controladoresPesagem.mapa141.text = "642 a 650";
     } else {
-      _controladoresPesagem.mapa141.text = "";
+      controladoresPesagem.mapa141.text = "";
     }
     if (temValor713Coluna11) {
-      _controladoresPesagem.mapa142.text = "713";
+      controladoresPesagem.mapa142.text = "713";
     } else {
-      _controladoresPesagem.mapa142.text = "";
+      controladoresPesagem.mapa142.text = "";
     }
     if (temValor714Coluna11) {
-      _controladoresPesagem.mapa143.text = "714";
+      controladoresPesagem.mapa143.text = "714";
     } else {
-      _controladoresPesagem.mapa143.text = "";
+      controladoresPesagem.mapa143.text = "";
     }
 ////////////////////
 ////////////////////
@@ -1518,71 +1518,71 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
 ////////////////////
 ////////////////////
     if (temValor715Coluna12) {
-      _controladoresPesagem.mapa144.text = "715";
+      controladoresPesagem.mapa144.text = "715";
     } else {
-      _controladoresPesagem.mapa144.text = "";
+      controladoresPesagem.mapa144.text = "";
     }
 
     if (temValor716Coluna12) {
-      _controladoresPesagem.mapa145.text = "716";
+      controladoresPesagem.mapa145.text = "716";
     } else {
-      _controladoresPesagem.mapa145.text = "";
+      controladoresPesagem.mapa145.text = "";
     }
     if (temValor717Coluna12) {
-      _controladoresPesagem.mapa146.text = "717";
+      controladoresPesagem.mapa146.text = "717";
     } else {
-      _controladoresPesagem.mapa146.text = "";
+      controladoresPesagem.mapa146.text = "";
     }
     if (temValorGrandeColuna12) {
-      _controladoresPesagem.mapa147.text =
+      controladoresPesagem.mapa147.text =
           "534, 536, 542, 548 a 552, 663, 681, 682  e 708";
     } else {
-      _controladoresPesagem.mapa147.text = "";
+      controladoresPesagem.mapa147.text = "";
     }
     if (temValor529Coluna12) {
-      _controladoresPesagem.mapa148.text = "529";
+      controladoresPesagem.mapa148.text = "529";
     } else {
-      _controladoresPesagem.mapa148.text = "";
+      controladoresPesagem.mapa148.text = "";
     }
     if (temValor530Coluna12) {
-      _controladoresPesagem.mapa149.text = "530";
+      controladoresPesagem.mapa149.text = "530";
     } else {
-      _controladoresPesagem.mapa149.text = "";
+      controladoresPesagem.mapa149.text = "";
     }
     if (temValor531Coluna12) {
-      _controladoresPesagem.mapa150.text = "531";
+      controladoresPesagem.mapa150.text = "531";
     } else {
-      _controladoresPesagem.mapa150.text = "";
+      controladoresPesagem.mapa150.text = "";
     }
     if (temValor532Coluna12) {
-      _controladoresPesagem.mapa151.text = "532";
+      controladoresPesagem.mapa151.text = "532";
     } else {
-      _controladoresPesagem.mapa151.text = "";
+      controladoresPesagem.mapa151.text = "";
     }
     if (temValor533Coluna12) {
-      _controladoresPesagem.mapa152.text = "533";
+      controladoresPesagem.mapa152.text = "533";
     } else {
-      _controladoresPesagem.mapa152.text = "";
+      controladoresPesagem.mapa152.text = "";
     }
     if (temValor633a641Coluna12) {
-      _controladoresPesagem.mapa153.text = "633 a 641";
+      controladoresPesagem.mapa153.text = "633 a 641";
     } else {
-      _controladoresPesagem.mapa153.text = "";
+      controladoresPesagem.mapa153.text = "";
     }
     if (temValor642a650Coluna12) {
-      _controladoresPesagem.mapa154.text = "642 a 650";
+      controladoresPesagem.mapa154.text = "642 a 650";
     } else {
-      _controladoresPesagem.mapa154.text = "";
+      controladoresPesagem.mapa154.text = "";
     }
     if (temValor713Coluna12) {
-      _controladoresPesagem.mapa155.text = "713";
+      controladoresPesagem.mapa155.text = "713";
     } else {
-      _controladoresPesagem.mapa155.text = "";
+      controladoresPesagem.mapa155.text = "";
     }
     if (temValor714Coluna12) {
-      _controladoresPesagem.mapa156.text = "714";
+      controladoresPesagem.mapa156.text = "714";
     } else {
-      _controladoresPesagem.mapa156.text = "";
+      controladoresPesagem.mapa156.text = "";
     }
   }
 
@@ -1611,90 +1611,90 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
     double somaColuna12 = 0.0;
 
     var coluna1 = [
-      _controladoresPesagem.aPesoPadrao1,
-      _controladoresPesagem.aPesoPadrao2,
-      _controladoresPesagem.aPesoPadrao3,
-      _controladoresPesagem.aPesoPadrao4,
-      _controladoresPesagem.aPesoPadrao5,
+      controladoresPesagem.aPesoPadrao1,
+      controladoresPesagem.aPesoPadrao2,
+      controladoresPesagem.aPesoPadrao3,
+      controladoresPesagem.aPesoPadrao4,
+      controladoresPesagem.aPesoPadrao5,
     ];
 
     var coluna2 = [
-      _controladoresPesagem.aPesoPadrao6,
-      _controladoresPesagem.aPesoPadrao7,
-      _controladoresPesagem.aPesoPadrao8,
-      _controladoresPesagem.aPesoPadrao9,
-      _controladoresPesagem.aPesoPadrao10,
+      controladoresPesagem.aPesoPadrao6,
+      controladoresPesagem.aPesoPadrao7,
+      controladoresPesagem.aPesoPadrao8,
+      controladoresPesagem.aPesoPadrao9,
+      controladoresPesagem.aPesoPadrao10,
     ];
     var coluna3 = [
-      _controladoresPesagem.aPesoPadrao11,
-      _controladoresPesagem.aPesoPadrao12,
-      _controladoresPesagem.aPesoPadrao13,
-      _controladoresPesagem.aPesoPadrao14,
-      _controladoresPesagem.aPesoPadrao15,
+      controladoresPesagem.aPesoPadrao11,
+      controladoresPesagem.aPesoPadrao12,
+      controladoresPesagem.aPesoPadrao13,
+      controladoresPesagem.aPesoPadrao14,
+      controladoresPesagem.aPesoPadrao15,
     ];
     var coluna4 = [
-      _controladoresPesagem.aPesoPadrao16,
-      _controladoresPesagem.aPesoPadrao17,
-      _controladoresPesagem.aPesoPadrao18,
-      _controladoresPesagem.aPesoPadrao19,
-      _controladoresPesagem.aPesoPadrao20,
+      controladoresPesagem.aPesoPadrao16,
+      controladoresPesagem.aPesoPadrao17,
+      controladoresPesagem.aPesoPadrao18,
+      controladoresPesagem.aPesoPadrao19,
+      controladoresPesagem.aPesoPadrao20,
     ];
     var coluna5 = [
-      _controladoresPesagem.aPesoPadrao21,
-      _controladoresPesagem.aPesoPadrao22,
-      _controladoresPesagem.aPesoPadrao23,
-      _controladoresPesagem.aPesoPadrao24,
-      _controladoresPesagem.aPesoPadrao25,
+      controladoresPesagem.aPesoPadrao21,
+      controladoresPesagem.aPesoPadrao22,
+      controladoresPesagem.aPesoPadrao23,
+      controladoresPesagem.aPesoPadrao24,
+      controladoresPesagem.aPesoPadrao25,
     ];
     var coluna6 = [
-      _controladoresPesagem.aPesoPadrao26,
-      _controladoresPesagem.aPesoPadrao27,
-      _controladoresPesagem.aPesoPadrao28,
-      _controladoresPesagem.aPesoPadrao29,
-      _controladoresPesagem.aPesoPadrao30,
+      controladoresPesagem.aPesoPadrao26,
+      controladoresPesagem.aPesoPadrao27,
+      controladoresPesagem.aPesoPadrao28,
+      controladoresPesagem.aPesoPadrao29,
+      controladoresPesagem.aPesoPadrao30,
     ];
     var coluna7 = [
-      _controladoresPesagem.aPesoPadrao31,
-      _controladoresPesagem.aPesoPadrao32,
-      _controladoresPesagem.aPesoPadrao33,
-      _controladoresPesagem.aPesoPadrao34,
-      _controladoresPesagem.aPesoPadrao35,
+      controladoresPesagem.aPesoPadrao31,
+      controladoresPesagem.aPesoPadrao32,
+      controladoresPesagem.aPesoPadrao33,
+      controladoresPesagem.aPesoPadrao34,
+      controladoresPesagem.aPesoPadrao35,
     ];
 
     var coluna8 = [
-      _controladoresPesagem.aPesoPadrao36,
-      _controladoresPesagem.aPesoPadrao37,
-      _controladoresPesagem.aPesoPadrao38,
-      _controladoresPesagem.aPesoPadrao39,
-      _controladoresPesagem.aPesoPadrao40,
+      controladoresPesagem.aPesoPadrao36,
+      controladoresPesagem.aPesoPadrao37,
+      controladoresPesagem.aPesoPadrao38,
+      controladoresPesagem.aPesoPadrao39,
+      controladoresPesagem.aPesoPadrao40,
     ];
     var coluna9 = [
-      _controladoresPesagem.aPesoPadrao41,
-      _controladoresPesagem.aPesoPadrao42,
-      _controladoresPesagem.aPesoPadrao43,
-      _controladoresPesagem.aPesoPadrao44,
-      _controladoresPesagem.aPesoPadrao45,
+      controladoresPesagem.aPesoPadrao41,
+      controladoresPesagem.aPesoPadrao42,
+      controladoresPesagem.aPesoPadrao43,
+      controladoresPesagem.aPesoPadrao44,
+      controladoresPesagem.aPesoPadrao45,
     ];
     var coluna10 = [
-      _controladoresPesagem.aPesoPadrao46,
-      _controladoresPesagem.aPesoPadrao47,
-      _controladoresPesagem.aPesoPadrao48,
-      _controladoresPesagem.aPesoPadrao49,
-      _controladoresPesagem.aPesoPadrao50,
+      controladoresPesagem.aPesoPadrao46,
+      controladoresPesagem.aPesoPadrao47,
+      controladoresPesagem.aPesoPadrao48,
+      controladoresPesagem.aPesoPadrao49,
+      controladoresPesagem.aPesoPadrao50,
     ];
     var coluna11 = [
-      _controladoresPesagem.aPesoPadrao51,
-      _controladoresPesagem.aPesoPadrao52,
-      _controladoresPesagem.aPesoPadrao53,
-      _controladoresPesagem.aPesoPadrao54,
-      _controladoresPesagem.aPesoPadrao55,
+      controladoresPesagem.aPesoPadrao51,
+      controladoresPesagem.aPesoPadrao52,
+      controladoresPesagem.aPesoPadrao53,
+      controladoresPesagem.aPesoPadrao54,
+      controladoresPesagem.aPesoPadrao55,
     ];
     var coluna12 = [
-      _controladoresPesagem.aPesoPadrao56,
-      _controladoresPesagem.aPesoPadrao57,
-      _controladoresPesagem.aPesoPadrao58,
-      _controladoresPesagem.aPesoPadrao59,
-      _controladoresPesagem.aPesoPadrao60,
+      controladoresPesagem.aPesoPadrao56,
+      controladoresPesagem.aPesoPadrao57,
+      controladoresPesagem.aPesoPadrao58,
+      controladoresPesagem.aPesoPadrao59,
+      controladoresPesagem.aPesoPadrao60,
     ];
 
     List<Map<String, String>> mapas = [
@@ -1846,29 +1846,29 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
       }
     }
 
-    _controladoresPesagem.result1.text =
+    controladoresPesagem.result1.text =
         somaColuna1.toStringAsFixed(7).replaceAll(".", ",");
-    _controladoresPesagem.result2.text =
+    controladoresPesagem.result2.text =
         somaColuna2.toStringAsFixed(7).replaceAll(".", ",");
-    _controladoresPesagem.result3.text =
+    controladoresPesagem.result3.text =
         somaColuna3.toStringAsFixed(7).replaceAll(".", ",");
-    _controladoresPesagem.result4.text =
+    controladoresPesagem.result4.text =
         somaColuna4.toStringAsFixed(7).replaceAll(".", ",");
-    _controladoresPesagem.result5.text =
+    controladoresPesagem.result5.text =
         somaColuna5.toStringAsFixed(7).replaceAll(".", ",");
-    _controladoresPesagem.result6.text =
+    controladoresPesagem.result6.text =
         somaColuna6.toStringAsFixed(7).replaceAll(".", ",");
-    _controladoresPesagem.result7.text =
+    controladoresPesagem.result7.text =
         somaColuna7.toStringAsFixed(7).replaceAll(".", ",");
-    _controladoresPesagem.result8.text =
+    controladoresPesagem.result8.text =
         somaColuna8.toStringAsFixed(7).replaceAll(".", ",");
-    _controladoresPesagem.result9.text =
+    controladoresPesagem.result9.text =
         somaColuna9.toStringAsFixed(7).replaceAll(".", ",");
-    _controladoresPesagem.result10.text =
+    controladoresPesagem.result10.text =
         somaColuna10.toStringAsFixed(7).replaceAll(".", ",");
-    _controladoresPesagem.result11.text =
+    controladoresPesagem.result11.text =
         somaColuna11.toStringAsFixed(7).replaceAll(".", ",");
-    _controladoresPesagem.result12.text =
+    controladoresPesagem.result12.text =
         somaColuna12.toStringAsFixed(7).replaceAll(".", ",");
   }
 
@@ -2026,27 +2026,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao1,
+                                controladoresPesagem.aPesoPadrao1,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 1),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao2,
+                                controladoresPesagem.aPesoPadrao2,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 1),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao3,
+                                controladoresPesagem.aPesoPadrao3,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 1),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao4,
+                                controladoresPesagem.aPesoPadrao4,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 1),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao5,
+                                controladoresPesagem.aPesoPadrao5,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 1),
                           ],
@@ -2055,21 +2055,21 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                       Container(width: 10),
                       Column(
                         children: [
-                          resultBox(_controladoresPesagem.result1,
+                          resultBox(controladoresPesagem.result1,
                               numPontosApoio >= 1),
-                          mapasNumeros(_controladoresPesagem.mapa),
-                          mapasNumeros(_controladoresPesagem.mapa2),
-                          mapasNumeros(_controladoresPesagem.mapa3),
-                          mapasNumeros(_controladoresPesagem.mapa4),
-                          mapasNumeros(_controladoresPesagem.mapa5),
-                          mapasNumeros(_controladoresPesagem.mapa6),
-                          mapasNumeros(_controladoresPesagem.mapa7),
-                          mapasNumeros(_controladoresPesagem.mapa8),
-                          mapasNumeros(_controladoresPesagem.mapa9),
-                          mapasNumeros(_controladoresPesagem.mapa10),
-                          mapasNumeros(_controladoresPesagem.mapa11),
-                          mapasNumeros(_controladoresPesagem.mapa12),
-                          mapasNumeros(_controladoresPesagem.mapa13),
+                          mapasNumeros(controladoresPesagem.mapa),
+                          mapasNumeros(controladoresPesagem.mapa2),
+                          mapasNumeros(controladoresPesagem.mapa3),
+                          mapasNumeros(controladoresPesagem.mapa4),
+                          mapasNumeros(controladoresPesagem.mapa5),
+                          mapasNumeros(controladoresPesagem.mapa6),
+                          mapasNumeros(controladoresPesagem.mapa7),
+                          mapasNumeros(controladoresPesagem.mapa8),
+                          mapasNumeros(controladoresPesagem.mapa9),
+                          mapasNumeros(controladoresPesagem.mapa10),
+                          mapasNumeros(controladoresPesagem.mapa11),
+                          mapasNumeros(controladoresPesagem.mapa12),
+                          mapasNumeros(controladoresPesagem.mapa13),
                         ],
                       ),
                     ],
@@ -2083,27 +2083,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao6,
+                                controladoresPesagem.aPesoPadrao6,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 2),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao7,
+                                controladoresPesagem.aPesoPadrao7,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 2),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao8,
+                                controladoresPesagem.aPesoPadrao8,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 2),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao9,
+                                controladoresPesagem.aPesoPadrao9,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 2),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao10,
+                                controladoresPesagem.aPesoPadrao10,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 2),
                           ],
@@ -2112,21 +2112,21 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                       Container(width: 10),
                       Column(
                         children: [
-                          resultBox(_controladoresPesagem.result2,
+                          resultBox(controladoresPesagem.result2,
                               numPontosApoio >= 2),
-                          mapasNumeros(_controladoresPesagem.mapa14),
-                          mapasNumeros(_controladoresPesagem.mapa15),
-                          mapasNumeros(_controladoresPesagem.mapa16),
-                          mapasNumeros(_controladoresPesagem.mapa17),
-                          mapasNumeros(_controladoresPesagem.mapa18),
-                          mapasNumeros(_controladoresPesagem.mapa19),
-                          mapasNumeros(_controladoresPesagem.mapa20),
-                          mapasNumeros(_controladoresPesagem.mapa21),
-                          mapasNumeros(_controladoresPesagem.mapa22),
-                          mapasNumeros(_controladoresPesagem.mapa23),
-                          mapasNumeros(_controladoresPesagem.mapa24),
-                          mapasNumeros(_controladoresPesagem.mapa25),
-                          mapasNumeros(_controladoresPesagem.mapa26),
+                          mapasNumeros(controladoresPesagem.mapa14),
+                          mapasNumeros(controladoresPesagem.mapa15),
+                          mapasNumeros(controladoresPesagem.mapa16),
+                          mapasNumeros(controladoresPesagem.mapa17),
+                          mapasNumeros(controladoresPesagem.mapa18),
+                          mapasNumeros(controladoresPesagem.mapa19),
+                          mapasNumeros(controladoresPesagem.mapa20),
+                          mapasNumeros(controladoresPesagem.mapa21),
+                          mapasNumeros(controladoresPesagem.mapa22),
+                          mapasNumeros(controladoresPesagem.mapa23),
+                          mapasNumeros(controladoresPesagem.mapa24),
+                          mapasNumeros(controladoresPesagem.mapa25),
+                          mapasNumeros(controladoresPesagem.mapa26),
                         ],
                       ),
                     ],
@@ -2140,27 +2140,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao11,
+                                controladoresPesagem.aPesoPadrao11,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 3),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao12,
+                                controladoresPesagem.aPesoPadrao12,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 3),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao13,
+                                controladoresPesagem.aPesoPadrao13,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 3),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao14,
+                                controladoresPesagem.aPesoPadrao14,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 3),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao15,
+                                controladoresPesagem.aPesoPadrao15,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 3),
                           ],
@@ -2169,21 +2169,21 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                       Container(width: 10),
                       Column(
                         children: [
-                          resultBox(_controladoresPesagem.result3,
+                          resultBox(controladoresPesagem.result3,
                               numPontosApoio >= 3),
-                          mapasNumeros(_controladoresPesagem.mapa27),
-                          mapasNumeros(_controladoresPesagem.mapa28),
-                          mapasNumeros(_controladoresPesagem.mapa29),
-                          mapasNumeros(_controladoresPesagem.mapa30),
-                          mapasNumeros(_controladoresPesagem.mapa31),
-                          mapasNumeros(_controladoresPesagem.mapa32),
-                          mapasNumeros(_controladoresPesagem.mapa33),
-                          mapasNumeros(_controladoresPesagem.mapa34),
-                          mapasNumeros(_controladoresPesagem.mapa35),
-                          mapasNumeros(_controladoresPesagem.mapa36),
-                          mapasNumeros(_controladoresPesagem.mapa37),
-                          mapasNumeros(_controladoresPesagem.mapa38),
-                          mapasNumeros(_controladoresPesagem.mapa39),
+                          mapasNumeros(controladoresPesagem.mapa27),
+                          mapasNumeros(controladoresPesagem.mapa28),
+                          mapasNumeros(controladoresPesagem.mapa29),
+                          mapasNumeros(controladoresPesagem.mapa30),
+                          mapasNumeros(controladoresPesagem.mapa31),
+                          mapasNumeros(controladoresPesagem.mapa32),
+                          mapasNumeros(controladoresPesagem.mapa33),
+                          mapasNumeros(controladoresPesagem.mapa34),
+                          mapasNumeros(controladoresPesagem.mapa35),
+                          mapasNumeros(controladoresPesagem.mapa36),
+                          mapasNumeros(controladoresPesagem.mapa37),
+                          mapasNumeros(controladoresPesagem.mapa38),
+                          mapasNumeros(controladoresPesagem.mapa39),
                         ],
                       ),
                     ],
@@ -2197,27 +2197,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao16,
+                                controladoresPesagem.aPesoPadrao16,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 4),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao17,
+                                controladoresPesagem.aPesoPadrao17,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 4),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao18,
+                                controladoresPesagem.aPesoPadrao18,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 4),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao19,
+                                controladoresPesagem.aPesoPadrao19,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 4),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao20,
+                                controladoresPesagem.aPesoPadrao20,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 4),
                           ],
@@ -2226,21 +2226,21 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                       Container(width: 10),
                       Column(
                         children: [
-                          resultBox(_controladoresPesagem.result4,
+                          resultBox(controladoresPesagem.result4,
                               numPontosApoio >= 4),
-                          mapasNumeros(_controladoresPesagem.mapa40),
-                          mapasNumeros(_controladoresPesagem.mapa41),
-                          mapasNumeros(_controladoresPesagem.mapa42),
-                          mapasNumeros(_controladoresPesagem.mapa43),
-                          mapasNumeros(_controladoresPesagem.mapa44),
-                          mapasNumeros(_controladoresPesagem.mapa45),
-                          mapasNumeros(_controladoresPesagem.mapa46),
-                          mapasNumeros(_controladoresPesagem.mapa47),
-                          mapasNumeros(_controladoresPesagem.mapa48),
-                          mapasNumeros(_controladoresPesagem.mapa59),
-                          mapasNumeros(_controladoresPesagem.mapa50),
-                          mapasNumeros(_controladoresPesagem.mapa51),
-                          mapasNumeros(_controladoresPesagem.mapa52),
+                          mapasNumeros(controladoresPesagem.mapa40),
+                          mapasNumeros(controladoresPesagem.mapa41),
+                          mapasNumeros(controladoresPesagem.mapa42),
+                          mapasNumeros(controladoresPesagem.mapa43),
+                          mapasNumeros(controladoresPesagem.mapa44),
+                          mapasNumeros(controladoresPesagem.mapa45),
+                          mapasNumeros(controladoresPesagem.mapa46),
+                          mapasNumeros(controladoresPesagem.mapa47),
+                          mapasNumeros(controladoresPesagem.mapa48),
+                          mapasNumeros(controladoresPesagem.mapa59),
+                          mapasNumeros(controladoresPesagem.mapa50),
+                          mapasNumeros(controladoresPesagem.mapa51),
+                          mapasNumeros(controladoresPesagem.mapa52),
                         ],
                       ),
                     ],
@@ -2254,27 +2254,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao21,
+                                controladoresPesagem.aPesoPadrao21,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 5),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao22,
+                                controladoresPesagem.aPesoPadrao22,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 5),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao23,
+                                controladoresPesagem.aPesoPadrao23,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 5),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao24,
+                                controladoresPesagem.aPesoPadrao24,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 5),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao25,
+                                controladoresPesagem.aPesoPadrao25,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 5),
                           ],
@@ -2283,21 +2283,21 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                       Container(width: 10),
                       Column(
                         children: [
-                          resultBox(_controladoresPesagem.result5,
+                          resultBox(controladoresPesagem.result5,
                               numPontosApoio >= 5),
-                          mapasNumeros(_controladoresPesagem.mapa53),
-                          mapasNumeros(_controladoresPesagem.mapa54),
-                          mapasNumeros(_controladoresPesagem.mapa55),
-                          mapasNumeros(_controladoresPesagem.mapa56),
-                          mapasNumeros(_controladoresPesagem.mapa57),
-                          mapasNumeros(_controladoresPesagem.mapa58),
-                          mapasNumeros(_controladoresPesagem.mapa59),
-                          mapasNumeros(_controladoresPesagem.mapa60),
-                          mapasNumeros(_controladoresPesagem.mapa61),
-                          mapasNumeros(_controladoresPesagem.mapa62),
-                          mapasNumeros(_controladoresPesagem.mapa63),
-                          mapasNumeros(_controladoresPesagem.mapa64),
-                          mapasNumeros(_controladoresPesagem.mapa65),
+                          mapasNumeros(controladoresPesagem.mapa53),
+                          mapasNumeros(controladoresPesagem.mapa54),
+                          mapasNumeros(controladoresPesagem.mapa55),
+                          mapasNumeros(controladoresPesagem.mapa56),
+                          mapasNumeros(controladoresPesagem.mapa57),
+                          mapasNumeros(controladoresPesagem.mapa58),
+                          mapasNumeros(controladoresPesagem.mapa59),
+                          mapasNumeros(controladoresPesagem.mapa60),
+                          mapasNumeros(controladoresPesagem.mapa61),
+                          mapasNumeros(controladoresPesagem.mapa62),
+                          mapasNumeros(controladoresPesagem.mapa63),
+                          mapasNumeros(controladoresPesagem.mapa64),
+                          mapasNumeros(controladoresPesagem.mapa65),
                         ],
                       ),
                     ],
@@ -2311,27 +2311,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao26,
+                                controladoresPesagem.aPesoPadrao26,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 6),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao27,
+                                controladoresPesagem.aPesoPadrao27,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 6),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao28,
+                                controladoresPesagem.aPesoPadrao28,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 6),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao29,
+                                controladoresPesagem.aPesoPadrao29,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 6),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao30,
+                                controladoresPesagem.aPesoPadrao30,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 6),
                           ],
@@ -2340,21 +2340,21 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                       Container(width: 10),
                       Column(
                         children: [
-                          resultBox(_controladoresPesagem.result6,
+                          resultBox(controladoresPesagem.result6,
                               numPontosApoio >= 6),
-                          mapasNumeros(_controladoresPesagem.mapa66),
-                          mapasNumeros(_controladoresPesagem.mapa67),
-                          mapasNumeros(_controladoresPesagem.mapa68),
-                          mapasNumeros(_controladoresPesagem.mapa69),
-                          mapasNumeros(_controladoresPesagem.mapa70),
-                          mapasNumeros(_controladoresPesagem.mapa71),
-                          mapasNumeros(_controladoresPesagem.mapa72),
-                          mapasNumeros(_controladoresPesagem.mapa73),
-                          mapasNumeros(_controladoresPesagem.mapa74),
-                          mapasNumeros(_controladoresPesagem.mapa75),
-                          mapasNumeros(_controladoresPesagem.mapa76),
-                          mapasNumeros(_controladoresPesagem.mapa77),
-                          mapasNumeros(_controladoresPesagem.mapa78),
+                          mapasNumeros(controladoresPesagem.mapa66),
+                          mapasNumeros(controladoresPesagem.mapa67),
+                          mapasNumeros(controladoresPesagem.mapa68),
+                          mapasNumeros(controladoresPesagem.mapa69),
+                          mapasNumeros(controladoresPesagem.mapa70),
+                          mapasNumeros(controladoresPesagem.mapa71),
+                          mapasNumeros(controladoresPesagem.mapa72),
+                          mapasNumeros(controladoresPesagem.mapa73),
+                          mapasNumeros(controladoresPesagem.mapa74),
+                          mapasNumeros(controladoresPesagem.mapa75),
+                          mapasNumeros(controladoresPesagem.mapa76),
+                          mapasNumeros(controladoresPesagem.mapa77),
+                          mapasNumeros(controladoresPesagem.mapa78),
                         ],
                       ),
                     ],
@@ -2384,27 +2384,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao31,
+                                controladoresPesagem.aPesoPadrao31,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 7),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao32,
+                                controladoresPesagem.aPesoPadrao32,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 7),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao33,
+                                controladoresPesagem.aPesoPadrao33,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 7),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao34,
+                                controladoresPesagem.aPesoPadrao34,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 7),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao35,
+                                controladoresPesagem.aPesoPadrao35,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 7),
                           ],
@@ -2413,21 +2413,21 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                       Container(width: 10),
                       Column(
                         children: [
-                          resultBox(_controladoresPesagem.result7,
+                          resultBox(controladoresPesagem.result7,
                               numPontosApoio >= 7),
-                          mapasNumeros(_controladoresPesagem.mapa79),
-                          mapasNumeros(_controladoresPesagem.mapa80),
-                          mapasNumeros(_controladoresPesagem.mapa81),
-                          mapasNumeros(_controladoresPesagem.mapa82),
-                          mapasNumeros(_controladoresPesagem.mapa83),
-                          mapasNumeros(_controladoresPesagem.mapa84),
-                          mapasNumeros(_controladoresPesagem.mapa85),
-                          mapasNumeros(_controladoresPesagem.mapa86),
-                          mapasNumeros(_controladoresPesagem.mapa87),
-                          mapasNumeros(_controladoresPesagem.mapa88),
-                          mapasNumeros(_controladoresPesagem.mapa89),
-                          mapasNumeros(_controladoresPesagem.mapa90),
-                          mapasNumeros(_controladoresPesagem.mapa91),
+                          mapasNumeros(controladoresPesagem.mapa79),
+                          mapasNumeros(controladoresPesagem.mapa80),
+                          mapasNumeros(controladoresPesagem.mapa81),
+                          mapasNumeros(controladoresPesagem.mapa82),
+                          mapasNumeros(controladoresPesagem.mapa83),
+                          mapasNumeros(controladoresPesagem.mapa84),
+                          mapasNumeros(controladoresPesagem.mapa85),
+                          mapasNumeros(controladoresPesagem.mapa86),
+                          mapasNumeros(controladoresPesagem.mapa87),
+                          mapasNumeros(controladoresPesagem.mapa88),
+                          mapasNumeros(controladoresPesagem.mapa89),
+                          mapasNumeros(controladoresPesagem.mapa90),
+                          mapasNumeros(controladoresPesagem.mapa91),
                         ],
                       ),
                     ],
@@ -2441,27 +2441,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao36,
+                                controladoresPesagem.aPesoPadrao36,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 8),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao37,
+                                controladoresPesagem.aPesoPadrao37,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 8),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao38,
+                                controladoresPesagem.aPesoPadrao38,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 8),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao39,
+                                controladoresPesagem.aPesoPadrao39,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 8),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao40,
+                                controladoresPesagem.aPesoPadrao40,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 8),
                           ],
@@ -2470,21 +2470,21 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                       Container(width: 10),
                       Column(
                         children: [
-                          resultBox(_controladoresPesagem.result8,
+                          resultBox(controladoresPesagem.result8,
                               numPontosApoio >= 8),
-                          mapasNumeros(_controladoresPesagem.mapa92),
-                          mapasNumeros(_controladoresPesagem.mapa93),
-                          mapasNumeros(_controladoresPesagem.mapa94),
-                          mapasNumeros(_controladoresPesagem.mapa95),
-                          mapasNumeros(_controladoresPesagem.mapa96),
-                          mapasNumeros(_controladoresPesagem.mapa97),
-                          mapasNumeros(_controladoresPesagem.mapa98),
-                          mapasNumeros(_controladoresPesagem.mapa99),
-                          mapasNumeros(_controladoresPesagem.mapa100),
-                          mapasNumeros(_controladoresPesagem.mapa101),
-                          mapasNumeros(_controladoresPesagem.mapa102),
-                          mapasNumeros(_controladoresPesagem.mapa103),
-                          mapasNumeros(_controladoresPesagem.mapa104),
+                          mapasNumeros(controladoresPesagem.mapa92),
+                          mapasNumeros(controladoresPesagem.mapa93),
+                          mapasNumeros(controladoresPesagem.mapa94),
+                          mapasNumeros(controladoresPesagem.mapa95),
+                          mapasNumeros(controladoresPesagem.mapa96),
+                          mapasNumeros(controladoresPesagem.mapa97),
+                          mapasNumeros(controladoresPesagem.mapa98),
+                          mapasNumeros(controladoresPesagem.mapa99),
+                          mapasNumeros(controladoresPesagem.mapa100),
+                          mapasNumeros(controladoresPesagem.mapa101),
+                          mapasNumeros(controladoresPesagem.mapa102),
+                          mapasNumeros(controladoresPesagem.mapa103),
+                          mapasNumeros(controladoresPesagem.mapa104),
                         ],
                       ),
                     ],
@@ -2498,27 +2498,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao41,
+                                controladoresPesagem.aPesoPadrao41,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 9),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao42,
+                                controladoresPesagem.aPesoPadrao42,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 9),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao43,
+                                controladoresPesagem.aPesoPadrao43,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 9),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao44,
+                                controladoresPesagem.aPesoPadrao44,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 9),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao45,
+                                controladoresPesagem.aPesoPadrao45,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 9),
                           ],
@@ -2527,21 +2527,21 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                       Container(width: 10),
                       Column(
                         children: [
-                          resultBox(_controladoresPesagem.result9,
+                          resultBox(controladoresPesagem.result9,
                               numPontosApoio >= 9),
-                          mapasNumeros(_controladoresPesagem.mapa105),
-                          mapasNumeros(_controladoresPesagem.mapa106),
-                          mapasNumeros(_controladoresPesagem.mapa107),
-                          mapasNumeros(_controladoresPesagem.mapa108),
-                          mapasNumeros(_controladoresPesagem.mapa109),
-                          mapasNumeros(_controladoresPesagem.mapa110),
-                          mapasNumeros(_controladoresPesagem.mapa111),
-                          mapasNumeros(_controladoresPesagem.mapa112),
-                          mapasNumeros(_controladoresPesagem.mapa113),
-                          mapasNumeros(_controladoresPesagem.mapa114),
-                          mapasNumeros(_controladoresPesagem.mapa115),
-                          mapasNumeros(_controladoresPesagem.mapa116),
-                          mapasNumeros(_controladoresPesagem.mapa117),
+                          mapasNumeros(controladoresPesagem.mapa105),
+                          mapasNumeros(controladoresPesagem.mapa106),
+                          mapasNumeros(controladoresPesagem.mapa107),
+                          mapasNumeros(controladoresPesagem.mapa108),
+                          mapasNumeros(controladoresPesagem.mapa109),
+                          mapasNumeros(controladoresPesagem.mapa110),
+                          mapasNumeros(controladoresPesagem.mapa111),
+                          mapasNumeros(controladoresPesagem.mapa112),
+                          mapasNumeros(controladoresPesagem.mapa113),
+                          mapasNumeros(controladoresPesagem.mapa114),
+                          mapasNumeros(controladoresPesagem.mapa115),
+                          mapasNumeros(controladoresPesagem.mapa116),
+                          mapasNumeros(controladoresPesagem.mapa117),
                         ],
                       ),
                     ],
@@ -2555,27 +2555,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao46,
+                                controladoresPesagem.aPesoPadrao46,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 10),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao47,
+                                controladoresPesagem.aPesoPadrao47,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 10),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao48,
+                                controladoresPesagem.aPesoPadrao48,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 10),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao49,
+                                controladoresPesagem.aPesoPadrao49,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 10),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao50,
+                                controladoresPesagem.aPesoPadrao50,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 10),
                           ],
@@ -2584,21 +2584,21 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                       Container(width: 10),
                       Column(
                         children: [
-                          resultBox(_controladoresPesagem.result10,
+                          resultBox(controladoresPesagem.result10,
                               numPontosApoio >= 10),
-                          mapasNumeros(_controladoresPesagem.mapa118),
-                          mapasNumeros(_controladoresPesagem.mapa119),
-                          mapasNumeros(_controladoresPesagem.mapa120),
-                          mapasNumeros(_controladoresPesagem.mapa121),
-                          mapasNumeros(_controladoresPesagem.mapa122),
-                          mapasNumeros(_controladoresPesagem.mapa123),
-                          mapasNumeros(_controladoresPesagem.mapa124),
-                          mapasNumeros(_controladoresPesagem.mapa125),
-                          mapasNumeros(_controladoresPesagem.mapa126),
-                          mapasNumeros(_controladoresPesagem.mapa127),
-                          mapasNumeros(_controladoresPesagem.mapa128),
-                          mapasNumeros(_controladoresPesagem.mapa129),
-                          mapasNumeros(_controladoresPesagem.mapa130),
+                          mapasNumeros(controladoresPesagem.mapa118),
+                          mapasNumeros(controladoresPesagem.mapa119),
+                          mapasNumeros(controladoresPesagem.mapa120),
+                          mapasNumeros(controladoresPesagem.mapa121),
+                          mapasNumeros(controladoresPesagem.mapa122),
+                          mapasNumeros(controladoresPesagem.mapa123),
+                          mapasNumeros(controladoresPesagem.mapa124),
+                          mapasNumeros(controladoresPesagem.mapa125),
+                          mapasNumeros(controladoresPesagem.mapa126),
+                          mapasNumeros(controladoresPesagem.mapa127),
+                          mapasNumeros(controladoresPesagem.mapa128),
+                          mapasNumeros(controladoresPesagem.mapa129),
+                          mapasNumeros(controladoresPesagem.mapa130),
                         ],
                       ),
                     ],
@@ -2612,27 +2612,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao51,
+                                controladoresPesagem.aPesoPadrao51,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 11),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao52,
+                                controladoresPesagem.aPesoPadrao52,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 11),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao53,
+                                controladoresPesagem.aPesoPadrao53,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 11),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao54,
+                                controladoresPesagem.aPesoPadrao54,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 11),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao55,
+                                controladoresPesagem.aPesoPadrao55,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 11),
                           ],
@@ -2641,21 +2641,21 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                       Container(width: 10),
                       Column(
                         children: [
-                          resultBox(_controladoresPesagem.result11,
+                          resultBox(controladoresPesagem.result11,
                               numPontosApoio >= 11),
-                          mapasNumeros(_controladoresPesagem.mapa131),
-                          mapasNumeros(_controladoresPesagem.mapa132),
-                          mapasNumeros(_controladoresPesagem.mapa133),
-                          mapasNumeros(_controladoresPesagem.mapa134),
-                          mapasNumeros(_controladoresPesagem.mapa135),
-                          mapasNumeros(_controladoresPesagem.mapa136),
-                          mapasNumeros(_controladoresPesagem.mapa137),
-                          mapasNumeros(_controladoresPesagem.mapa138),
-                          mapasNumeros(_controladoresPesagem.mapa139),
-                          mapasNumeros(_controladoresPesagem.mapa140),
-                          mapasNumeros(_controladoresPesagem.mapa141),
-                          mapasNumeros(_controladoresPesagem.mapa142),
-                          mapasNumeros(_controladoresPesagem.mapa143),
+                          mapasNumeros(controladoresPesagem.mapa131),
+                          mapasNumeros(controladoresPesagem.mapa132),
+                          mapasNumeros(controladoresPesagem.mapa133),
+                          mapasNumeros(controladoresPesagem.mapa134),
+                          mapasNumeros(controladoresPesagem.mapa135),
+                          mapasNumeros(controladoresPesagem.mapa136),
+                          mapasNumeros(controladoresPesagem.mapa137),
+                          mapasNumeros(controladoresPesagem.mapa138),
+                          mapasNumeros(controladoresPesagem.mapa139),
+                          mapasNumeros(controladoresPesagem.mapa140),
+                          mapasNumeros(controladoresPesagem.mapa141),
+                          mapasNumeros(controladoresPesagem.mapa142),
+                          mapasNumeros(controladoresPesagem.mapa143),
                         ],
                       ),
                     ],
@@ -2669,27 +2669,27 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                         child: Column(
                           children: [
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao56,
+                                controladoresPesagem.aPesoPadrao56,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 12),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao57,
+                                controladoresPesagem.aPesoPadrao57,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 12),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao58,
+                                controladoresPesagem.aPesoPadrao58,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 12),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao59,
+                                controladoresPesagem.aPesoPadrao59,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 12),
                             const SizedBox(height: 10),
                             pesoPad(
-                                _controladoresPesagem.aPesoPadrao60,
+                                controladoresPesagem.aPesoPadrao60,
                                 [controladores.aPesoPadrao1F],
                                 numPontosApoio >= 12),
                           ],
@@ -2698,21 +2698,21 @@ class _EnsaioExcentricoState extends State<EnsaioExcentrico> {
                       Container(width: 10),
                       Column(
                         children: [
-                          resultBox(_controladoresPesagem.result12,
+                          resultBox(controladoresPesagem.result12,
                               numPontosApoio >= 12),
-                          mapasNumeros(_controladoresPesagem.mapa144),
-                          mapasNumeros(_controladoresPesagem.mapa145),
-                          mapasNumeros(_controladoresPesagem.mapa146),
-                          mapasNumeros(_controladoresPesagem.mapa147),
-                          mapasNumeros(_controladoresPesagem.mapa148),
-                          mapasNumeros(_controladoresPesagem.mapa149),
-                          mapasNumeros(_controladoresPesagem.mapa150),
-                          mapasNumeros(_controladoresPesagem.mapa151),
-                          mapasNumeros(_controladoresPesagem.mapa152),
-                          mapasNumeros(_controladoresPesagem.mapa153),
-                          mapasNumeros(_controladoresPesagem.mapa154),
-                          mapasNumeros(_controladoresPesagem.mapa155),
-                          mapasNumeros(_controladoresPesagem.mapa156),
+                          mapasNumeros(controladoresPesagem.mapa144),
+                          mapasNumeros(controladoresPesagem.mapa145),
+                          mapasNumeros(controladoresPesagem.mapa146),
+                          mapasNumeros(controladoresPesagem.mapa147),
+                          mapasNumeros(controladoresPesagem.mapa148),
+                          mapasNumeros(controladoresPesagem.mapa149),
+                          mapasNumeros(controladoresPesagem.mapa150),
+                          mapasNumeros(controladoresPesagem.mapa151),
+                          mapasNumeros(controladoresPesagem.mapa152),
+                          mapasNumeros(controladoresPesagem.mapa153),
+                          mapasNumeros(controladoresPesagem.mapa154),
+                          mapasNumeros(controladoresPesagem.mapa155),
+                          mapasNumeros(controladoresPesagem.mapa156),
                         ],
                       ),
                     ],

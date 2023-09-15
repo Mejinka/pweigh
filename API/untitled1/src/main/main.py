@@ -198,162 +198,188 @@ cursor = conn.cursor()
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS mapas(
             id INT AUTO_INCREMENT,
-            mapa VARCHAR(30),
-            mapa2 VARCHAR(30),
-            mapa3 VARCHAR(30),
-            mapa4 VARCHAR(30),
-            mapa5 VARCHAR(30),
-            mapa6 VARCHAR(30),
-            mapa7 VARCHAR(30),
-            mapa8 VARCHAR(30),
-            mapa9 VARCHAR(30),
-            mapa10 VARCHAR(30),
-            mapa11 VARCHAR(30),
-            mapa12 VARCHAR(30),
-            mapa13 VARCHAR(30),
-            mapa14 VARCHAR(30),
-            mapa15 VARCHAR(30),
-            mapa16 VARCHAR(30),
-            mapa17 VARCHAR(30),
-            mapa18 VARCHAR(30),
-            mapa19 VARCHAR(30),
-            mapa20 VARCHAR(30),
-            mapa21 VARCHAR(30),
-            mapa22 VARCHAR(30),
-            mapa23 VARCHAR(30),
-            mapa24 VARCHAR(30),
-            mapa25 VARCHAR(30),
-            mapa26 VARCHAR(30),
-            mapa27 VARCHAR(30),
-            mapa28 VARCHAR(30),
-            mapa29 VARCHAR(30),
-            mapa30 VARCHAR(30),
-            mapa31 VARCHAR(30),
-            mapa32 VARCHAR(30),
-            mapa33 VARCHAR(30),
-            mapa34 VARCHAR(30),
-            mapa35 VARCHAR(30),
-            mapa36 VARCHAR(30),
-            mapa37 VARCHAR(30),
-            mapa38 VARCHAR(30),
-            mapa39 VARCHAR(30),
-            mapa40 VARCHAR(30),
-            mapa41 VARCHAR(30),
-            mapa42 VARCHAR(30),
-            mapa43 VARCHAR(30),
-            mapa44 VARCHAR(30),
-            mapa45 VARCHAR(30),
-            mapa46 VARCHAR(30),
-            mapa47 VARCHAR(30),
-            mapa48 VARCHAR(30),
-            mapa49 VARCHAR(30),
-            mapa50 VARCHAR(30),
-            mapa51 VARCHAR(30),
-            mapa52 VARCHAR(30),
-            mapa53 VARCHAR(30),
-            mapa54 VARCHAR(30),
-            mapa55 VARCHAR(30),
-            mapa56 VARCHAR(30),
-            mapa57 VARCHAR(30),
-            mapa58 VARCHAR(30),
-            mapa59 VARCHAR(30),
-            mapa60 VARCHAR(30),
-            mapa61 VARCHAR(30),
-            mapa62 VARCHAR(30),
-            mapa63 VARCHAR(30),
-            mapa64 VARCHAR(30),
-            mapa65 VARCHAR(30),
-            mapa66 VARCHAR(30),
-            mapa67 VARCHAR(30),
-            mapa68 VARCHAR(30),
-            mapa69 VARCHAR(30),
-            mapa70 VARCHAR(30),
-            mapa71 VARCHAR(30),
-            mapa72 VARCHAR(30),
-            mapa73 VARCHAR(30),
-            mapa74 VARCHAR(30),
-            mapa75 VARCHAR(30),
-            mapa76 VARCHAR(30),
-            mapa77 VARCHAR(30),
-            mapa78 VARCHAR(30),
-            mapa79 VARCHAR(30),
-            mapa80 VARCHAR(30),
-            mapa81 VARCHAR(30),
-            mapa82 VARCHAR(30),
-            mapa83 VARCHAR(30),
-            mapa84 VARCHAR(30),
-            mapa85 VARCHAR(30),
-            mapa86 VARCHAR(30),
-            mapa87 VARCHAR(30),
-            mapa88 VARCHAR(30),
-            mapa89 VARCHAR(30),
-            mapa90 VARCHAR(30),
-            mapa91 VARCHAR(30),
-            mapa92 VARCHAR(30),
-            mapa93 VARCHAR(30),
-            mapa94 VARCHAR(30),
-            mapa95 VARCHAR(30),
-            mapa96 VARCHAR(30),
-            mapa97 VARCHAR(30),
-            mapa98 VARCHAR(30),
-            mapa99 VARCHAR(30),
-            mapa100 VARCHAR(30),
-            mapa101 VARCHAR(30),
-            mapa102 VARCHAR(30),
-            mapa103 VARCHAR(30),
-            mapa104 VARCHAR(30),
-            mapa105 VARCHAR(30),
-            mapa106 VARCHAR(30),
-            mapa107 VARCHAR(30),
-            mapa108 VARCHAR(30),
-            mapa109 VARCHAR(30),
-            mapa110 VARCHAR(30),
-            mapa111 VARCHAR(30),
-            mapa112 VARCHAR(30),
-            mapa113 VARCHAR(30),
-            mapa114 VARCHAR(30),
-            mapa115 VARCHAR(30),
-            mapa116 VARCHAR(30),
-            mapa117 VARCHAR(30),
-            mapa118 VARCHAR(30),
-            mapa119 VARCHAR(30),
-            mapa120 VARCHAR(30),
-            mapa121 VARCHAR(30),
-            mapa122 VARCHAR(30),
-            mapa123 VARCHAR(30),
-            mapa124 VARCHAR(30),
-            mapa125 VARCHAR(30),
-            mapa126 VARCHAR(30),
-            mapa127 VARCHAR(30),
-            mapa128 VARCHAR(30),
-            mapa129 VARCHAR(30),
-            mapa130 VARCHAR(30),
-            mapa131 VARCHAR(30),
-            mapa132 VARCHAR(30),
-            mapa133 VARCHAR(30),
-            mapa134 VARCHAR(30),
-            mapa135 VARCHAR(30),
-            mapa136 VARCHAR(30),
-            mapa137 VARCHAR(30),
-            mapa138 VARCHAR(30),
-            mapa139 VARCHAR(30),
-            mapa140 VARCHAR(30),
-            mapa141 VARCHAR(30),
-            mapa142 VARCHAR(30),
-            mapa143 VARCHAR(30),
-            mapa144 VARCHAR(30),
-            mapa145 VARCHAR(30),
-            mapa146 VARCHAR(30),
-            mapa147 VARCHAR(30),
-            mapa148 VARCHAR(30),
-            mapa149 VARCHAR(30),
-            mapa150 VARCHAR(30),
-            mapa151 VARCHAR(30),
-            mapa152 VARCHAR(30),
-            mapa153 VARCHAR(30),
-            mapa154 VARCHAR(30),
-            mapa155 VARCHAR(30),
-            mapa156 VARCHAR(30),
+            mapa VARCHAR(50),
+            mapa2 VARCHAR(50),
+            mapa3 VARCHAR(50),
+            mapa4 VARCHAR(50),
+            mapa5 VARCHAR(50),
+            mapa6 VARCHAR(50),
+            mapa7 VARCHAR(50),
+            mapa8 VARCHAR(50),
+            mapa9 VARCHAR(50),
+            mapa10 VARCHAR(50),
+            mapa11 VARCHAR(50),
+            mapa12 VARCHAR(50),
+            mapa13 VARCHAR(50),
+            mapa14 VARCHAR(50),
+            mapa15 VARCHAR(50),
+            mapa16 VARCHAR(50),
+            mapa17 VARCHAR(50),
+            mapa18 VARCHAR(50),
+            mapa19 VARCHAR(50),
+            mapa20 VARCHAR(50),
+            mapa21 VARCHAR(50),
+            mapa22 VARCHAR(50),
+            mapa23 VARCHAR(50),
+            mapa24 VARCHAR(50),
+            mapa25 VARCHAR(50),
+            mapa26 VARCHAR(50),
+            mapa27 VARCHAR(50),
+            mapa28 VARCHAR(50),
+            mapa29 VARCHAR(50),
+            mapa30 VARCHAR(50),
+            mapa31 VARCHAR(50),
+            mapa32 VARCHAR(50),
+            mapa33 VARCHAR(50),
+            mapa34 VARCHAR(50),
+            mapa35 VARCHAR(50),
+            mapa36 VARCHAR(50),
+            mapa37 VARCHAR(50),
+            mapa38 VARCHAR(50),
+            mapa39 VARCHAR(50),
+            mapa40 VARCHAR(50),
+            mapa41 VARCHAR(50),
+            mapa42 VARCHAR(50),
+            mapa43 VARCHAR(50),
+            mapa44 VARCHAR(50),
+            mapa45 VARCHAR(50),
+            mapa46 VARCHAR(50),
+            mapa47 VARCHAR(50),
+            mapa48 VARCHAR(50),
+            mapa49 VARCHAR(50),
+            mapa50 VARCHAR(50),
+            mapa51 VARCHAR(50),
+            mapa52 VARCHAR(50),
+            mapa53 VARCHAR(50),
+            mapa54 VARCHAR(50),
+            mapa55 VARCHAR(50),
+            mapa56 VARCHAR(50),
+            mapa57 VARCHAR(50),
+            mapa58 VARCHAR(50),
+            mapa59 VARCHAR(50),
+            mapa60 VARCHAR(50),
+            mapa61 VARCHAR(50),
+            mapa62 VARCHAR(50),
+            mapa63 VARCHAR(50),
+            mapa64 VARCHAR(50),
+            mapa65 VARCHAR(50),
+            mapa66 VARCHAR(50),
+            mapa67 VARCHAR(50),
+            mapa68 VARCHAR(50),
+            mapa69 VARCHAR(50),
+            mapa70 VARCHAR(50),
+            mapa71 VARCHAR(50),
+            mapa72 VARCHAR(50),
+            mapa73 VARCHAR(50),
+            mapa74 VARCHAR(50),
+            mapa75 VARCHAR(50),
+            mapa76 VARCHAR(50),
+            mapa77 VARCHAR(50),
+            mapa78 VARCHAR(50),
+            mapa79 VARCHAR(50),
+            mapa80 VARCHAR(50),
+            mapa81 VARCHAR(50),
+            mapa82 VARCHAR(50),
+            mapa83 VARCHAR(50),
+            mapa84 VARCHAR(50),
+            mapa85 VARCHAR(50),
+            mapa86 VARCHAR(50),
+            mapa87 VARCHAR(50),
+            mapa88 VARCHAR(50),
+            mapa89 VARCHAR(50),
+            mapa90 VARCHAR(50),
+            mapa91 VARCHAR(50),
+            mapa92 VARCHAR(50),
+            mapa93 VARCHAR(50),
+            mapa94 VARCHAR(50),
+            mapa95 VARCHAR(50),
+            mapa96 VARCHAR(50),
+            mapa97 VARCHAR(50),
+            mapa98 VARCHAR(50),
+            mapa99 VARCHAR(50),
+            mapa100 VARCHAR(50),
+            mapa101 VARCHAR(50),
+            mapa102 VARCHAR(50),
+            mapa103 VARCHAR(50),
+            mapa104 VARCHAR(50),
+            mapa105 VARCHAR(50),
+            mapa106 VARCHAR(50),
+            mapa107 VARCHAR(50),
+            mapa108 VARCHAR(50),
+            mapa109 VARCHAR(50),
+            mapa110 VARCHAR(50),
+            mapa111 VARCHAR(50),
+            mapa112 VARCHAR(50),
+            mapa113 VARCHAR(50),
+            mapa114 VARCHAR(50),
+            mapa115 VARCHAR(50),
+            mapa116 VARCHAR(50),
+            mapa117 VARCHAR(50),
+            mapa118 VARCHAR(50),
+            mapa119 VARCHAR(50),
+            mapa120 VARCHAR(50),
+            mapa121 VARCHAR(50),
+            mapa122 VARCHAR(50),
+            mapa123 VARCHAR(50),
+            mapa124 VARCHAR(50),
+            mapa125 VARCHAR(50),
+            mapa126 VARCHAR(50),
+            mapa127 VARCHAR(50),
+            mapa128 VARCHAR(50),
+            mapa129 VARCHAR(50),
+            mapa130 VARCHAR(50),
+            mapa131 VARCHAR(50),
+            mapa132 VARCHAR(50),
+            mapa133 VARCHAR(50),
+            mapa134 VARCHAR(50),
+            mapa135 VARCHAR(50),
+            mapa136 VARCHAR(50),
+            mapa137 VARCHAR(50),
+            mapa138 VARCHAR(50),
+            mapa139 VARCHAR(50),
+            mapa140 VARCHAR(50),
+            mapa141 VARCHAR(50),
+            mapa142 VARCHAR(50),
+            mapa143 VARCHAR(50),
+            mapa144 VARCHAR(50),
+            mapa145 VARCHAR(50),
+            mapa146 VARCHAR(50),
+            mapa147 VARCHAR(50),
+            mapa148 VARCHAR(50),
+            mapa149 VARCHAR(50),
+            mapa150 VARCHAR(50),
+            mapa151 VARCHAR(50),
+            mapa152 VARCHAR(50),
+            mapa153 VARCHAR(50),
+            mapa154 VARCHAR(50),
+            mapa155 VARCHAR(50),
+            mapa156 VARCHAR(50),
+            idMapas1 VARCHAR(50),
+            idMapas2 VARCHAR(50),
+            idMapas3 VARCHAR(50),
+            idMapas4 VARCHAR(50),
+            idMapas5 VARCHAR(50),
+            idMapas6 VARCHAR(50),
+            idMapas7 VARCHAR(50),
+            idMapas8 VARCHAR(50),
+            idMapas9 VARCHAR(50),
+            idMapas10 VARCHAR(50),
+            idMapas11 VARCHAR(50),
+            idMapas12 VARCHAR(50),
+            idMapas13 VARCHAR(50),
+            idMapas1desc VARCHAR(300),
+            idMapas2desc VARCHAR(300),
+            idMapas3desc VARCHAR(300),
+            idMapas4desc VARCHAR(300),
+            idMapas5desc VARCHAR(300),
+            idMapas6desc VARCHAR(300),
+            idMapas7desc VARCHAR(300),
+            idMapas8desc VARCHAR(300),
+            idMapas9desc VARCHAR(300),
+            idMapas10desc VARCHAR(300),
+            idMapas11desc VARCHAR(300),
+            idMapas12desc VARCHAR(300),
+            idMapas13desc VARCHAR(300),
             
             PRIMARY KEY(id)
     )
@@ -756,6 +782,32 @@ def mapas():
     mapa154 = request.form.get('mapa154')
     mapa155 = request.form.get('mapa155')
     mapa156 = request.form.get('mapa156')
+    idMapas1 = request.form.get('idMapas1')
+    idMapas2 = request.form.get('idMapas2')
+    idMapas3 = request.form.get('idMapas3')
+    idMapas4 = request.form.get('idMapas4')
+    idMapas5 = request.form.get('idMapas5')
+    idMapas6 = request.form.get('idMapas6')
+    idMapas7 = request.form.get('idMapas7')
+    idMapas8 = request.form.get('idMapas8')
+    idMapas9 = request.form.get('idMapas9')
+    idMapas10 = request.form.get('idMapas10')
+    idMapas11 = request.form.get('idMapas11')
+    idMapas12 = request.form.get('idMapas12')
+    idMapas13 = request.form.get('idMapas13')
+    idMapas1desc = request.form.get('idMapas1desc')
+    idMapas2desc = request.form.get('idMapas2desc')
+    idMapas3desc = request.form.get('idMapas3desc')
+    idMapas4desc = request.form.get('idMapas4desc')
+    idMapas5desc = request.form.get('idMapas5desc')
+    idMapas6desc = request.form.get('idMapas6desc')
+    idMapas7desc = request.form.get('idMapas7desc')
+    idMapas8desc = request.form.get('idMapas8desc')
+    idMapas9desc = request.form.get('idMapas9desc')
+    idMapas10desc = request.form.get('idMapas10desc')
+    idMapas11desc = request.form.get('idMapas11desc')
+    idMapas12desc = request.form.get('idMapas12desc')
+    idMapas13desc = request.form.get('idMapas13desc')
 
 
     cursor = conn.cursor()
@@ -777,7 +829,11 @@ def mapas():
         'mapa125, mapa126, mapa127, mapa128, mapa129, mapa130, mapa131, mapa132, mapa133,'
         'mapa134, mapa135, mapa136, mapa137, mapa138, mapa139, mapa140, mapa141, mapa142,'
         'mapa143, mapa144, mapa145, mapa146, mapa147, mapa148, mapa149, mapa150, mapa151,'
-        'mapa152, mapa153, mapa154, mapa155, mapa156)'
+        'mapa152, mapa153, mapa154, mapa155, mapa156, idMapas1, idMapas2, idMapas3,'
+        'idMapas4, idMapas5, idMapas6, idMapas7, idMapas8, idMapas9, idMapas10, idMapas11,'
+        'idMapas12, idMapas13, idMapas1desc, idMapas2desc, idMapas3desc, idMapas4desc,'
+        'idMapas5desc, idMapas6desc, idMapas7desc, idMapas8desc, idMapas9desc, idMapas10desc,'
+        'idMapas11desc, idMapas12desc, idMapas13desc)'
         'VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
             '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
             '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
@@ -785,8 +841,10 @@ def mapas():
             '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
             '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
             '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
-            '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)',
-        ( mapa, mapa2, mapa3, mapa4, mapa5, mapa6,mapa7, mapa8, mapa9, mapa10, mapa11, 
+            '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
+            '%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, '
+            '%s, %s)',
+        (mapa, mapa2, mapa3, mapa4, mapa5, mapa6,mapa7, mapa8, mapa9, mapa10, mapa11, 
          mapa12, mapa13, mapa14, mapa15, mapa16, mapa17, mapa18, mapa19, mapa20,
          mapa21, mapa22, mapa23, mapa24, mapa25, mapa26, mapa27, mapa28, mapa29,
          mapa30, mapa31, mapa32, mapa33, mapa34, mapa35, mapa36, mapa37, mapa38,
@@ -803,7 +861,12 @@ def mapas():
          mapa126, mapa127, mapa128, mapa129, mapa130, mapa131, mapa132, mapa133,
          mapa134, mapa135, mapa136, mapa137, mapa138, mapa139, mapa140, mapa141,
          mapa142, mapa143, mapa144, mapa145, mapa146, mapa147, mapa148, mapa149,
-         mapa150, mapa151, mapa152, mapa153, mapa154, mapa155, mapa156,)
+         mapa150, mapa151, mapa152, mapa153, mapa154, mapa155, mapa156, idMapas1,
+         idMapas2, idMapas3, idMapas4, idMapas5, idMapas6, idMapas7, idMapas8,
+         idMapas9, idMapas10, idMapas11, idMapas12, idMapas13, idMapas1desc, idMapas2desc,
+         idMapas3desc, idMapas4desc, idMapas5desc, idMapas6desc, idMapas7desc,
+         idMapas8desc, idMapas9desc, idMapas10desc, idMapas11desc, idMapas12desc,
+         idMapas13desc)
     )
     conn.commit()
 
@@ -869,116 +932,174 @@ def generate_pdf():
         return {"success": False, "message": "No data found for mapas"}
 
     column_headers_mapas = [i[0] for i in cursor.description]
-    mapa_index = column_headers_mapas.index("mapa")
-    mapa = data_mapas[0][mapa_index]
-    c = canvas.Canvas("certficado de calibração.pdf", pagesize=letter)
+    idMapas1_index = column_headers_mapas .index('idMapas1')
+    idMapas2_index = column_headers_mapas .index('idMapas2')
+    idMapas3_index = column_headers_mapas .index('idMapas3')
+    idMapas4_index = column_headers_mapas .index('idMapas4')
+    idMapas5_index = column_headers_mapas .index('idMapas5')
+    idMapas6_index = column_headers_mapas .index('idMapas6')
+    idMapas7_index = column_headers_mapas .index('idMapas7')
+    idMapas8_index = column_headers_mapas .index('idMapas8')
+    idMapas9_index = column_headers_mapas .index('idMapas9')
+    idMapas10_index = column_headers_mapas .index('idMapas10')
+    idMapas11_index = column_headers_mapas .index('idMapas11')
+    idMapas12_index = column_headers_mapas .index('idMapas12')
+    idMapas13_index = column_headers_mapas .index('idMapas13')
+
+    idMapas1desc_index = column_headers_mapas .index('idMapas1desc')
+    idMapas2desc_index = column_headers_mapas .index('idMapas2desc')
+    idMapas3desc_index = column_headers_mapas .index('idMapas3desc')
+    idMapas4desc_index = column_headers_mapas .index('idMapas4desc')
+    idMapas5desc_index = column_headers_mapas .index('idMapas5desc')
+    idMapas6desc_index = column_headers_mapas .index('idMapas6desc')
+    idMapas7desc_index = column_headers_mapas .index('idMapas7desc')
+    idMapas8desc_index = column_headers_mapas .index('idMapas8desc')
+    idMapas9desc_index = column_headers_mapas .index('idMapas9desc')
+    idMapas10desc_index = column_headers_mapas .index('idMapas10desc')
+    idMapas11desc_index = column_headers_mapas .index('idMapas11desc')
+    idMapas12desc_index = column_headers_mapas .index('idMapas12desc')
+    idMapas13desc_index = column_headers_mapas .index('idMapas13desc')
+
+
+    idMapas1 = data_mapas[0][idMapas1_index]
+    idMapas2 = data_mapas[0][idMapas2_index]
+    idMapas3 = data_mapas[0][idMapas3_index]
+    idMapas4 = data_mapas[0][idMapas4_index]
+    idMapas5 = data_mapas[0][idMapas5_index]
+    idMapas6 = data_mapas[0][idMapas6_index]
+    idMapas7 = data_mapas[0][idMapas7_index]
+    idMapas8 = data_mapas[0][idMapas8_index]
+    idMapas9 = data_mapas[0][idMapas9_index]
+    idMapas10 = data_mapas[0][idMapas10_index]
+    idMapas11 = data_mapas[0][idMapas11_index]
+    idMapas12 = data_mapas[0][idMapas12_index]
+    idMapas13 = data_mapas[0][idMapas13_index]
+
+    idMapas1desc = data_mapas[0][idMapas1desc_index]
+    idMapas2desc = data_mapas[0][idMapas2desc_index]
+    idMapas3desc = data_mapas[0][idMapas3desc_index]
+    idMapas4desc = data_mapas[0][idMapas4desc_index]
+    idMapas5desc = data_mapas[0][idMapas5desc_index]
+    idMapas6desc = data_mapas[0][idMapas6desc_index]
+    idMapas7desc = data_mapas[0][idMapas7desc_index]
+    idMapas8desc = data_mapas[0][idMapas8desc_index]
+    idMapas9desc = data_mapas[0][idMapas9desc_index]
+    idMapas10desc = data_mapas[0][idMapas10desc_index]
+    idMapas11desc = data_mapas[0][idMapas11desc_index]
+    idMapas12desc = data_mapas[0][idMapas12desc_index]
+    idMapas13desc = data_mapas[0][idMapas13desc_index]
+
+
+
+    
+    c = canvas.Canvas("certficado de calibração.pdf", pdfVersion=letter)
 
     c.setFillColor(black)
     c.setFont("Arial-Bold", 14)
-    c.drawString(20, 760, "CERTIFICADO DE CALIBRAÇÃO")
+    c.drawString(20, 820, "CERTIFICADO DE CALIBRAÇÃO")
     c.setFont("Arial-Italic", 12)
-    c.drawString(20, 748, "Certificate of Calibration")
+    c.drawString(20, 808, "Certificate of Calibration")
     c.setFont("Arial-Bold", 12)
-    c.drawString(20, 734, "NÚMERO")
-    c.drawString(100, 734, f"{numero_certificado}")
+    c.drawString(20, 794, "NÚMERO")
+    c.drawString(100, 794, f"{numero_certificado}")
     c.setFont("Arial-Italic", 10)
-    c.drawString(20, 724,"Number")
+    c.drawString(20, 784,"Number")
     c.setFont("Arial-Bold", 12)
-    c.drawString(20, 712, "DATA")
-    c.drawString(120, 712, f"{data_para_exibir}")
+    c.drawString(20, 772, "DATA")
+    c.drawString(120, 772, f"{data_para_exibir}")
     c.setFont("Arial-Italic", 10)
-    c.drawString(20, 702, "Date ")
+    c.drawString(20, 762, "Date ")
 
-    c.drawImage("assets/images/labweigh.png", 260, 710, 200, 60) 
-    c.drawImage("assets/images/ipac.png", 500, 700, 80, 70)  
-    c.line(20, 660, 590, 660)
+    c.drawImage("assets/images/labweigh.png", 260, 770, 200, 60) 
+    c.drawImage("assets/images/ipac.png", 500, 760, 80, 70)  
+    c.line(20, 730, 590, 730)
     ##############################################################
     c.setFont("Arial-Bold", 12)
-    c.drawString(20, 630, f"Objecto")
+    c.drawString(20, 705, f"Objecto")
     c.setFont("Arial-Italic", 10)
-    c.drawString(20, 620, f"Item")
+    c.drawString(20, 695, f"Item")
     c.setFont("Arial", 10)
-    c.drawString(160, 630, f"{objeto}")
+    c.drawString(160, 705, f"{objeto}")
     ###################################
     c.setFont("Arial-Bold", 12)
-    c.drawString(20, 606, f"Marca")
+    c.drawString(20, 681, f"Marca")
     c.setFont("Arial-Italic", 10)
-    c.drawString(20, 596, f"Mark")
+    c.drawString(20, 671, f"Mark")
     c.setFont("Arial", 10)
-    c.drawString(160, 606, f"{marca}")
+    c.drawString(160, 681, f"{marca}")
     ###################################
     c.setFont("Arial-Bold", 12)
-    c.drawString(20, 582, f"Modelo")
+    c.drawString(20, 657, f"Modelo")
     c.setFont("Arial-Italic", 10)
-    c.drawString(20, 572, f"Model")
+    c.drawString(20, 647, f"Model")
     c.setFont("Arial", 10)
-    c.drawString(160, 582, f"{modelo}")
+    c.drawString(160, 657, f"{modelo}")
     ##################################
     c.setFont("Arial-Bold", 12)
-    c.drawString(20, 558, f"N.º Série")
+    c.drawString(20, 633, f"N.º Série")
     c.setFont("Arial-Italic", 10)
-    c.drawString(20, 548, f"Serial Number")
+    c.drawString(20, 623, f"Serial Number")
     c.setFont("Arial", 10)
-    c.drawString(160, 558, f"{nserie}")
+    c.drawString(160, 633, f"{nserie}")
     ##################################
     c.setFont("Arial-Bold", 12)
-    c.drawString(20, 534, f"Identificação")
+    c.drawString(20, 609, f"Identificação")
     c.setFont("Arial-Italic", 10)
-    c.drawString(20, 524, f"Identification")
+    c.drawString(20, 598, f"Identification")
     c.setFont("Arial", 10)
-    c.drawString(160, 534, f"{id_interna}")
-    c.line(20, 510, 590, 510)
+    c.drawString(160, 609, f"{id_interna}")
+    c.line(20, 585, 590, 585)
     ##################################
     c.setFont("Arial-Bold", 12)
-    c.drawString(20, 486, f"Solicitante")
+    c.drawString(20, 560, f"Solicitante")
     c.setFont("Arial-Italic", 10)
-    c.drawString(20, 476, f"Applicant")
+    c.drawString(20, 550, f"Applicant")
     c.setFont("Arial", 10)
-    c.drawString(160, 486, f"{cliente}")
-    c.drawString(160, 466, f"{morada}")
-    c.drawString(160, 446, f"{cep}")
-    c.line(20, 430, 590, 430)
+    c.drawString(160, 560, f"{cliente}")
+    c.drawString(160, 545, f"{morada}")
+    c.drawString(160, 530, f"{cep}")
+    c.line(20, 505, 590, 505)
     ###################################
     c.setFont("Arial-Bold", 14)
-    c.drawString(20, 406, f"Condições de calibração:")
+    c.drawString(20, 480, f"Condições de calibração:")
     c.setFont("Arial-Italic", 10)
-    c.drawString(20, 396, f"Calibration conditions:")
+    c.drawString(20, 468, f"Calibration conditions:")
     c.setFont("Arial-Bold", 12)
-    c.drawString(20, 378, f"Procedimento")
+    c.drawString(20, 452, f"Procedimento")
     c.setFont("Arial", 10)
-    c.drawString(160, 378, f"PT 05 01, Rev.4")
+    c.drawString(160, 452, f"PT 05 01, Rev.4")
     c.setFont("Arial-Italic", 10)
-    c.drawString(20, 368, f"Procedure")
+    c.drawString(20, 442, f"Procedure")
     c.setFont("Arial-Bold", 12)
-    c.drawString(20, 354, f"Data de Calibração")
+    c.drawString(20, 428, f"Data de Calibração")
     c.setFont("Arial", 10)
-    c.drawString(160, 354, f"{data_para_exibir}")
+    c.drawString(160, 428, f"{data_para_exibir}")
     c.setFont("Arial-Italic", 10)
-    c.drawString(20, 344, f"Date of Calibration")
+    c.drawString(20, 419, f"Date of Calibration")
     c.setFont("Arial-Bold", 12)
-    c.drawString(20, 330, f"Rastreabilidade")
+    c.drawString(20, 405, f"Rastreabilidade")
     c.setFont("Arial-Italic", 10)
-    c.drawString(20, 320, f"Traceability")
+    c.drawString(20, 395, f"Traceability")
     c.setFont("Arial", 11)   
     c.drawString(160, 330, f"Calibração com rastreabilidade ao Sistema Internacional de Unidades (SI) por")
     c.drawString(160, 318, f"intermédio do(s) seguinte(s) peso(s) padrão:")
     ######################################
     c.setFont("Arial-Bold", 12)
-    c.drawString(360, 378, f"Temperatura (˚C):")
-    c.rect(464, 374, 50, 14, fill=0)
-    c.rect(524, 374, 50, 14, fill=0)
-    c.drawString(328, 354, f"Humidade Relativa (%):")
-    c.rect(464, 350, 50, 14, fill=0)
-    c.rect(524, 350, 50, 14, fill=0)
-    c.drawString(472,394,f"Inicial")
+    c.drawString(360, 452, f"Temperatura (˚C):")
+    c.rect(464, 448, 50, 14, fill=0)
+    c.rect(524, 448, 50, 14, fill=0)
+    c.drawString(328, 428, f"Humidade Relativa (%):")
+    c.rect(464, 424, 50, 14, fill=0)
+    c.rect(524, 424, 50, 14, fill=0)
+    c.drawString(472,468,f"Inicial")
     c.setFont("Arial", 11)
-    c.drawString(468, 378, f"{temp_init} ± 1")
-    c.drawString(468, 354, f"{hora_init} ± 1")
+    c.drawString(468, 452, f"{temp_init} ± 1")
+    c.drawString(468, 428, f"{hora_init} ± 1")
     c.setFont("Arial-Bold", 12)
-    c.drawString(532,394,f"Final")
+    c.drawString(532,468,f"Final")
     c.setFont("Arial", 11)
-    c.drawString(530, 378, f"{temp_final} ± 1")
-    c.drawString(530, 354, f"{hora_final} ± 1")
+    c.drawString(530, 452, f"{temp_final} ± 1")
+    c.drawString(530, 428, f"{hora_final} ± 1")
     #######################################
     c.setFillColorRGB(0.7, 0.7, 0.7)
     c.setStrokeColorRGB(0.7, 0.7, 0.7) 
@@ -987,9 +1108,12 @@ def generate_pdf():
     c.setFillColorRGB(0, 0, 0)
     c.drawString(220, 275 + 20 / 2, "Código")
     c.drawString(360, 275 + 20 / 2,"Peso(s) Padrão")
-    c.setFont("Arial", 102)
-    c.drawString(200, 275, f"{mapa}")
-    
+    c.setFont("Arial", 12)
+    c.drawString(230, 260, f"{idMapas1}")
+    c.drawString(310, 260, f"{idMapas1desc}")
+    c.drawString(230, 240, f"{idMapas1}")
+    c.drawString(310, 240, f"{idMapas1desc}")
+
     
 
 

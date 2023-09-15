@@ -473,6 +473,30 @@ class EnsaioPesagemControllers with ChangeNotifier {
   final TextEditingController idMapas1 = TextEditingController();
   final TextEditingController idMapas2 = TextEditingController();
   final TextEditingController idMapas3 = TextEditingController();
+  final TextEditingController idMapas4 = TextEditingController();
+  final TextEditingController idMapas5 = TextEditingController();
+  final TextEditingController idMapas6 = TextEditingController();
+  final TextEditingController idMapas7 = TextEditingController();
+  final TextEditingController idMapas8 = TextEditingController();
+  final TextEditingController idMapas9 = TextEditingController();
+  final TextEditingController idMapas10 = TextEditingController();
+  final TextEditingController idMapas11 = TextEditingController();
+  final TextEditingController idMapas12 = TextEditingController();
+  final TextEditingController idMapas13 = TextEditingController();
+
+  final TextEditingController idMapas1desc = TextEditingController();
+  final TextEditingController idMapas2desc = TextEditingController();
+  final TextEditingController idMapas3desc = TextEditingController();
+  final TextEditingController idMapas4desc = TextEditingController();
+  final TextEditingController idMapas5desc = TextEditingController();
+  final TextEditingController idMapas6desc = TextEditingController();
+  final TextEditingController idMapas7desc = TextEditingController();
+  final TextEditingController idMapas8desc = TextEditingController();
+  final TextEditingController idMapas9desc = TextEditingController();
+  final TextEditingController idMapas10desc = TextEditingController();
+  final TextEditingController idMapas11desc = TextEditingController();
+  final TextEditingController idMapas12desc = TextEditingController();
+  final TextEditingController idMapas13desc = TextEditingController();
 
   Map<int, List<TextEditingController>> controladoresPontosApoio = {};
 
