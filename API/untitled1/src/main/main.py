@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file
 from flask_mysqldb import MySQL
 from flask_cors import CORS
 from datetime import datetime
@@ -11,6 +11,15 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.colors import black, white, HexColor
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
+import os
+import webbrowser
+from pathlib import Path
+from flask import Response
+from reportlab.lib.pagesizes import letter, A4
+
+
+
+
 
 arial_font_path = "C:/Windows/Fonts/arial.ttf" 
 pdfmetrics.registerFont(TTFont("Arial", arial_font_path))
@@ -887,6 +896,18 @@ def try_parsing_date(text):
 @app.route('/generate_pdf')
 def generate_pdf():
     cursor = conn.cursor()
+    
+    cursor.execute('SELECT * FROM usuarios ORDER BY id DESC')
+    data = cursor.fetchall()
+    
+    column_headers_users = [i[0] for i in cursor.description]
+    first_name_index = column_headers_users.index("first_name")
+    last_name_index = column_headers_users.index("last_name")
+    
+    first_name = data[0][first_name_index]
+    last_name = data[0][last_name_index]
+
+    
     cursor.execute('SELECT * FROM calibration ORDER BY id DESC')
     data = cursor.fetchall()
 
@@ -990,136 +1011,215 @@ def generate_pdf():
     idMapas13desc = data_mapas[0][idMapas13desc_index]
 
 
+    documents_path = Path.home() / "Documents"
+    folder_path = documents_path / "Certificados de Calibração"
+    current_datetime = datetime.now().strftime('%Y-%m-%d %H-%M-%S')
+    pdf_filename = f"Certificado de Calibração - {first_name} {last_name} {current_datetime}.pdf"
+    file_path = folder_path / pdf_filename
+    os.makedirs(folder_path, exist_ok=True)
 
-    
-    c = canvas.Canvas("certficado de calibração.pdf", pdfVersion=letter)
+    scale_factor = 0.8
+    page_width = 595.28
+    # Suponho que a maior largura do conteúdo seja a soma da margem esquerda da imagem e da largura da imagem.
+    # Se isso não for preciso, ajuste o valor de content_width.
+    content_width = (340 + 200) * scale_factor
+    x_start = (page_width - content_width) / 2.3
+
+    c = canvas.Canvas(str(file_path), pagesize=(595.28, 841.89))
 
     c.setFillColor(black)
-    c.setFont("Arial-Bold", 14)
-    c.drawString(20, 820, "CERTIFICADO DE CALIBRAÇÃO")
-    c.setFont("Arial-Italic", 12)
-    c.drawString(20, 808, "Certificate of Calibration")
-    c.setFont("Arial-Bold", 12)
-    c.drawString(20, 794, "NÚMERO")
-    c.drawString(100, 794, f"{numero_certificado}")
-    c.setFont("Arial-Italic", 10)
-    c.drawString(20, 784,"Number")
-    c.setFont("Arial-Bold", 12)
-    c.drawString(20, 772, "DATA")
-    c.drawString(120, 772, f"{data_para_exibir}")
-    c.setFont("Arial-Italic", 10)
-    c.drawString(20, 762, "Date ")
+    c.setFont("Arial-Bold", 14 * scale_factor)
+    c.drawString(x_start, 1020 * scale_factor, "CERTIFICADO DE CALIBRAÇÃO")
 
-    c.drawImage("assets/images/labweigh.png", 260, 770, 200, 60) 
-    c.drawImage("assets/images/ipac.png", 500, 760, 80, 70)  
-    c.line(20, 730, 590, 730)
-    ##############################################################
+    c.setFont("Arial-Italic", 12 * scale_factor)
+    c.drawString(x_start, 1008 * scale_factor, "Certificate of Calibration")
+
+    c.setFont("Arial-Bold", 12 * scale_factor)
+    c.drawString(x_start, 994 * scale_factor, "NÚMERO")
+    c.drawString(x_start + 80 * scale_factor, 994 * scale_factor, f"{numero_certificado}")
+
+    c.setFont("Arial-Italic", 10 * scale_factor)
+    c.drawString(x_start, 984 * scale_factor, "Number")
+
+    c.setFont("Arial-Bold", 12 * scale_factor)
+    c.drawString(x_start, 972 * scale_factor, "DATA")
+    c.drawString(x_start + 100 * scale_factor, 972 * scale_factor, f"{data_para_exibir}")
+
+    c.setFont("Arial-Italic", 10 * scale_factor)
+    c.drawString(x_start, 962 * scale_factor, "Date ")
+
+    c.drawImage("assets/images/labweigh.png", x_start + 240 * scale_factor, 970 * scale_factor, 200 * scale_factor, 60 * scale_factor) 
+    
+    c.drawImage("assets/images/ipac.png", x_start + 470 * scale_factor, 960 * scale_factor, 80 * scale_factor, 70 * scale_factor)  
+    increase_length = 10  # Aumento em cada lado
+    c.line(x_start - increase_length, 930 * scale_factor, (x_start + 600 + increase_length) * scale_factor, 930 * scale_factor)    ###################################
+    
     c.setFont("Arial-Bold", 12)
-    c.drawString(20, 705, f"Objecto")
+    c.drawString(x_start, 905 * scale_factor, f"Objecto")
     c.setFont("Arial-Italic", 10)
-    c.drawString(20, 695, f"Item")
+    c.drawString(x_start, 892 * scale_factor, f"Item")
     c.setFont("Arial", 10)
-    c.drawString(160, 705, f"{objeto}")
-    ###################################
+    c.drawString(x_start + 140 * scale_factor, 905 * scale_factor, f"{objeto}")
+
     c.setFont("Arial-Bold", 12)
-    c.drawString(20, 681, f"Marca")
+    c.drawString(x_start, 878 * scale_factor, f"Marca")
     c.setFont("Arial-Italic", 10)
-    c.drawString(20, 671, f"Mark")
+    c.drawString(x_start, 867 * scale_factor, f"Mark")
     c.setFont("Arial", 10)
-    c.drawString(160, 681, f"{marca}")
-    ###################################
+    c.drawString(x_start + 140 * scale_factor, 878 * scale_factor, f"{marca}")
+
     c.setFont("Arial-Bold", 12)
-    c.drawString(20, 657, f"Modelo")
+    c.drawString(x_start, 853 * scale_factor, f"Modelo")
     c.setFont("Arial-Italic", 10)
-    c.drawString(20, 647, f"Model")
+    c.drawString(x_start, 842 * scale_factor, f"Model")
     c.setFont("Arial", 10)
-    c.drawString(160, 657, f"{modelo}")
-    ##################################
+    c.drawString(x_start + 140 * scale_factor, 853 * scale_factor, f"{modelo}")
+
     c.setFont("Arial-Bold", 12)
-    c.drawString(20, 633, f"N.º Série")
+    c.drawString(x_start, 828 * scale_factor, f"N.º Série")
     c.setFont("Arial-Italic", 10)
-    c.drawString(20, 623, f"Serial Number")
+    c.drawString(x_start, 816 * scale_factor, f"Serial Number")
     c.setFont("Arial", 10)
-    c.drawString(160, 633, f"{nserie}")
-    ##################################
+    c.drawString(x_start + 140 * scale_factor, 828 * scale_factor, f"{nserie}")
+
     c.setFont("Arial-Bold", 12)
-    c.drawString(20, 609, f"Identificação")
+    c.drawString(x_start, 802 * scale_factor, f"Identificação")
     c.setFont("Arial-Italic", 10)
-    c.drawString(20, 598, f"Identification")
+    c.drawString(x_start, 791 * scale_factor, f"Identification")
     c.setFont("Arial", 10)
-    c.drawString(160, 609, f"{id_interna}")
-    c.line(20, 585, 590, 585)
-    ##################################
+    c.drawString(x_start + 140 * scale_factor, 802 * scale_factor, f"{id_interna}")
+
+    increase_length = 12  # Aumento em cada lado
+    c.line(x_start - increase_length, 785 * scale_factor, (x_start + 600 + increase_length) * scale_factor, 785 * scale_factor)    ###################################
+
     c.setFont("Arial-Bold", 12)
-    c.drawString(20, 560, f"Solicitante")
+    c.drawString(x_start, 760 * scale_factor, f"Solicitante")
     c.setFont("Arial-Italic", 10)
-    c.drawString(20, 550, f"Applicant")
+    c.drawString(x_start, 750 * scale_factor, f"Applicant")
     c.setFont("Arial", 10)
-    c.drawString(160, 560, f"{cliente}")
-    c.drawString(160, 545, f"{morada}")
-    c.drawString(160, 530, f"{cep}")
-    c.line(20, 505, 590, 505)
-    ###################################
-    c.setFont("Arial-Bold", 14)
-    c.drawString(20, 480, f"Condições de calibração:")
-    c.setFont("Arial-Italic", 10)
-    c.drawString(20, 468, f"Calibration conditions:")
+    c.drawString(x_start + 140 * scale_factor, 760 * scale_factor, f"{cliente}")
+    c.drawString(x_start + 140 * scale_factor, 740 * scale_factor, f"{morada}")
+    c.drawString(x_start + 140 * scale_factor, 720 * scale_factor, f"{cep}")
+
+    increase_length = 10  # Aumento em cada lado
+    c.line(x_start - increase_length, 700 * scale_factor, (x_start + 600 + increase_length) * scale_factor, 700 * scale_factor)    ###################################
+    
     c.setFont("Arial-Bold", 12)
-    c.drawString(20, 452, f"Procedimento")
-    c.setFont("Arial", 10)
-    c.drawString(160, 452, f"PT 05 01, Rev.4")
-    c.setFont("Arial-Italic", 10)
-    c.drawString(20, 442, f"Procedure")
-    c.setFont("Arial-Bold", 12)
-    c.drawString(20, 428, f"Data de Calibração")
-    c.setFont("Arial", 10)
-    c.drawString(160, 428, f"{data_para_exibir}")
-    c.setFont("Arial-Italic", 10)
-    c.drawString(20, 419, f"Date of Calibration")
-    c.setFont("Arial-Bold", 12)
-    c.drawString(20, 405, f"Rastreabilidade")
-    c.setFont("Arial-Italic", 10)
-    c.drawString(20, 395, f"Traceability")
-    c.setFont("Arial", 11)   
-    c.drawString(160, 330, f"Calibração com rastreabilidade ao Sistema Internacional de Unidades (SI) por")
-    c.drawString(160, 318, f"intermédio do(s) seguinte(s) peso(s) padrão:")
+    c.drawString(x_start, 680 * scale_factor, f"Condições de calibração:")
+
+    c.setFont("Arial-Italic", 8)
+    c.drawString(x_start, 668 * scale_factor, f"Calibration conditions:")
+
+    c.setFont("Arial-Bold", 10)
+    c.drawString(x_start, 652 * scale_factor, f"Procedimento")
+
+    c.setFont("Arial", 8)
+    c.drawString(x_start + 140 * scale_factor, 652 * scale_factor, f"PT 05 01, Rev.4")
+
+    c.setFont("Arial-Italic", 8)
+    c.drawString(x_start, 642 * scale_factor, f"Procedure")
+
+    c.setFont("Arial-Bold", 10)
+    c.drawString(x_start, 628 * scale_factor, f"Data de Calibração")
+
+    c.setFont("Arial", 8)
+    c.drawString(x_start + 140 * scale_factor, 628 * scale_factor, f"{data_para_exibir}")
+
+    c.setFont("Arial-Italic", 8)
+    c.drawString(x_start, 619 * scale_factor, f"Date of Calibration")
+
+    c.setFont("Arial-Bold", 10)
+    c.drawString(x_start, 605 * scale_factor, f"Rastreabilidade")
+
+    c.setFont("Arial-Italic", 8)
+    c.drawString(x_start, 595 * scale_factor, f"Traceability")
+
+    c.setFont("Arial", 9)   
+    c.drawString(x_start + 140 * scale_factor, 505 * scale_factor, f"Calibração com rastreabilidade ao Sistema Internacional de Unidades (SI) por")
+    c.drawString(x_start + 140 * scale_factor, 493 * scale_factor, f"intermédio do(s) seguinte(s) peso(s) padrão:")
     ######################################
-    c.setFont("Arial-Bold", 12)
-    c.drawString(360, 452, f"Temperatura (˚C):")
-    c.rect(464, 448, 50, 14, fill=0)
-    c.rect(524, 448, 50, 14, fill=0)
-    c.drawString(328, 428, f"Humidade Relativa (%):")
-    c.rect(464, 424, 50, 14, fill=0)
-    c.rect(524, 424, 50, 14, fill=0)
-    c.drawString(472,468,f"Inicial")
-    c.setFont("Arial", 11)
-    c.drawString(468, 452, f"{temp_init} ± 1")
-    c.drawString(468, 428, f"{hora_init} ± 1")
-    c.setFont("Arial-Bold", 12)
-    c.drawString(532,468,f"Final")
-    c.setFont("Arial", 11)
-    c.drawString(530, 452, f"{temp_final} ± 1")
-    c.drawString(530, 428, f"{hora_final} ± 1")
+
+    c.setFont("Arial-Bold", 9)
+    c.drawString(x_start + 310 , 652 * scale_factor, f"Temperatura (˚C):")
+
+    c.rect(x_start + 486 * scale_factor, 648 * scale_factor, 50 * scale_factor, 14 * scale_factor, fill=0)
+    c.rect(x_start + 546 * scale_factor, 648 * scale_factor, 50 * scale_factor, 14 * scale_factor, fill=0)
+
+    c.drawString(x_start + 283, 628 * scale_factor, f"Humidade Relativa (%):")
+    c.rect(x_start + 486 * scale_factor, 626 * scale_factor, 50 * scale_factor, 14 * scale_factor, fill=0)
+    c.rect(x_start + 546 * scale_factor, 626 * scale_factor, 50 * scale_factor, 14 * scale_factor, fill=0)
+
+    c.drawString(x_start + 494 * scale_factor, 668 * scale_factor, f"Inicial")
+
+    c.setFont("Arial", 9)
+    c.drawString(x_start + 490 * scale_factor, 651 * scale_factor, f"{temp_init} ± 1")
+    c.drawString(x_start + 490 * scale_factor, 628 * scale_factor, f"{hora_init} ± 1")
+
+    c.setFont("Arial-Bold", 9)
+    c.drawString(x_start + 554 * scale_factor, 668 * scale_factor, f"Final")
+
+    c.setFont("Arial", 9)
+    c.drawString(x_start + 550 * scale_factor, 651 * scale_factor, f"{temp_final} ± 1")
+    c.drawString(x_start + 550 * scale_factor, 628 * scale_factor, f"{hora_final} ± 1")
     #######################################
     c.setFillColorRGB(0.7, 0.7, 0.7)
     c.setStrokeColorRGB(0.7, 0.7, 0.7) 
-    c.rect(160, 280, 420, 20, fill=1)
+    c.rect(160, 365, 420, 20, fill=1)
     c.setFont("Arial-Bold", 12)
     c.setFillColorRGB(0, 0, 0)
-    c.drawString(220, 275 + 20 / 2, "Código")
-    c.drawString(360, 275 + 20 / 2,"Peso(s) Padrão")
+    c.drawString(220, 360 + 20 / 2, "Código")
+    c.drawString(360, 360 + 20 / 2,"Peso(s) Padrão")
+    c.setFont("Arial", 10)
+    idMapas_values = [
+        (idMapas1, idMapas1desc),
+        (idMapas2, idMapas2desc),
+        (idMapas3, idMapas3desc),
+        (idMapas4, idMapas4desc),
+        (idMapas5, idMapas5desc),
+        (idMapas6, idMapas6desc),
+        (idMapas7, idMapas7desc),
+        (idMapas8, idMapas8desc),
+        (idMapas9, idMapas9desc),
+        (idMapas10, idMapas10desc),
+        (idMapas11, idMapas11desc)
+    ]
+    # 2. Adicione os valores à lista apenas se eles não estiverem vazios.
+    non_empty_values = [(id_val, desc_val) for id_val, desc_val in idMapas_values if id_val and desc_val]
+
+# 3. Itere sobre a lista para adicionar os valores ao PDF.
+    y_position = 345
+    for id_val, desc_val in non_empty_values:
+        c.drawString(230, y_position, f"{id_val}")
+        c.drawString(310, y_position, f"{desc_val}")
+        y_position -= 20
+
+
+    c.setFont("Arial-Bold", 12)
+    c.drawString(20, 125, f"Observações")
+    c.setFont("Arial-Italic", 10)
+    c.drawString(20, 115, f"Observations")
     c.setFont("Arial", 12)
-    c.drawString(230, 260, f"{idMapas1}")
-    c.drawString(310, 260, f"{idMapas1desc}")
-    c.drawString(230, 240, f"{idMapas1}")
-    c.drawString(310, 240, f"{idMapas1desc}")
+    c.drawString(160, 123, f"A incerteza expandida de medição apresentada, é indicada como a incerteza")
+    c.drawString(160, 110, f"padrão da medição, multiplicada por um fator de cobertura 'k' tal, que a")
+    c.drawString(160, 97, f"probabilidade de cobertura corresponde a aproximadamente 95%.")
+    c.drawString(160, 84, f"A incerteza foi calculada de acordo com o Doc. EA-4/02.")
+    c.setFont("Arial-Italic", 8)
+    c.drawString(20, 70, f"O IPAC é um dos signatários do Acordo de Reconhecimento Mútuo (MLA) da European Cooperation for Accreditation (EA) e da International")
+    c.drawString(20, 58, f"Laboratory Accreditation Cooperation (ILAC) para a calibração.")
+    c.setFont("Arial", 12)
+    c.drawString(20, 30, f" Técnico:")
+    c.line(60, 30, 50, 30)
 
-    
-
-
+    c.showPage()
     c.save()
+    webbrowser.open(str(file_path))
+    with open(file_path, "rb") as pdf_file:
+        content = pdf_file.read()
 
-    return {"success": True, "message": "PDF generated successfully"}
+    response = Response(content, content_type="application/pdf")
+    response.headers["Content-Disposition"] = f"inline; filename={pdf_filename}"
+
+    return response   
 
 
 
