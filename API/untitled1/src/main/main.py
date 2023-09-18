@@ -1054,37 +1054,37 @@ def generate_pdf():
     increase_length = 10  # Aumento em cada lado
     c.line(x_start - increase_length, 930 * scale_factor, (x_start + 600 + increase_length) * scale_factor, 930 * scale_factor)    ###################################
     
-    c.setFont("Arial-Bold", 12)
+    c.setFont("Arial-Bold", 10)
     c.drawString(x_start, 905 * scale_factor, f"Objecto")
-    c.setFont("Arial-Italic", 10)
+    c.setFont("Arial-Italic", 8)
     c.drawString(x_start, 892 * scale_factor, f"Item")
     c.setFont("Arial", 10)
     c.drawString(x_start + 140 * scale_factor, 905 * scale_factor, f"{objeto}")
 
-    c.setFont("Arial-Bold", 12)
+    c.setFont("Arial-Bold", 10)
     c.drawString(x_start, 878 * scale_factor, f"Marca")
-    c.setFont("Arial-Italic", 10)
+    c.setFont("Arial-Italic", 8)
     c.drawString(x_start, 867 * scale_factor, f"Mark")
     c.setFont("Arial", 10)
     c.drawString(x_start + 140 * scale_factor, 878 * scale_factor, f"{marca}")
 
-    c.setFont("Arial-Bold", 12)
+    c.setFont("Arial-Bold", 10)
     c.drawString(x_start, 853 * scale_factor, f"Modelo")
-    c.setFont("Arial-Italic", 10)
+    c.setFont("Arial-Italic", 8)
     c.drawString(x_start, 842 * scale_factor, f"Model")
     c.setFont("Arial", 10)
     c.drawString(x_start + 140 * scale_factor, 853 * scale_factor, f"{modelo}")
 
-    c.setFont("Arial-Bold", 12)
+    c.setFont("Arial-Bold", 10)
     c.drawString(x_start, 828 * scale_factor, f"N.º Série")
-    c.setFont("Arial-Italic", 10)
+    c.setFont("Arial-Italic", 8)
     c.drawString(x_start, 816 * scale_factor, f"Serial Number")
     c.setFont("Arial", 10)
     c.drawString(x_start + 140 * scale_factor, 828 * scale_factor, f"{nserie}")
 
-    c.setFont("Arial-Bold", 12)
+    c.setFont("Arial-Bold", 10)
     c.drawString(x_start, 802 * scale_factor, f"Identificação")
-    c.setFont("Arial-Italic", 10)
+    c.setFont("Arial-Italic", 8)
     c.drawString(x_start, 791 * scale_factor, f"Identification")
     c.setFont("Arial", 10)
     c.drawString(x_start + 140 * scale_factor, 802 * scale_factor, f"{id_interna}")
@@ -1092,9 +1092,9 @@ def generate_pdf():
     increase_length = 12  # Aumento em cada lado
     c.line(x_start - increase_length, 785 * scale_factor, (x_start + 600 + increase_length) * scale_factor, 785 * scale_factor)    ###################################
 
-    c.setFont("Arial-Bold", 12)
+    c.setFont("Arial-Bold", 10)
     c.drawString(x_start, 760 * scale_factor, f"Solicitante")
-    c.setFont("Arial-Italic", 10)
+    c.setFont("Arial-Italic", 8)
     c.drawString(x_start, 750 * scale_factor, f"Applicant")
     c.setFont("Arial", 10)
     c.drawString(x_start + 140 * scale_factor, 760 * scale_factor, f"{cliente}")
@@ -1107,7 +1107,7 @@ def generate_pdf():
     c.setFont("Arial-Bold", 12)
     c.drawString(x_start, 680 * scale_factor, f"Condições de calibração:")
 
-    c.setFont("Arial-Italic", 8)
+    c.setFont("Arial-Italic", 10)
     c.drawString(x_start, 668 * scale_factor, f"Calibration conditions:")
 
     c.setFont("Arial-Bold", 10)
@@ -1139,13 +1139,13 @@ def generate_pdf():
     c.drawString(x_start + 140 * scale_factor, 493 * scale_factor, f"intermédio do(s) seguinte(s) peso(s) padrão:")
     ######################################
 
-    c.setFont("Arial-Bold", 9)
-    c.drawString(x_start + 310 , 652 * scale_factor, f"Temperatura (˚C):")
+    c.setFont("Arial-Bold", 10)
+    c.drawString(x_start + 300 , 652 * scale_factor, f"Temperatura (˚C):")
 
     c.rect(x_start + 486 * scale_factor, 648 * scale_factor, 50 * scale_factor, 14 * scale_factor, fill=0)
     c.rect(x_start + 546 * scale_factor, 648 * scale_factor, 50 * scale_factor, 14 * scale_factor, fill=0)
 
-    c.drawString(x_start + 283, 628 * scale_factor, f"Humidade Relativa (%):")
+    c.drawString(x_start + 273, 628 * scale_factor, f"Humidade Relativa (%):")
     c.rect(x_start + 486 * scale_factor, 626 * scale_factor, 50 * scale_factor, 14 * scale_factor, fill=0)
     c.rect(x_start + 546 * scale_factor, 626 * scale_factor, 50 * scale_factor, 14 * scale_factor, fill=0)
 
@@ -1155,7 +1155,7 @@ def generate_pdf():
     c.drawString(x_start + 490 * scale_factor, 651 * scale_factor, f"{temp_init} ± 1")
     c.drawString(x_start + 490 * scale_factor, 628 * scale_factor, f"{hora_init} ± 1")
 
-    c.setFont("Arial-Bold", 9)
+    c.setFont("Arial-Bold", 10)
     c.drawString(x_start + 554 * scale_factor, 668 * scale_factor, f"Final")
 
     c.setFont("Arial", 9)
