@@ -1135,8 +1135,8 @@ def generate_pdf():
     c.drawString(x_start, 595 * scale_factor, f"Traceability")
 
     c.setFont("Arial", 9)   
-    c.drawString(x_start + 140 * scale_factor, 505 * scale_factor, f"Calibração com rastreabilidade ao Sistema Internacional de Unidades (SI) por")
-    c.drawString(x_start + 140 * scale_factor, 493 * scale_factor, f"intermédio do(s) seguinte(s) peso(s) padrão:")
+    c.drawString(x_start + 140 * scale_factor, 605 * scale_factor, f"Calibração com rastreabilidade ao Sistema Internacional de Unidades (SI) por")
+    c.drawString(x_start + 140 * scale_factor, 593 * scale_factor, f"intermédio do(s) seguinte(s) peso(s) padrão:")
     ######################################
 
     c.setFont("Arial-Bold", 10)
@@ -1162,14 +1162,29 @@ def generate_pdf():
     c.drawString(x_start + 550 * scale_factor, 651 * scale_factor, f"{temp_final} ± 1")
     c.drawString(x_start + 550 * scale_factor, 628 * scale_factor, f"{hora_final} ± 1")
     #######################################
+    increase_length = 40  # Aumento em cada lado para o retângulo
+
+    y_start_position = 593 * scale_factor - 30  # 30 é um valor arbitrário para criar algum espaço entre a string e o retângulo.
+
+    # Ajustando o retângulo e centralizando
     c.setFillColorRGB(0.7, 0.7, 0.7)
     c.setStrokeColorRGB(0.7, 0.7, 0.7) 
-    c.rect(160, 365, 420, 20, fill=1)
+    c.rect((249 - increase_length/2) * scale_factor, y_start_position, (420 + increase_length) * scale_factor, 20 * scale_factor, fill=1)
+
+    # Ajustando e centralizando as strings
     c.setFont("Arial-Bold", 12)
     c.setFillColorRGB(0, 0, 0)
-    c.drawString(220, 360 + 20 / 2, "Código")
-    c.drawString(360, 360 + 20 / 2,"Peso(s) Padrão")
+    middle_rect = y_start_position + 5  # meio do retângulo
+    c.drawString((280 - increase_length/4) * scale_factor, middle_rect, "Código")
+    c.drawString((420 + increase_length/4) * scale_factor, middle_rect, "Peso(s) Padrão")
+
     c.setFont("Arial", 10)
+
+    # Definição das listas de deslocamentos.
+    # Você pode ajustar os valores para deslocar as posições manualmente.
+    x_offsets = [0, 0, 0, -30, 0, 0, 0, 0, 0, 0, 0]  # Deslocamentos no eixo x para cada entrada.
+    y_offsets = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  # Deslocamentos no eixo y para cada entrada.
+
     idMapas_values = [
         (idMapas1, idMapas1desc),
         (idMapas2, idMapas2desc),
@@ -1181,34 +1196,52 @@ def generate_pdf():
         (idMapas8, idMapas8desc),
         (idMapas9, idMapas9desc),
         (idMapas10, idMapas10desc),
-        (idMapas11, idMapas11desc)
+        (idMapas11, idMapas11desc),
     ]
-    # 2. Adicione os valores à lista apenas se eles não estiverem vazios.
+
     non_empty_values = [(id_val, desc_val) for id_val, desc_val in idMapas_values if id_val and desc_val]
 
-# 3. Itere sobre a lista para adicionar os valores ao PDF.
-    y_position = 345
-    for id_val, desc_val in non_empty_values:
-        c.drawString(230, y_position, f"{id_val}")
-        c.drawString(310, y_position, f"{desc_val}")
-        y_position -= 20
+    # Base position
+    base_y_position = y_start_position - 30  # 30 é um valor arbitrário.
 
+    for index, (id_val, desc_val) in enumerate(non_empty_values):
+     x_offset = x_offsets[index]
+     y_offset = y_offsets[index]
+
+     if id_val == idMapas4:
+         # Dividir o idMapas4 em duas linhas
+         text_object = c.beginText(((240 - increase_length/4) + x_offset) * scale_factor, base_y_position + y_offset)
+         text_object.setFont("Arial", 10)
+         # Aqui, estou assumindo que você quer dividir o texto pela metade.
+         # Você pode ajustar conforme necessário.
+         half_length = len(id_val) // 2
+         text_object.textLine(id_val[:half_length])
+         text_object.textLine(id_val[half_length:])
+         c.drawText(text_object)
+         base_y_position -= 20  # Ajuste adicional para acomodar a segunda linha
+     else:
+         c.drawString(((295 - increase_length/4) + x_offset) * scale_factor, base_y_position + y_offset, f"{id_val}")
+
+     c.drawString(((370 + increase_length/4) + x_offset) * scale_factor, base_y_position + y_offset, f"{desc_val}")
+     base_y_position -= 20
+
+    y_offset = 100  # Esse valor é arbitrário e pode ser ajustado conforme necessário.
 
     c.setFont("Arial-Bold", 12)
-    c.drawString(20, 125, f"Observações")
+    c.drawString(x_start, 220 * scale_factor, "Observações")
     c.setFont("Arial-Italic", 10)
-    c.drawString(20, 115, f"Observations")
-    c.setFont("Arial", 12)
-    c.drawString(160, 123, f"A incerteza expandida de medição apresentada, é indicada como a incerteza")
-    c.drawString(160, 110, f"padrão da medição, multiplicada por um fator de cobertura 'k' tal, que a")
-    c.drawString(160, 97, f"probabilidade de cobertura corresponde a aproximadamente 95%.")
-    c.drawString(160, 84, f"A incerteza foi calculada de acordo com o Doc. EA-4/02.")
-    c.setFont("Arial-Italic", 8)
-    c.drawString(20, 70, f"O IPAC é um dos signatários do Acordo de Reconhecimento Mútuo (MLA) da European Cooperation for Accreditation (EA) e da International")
-    c.drawString(20, 58, f"Laboratory Accreditation Cooperation (ILAC) para a calibração.")
-    c.setFont("Arial", 12)
-    c.drawString(20, 30, f" Técnico:")
-    c.line(60, 30, 50, 30)
+    c.drawString(x_start, 205 * scale_factor, "Observations")
+    c.setFont("Arial", 12 * scale_factor)
+    c.drawString(x_start + 160 * scale_factor, (123 + y_offset) * scale_factor, "A incerteza expandida de medição apresentada, é indicada como a incerteza")
+    c.drawString(x_start + 160 * scale_factor, (110 + y_offset) * scale_factor, "padrão da medição, multiplicada por um fator de cobertura 'k' tal, que a")
+    c.drawString(x_start + 160 * scale_factor, (97 + y_offset) * scale_factor, "probabilidade de cobertura corresponde a aproximadamente 95%.")
+    c.drawString(x_start + 160 * scale_factor, (84 + y_offset) * scale_factor, "A incerteza foi calculada de acordo com o Doc. EA-4/02.")
+    c.setFont("Arial-Italic", 8 * scale_factor)
+    c.drawString(x_start + 20 * scale_factor, (70 + y_offset) * scale_factor, "O IPAC é um dos signatários do Acordo de Reconhecimento Mútuo (MLA) da European Cooperation for Accreditation (EA) e da International")
+    c.drawString(x_start + 20 * scale_factor, (58 + y_offset) * scale_factor, "Laboratory Accreditation Cooperation (ILAC) para a calibração.")
+    c.setFont("Arial", 12 * scale_factor)
+    c.drawString(x_start + 20 * scale_factor, (30 + y_offset) * scale_factor, "Técnico:")
+    c.line(x_start + 60 * scale_factor, (30 + y_offset) * scale_factor, x_start + 50 * scale_factor, (30 + y_offset) * scale_factor)
 
     c.showPage()
     c.save()
